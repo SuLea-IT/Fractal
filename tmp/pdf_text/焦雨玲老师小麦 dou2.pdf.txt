@@ -1,0 +1,1345 @@
+
+
+===== PAGE 1 =====
+
+nature plants
+Article https://doi.org/10.1038/s41477-026-02246-3
+Grass inflorescence morphodynamics guides
+yield improvement in wheat
+Received: 26 June 2025 Yuange Wang 1,7, Bofei Cui 2,3,7, Fei Du 4,7, Jian Li 5,6 & Yuling Jiao 2,3,5
+Accepted: 9 February 2026
+Grass inflorescence morphology displays remarkable diversity across
+Published online: xx xx xxxx
+species and is a key determinant of crop yield. Here, to elucidate how
+Check for updates
+developmental morphodynamics shapes inflorescence architecture, we
+conducted a comparative analysis of early inflorescence development in
+bread wheat and rice. Computational modelling revealed that meristem
+fate transition and primordium initiation modes collectively contribute
+to the observed architecture diversity. Furthermore, the model elucidates
+the formation of distinct supernumerary spikelet types in wheat and
+predicts two independent developmental pathways for generating paired
+spikelets—a specialized form of inflorescence branching. We also identified
+a mutant allele, duo2, that results in accelerated developmental progression
+and demonstrated significant yield improvement in duo2 plants under
+field conditions. The causal gene RA2-D, an orthologue of maize RAMOSA2
+(RA2), was found to regulate floral transition. This study elucidates how
+perturbations in developmental dynamics drive the diversification of grass
+inflorescence morphologies.
+Developmental programs govern the range of phenotypic variation evolved a characteristic yet highly divergent branching inflorescence
+observable in nature. Elucidating evolutionarily conserved develop- morphology. Unlike eudicots and other monocots, grass inflores-
+mental mechanisms has established integrative conceptual frame- cences, known as spikes, feature spikelets arranged distichously along
+works for deciphering organismal ontogeny while revealing actionable a rachis. The spikelet, the basic structural unit, produces florets along a
+blueprints for optimizing crop and livestock breeding. Vertebrate limb condensed secondary axis. Despite their monophyletic origin, grasses
+development exemplifies such developmental constraints through the exhibit striking interspecific variation in spike architecture—a determi-
+conserved pentadactyl structure persisting across mammals1. In plants, nant of grain number and ecological success. No unified developmental
+the fate transition framework explains constrained inflorescence diver- model currently explains this morphological spectrum, highlight-
+sity, demonstrating how three principal types—panicles, racemes and ing critical gaps in the understanding of developmental constraints
+cymes—originate from differential meristem fate transitions2. in grasses.
+While this fate-centred model provides a robust framework for As grasses encompass major crops, including wheat (Triticum
+understanding inflorescence development and evolution, the phy- aestivum L.), maize (Zea mays L.), rice (Oryza sativa L.) and barley
+logenetic spectrum of inflorescence diversity—particularly within (Hordeum vulgare L.), engineering spike morphology offers direct
+angiosperm families such as Poaceae—necessitates the incorporation pathways to enhance the number of grains per spike, a major yield
+of additional determinants. Grasses exemplify this complexity, having component3–6. For instance, wheat supernumerary spikelets have
+1Laboratory of Advanced Breeding Technologies, Institute of Genetics and Developmental Biology, Chinese Academy of Sciences, Beijing, China.
+2State Key Laboratory of Gene Function and Modulation Research, School of Life Sciences, Peking University, Beijing, China. 3Peking-Tsinghua Center for
+Life Sciences, Center for Quantitative Biology, Academy for Advanced Interdisciplinary Studies, Peking University, Beijing, China. 4State Key Laboratory
+of Crop Gene Resources and Breeding, Institute of Crop Sciences, Chinese Academy of Agricultural Sciences, Beijing, China. 5Peking University Institute
+of Advanced Agricultural Sciences, Shandong Laboratory of Advanced Agricultural Sciences in Weifang, Weifang, China. 6State Key Laboratory of Wheat
+Improvement, Peking University Institute of Advanced Agricultural Sciences, Shandong Laboratory of Advanced Agricultural Sciences in Weifang,
+Weifang, China. 7These authors contributed equally: Yuange Wang, Bofei Cui, Fei Du. e-mail: yuling.jiao@pku.edu.cn
+Nature Plants
+
+===== PAGE 2 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+a VM c d e f Wheat
+IM
+SM
+FM
+SM
+b IM
+L
+L
+g h i j Rice
+IM
+SBM BM
+VM
+BM BM
+L L
+k l
+SM
+IM IM
+BM
+SBM
+Mor window Mor window
+the potential to increase grain yield3,4,7–9. Decoding inflorescence the formation of about eight primary BMs, which subsequently gen-
+morphodynamics promises to enable rational spike design and erate secondary BMs through recursive branching (Fig. 1j) before
+yield optimization2,10. transitioning to SM formation13, maintaining acropetal progression
+without temporal coordination.
+Results This comparative analysis confirms meristem identity transition
+Early inflorescence development in wheat and rice timing as a critical determinant of grass inflorescence divergence14,15.
+We applied comparative morphodynamic imaging to analyse early Furthermore, the initiation of axillary meristem (AxM) primordia dif-
+branching patterns in wheat and rice inflorescences (Fig. 1). In wheat, fers between wheat and rice, being delayed in wheat but sequential in
+spikelet initiation exhibits a delayed onset relative to the vegetative– rice (Fig. 1k,l). This contrast supports the hypothesis that spatiotem-
+reproductive transition (Fig. 1a). The inflorescence meristem (IM) poral coordination between fate specification and morphogenetic
+enters a three-to-five-day lag phase after transition. It then produces progression establishes the foundational inflorescence architecture.
+approximately six presumptive leaf primordia, which appear as single These two key parameters, when integrated with other structural fea-
+ridges. This marks the transition into the single-ridge stage (Fig. 1b), tures, such as rachis length, branch (in)determinacy and phyllotactic
+a progression that aligns with ontogenetic timelines11,12. Subsequent patterns, may collectively explain the spectrum of inflorescence mor-
+rapid ridge formation culminates in the transition to the double-ridge phologies observed across Poaceae species.
+stage, characterized by the formation of spikelet meristems (SMs)
+suprajacent to leaf primordia (Fig. 1c). Delayed SM formation occurs A unifying model for diverse grass inflorescences
+within a narrow temporal window. The establishment of floret mer- The previously described fate transition model, which considers only
+istems (FMs) on SMs becomes relatively synchronized as a result of developmental-fate transition, employs a continuous abstract variable
+delayed SM formation11,12 (Fig. 1e). termed ‘vegetativeness’ (veg) to represent temporal differences during
+Conversely, rice panicle development demonstrates acropetal the transition of meristem identity from shoot meristem to FM identity.
+branch meristem (BM) initiation immediately post-transition (Fig. 1g‒i), The value of veg represents the developmental distance of a meris-
+mirroring sequential leaf formation. The IM enters dormancy following tem from FM specification2. To accommodate multi-level meristem
+Nature Plants
+remotyhP
+remotyhP
+Fig. 1 | Comparative analysis of early inflorescence development in wheat g–j, Developmental progression of young panicles in rice: vegetative stage (g)
+and rice. a–f, Developmental progression of young spikes in wheat: vegetative and reproductive stage (h‒j) with BM formation (h,i) and secondary BM (SBM)
+stage (a), single-ridge stage (b), late double-ridge stage (c), glume differentiation formation (j). The red and yellow dots indicate BMs and SBMs, respectively. Scale
+stage (d), floret primordium differentiation stage (e) and stamen and pistil bars, 50 μm. k,l, Schematic illustration of delayed (k) versus sequential (l) modes
+differentiation stage (f). The red and yellow dots indicate SMs and FMs, of AxM primordium initiation. SM, IM, phytomer, BM and SBM are annotated.
+respectively. VM, vegetative meristem; L, leaf primordium. Scale bars, 100 μm. The Mor window is the morphogenetic competence period for AxM formation.
+
+===== PAGE 3 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+a b c
+d e
+Rice
+Wheat
+f g
+Barley Maize tassel
+h
+Maize ear
+identities, we extended the existing framework by introducing the Fate essence, the F variable determines both the current and future states
+(F) variable. This variable shares the characteristic temporal decline of a meristem, defining its developmental identity.
+of veg2 while also incorporating additional hierarchical identity levels. More importantly, the new model incorporates an additional
+Starting from the IM level, F progressively declines to the SM and FM variable, Morphogenesis Potential (Mor), to account for the temporal
+levels, and this decline may accelerate during branching events. Apical progression of morphogenetic capacity, specifically the phytomer’s
+meristems retain IM identity when F values exceed a defined threshold. ability to generate AxMs (Fig. 1k,l). Meristem elongation and phytomer
+When F decreases below this threshold (assuming no meristem degen- formation occur at a constant rate, consistent with prior modelling
+eration occurs), the apical meristem transitions to SM identity (Fig. 2a). approaches2, while the model itself introduces novel temporal regula-
+Newly formed phytomers inherit the parental F values unchanged tion for AxM initiation. When Mor levels surpass a defined threshold,
+from the IM, while AxM initiation from these phytomers triggers a thereby entering the morphogenetically active window, the main mer-
+fixed reduction in F, thereby determining their subsequent identity. In istem is triggered to break dormancy and initiate new AxMs (Fig. 2b).
+Nature Plants
+Phytomer
+no.
+Phytomer
+no.
+Phytomer
+no.
+Phytomer
+no.
+Phytomer
+no.
+F Mor Mor
+Mor th Mor th
+Mor window
+∆t
+t T 0 T 1 t T 0 T 1 t
+∆t
+F
+F
+∆t
+t t
+∆t
+F F
+∆t
+t t
+∆t
+IM F ∆t
+SM Mor Mor window
+F SPM/TSM Phytomer no.
+IM fate SM fate SPM/TSM fate FM fate
+Spikelet Floret Inter-phytomer
+t
+Fig. 2 | Computational modelling of inflorescence architecture determinants horizontal axis delineates the Mor window. Grey boxes indicate degenerated
+across cereal species. a–c, Model variables. Panel a illustrates the temporal meristems. Triangles positioned below the x axis mark side (branching)
+dynamics of meristem identity factor F, where thicker lines correspond to main meristem initiation events: orange triangles signify SM, TSM or SPM formation,
+meristems and thinner lines to AxMs. In AxMs, F decreases at branching events. while yellow triangles designate IM-identity BM formation. For graphical
+The colour code represents meristem identities: yellow for IM, orange for SM simplification, the depicted phytomer number may represent a subset of
+and red for FM. Panel b illustrates the temporal dynamics of Mor, with Mor biological reality. AxM parameters are provided in Extended Data Fig. 2. Wheat
+th
+indicating the Mor window threshold. The green region highlights the active exhibits late Mor activation with post-branching F decline to the SM fate (d).
+Mor window (T 0‒T
+1
+). Panel c depicts the interaction between Mor (green) and Rice shows early Mor activation where F retains the IM fate after branching
+the developmental interval Δt (light blue region) on a phytomer. Here, one (e). Barley demonstrates late Mor activation with post-branching F decline to
+Δt fits within the Mor window, permitting a single round of branching. the TSM fate (f). Maize tassel features early Mor activation, with F retaining IM
+d–h, Time courses of variables and simulated inflorescence architectures. identity in basal phytomers and transitioning to the SPM fate in upper phytomers
+The blue stepwise lines track phytomer formation progression, while the black (g). Maize ear displays late Mor activation accompanied by post-branching
+lines represent the meristem identity factor F. The light blue boxes denote F decline to the SPM fate (h).
+phytomer-specific developmental intervals (Δt), and the green bar along the
+
+===== PAGE 4 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+A supplementary parameter, Time Duration for Morphogenesis (Δt), phytomers on the top. Phytomers on the rice IM start with a high Mor
+captures the latency period required for AxM formation. Subsequent level and sustain it consistently. This leads to an early initiation of the
+AxM formation may occur after Δt has elapsed, contingent on the main Mor window. Consequently, AxMs form sequentially immediately
+meristem remaining within the Mor window (Fig. 2c). These dynamics after the IM establishes. These AxMs retain the IM identity throughout
+are formalized using the Lindenmayer system (L-system) framework to development. Notably, the Mor window terminates after branching,
+simulate inflorescence topology16,17, integrating temporal constraints and no internode growth after branching is allowed in rice, leading to
+with developmental plasticity. Thus, while the F variable defines the a strict pattern of one AxM per phytomer (Fig. 2e and Supplementary
+meristem’s identity, the Mor variable dictates whether and when it can Video 2). The main meristem remains continuously within a Mor
+exercise its branching capacity. window, indicating an absence of dormancy. This configuration aligns
+In essence, our model explains grass inflorescence architecture with the previous model without tuning the primordium initiation
+through the interplay of two developmental timers. The first, gov- mode2. On primary AxMs, F retains the IM identity in several basal
+erned by the F variable, acts as a countdown clock that determines phytomers, producing secondary BMs. When F decreases below the
+meristem identity (for example, branch versus spikelet). The second, threshold after a prolonged period, subsequent branches acquire the
+governed by Mor and Δt, defines a programmable ‘branching window’: SM identity (Extended Data Fig. 2b). The tip of the primary BM converts
+a phytomer can initiate a branch only when Mor exceeds a threshold, to a terminal SM when its F value reaches the SM level. SMs have a low
+and each initiation requires a fixed duration Δt. Thus, F specifies what Mor level so that they do not branch further. F in SMs also quickly
+forms, while Mor and Δt determine whether and how many structures decreases to the next level to form a single FM per SM.
+arise at a position. The L-system translates these abstract temporal
+rules into the concrete branched topology of the inflorescence, where Modelling barley and maize inflorescences
+recursive string modules are mapped to physical plant components We further explored the morphodynamic model parameters to model
+and their spatial connectivity (Methods and Extended Data Fig. 1a,b). barley and maize inflorescences. The inflorescence morphology of
+The computational realization of this process follows a simulation barley is similar to that of wheat, with a few differences. First, the IM
+loop as detailed in the algorithmic framework (Extended Data Fig. 1c). forms a special meristem fate level called the triple SM (TSM), which
+On the basis of observations in wheat, we determined that F starts at further forms three SMs on each rachis phytomer rather than one SM
+a high level and decreases with branching, leading to a change in AxM in wheat3. Second, the primary IM does not terminate as a terminal SM
+fates after branching. F also gradually decreases, leading to the con- but ends with growth arrest together with the last few TSMs, a process
+version of the IM to the terminal SM (Fig. 2d, Supplementary Video 1 termed pre-anthesis tip degeneration19. Third, each SM bears a single
+and Supplementary Table 1). The decrease of the F level is genetically FM. On the basis of these differences, our barley model has an additional
+regulated by genes such as WFZP/BHt, and mutations in these genes meristem identity, TSM, between IM and SM. Similar to that in wheat
+lead to a slower F level decrease. The length of the wheat IM continu- spikes, the Mor window starts at time point T , when the single-ridge
+0
+ously increases until terminal SM conversion occurs. Mor starts at a stage commences (Fig. 2f and Supplementary Video 3).
+low level and gradually increases over time. As a result, the Mor window Maize tassels are similar to rice panicles, although spikelet pair
+starts at time point T , corresponding to the start of the single-ridge meristem (SPM) is an additional meristem identity level, which forms
+0
+stage. Mor eventually decreases below the threshold at time point T. a pair of SMs, between IM and SM. The F value of the tassel IM slowly
+1
+It is important to note that branching does not cause the Mor window decreases over time, and the length of the IM continuously increases
+to terminate within a phytomer. This leaves open the potential for before tip IM degeneration, which is much later than that of the rice
+an additional branch to form at the same phytomer. If the interval IM. Similar to rice, the tassel IM Mor window starts at the beginning.
+T–T is shorter than two times the value of Δt, no further branching These settings result in basal phytomers bearing the IM identity to
+1 0
+occurs. This pattern is consistently observed in the wild type. Although form branching meristems and upper phytomers bearing the SPM
+internode growth may provide physical space for a secondary branch identity (Fig. 2g and Supplementary Video 4). In contrast, maize ears
+to form, branching is inhibited under this condition. We set the Δt are similar to those of wheat and barley, with a delayed Mor window.
+value slightly shorter in the middle spike to recapitulate the slightly Maize ears also undergo tip IM degeneration20, and there is an SPM-level
+faster development of middle SMs in most wheat varieties12,18. For SM F value. Other settings are identical to those of the tassels (Fig. 2h and
+development, Mor maintains a high level from the beginning, and F Supplementary Video 5).
+further decreases when branching, leading to sequential FM formation Together, the morphodynamic model considering the timing of
+(Extended Data Fig. 2a). AxM primordium initiation and cell fate transition can explain a range
+For recapitulation of rice inflorescence morphology, the F value of inflorescence morphologies for different grass species.
+also gradually decreases, although at a slower rate, and slightly
+decreases when branching. Because of the slower F decline, the Modelling supernumerary wheat spikelets
+first-level AxMs, also termed BMs, retain the fate of the parental Genotypes that form supernumerary spikelets are useful genetic
+meristem with the IM fate. As with wheat, the length of the rice IM resources for increasing wheat grain yield potential3,4,7–9. Whereas
+continuously increases before tip IM degeneration, leading to more one SM is found on each wheat rachis phytomer, supernumerary
+Fig. 3 | Modelling supernumerary spikelet formation in wheat mutants. formation; and f demonstrates that a normal Mor window combined with
+a–c, Mutant phenotypes, where red, yellow and blue denote the first, a reduced Δt also allows two Δts to fit in middle phytomers, resulting in
+second and third supernumerary SMs, respectively. Specifically, a illustrates comparable paired spikelets. g,h, SM initiation on a single phytomer. In g, a single
+the duo-B1 mutant with multirow spikelets, b shows the wfzp-D mutant SM is formed when the duration of the Mor window is shorter than twice the
+(Extended Data Fig. 3) with ramified spikelets and c displays the duo2 mutant Δt interval. In h, paired SMs emerge when the length of the Mor window allows
+with paired spikelets, noting that one spikelet beneath the rachis phytomer with for two consecutive Δt cycles. The square brackets indicate branching events.
+a coloured supernumerary SM was removed in the left panel. Scale bars, 200 μm. i, Morphospace analysis of paired-spikelet formation under varying Mor and
+d–f, Time courses of variables and simulated supernumerary wheat spike Δt conditions (in middle phytomers). The colour gradient represents the total
+architectures, using diagram components as described in Fig. 2d‒h, except number of spikelets per spike, demonstrating that paired spikelets (indicated
+that a light purple box represents the second Δt of a phytomer. In d, multirow by the tandem spikelet icons) inevitably form when the ratio of Mor window
+spikelets arise via reduced F decline; e features an extended Mor window duration to Δt interval exceeds 2.
+(light green) that accommodates a second Δt, leading to paired-spikelet
+Nature Plants
+
+===== PAGE 5 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+a b c
+i
+Nature Plants
+1B-oud D-pzfw
+2oud 2oud
+d e
+Multirow Paired
+spikelets spikelets
+f
+Paired
+spikelets
+Phytomer
+no.
+Phytomer
+no.
+Phytomer
+no.
+∆t ∆t
+F F
+t t
+∆t
+IM F First ∆t
+SM Phytomer no. Second ∆t
+F Secondary SM Mor window
+IM fate SM fate FM fate
+Spikelet Floret Inter-phytomer
+t
+g h
+Phytomer Phytomer + SM Phytomer Phytomer + paired SM
+...N... ...N[SM]... ...N... ...N[SM][SM]...
+Phytomer production Phytomer production
+∆t ∆t ∆t ∆t ∆t
+Mor window Mor window
+IM fate SM fate FM fate t IM fate SM fate FM fate
+t
+10
+Mor window 8
+length
+Spikelet no.
+6 19
+15
+10
+5 3.6 2.5
+∆t
+
+===== PAGE 6 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+spikelets can have several spikelets per rachis phytomer. There are two Ningchun 4 (NC4), an elite spring wheat cultivar. This dual-screen
+broad types of supernumerary spikelets3. Multirow spikelets feature strategy first identified paired-spikelet mutants and then prioritized
+a horizontal cluster of SMs at a single phytomer, as seen in the duo-B1 early-heading phenotypes through multi-year field evaluations. A
+mutant (Fig. 3a). Ramified spikelets also form a horizontal SM cluster mutant line exhibiting both distinct paired-spikelet formation and
+but contain more SMs and exhibit an elongated rachis between SMs21, consistently accelerated early heading was isolated and designated
+exemplified by wfzp-D (Fig. 3b,d, and Extended Data Fig. 3). In contrast, duo2 (‘duo’ means ‘more’ in Chinese) (Fig. 4a‒c). Phenological tracking
+paired spikelets consist of two SMs, with the secondary spikelet forming revealed that duo2 achieved heading dates five to six days earlier than
+immediately below the primary spikelet (Fig. 3c,e,f). wild-type controls (Fig. 4e‒g).
+We next used the morphodynamic model to elucidate the for- At individual rachis phytomers, duo2 develops a secondary spike-
+mation of supernumerary wheat spikelets. For multirow spikelets let beneath the primary spikelet (Fig. 4c). These secondary spikelets
+and ramified spikelets, the horizontal cluster of SMs can be consid- were predominantly localized in the medial region of the spike (Fig. 4d)
+ered to retain a higher F value to maintain the IM identity. Slowing the and had about an 80% fertility rate (Extended Data Fig. 4a). Unlike
+branching-dependent F reduction led to the establishment of multirow the wild-type cv. NC4, most secondary spikelets in duo2 produced
+spikelets (Fig. 3d and Supplementary Video 6). This result implicates fertile florets (Extended Data Fig. 4b). This resulted in more spikelets
+multirow-spikelet-suppressing genes in the reduction of F, such as and more grains per spike (Fig. 4h‒k). Scanning electron microscopy
+WFZP/BHt (a rice FRIZZLE PANICLE orthologue) and DUO-B1 (a rice analysis revealed no detectable divergence in inflorescence architec-
+MULTI-FLORET SPIKELET1 orthologue). ture between wild-type and duo2 plants prior to the stamen and pistil
+The Ppd-D1 sensitive lines that exhibit paired spikelets display primordium differentiation stage (Waddington stage W4)23 (Fig. 4l).
+delayed floral transition22. This indicates an extended Mor window. At late W4, when FMs began forming lemmas, ectopic SMs emerged
+Our computational morphospace analysis corroborated this rela- beneath primary SMs in duo2 mutants (Fig. 4l). These ectopic SMs
+tionship, revealing that a Mor window exceeding twice the Δt dura- subsequently differentiated into additional spikelets (Fig. 4m), mim-
+tion is sufficient to induce paired-spikelet formation (Fig. 3g–i). By icking the spike morphology characteristics of paired spikelet1 (ps1),
+systematically varying these parameters, we identified two distinct ps2 and highly branched mutants24. Subsequently, FMs developed on
+developmental strategies underlying paired-spikelet formation. The both primary and ectopic SMs.
+first strategy involves prolonging the Mor window (Fig. 3e and Sup- Earlier heading dates indicate an earlier floral transition and faster
+plementary Video 7), which correlates with the delayed heading and SM development. An analysis of the inflorescence developmental
+harvest times observed in Ppd-D1 sensitive lines. The alternative strat- course revealed that early spike developmental stages, including Wad-
+egy accelerates SM development by reducing Δt duration. Theoretical dington stage W1.5 (the transition apex), W2.5 (the double-ridge stage),
+modelling predicted that when Δt is shortened to less than half the Mor W3 (the glume primordium stage), W3.5 (the floret primordium stage)
+window length, paired spikelets emerge as a developmental inevitabil- and W4 (the stamen and pistil primordium differentiation stage)23,
+ity (Fig. 3f and Supplementary Video 8). The Δt-shortening strategy were all shortened in duo2 plants (Fig. 1n). This observation aligns
+achieves architecturally equivalent spikelets without delaying heading with the Δt-shortening strategy predicted by the model. When the
+or harvest time, highlighting its strong potential for yield optimization spikes of the wild-type siblings were still at early W2.5 (Fig. 4o), duo2
+in breeding. Together, these modelling analyses show that modulat- mutant spikes had reached W3 (Fig. 4p). By the time the wild type
+ing simple parameters with easily detectable outputs (for example, reached late W2.5 (Fig. 4q), duo2 had advanced to W3.5 (Fig. 4r). When
+heading date) enables the prediction of complex phenotypes such as the wild type attained W3.5 (Fig. 4s), duo2 was slightly advanced, with
+paired spikelets. secondary spikelets visible (Fig. 4t). Nevertheless, the harvest time
+of duo2 was approximately the same as that of cv. NC4. In addition,
+Isolation of a fast-developing paired-spikelet mutant we observed longer pedicels in duo2 than in the wild-type siblings
+The phenological advantage of early heading mitigates delayed-harvest (Extended Data Fig. 4c,d), presumably providing more space for the
+risks—a critical requirement for double-cropping systems, an agri- secondary spikelet. In contrast, we found no significant difference in
+cultural practice widely implemented in key wheat-producing the tiller number per plant or plant height (Extended Data Fig. 4e,f).
+zones including North and South China, Mediterranean Europe
+and selected North American regions. Importantly, early heading The duo2 mutation increases bread wheat yield at different
+reduces the susceptibility of grain-filling stages to summer dry-hot seeding densities
+wind stress, thereby minimizing yield losses under terminal heat con- We found that the grain weight of primary spikelets in duo2 plants was
+ditions. To exploit this dual benefit, we established and screened an comparable to that of the wild-type plants when grown in the green-
+ethyl-methanesulfonate-mutagenized population derived from cv. house (Extended Data Fig. 4g), although the grain weight of secondary
+Fig. 4 | Phenotypic and agronomic characterization of the duo2 mutant. wild type (left). Scale bars, 500 μm. n, Developmental timing across Waddington
+a–c, Spike architecture. Panel a shows schematics of wild-type (left) versus stages W1.5 to W4 of spike development in the greenhouse (n = 20 biologically
+paired-spikelet spikes (right), with the arrow indicating a spikelet. Panels b and independent samples). The young spike phenotypes at each stage were examined
+c show mature spikes of cv. NC4 (b) and duo2 (c), where secondary spikelets are as previously described12,23. o–t, Scanning electron microscopy time course at 15
+shown in pink. Scale bars, 3 cm. d, Spatial distribution of secondary spikelets days (o,p), 21 days (q,r) and 26 days (s,t) post apical transition in cv. NC4 (o,q,s)
+of duo2 mutants along rachis phytomers (from 1 (basal) to 16 (apical)). The versus duo2 (p,r,t), highlighting the faster development of duo2. Scale bars,
+data are shown as mean ± s.d. (n = 3 biological replicates). e–g, Early heading 100 μm. u–w, Yield metrics in the greenhouse: grain weight per floret (u) (n = 20
+of duo2. Panels e and f show representative heading spikes of cv. NC4 and duo2, biologically independent samples), grain weight per plant (v) (n = 20 biologically
+noting that the duo2 spike is no longer wrapped by the flag leaf due to early independent samples) and harvest index (w) (n = 11 biologically independent
+emergence. Scale bar, 2 cm. Panel g shows quantified heading days (n = 15 samples). PS, primary spikelet; SS, secondary spikelet. x,y, Field performance at
+biologically independent samples). h,i, Yield components in the greenhouse 180 (x) (n = 10 biologically independent samples) and 360 (y) (n = 10 biologically
+under controlled conditions: grain number per spike (h) (n = 15 biologically independent samples) seeds per m2 in Zhaoxian, Hebei, and Changping, Beijing.
+independent samples) and spikelet number per spike (i) (n = 20 biologically The data in n and u represent the means ± s.d. Statistical significance was
+independent samples). j,k, Representative spikes showing grain numbers in evaluated using a two-sided Student’s t-test. The box plots span the first and third
+cv. NC4 (j) versus duo2 (k). Scale bars, 3 cm. l,m, Scanning electron microscopy quartiles, the centre lines denote the medians, and the whiskers indicate the
+images showing secondary spikelets (yellow) in duo2 (right) compared to cv. NC4 minimum and maximum sample values in g–i and v–y.
+Nature Plants
+
+===== PAGE 7 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+NC4 duo2 NC4 duo2
+duo2
+Primary
+Secondary
+duo2
+8.0
+7.5 7.0 6.5
+6.0
+Nature Plants
+syad
+gnidaeH
+NC4
+ekips
+rep
+rebmun
+niarG
+duo2
+ekips
+rep
+rebmun
+telekipS
+NC4
+20
+15
+10
+5
+0 NC4
+NC4 duo2
+Spike node position in duo2
+NC4 duo2
+ecnerrucco
+SS
+fo
+ycneuqerF
+8 6
+4 2 NC4
+duo2
+0
+W1.5 W2.5 W3 W3.5 W4
+NC4 duo2
+syaD
+Spike developmental stage
+ZhaoxianChangping
+)g(
+tnalp rep thgiew niarG
+ZhaoxianChangping
+)g(
+tnalp rep thgiew niarG )%( xedni tsevraH
+)g(
+tnalp rep thgiew niarG
+Floret position
+)gm( terolf rep thgiew
+niarG
+60 90
+80
+55
+70
+50
+60
+45 50
+0.8
+0.6
+0.4
+0.2
+0
+1 2 3 4 5 6 7 8 9 10 11 1213141516
+38 PS of NC4 24 24
+55 PS of duo2 37 22 SS of duo2 22 50 36 20 45 20 40 35 18 35 34 16 18 30
+25 33 14 16
+1 2 3 4 NC4duo2 NC4duo2
+9–01
+×
+22.8
+=
+P
+9–01
+× 22.8
+=
+P
+P = 0.5036
+P = 2.39 × 10–21
+91–01 × 97.1 = P 52–01 × 45.4 = P P = 0.000443 70-E24.1 = P 71–01 × 70.2 = P 32–01 × 28.9 = P
+a b c e f g h
+d i j
+k l
+m n P = 2.73 × P 10 = – 9 1.61 × P 10 = – 1 2 1 .45 × 10–12
+P = 5.91 P × = 1 0 4 – . 8 17 × 10–9
+o p q r s t
+NC4 duo2 NC4 duo2 NC4 duo2
+u v w x y
+NC4 duo2 NC4 duo2
+***
+
+===== PAGE 8 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+spikelets was slightly lower than that of primary spikelets (Fig. 4u). We complemented the duo2 mutant by transferring a genomic
+The overall grain weight per plant in duo2 was 20% greater than that in region harbouring RA2-D and rescued the paired-spikelet phenotype
+the wild type when the plants were grown in the greenhouse (Fig. 4v), (Fig. 6). CRISPR–Cas9-generated mutant lines in the cv. Fielder back-
+leading to an 11% increase in the harvest index (Fig. 4w). ground, designated ra2_m1 and ra2_m2 (Fig. 7a), presented spike phe-
+The greenhouse results encouraged us to perform yield tests in notypes similar to those of the original duo2 mutant. In both mutants,
+the field. We performed yield trials in the field at two sites in Zhaox- we found that early spike developmental stages were similarly shorter
+ian, Hebei, and Changping, Beijing, in two successive years, 2021/22 than those in the corresponding wild type. Although the homeologues
+and 2022/23 (see Methods for the experimental details). At a sow- TraesCS3A02G093200 (RA2-A) and TraesCS3B02G108500 (RA2-B)
+ing density of 180 seeds per m2, which is commonly used worldwide were also mutated (Fig. 7b–d), transgenic complementation with
+(including in Australia, Canada and the USA25–27), the number of grains the D sub-genome copy was sufficient to rescue the spike phenotype
+per spike and the number of spikelets (including secondary spike- (Fig. 7e‒i). RA2-D was thus confirmed to be responsible for duo2.
+lets) per spike were significantly greater in the duo2 mutants than in Remarkably, both editing lines demonstrated significantly superior
+their wild-type siblings at both sites, although the number of rachis yield performance to that of cv. Fielder in the greenhouse and in the
+phytomers per spike remained constant. Notably, the 1,000-grain field (Fig. 7d, Extended Data Fig. 7 and Supplementary Table 3).
+weight of the mutant was comparable to that of cv. NC4. Together, Expression profiling revealed that RA2-D exhibited low transcript
+the grain weight per plant, spike fertility index, harvest index and levels in vegetative tissues (Fig. 5c), with significant upregulation
+grain yield per m2 were significantly higher in duo2, with 10% and 11% in developing spikes (Fig. 5b). Comparative transcriptome analysis
+higher grain yield in Zhaoxian and Changping, respectively (Fig. 4x of young spikes in wheat identified RA2-D expression substantially
+and Extended Data Fig. 5a‒f). exceeding that of its homeologues (Fig. 5j). In situ hybridization
+We next tested an increased sowing density of 360 seeds per m2, revealed that DUO2 transcripts initially localized to emerging SMs dur-
+which is prevalent in North China. The same trends were observed for ing the early double-ridge stage (Fig. 5d). During the late double-ridge
+duo2, and 7% and 9% increases in grain yield were obtained in Zhaoxian stage, expression intensified while remaining SM-specific (Fig. 5e). At
+and Changping, respectively (Fig. 4y and Extended Data Fig. 5a‒f). The the glume and floret differentiation stages, the expression of the three
+tiller number per plant and plant height were still unaffected in the field RA2 homeologues became restricted to the bases of SMs at the bound-
+trials (Extended Data Fig. 5g‒h). Collectively, the above results show ary zones between adjacent spikelet primordia (Fig. 5f‒i). This spatially
+that duo2 may be used to increase grain yield in the field. constrained expression pattern implies that RA2 normally suppresses
+meristematic activity at primary spikelet bases. Corroborating this
+Mapping and positional cloning of duo2 hypothesis, the meristem marker gene Wknox1 showed upregulated
+A set of 190 Simple Sequence Repeats (SSR) markers from GrainGenes expression in secondary SMs at primary spikelet bases of the duo2
+(https://wheat.pw.usda.gov/GG3/) were tested for polymorphisms. mutant (Fig. 5k‒m). Reverse transcription quantitative PCR (RT-qPCR)
+These were analysed between two groups: ten individuals with normal and RNA in situ hybridization also showed upregulated expression of
+spike architecture and ten with typical paired spikelets. The DUO2 Histone H4, a marker for active cell division, in duo2 spikes at differ-
+locus was found to be linked to two markers, cfd127 and barc68, located ent stages, which is consistent with the accelerated developmental
+on chromosome arm 3DS. Additional SSR and Sequence Tagged Site process (Fig. 5n–r).
+(STS) markers, developed on the basis of the Chinese Spring reference
+genome sequence28, were further used to genotype 1,253 F and 786 RA2-D suppresses TaFT expression
+2:3
+F families. Five recombinants were identified. The closest STS mark- duo2 mutants exhibit accelerated spike development, with this pheno-
+2:4
+ers, d7 and d8, placed DUO2 within a 3.28-cM genetic interval. This typic acceleration underlying paired-spikelet formation. To delineate
+interval corresponds to a 1.42-Mb physical region on chromosome arm the molecular mechanism by which RA2-D regulates spike morphogen-
+3DS, which contains 24 predicted high-confidence genes (Fig. 5a and esis and flowering time, we conducted RT-qPCR analysis on early-stage
+Supplementary Table 2). We identified a SNP in the coding region of mutant spikes. The results revealed that all three FT homeologues
+TraesCS3D02G093500, encoding an LOB-domain putative transcrip- (FT-A1, FT-B1 and FT-D1) exhibited significantly higher expression in
+tion factor (Extended Data Fig. 6). Phylogenetic analysis revealed that the duo2 mutant than in the wild-type cv. NC4 plants. Among them,
+TraesCS3D02G093500 is evolutionarily conserved in eudicots and FT-B1 transcripts showed the highest abundance. Similar results were
+monocots (Extended Data Fig. 6) and shares orthology with maize observed in ra2 gene knockout mutants compared with cv. Fielder
+RAMOSA2 (RA2), barley six-row spike4 (Vrs4) and Arabidopsis LATERAL plants (Fig. 8a). These findings suggest that RA2-D represses the expres-
+ORGAN BOUNDARIES (LOB)29–31. To facilitate comparative analyses, we sion of TaFTs, which aligns with the established roles of TaFT genes in
+designed the gene RA2-D. coordinating flowering and spikelet development22,32.
+Fig. 5 | Map-based cloning and expression dynamics of RA2-D. a, Map-based spikes of cv. Kenong9204 (ref. 11). Developmental stages I to VI correspond to
+cloning of RA2-D. The gene was narrowed down to a 1.42-Mb interval on the sequential morphological transitions in spike development: vegetative stage,
+short arm of chromosome 3D. The number of plants used for mapping and the elongation stage, single-ridge stage, double-ridge stage, glume primordium
+identified recombinants are indicated. The physical positions of markers d7 differentiation stage and floret differentiation stage. Transcript levels are
+and d8 are shown. b, Developmental expression analysis via RT-qPCR. Samples expressed as transcripts per million reads (TPM). The data are shown as means ±
+include shoot (ST), root (RT), leaf blade (LB), leaf sheath (LS), internode s.d.; n = 2 biological replicates. k,l, In situ hybridization with antisense Wknox1
+(IN), phytomer (ND), single-ridge stage (SR), double-ridge stage (DR), glume probe in cv. NC4 (k) and duo2 (l) spikes. Secondary SMs initiated from the bases
+primordium stage (GP), floret primordium differentiation stage (FD) and pistil of primary spikelets are outlined in red. m, Sense probe control. Scale bars,
+and stamen differentiation stage (PI). The data are presented as means ± s.d.; 100 μm. n, Expression analysis of Histone H4 in cv. NC4 and duo2 young spikes
+n = 3 biological replicates. c–i, Spatiotemporal expression patterns detected at the double-ridge stage via RT-qPCR. The data are presented as means ± s.d.;
+via in situ hybridization: single-ridge stage (c), early double-ridge stage (d), late n = 3 biological replicates. The expression data were analysed using a two-sided
+double-ridge stage (e,h), glume primordium stage (f,i) and floret primordium Student’s t-test. o–q, In situ hybridization with antisense Histone H4 probe
+differentiation stage (g). Sense probe controls are shown in h and i. AS, antisense in cv. NC4 (o) and duo2 (p,q) spikes at the early (o,p) and late (q) stamen and
+probe; S, sense probe; LP, leaf primordium; SP, spikelet primordium. Scale bars, pistil differentiation stages. Secondary SMs initiated from the bases of primary
+100 μm. Each experiment was independently repeated at least three times with spikelets are outlined in red. r, Sense probe control. Scale bars, 100 μm.
+consistent results. j, Homeologue expression dominance of RA2-D in young
+Nature Plants
+
+===== PAGE 9 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+Focusing on the most abundant FT-B1 locus, we identified three significance. While meristem fate transition (F in our model) is
+conserved LBD transcription factor binding motifs33 (that is, 5′-(G) recognized as a key developmental determinant of inflorescence
+CGGC(G)-3′) within its 1.0-kb promoter region (Fig. 8b). Electropho- architecture2, our computational modelling identifies AxM primor-
+retic mobility shift assays (EMSAs) using recombinant RA2-D protein dium initiation timing (Mor and Δt, Fig. 1k,l) as an additional critical
+confirmed sequence-specific binding to FT-B1 promoter fragments morphogenic regulator shaping grass inflorescence morpho-
+(Fig. 8c). Collectively, these findings establish that RA2-D negatively dynamics. The unified model successfully recapitulates wheat and
+regulates TaFT expression through direct transcriptional repres- rice spike architectures. Crucially, coordinating primordium initiation
+sion, operating at least partially via physical interaction with FT-B1 timing with meristem fate transitions proved essential for simulating
+promoter elements. inflorescence architectures in other crops. The temporal regulation of
+developmental processes represents a conserved evolutionary strategy
+Discussion across plant lineages34. Specifically, modulating the Mor window’s initi-
+Grass inflorescence architecture exhibits unique morphological ation and termination dynamics provides a plausible mechanistic basis
+diversity that underlies both ecological dominance and agricultural for divergent inflorescence architectures in non-grass species—such as
+6
+5
+4
+3
+2
+1
+0
+Nature Plants
+noisserpxe
+evitaleR
+cfd127 barc68
+Chr. 3D
+F
+2 Markers
+Recombinants n = 8,532
+ST RT LB LS IN ND SR DR GP FD PI
+Vegetative organs Developing spikes
+141dfc 34cmw 97dfc 6crab 24crab 25rab
+54 15 5 2 1
+821crab 413mwg
+F
+3
+n = 1,253
+97dfc
+1d 2d 3d 4d 6d
+6crab
+3 20 43
+Markers
+Recombinants 44 32 4 2 1 1
+F 4 6d 7d 8d
+6crab
+Markers
+Recombinants 3 1 1 n = 786
+Genes
+70 nt
+ATG c. 684G>A TAG
+p.Trp228*
+AS AS AS AS AS S S
+LP SP SP SP SP SP SP
+SR Early DR Late DR GP FD Late DR GP
+10
+8
+6
+4
+2
+0
+Stage I Stage II Stage III Stage IV Stage V Stage VI
+)MPT(
+noisserpxE
+46.23 Mb 47.65 Mb
+TaRA2-A
+TaRA2-B
+TaRA2-D
+noisserpxe
+evitaleR
+4H
+enotsiH
+fo
+a b
+c d e f g h i
+j k AS l AS m
+NC4 duo2 NC4
+n o p q r
+AS AS AS S
+8 P = 3.619 × 10–11
+6
+4
+2
+0 NC4 duo2 duo2 NC4
+NC4 duo2
+
+===== PAGE 10 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+the Apiaceae-type umbel and compound umbel inflorescences—where where grain-number–weight trade-offs intensify35, yield gains of
+architectural determinism hinges on spatiotemporal control of AxM 7–9% were maintained, demonstrating the functional robustness of
+primordium initiation. RA2-D. Earlier heading coupled with uncompromised harvest timing
+Crop inflorescence architecture directly determines per-plant extended spike and seed growth periods, potentially mitigating the
+grain yield. Supernumerary spikelets represent valuable genetic grain-number–weight trade-off36,37. This underscores the breeding
+resources for yield enhancement. Through modelling supernumer- relevance, especially for high-density planting and climate resilience.
+ary wheat spikelet variants, we pinpointed developmental parameter At the molecular level, RA2-D regulates spike morphogenesis and
+alterations that drive these phenotypes. Known regulators of multirow flowering time partly by suppressing TaFT expression (Fig. 8). TaFTs
+and ramified spikelets, such as WFZP/BHt and DUO-B1, influence the themselves regulate flowering and spikelet development22,32. In Ppd-1
+model’s F parameter. In contrast, Ppd-D1 modulates the Mor parameter. mutants, the downregulation of TaFTs is associated with delayed flow-
+We predicted that paired-spikelet formation is associated not only ering and paired-spikelet formation22. In contrast, in the duo2 mutant,
+with delayed flowering22 but also with early heading. Early heading although the upregulation of TaFTs probably accelerates flowering,
+avoids harvest delay, which benefits double-cropping systems and the paired-spikelet phenotype and increased grain number appear to
+suggests novel breeding targets. Introducing additional parameters, be primarily driven by the ectopic activation of meristem genes such
+such as regional growth rate variation, could enhance model inclu- as Wknox1 (Fig. 5k–l). This activation promotes secondary spikelet
+sivity. This may reveal new mechanisms underlying supernumerary formation, probably by accelerating the meristem developmental
+spikelet formation. rate. This decoupling of flowering time from spikelet development—
+Model-guided characterization revealed that the duo2 mutant achieved through separate regulatory pathways—is probably a key
+produces paired spikelets with accelerated spike development, which mechanistic feature of the mutant. The duo2 allele thus provides an
+corresponds to a reduced Δt. In field trials, the mutant showed 7–11% elite locus for breaking the trade-off between heading time and yield
+yield increases due to fertile paired-spikelet formation, while grain in wheat breeding. The recently reported alog1 mutants also have early
+weight remained nearly unchanged. Under high-density planting, heading, further demonstrating the predictive power of the model38.
+Nature Plants
+ekips
+rep
+rebmun
+telekipS
+4CN 1#2oud
+D-2ARaTg
+2#2oud
+D-2ARaTg
+b
+20
+19
+18
+17
+16
+15
+tnalp
+rep
+rebmun
+ekipS
+e
+ekips
+rep
+rebmun
+niarG
+c
+62
+60
+58
+56
+54
+52
+syad
+gnidaeH
+d
+60 11
+58 10
+56 9
+54 8
+52 7
+50 6
+48 5
+4CN
+4CN
+1#2oud
+D-2ARaTg
+2#2oud
+D-2ARaTg
+1#2oud
+D-2ARaTg
+4CN 1#2oud
+D-2ARaTg
+2#2oud
+D-2ARaTg
+2#2oud
+D-2ARaTg
+4CN 1#2oud
+D-2ARaTg
+2#2oud
+D-2ARaTg
+a
+2oud
+P = 0.86
+P = 1.00
+P = 0.62 P = 0.95 P = 0.34
+P = 0.25 P = 0.79 P = 0.20
+Fig. 6 | Genetic complementation rescues duo2 mutant phenotypes. a, Spike spike number per plant (e) (n = 20 biologically independent samples for b–e).
+morphology comparison between wild-type cv. NC4 and two independent Statistical significance was determined using a two-sided Student’s t-test in
+complementation lines (gRA2-D/duo2#1 and #2), with secondary spikelets in b–e. The box plots span the first and third quartiles, the centre lines denote the
+duo2 highlighted in pink. Scale bars, 3 cm. b–e, Quantitative analysis of spikelet medians, and the whiskers indicate the minimum and maximum sample values
+number per spike (b), grain number per spike (c), days to heading (d) and in b–e.
+
+===== PAGE 11 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+ATG 70 nt TGA
+sgRNA
+Fielder 3A: TCGCAGCACCGACGACACCGGG
+Fielder 3B: TCGCAGCACCGACGACACCGGG
+Fielder 3D: TCGCAGCACCGACGACACCGGG
+Tara2_m1 3A: TCGCAGCACCGACG--ACCGGG –2 bp
+Tara2_m1 3B: TCGCAGCACCGA------ACCGGG –4 bp
+Tara2_m1 3D: TCGCAGCACCGACGACAACCGGG +1 bp
+Tara2_m2 3A: TCGCAGCACCGA------ACCGGG–4 bp
+Tara2_m2 3B: TCGCAGCACCGACG-----CGGG –4 bp
+Tara2_m2 3D: TCGCAGCACCGAC---ACCGGG –3 bp
+Fielder Tara2_m1 Tara2_m2
+RA2-D and ALOG1 share similar boundary expression patterns, suggest- across the entire SM in mutants could mechanistically explain the
+ing that boundary cell fate may have changed in mutants, which may observed Δt reduction, indicating that the widespread RA2-D expres-
+contribute to the paired-spikelet phenotype. sion during the double-ridge stage appears to decrease the rate of
+The roles of wheat RA2-D in spike architecture suggest that meristem maturation in SMs. Starting from the glume primordium
+LOB-domain proteins play conserved roles in grass inflorescence devel- stage, RA2-D expression becomes confined to boundary regions
+opment, albeit with species-specific modifications. In Arabidopsis, (Fig. 5f–i), notably colocalizing with paired-spikelet initiation sites.
+LOB limits growth and cell proliferation in leaf axils31,39. RA2-D has This shift in expression pattern may lead to two developmental out-
+elevated expression in the single-ridge stage (Fig. 5b), and its expres- comes. First, it relieves SMs from RA2-D-mediated repression, thereby
+sion encompasses the entire SM until the double-ridge stage (Fig. 5d,e). promoting meristem development and the initiation of organ pri-
+If RA2-D similarly inhibits growth, the accelerated growth observed mordia. Second, boundary-enriched RA2-D expression prevents AxM
+Nature Plants
+ekips
+rep
+rebmun
+telekipS
+E
+redleiF 1#1m_2araT
+D-2ARaTg
+2#1m_2araT
+D-2ARaTg
+ekips
+rep
+rebmun
+telekipS
+20
+19
+18
+17
+16
+15
+ekips
+rep
+rebmun
+niarG
+56
+54
+52
+50
+48
+46
+syad
+gnidaeH
+62
+60
+58
+56
+54
+52
+50
+tnalp
+rep
+rebmun
+relliT
+a b
+c d
+e f g h i
+20
+18
+16
+14
+12
+10
+redleiF 1#1m_2araT
+D-2ARaTg
+2#1m_2araT
+D-2ARaTg
+redleiF 1#1m_2araT
+D-2ARaTg
+2#1m_2araT
+D-2ARaTg
+redleiF 1#1m_2araT
+D-2ARaTg
+2#1m_2araT
+D-2ARaTg
+redleiF 1#1m_2araT
+D-2ARaTg
+2#1m_2araT
+D-2ARaTg
+25 Primary
+Secondary
+20
+15
+10
+5
+0
+Fielder
+Tara2_
+m
+T
+1
+ara2_
+m2
+redleiF
+1m_2araT 2m_2araT
+2oud
+07
+0.
+P
+=
+P = 1.00
+P = 3.24 × 10–32
+P = 9.66 × 10–32
+P = 0.87 P = 0.85 P = 0.27 P = 0.56
+P = 1.00
+P = 0.86 P = 0.12 P = 0.42
+Fig. 7 | Functional validation of RA2 homeologues through CRISPR–Cas9 duo2 mutants grown in the greenhouse (n = 20 biologically independent
+mutagenesis and quantitative phenotyping. a, CRISPR–Cas9 target sites within samples). e, Representative images of cv. Fielder and two independent
+exonic regions of RA2 homeologues. Nucleotide insertions (+) and deletions complementation lines of ra2_m1 transformed with the genomic RA2-D locus
+(−) are annotated with the corresponding base change counts, and Protospacer (gRA2-D ra2_m1#1 and gRA2-D ra2_m1#2). Scale bar, 3 cm. f–i, Multi-trait
+Adjacent Motif (PAM) sequences are highlighted in red. sgRNA, single guide RNA. phenotypic analysis (n = 20 biologically independent samples) including spikelet
+b, Comparison of spike architecture among wild-type cv. Fielder, two CRISPR– number per spike (f), grain number per spike (g), heading days (h) and tiller
+Cas9-based mutants (ra2_m1 and ra2_m2) and the duo2 mutant, with secondary number per plant (i). Statistical significance was determined using a two-sided
+spikelets highlighted in pink. Scale bar, 3 cm. c, Analysis of grain number per Student’s t-test in d and f–i. The box plots span the first and third quartiles, the
+spike in cv. Fielder and two mutants under greenhouse conditions. Scale bars, centre lines denote the medians, and the whiskers indicate the minimum and
+3 cm. d, Quantitative assessment of spikelet number per spike in cv. Fielder and maximum sample values in d and f–i.
+
+===== PAGE 12 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+a Methods
+15
+Plant materials and growth conditions
+An ethyl-methanesulfonate-induced M population of NC4, an elite
+3 spring wheat cultivar, was screened for spike architecture variations.
+10 Paired-spikelet mutants were identified by complete penetrance of
+fertile secondary spikelets across all tillers. A mutant line exhibiting
+consistent paired-spikelet formation was isolated and designated
+duo2. Three generations of mutant plants were cultivated in con-
+5 trolled greenhouse conditions: 16-h photoperiod (350 μmol m−2 s−1
+light intensity), 25 °C day/night temperature and 60–70% relative
+humidity. For genetic mapping, M-generation duo2 plants were
+5
+crossed with cv. Fielder to generate an F population (n = 8,532). The
+2
+0 mapping population was field-grown at an experimental station
+FT-A1 FT-B1 FT-D1 in Changping, Beijing, China, in 1.5-m rows (15 seeds per row). The
+sequences of the molecular markers used in this study are listed in
+b
+C C G G G C C G G G C G G C G G C G Supp Y l i e e m ld e e n v ta a r lu y a T t a io b n le t 3 r . ials were conducted to compare the perfor-
+mance of cv. NC4 versus duo2 and cv. Fielder versus ra2_m1/ra2_m2
+across two different field sites (Zhaoxian in Hebei and Changping in
+P1 P2 P3 FT-B1 100 bp
+Beijing) under contrasting sowing densities (180 versus 360 seeds
+c per m2). The experiment used a total of 15 plots, each measuring 1.5 m
+FT-B1-P1 FT-B1-P2 FT-B1-P3
+long and 3 m wide. These plots included nine allocated to the mutant
+TaRA-D2 – + + – + + – + + lines (ra2_m1, ra2_m2 and duo2) and six to their respective wild-type
+Biotin probe + + + + + + + + + controls (cv. Fielder and cv. NC4), arranged in a replicated block design
+Competitor – – + – – + – – + with three replicates. Each line was planted in a plot consisting of
+12 rows with a consistent row spacing of 0.25 m. In low-density plots,
+each row (1.5 m long) was sown with 36 seeds, while high-density
+plots maintained the same row spacing but with double the seeding
+rate (72 seeds per row). Phenotypic data were collected over two
+consecutive growing seasons (2021/22 and 2022/23).
+Phenotype analysis
+Spikelet quantification followed established developmental stag-
+ing protocols22. Primary and secondary spikelet distribution was
+determined along rachis phytomers of main stems. Heading time was
+recorded at spike emergence from the flag leaf sheath. Grain number
+per spike included both primary and secondary spikelets.
+For the field trails, tiller number per plant, plant height, 1,000-grain
+weight, harvest index and spike fertility index were measured at matu-
+rity. The harvest index was calculated as the ratio of grain yield per plant
+to its aboveground dry-weight biomass as previously described24. The
+spike fertility index was determined by dividing the grain number per
+spike by its spike chaff as previously described40.
+Wheat and rice inflorescence imaging
+Immature inflorescence samples from wheat cv. NC4 and rice cv.
+Nipponbare were isolated and fixed in 4% (w/v) paraformaldehyde in
+1× PBS (pH 7.0–7.2) under vacuum (0.7–0.8 kgf cm−2) for four 30-min
+treatments at room temperature. After fixation, the samples were
+washed twice for 1 min each time in 1× PBS and transferred to ClearSee
+formation, probably by limiting cell proliferation and repressing key solution. The ClearSee solution was a mixture of xylitol (final 10% (w/v),
+meristem-related genes such as Wknox1. In contrast, the duo2 mutant Sigma-Aldrich, cat. no. X3375), sodium deoxycholate (final 15% (w/v),
+exhibits enhanced mitotic activity and ectopic Wknox1 expression in Sigma-Aldrich, cat. no. D6750) and urea (final 25% (w/v), Sigma-Aldrich,
+boundary regions, thereby creating permissive conditions for ectopic cat. no. V900119) in ddHO. The samples were cleared in ClearSee solu-
+2
+AxM formation. Barley has an indeterminate spike that produces three tion for one to two weeks in the dark at room temperature. The cell
+single-flowered spikelets at each rachis internode. Barley vrs4 mutants, walls of the cleared samples were stained overnight with 0.1 mg ml−1
+encoding the RA2-D orthologue, have otherwise sterile lateral spikelets Fluorescent Brightener 28 (Sigma-Aldrich, cat. no. F3543) dissolved
+that develop into grains29. In addition, vrs4 mutants often form addi- in ClearSee solution. After staining, the samples were washed with
+tional spikelets. These phenotypic changes are consistent with the pure ClearSee solution for 30 min and mounted in ClearSee solution
+accelerated growth of corresponding meristems. When the homolo- for microscopic imaging.
+gous maize RA2 gene is mutated, determinate SPMs assume indeter- Confocal imaging used a Nikon A1 confocal laser scanning micro-
+minate long BM identity, leading to a highly branched inflorescence30. scope with a ×10 air objective. For analysis of Fluorescent Brightener
+While developmental speed might be accelerated in ra2 mutants, there 28-stained cell walls, a 405-nm laser was used for excitation, and
+is a clearly delayed F decline in AxMs. Whether the delayed F decline emission was measured at 425–475 nm. Z-stacks were acquired at
+is associated with faster development warrants further investigation. 3–4-μm intervals.
+Nature Plants
+noisserpxe
+evitaleR
+NC4
+duo2
+Fielder
+Tara2_m1
+Tara2_m2
+8–01
+× 6.2
+=
+P
+P = 3.00 × 10–9
+P = 3.92 × 10–9
+P = 1.95 × 10–9 P = 7.14 × 10–9
+P = 1.50 × 10–8 P = 0.00 P = 0.00
+P = 1.22 × 10–8
+Fig. 8 | RA2-D mediates transcriptional suppression of TaFTs through direct
+binding specifically to the FT-B1 promoter. a, Quantification via RT-qPCR of
+FT-A1, FT-B1 and FT-D1 expression in cv. NC4 compared to the duo2 mutant, and
+in cv. Fielder compared to ra2 knockout mutants (n = 3 biologically independent
+samples). The data are represented as means ± s.d. Statistical significance
+was determined using a two-sided by Student’s t-test, with P < 0.001. b, In
+silico prediction of LBD transcription factor binding motifs within the 1.0-kb
+FT-B1 promoter sequence. c, EMSA demonstrating RA2-D binding to the FT-B1
+promoter fragments illustrated in b. The plus and minus symbols indicate the
+presence or absence of specific probes or proteins, respectively. Similar results
+were obtained in three independent experiments in c.
+
+===== PAGE 13 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+L-system-based grass inflorescence model quantitative experimental observations of inflorescence architecture.
+We implemented a parametric L-system framework16,17,41 to simulate Using wild-type wheat spike simulation as a representative example,
+grass inflorescence development. The model represents inflorescence we calibrated the initial F value to F = 3. Identity thresholds were set
+init
+architecture through bracketed L-strings41 where modules correspond at F = 2 and F = 1 to delineate the IM, SM and FM phases. The decay
+IS SF
+to internode (I), phytomer (N), IM, SM and FM. Species-specific mod- rate of F was set to 0.05 per simulation step. Given a standardized
+ules included TSM for barley and SPM for maize, both between the IM elongation rate of 1 phytomer per step, the IM generates 20 phytom-
+and SM fate levels. ers before F drops below F (calculated as (3.0 − 2.0)/0.05 = 20 steps),
+IS
+Branching events are encoded by square brackets. Modules which matches the typical spikelet number in the target phenotype.
+enclosed within a matching pair of brackets represent the components For Mor, we set the activation threshold Mor = 15. The
+threshold
+of a side branch, and the position of the opening bracket indicates dynamic profile of Mor was calibrated to enter and exit this window at
+the attachment point of the branch to its parent axis. For example, T = 18 and T = 24, respectively. The Δt for AxM formation was defined
+0 1
+the L-string as Δt = 6 simulation steps. Consequently, a phytomer remains com-
+petent for a duration just sufficient to complete a single branching
+I(var1)N(var2)[I(var3)N(var4)I(var5)IM(var6)]I(var7)N(var8) event (T − T ≥ Δt), which recapitulates the unbranched spikelet mor-
+1 0
+phology of wheat. For species with complex branching (such as rice),
+represents an inflorescence with a main axis these parameters are adjusted to widen the Mor window relative to Δt.
+Detailed parameter configurations are provided in the ‘*_config.json’
+I(var1)N(var2)I(var7)N(var8) files included with the code.
+and a side branch originating from the phytomer N(var): Simulation logic. The simulation proceeds in discrete time steps.
+2
+During each step, the state of all modules in the L-string is potentially
+I(var3)N(var4)I(var5)IM(var6) updated on the basis of predefined developmental rules governed
+by F, Mor and Δt. Within each iteration step, the inflorescence mod-
+Key developmental variables. Three developmental variables govern ules undergo unit growth updates. When specific threshold condi-
+inflorescence behaviour: tions are satisfied, new modules are generated through two distinct
+mechanisms: (1) the production of phytomer–internode module pairs
+1. F: This variable represents the developmental identity or poten-
+facilitating IM/SM axis elongation and (2) the initiation of AxM modules
+tial of a meristem. It functions analogously to the concept of
+“vegetativeness”2 but accommodates more meristem levels spe- enabling branching events. Pseudocode exemplifying these develop-
+mental rules is provided below.
+cific to grasses. F starts at a high value corresponding to IM identity
+and can decrease over simulation time or upon branching events. FOR each module IN L_string:
+Predefined thresholds dictate meristem identity transitions: CALL module.growth()
+IF new I and N modules are produced:
+• F > F (or F in barley or F in maize, for TSM/SPM): Meristem
+IS IT IP INTEGRATE new module into L_string
+maintains IM identity.
+IF module.parameters satisfy certain conditions:
+• F > F > F (or analogous thresholds for TSM/SPM):
+IS SF CALL module.morphogenesis()
+Meristem assumes SM identity (or TSM/SPM identity,
+INTEGRATE new module into L_string
+which subsequently transitions to SM clusters).
+• F < F SF : Meristem transitions to FM identity. Newly formed Static modules, including internodes (I) and FMs, maintain fixed
+phytomers typically inherit the F value of their parent mer- parameters post-generation, exhibiting neither parametric fluctua-
+istem, while AxMs initiated from a phytomer experience a tions nor branching.
+defined reduction in F, influencing their initial identity.
+IF module.type IN [‘I’, ‘FM’]:
+2. Mor: This variable describes the capacity of a phytomer to SKIP parameter updates (static modules)
+initiate AxMs. Mor changes dynamically over time. It typically
+Dynamic modules comprising IMs, SMs and phytomers (N)
+starts at an initial value, increases and then decreases. AxM for-
+undergo temporally regulated parameter shifts. These dynamic shifts
+mation is possible only when Mor exceeds a specific threshold,
+enable the modules to drive subsequent growth, branching and differ-
+Mor . The time interval during which Mor > Mor
+threshold threshold entiation processes. While modules IM and SM do not directly generate
+defines the ‘morphogenesis window’ (T to T):
+0 1 new meristem modules, they continually produce modules I and N in the
+Mor|
+T0
+=Mor|
+T1
+=Morthreshold morphogenesis unit until their eventual degeneration or differentiation
+under defined conditions. Operationally, modules I and N are generated
+Once an AxM forms, the Mor value on the new meristem resets at fixed temporal intervals spanning multiple simulation time steps.
+and begins its own accumulation cycle. Specific patterns, such as
+immediate branching in rice versus delayed branching in wheat/ IF module.type IN [‘IM’, ‘SM’]:
+maize ears, are achieved by setting different initial Mor values and UPDATE module parameters Time
+dynamic profiles for phytomers derived from different meristem UPDATE variables on the basis of developmental rules
+types or species. C HECK threshold conditions for phytomer production and
+3. Δt: This parameter represents the time required for a phytomer state transitions
+to form a AxM once it has entered the morphogenesis window UPDATE module parameters Loc
+(that is, Mor > Mor ). It corresponds biologically to the
+threshold
+plastochron for lateral primordium development. The identity # termination
+of the formed AxM is determined by the F value of the parent IF condition satisfies meristem termination:
+phytomer at the time of completion (T + Δt). MARK module as a degenerated meristem (degeneration)
+0
+OR
+Calibration of the model parameters—specifically the profiles REPLACE module with a lower-level meristem module
+of F and Mor, identity thresholds and Δt duration—was derived from (differentiation)
+Nature Plants
+
+===== PAGE 14 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+# producing new phytomers T transgenic lines were confirmed to show complementation. Two T
+1 1
+IF condition satisfies phytomer production: transgenic lines from each complementation experiment were then
+CREATE a new internode module and a new phytomer module: randomly selected for spike phenotype analysis.
+Module_N.type = ‘N’, Module_I.type = ‘I’
+Module_N.parameters, Module_I.parameters = (Time,Loc, RT-qPCR
+F,Mor,Δt) Vegetative organs, including shoot, root, leaf blade, leaf sheath, inter-
+INTEGRATE Module_N and Module_I into L_string node and phytomer, were collected from approximately four-week-old
+plants, immediately dissected and flash-frozen in liquid nitrogen.
+Module N generates new AxM modules under specific conditions. Young spike samples at distinct developmental stages were carefully
+The parameters of these newly formed AxM modules are determined by microdissected under a stereomicroscope using fine tweezers and
+those of the original N module, particularly the variables F, Mor and Δt. subsequently frozen in liquid nitrogen. All harvested samples were
+thoroughly homogenized in an MM300 mixer mill (Retsch) equipped
+IF module.type IN [‘N’]: with a 3-mm-diameter grinding ball. Total RNA was extracted from
+UPDATE module parameters Time each sample using the RNeasy Micro Kit (Qiagen), after which reverse
+UPDATE variables on the basis of developmental rules transcription was carried out with the TransScript One-Step gDNA
+CHECK threshold conditions for phytomer production and Removal and cDNA Synthesis SuperMix (TransGen). For gene expres-
+state transitions sion analysis, cDNA was synthesized from approximately 120 ng of
+UPDATE module parameters Loc total RNA using the TransScript II One-Step gDNA Removal and cDNA
+Synthesis SuperMix (TransGen, AH311-02). Quantitative PCR was
+# branching performed with the KAPA SYBR FAST qPCR Kit on a Bio-Rad CFX96
+IF branching conditions are met: real-time PCR detection system under the following cycling condi-
+CREATE a new meristem module: tions: initial denaturation at 94 °C for 3 min, followed by 40 cycles of
+New_Module.type = determine_type 94 °C for 20 s, 60 °C for 30 s and 72 °C for 20 s. The wheat β-actin gene
+New_Module.parameters = initialize_parameters (GenBank accession no. AB181991) served as the internal normaliza-
+New_Module.position = assign_position tion control. Each experiment included three biological replicates,
+and data analysis was conducted via the comparative CT method as
+INTEGRATE New_Module into L_string previously described48. The sequences of all primers used for RT-qPCR
+are provided in Supplementary Table 4.
+The L-system model was implemented using custom Python code,
+which is available at https://github.com/bfcui/grass_morphodynamics. Phylogenetic analysis
+The RA2-D protein sequence was used as a query against the Ensembl
+DNA extraction and polymorphic DNA marker development Plants database (http://plants.ensembl.org) via the Basic Local Align-
+Genomic DNA was isolated using the CTAB method42. Polymorphic SSR ment Search Tool (BLAST) with the default parameters to retrieve
+markers (Xgwm, Xwmc, Xbarc, Xcfa and Xcfd series) from GrainGenes homologues from other plant species, including Aegilops tauschii,
+(https://wheat.pw.usda.gov/GG3/) were screened across two bulked Brachypodium distachyon, Triticum urartu, Oryza sativa, Zea mays,
+pools: ten wild-type (normal spike) and ten paired-spikelet plants. Hordeum vulgare, Setaria italica, Glycine max, Physcomitrium patens,
+Markers showing genotype–phenotype concordance were selected Sorghum bicolor and Arabidopsis thaliana, with the criteria of >50%
+for F population genotyping (recombination frequency <40%)43. identity and a score >70%. A neighbour-joining phylogenetic tree was
+2
+DUO2-linked markers were designed using the Chinese Spring Ref- constructed on the basis of amino acid sequences using MEGA49 v.6.0,
+Seqv1.0 genome at WheatOmics44. and a bootstrap analysis was generated via the use of 1,000 replicates.
+The protein sequences are listed in Supplementary Table 5.
+Independence test and linkage analysis
+Genetic linkage mapping of the duo2 × cv. Fielder F population was Scanning electron microscopy analysis
+2
+performed using Mapmaker v.3.0 with the Kosambi mapping func- Young spikes of wheat plants grown in the greenhouse were sampled.
+tion45. Gene annotations were retrieved from WheatOmics44. Sample fixation, processing and image photography were conducted
+as previously described35.
+Gene editing and plant transformation
+RA2 knockout mutants were generated using the CRISPR–Cas9 system. In situ RNA hybridization
+Briefly, the exon sequences of RA2 were used to design sgRNAs with DUO-D2, Wknox1 and Histone H4 antisense and sense probes were
+the web-based E-CRISPR program (http://www.e-crisp.org/ECRISP/). PCR-amplified, cloned into the pEASY-Blunt cloning vector (TransGen
+The MT1T2 vector was amplified using two pairs of primers contain- Biotech, cat. no. CB101) and synthesized using T7 RNA polymerase
+ing the sgRNAs and cloned into the CRISPR–Cas9 vector pBUE411 as (Promega, cat. no. P2075) with digoxigenin labelling (Roche, cat.
+described previously46. Genotyping of 18 independent T plant lines no. 11277073910). The full-length probes were then hydrolysed to
+0
+was performed via PCR amplification of genomic DNA, followed by an average length of 150 bp and resuspended in 50% formamide at
+Sanger sequencing. Six independent RA2 knockout lines were obtained the desired concentrations. Immature inflorescences at different
+(editing efficiency ~33.3%), and two independent T knockout mutants developmental stages were isolated and fixed in 4% (w/v) paraform-
+2
+were randomly selected for spike architecture evaluation. aldehyde in 1× PBS (pH 7.0–7.2) overnight at 4 °C. The fixed samples
+For complementation, a ~5-kb genomic fragment of RA2-D, con- were further dehydrated through an ethanol series, cleared in Histo-
+taining 4 kb of the 5′ upstream region, the gene coding sequence and choice (Sigma-Aldrich, cat. no. H2779) and embedded in Leica paraffin
+0.5 kb of the 3′ downstream region, was PCR-amplified from cv. NC4 and wax. The paraffin samples were cut into 8-μm-thick sections, and the
+cv. Fielder genomic DNA, respectively, using COM-F and COM-R prim- hybridization and washing processes were performed according to
+ers, and cloned into the pMOA36 vector. The resulting constructs were a previously described protocol50. Both the probe hybridization and
+transformed via Agrobacterium-mediated transformation47. For com- washing steps were performed at 55 °C, and signal detection by NBT/
+plementation, we obtained 18 (for duo2) and 20 (for ra2_m1) independ- BCIP (Roche, cat. no. 11681451001) was conducted at room tempera-
+ent T lines. From these, 10 (for duo2) and 12 (for ra2_m1) independent ture. The sections were mounted within 50% (v/v) glycerol, and optical
+0
+Nature Plants
+
+===== PAGE 15 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+photographs were taken with a Nikon ECLIPSE Ni-U microscope with a ×10 11. Li, Y. et al. A genome-wide view of transcriptome dynamics during
+air objective. To better compare Wknox1 and Histone H4 expression early spike development in bread wheat. Sci. Rep. 8, 15338 (2018).
+between cv. NC4 and duo2, the paraffin sections of both genotypes were 12. Gardner, J. S., Hess, W. M. & Trione, E. J. Development of the
+placed on the same slide for hybridization. The primers are provided young wheat spike: a SEM study of Chinese Spring wheat.
+in Supplementary Table 4 or were described before35. Am. J. Bot. 72, 548–559 (1985).
+13. Li, G., Zhang, H., Li, J., Zhang, Z. & Li, Z. Genetic control of panicle
+EMSA architecture in rice. Crop J. 9, 590–597 (2021).
+The full-length coding sequence (cDNA) of RA2-D was amplified from 14. Kyozuka, J., Tokunaga, H. & Yoshida, A. Control of grass
+young spike cDNA of cv. NC4 and cloned into the pGADT7 vector for inflorescence form by the fine-tuning of meristem phase change.
+in vitro translation using a TNT T7/SP6 Coupled Wheat Germ Extract Curr. Opin. Plant Biol. 17, 110–115 (2014).
+System (Promega). The 5′-(G)CGGC(G)-3′ binding motifs and their 15. McSteen, P. & Kellogg, E. A. Molecular, cellular, and
+flanking sequences in the promoter regions of FT-A1, FT-B1 and FT-D1 developmental foundations of grass diversity. Science 377,
+were synthesized as biotin-labelled primers. A 100× excess of unla- 599–602 (2022).
+belled probes was used as competitors. All primer sequences are pro- 16. Lindenmayer, A. Developmental algorithms for multicellular
+vided in Supplementary Table 4. organisms: a survey of L-systems. J. Theor. Biol. 54, 3–22 (1975).
+17. Prusinkiewicz, P. & Lindenmayer, A. The Algorithmic Beauty of
+Statistical analyses Plants (Springer-Verlag, 1990).
+Statistical analyses were conducted using GraphPad Prism v.8.0.2 18. Bonnett, O. T. Inflorescences of Maize, Wheat, Rye, Barley, and
+(https://www.graphpad.com/). The chi-squared test assessed goodness Oats: Their Initiation and Development (University of Illinois,
+of fit, with two-tailed Student’s t-test applied for group comparisons. College of Agriculture, Agricultural Experiment Station, 1966).
+All experimental data are expressed as means ± s.d., with detailed 19. Shanmugaraj, N. et al. Multilayered regulation of developmentally
+parameters annotated in the corresponding figure legends. Sample programmed pre-anthesis tip degeneration of the barley
+sizes (n) and statistical significance levels are denoted. inflorescence. Plant Cell 35, 3973–4001 (2023).
+20. Pei, Y. et al. EAR APICAL DEGENERATION1 regulates maize
+Reporting summary ear development by maintaining malate supply for apical
+Further information on research design is available in the Nature inflorescence. Plant Cell 34, 2222–2241 (2022).
+Portfolio Reporting Summary linked to this article. 21. Wolde, G. M., Trautewig, C., Mascher, M. & Schnurbusch, T.
+Genetic insights into morphometric inflorescence traits of wheat.
+Data availability Theor. Appl. Genet. 132, 1661–1676 (2019).
+Source data are provided with this paper. All other data are available 22. Boden, S. A. et al. Ppd-1 is a key regulator of inflorescence
+in the Article and Supplementary Information. architecture and paired spikelet development in wheat.
+Nat. Plants 1, 14016 (2015).
+Code availability 23. Waddington, S. R., Cartwright, P. M. & Wall, P. C. A quantitative
+The code for modelling is available via GitHub at https://github.com/ scale of spike initial and pistil development in barley and wheat.
+bfcui/grass_morphodynamics. Ann. Bot. 51, 119–130 (1983).
+24. Dixon, L. E. et al. MicroRNA-resistant alleles of HOMEOBOX
+References DOMAIN-2 modify inflorescence branching and increase grain
+1. Young, J. J. & Tabin, C. J. Saunders’s framework for understanding protein content of wheat. Sci. Adv. 8, eabn5907 (2022).
+limb development as a platform for investigating limb evolution. 25. Fowler, D. B. Influence of delayed seeding on yield, hectolitre
+Dev. Biol. 429, 401–408 (2017). weight and seed size of stubble-seeded winter wheat and rye
+2. Prusinkiewicz, P., Erasmus, Y., Lane, B., Harder, L. D. & Coen, E. grown in Saskatchewan. Can. J. Plant Sci. 66, 553–557 (1986).
+Evolution and development of inflorescence architectures. 26. Entz, M. H. & Fowler, D. B. Agronomic performance of winter
+Science 316, 1452–1456 (2007). versus spring wheat. Agron. J. 83, 527–532 (1991).
+3. Koppolu, R. & Schnurbusch, T. Developmental pathways for 27. Monjardino, M., Hochman, Z. & Horan, H. Yield potential
+shaping spike inflorescence architecture in barley and wheat. determines Australian wheat growers’ capacity to close yield gaps
+J. Integr. Plant Biol. 61, 278–295 (2019). while mitigating economic risk. Agron. Sustain. Dev. 39, 49 (2019).
+4. Gauley, A. & Boden, S. A. Genetic pathways controlling 28. International Wheat Genome Sequencing Consortium Shifting
+inflorescence architecture and development in wheat and barley. the limits in wheat research and breeding using a fully annotated
+J. Integr. Plant Biol. 61, 296–309 (2019). reference genome. Science 361, eaar7191 (2018).
+5. Zhang, X. et al. TaCol-B5 modifies spike architecture and 29. Koppolu, R. et al. Six-rowed spike4 (Vrs4) controls spikelet
+enhances grain yield in wheat. Science 376, 180–183 (2022). determinacy and row-type in barley. Proc. Natl Acad. Sci. USA 110,
+6. Zhang, X. et al. Enhancing rice panicle branching and grain yield 13198–13203 (2013).
+through tissue-specific brassinosteroid inhibition. Science 383, 30. Bortiri, E. et al. ramosa2 encodes a LATERAL ORGAN BOUNDARY
+eadk8838 (2024). domain protein that determines the fate of stem cells in branch
+7. Debernardi, J. M., Lin, H., Chuck, G., Faris, J. D. & Dubcovsky, J. meristems of maize. Plant Cell 18, 574–585 (2006).
+microRNA172 plays a crucial role in wheat spike morphogenesis 31. Shuai, B., Reynaga-Peña, C. G. & Springer, P. S. The Lateral Organ
+and grain threshability. Development 144, 1966–1975 (2017). Boundaries gene defines a novel, plant-specific gene family.
+8. Dobrovolskaya, O. et al. FRIZZY PANICLE drives supernumerary Plant Physiol. 129, 747–761 (2002).
+spikelets in bread wheat. Plant Physiol. 167, 189–199 (2015). 32. Chen, Z. et al. A single nucleotide deletion in the third exon of FT-D1
+9. Poursarebani, N. et al. The genetic basis of composite increases the spikelet number and delays heading date in wheat
+spike form in barley and ‘miracle-wheat’. Genetics 201, 155–165 (Triticum aestivum L.). Plant Biotechnol. J. 20, 920–933 (2022).
+(2015). 33. Husbands, A., Bell, E. M., Shuai, B., Smith, H. M. S. & Springer,
+10. Roeder, A. H. K. et al. Computational morphodynamics of plants: P. S. LATERAL ORGAN BOUNDARIES defines a new family of
+integrating development over space and time. Nat. Rev. Mol. DNA-binding transcription factors and can interact with specific
+Cell Biol. 12, 265–273 (2011). bHLH proteins. Nucleic Acids Res. 35, 6663–6671 (2007).
+Nature Plants
+
+===== PAGE 16 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+34. Coen, E. & Prusinkiewicz, P. Developmental timing in plants. Acknowledgements
+Nat. Commun. 15, 2674 (2024). We thank S. Boden for fruitful discussions and critical comments
+35. Wang, Y. et al. Improving bread wheat yield through modulating on the manuscript. We also acknowledge the Core Facilities of Life
+an unselected AP2/ERF gene. Nat. Plants 8, 930–939 (2022). Sciences at Peking University and the State Key Laboratory of Plant
+36. Molero, G. et al. Elucidating the genetic basis of biomass Genomics for assistance with scanning electron microscopy.
+accumulation and radiation use efficiency in spring wheat and This work was supported by the National Key R&D Program of China
+its role in yield potential. Plant Biotechnol. J. 17, 1276–1288 (grant no. 2024YFF1000301), the Natural Science Foundation of China
+(2019). (grant no. 32230010) and the Shandong Provincial Natural Science
+37. Quintero, A., Molero, G., Reynolds, M. P. & Calderini, D. F. Trade-off Foundation (grant nos SYS202206 and ZR2022ZD22).
+between grain weight and grain number in wheat depends on
+GxE interaction: a case study of an elite CIMMYT panel (CIMCOG). Author contributions
+Eur. J. Agron. 92, 17–29 (2018). Y.J. conceived of the study. B.C. designed the computational model
+38. Gauley, A. et al. Photoperiod-1 regulates the wheat inflorescence and performed the modelling. Y.W. characterized the mutants and
+transcriptome to influence spikelet architecture and flowering performed the molecular cloning and field analysis. F.D. performed
+time. Curr. Biol. 34, 2330–2343.e4 (2024). the imaging and expression analysis. J.L. performed the genetic
+39. Bell, E. M. et al. Arabidopsis LATERAL ORGAN BOUNDARIES transformation. Y.J., Y.W. and B.C. wrote the manuscript, with input
+negatively regulates brassinosteroid accumulation to limit growth from all authors.
+in organ boundaries. Proc. Natl Acad. Sci. USA 109, 21146–21151
+(2012). Competing interests
+40. Sakuma, S. et al. Unleashing floret fertility in wheat through the The authors declare no competing interests.
+mutation of a homeobox gene. Proc. Natl Acad. Sci. USA 116,
+5182–5187 (2019). Additional information
+41. Boudon, F., Pradal, C., Cokelaer, T., Prusinkiewicz, P. & Godin, C. Extended data is available for this paper at
+L-Py: an L-system simulation framework for modeling plant https://doi.org/10.1038/s41477-026-02246-3.
+architecture development based on a dynamic language.
+Front. Plant Sci. 3, 76 (2012). Supplementary information The online version contains supplementary
+42. Allen, G. C., Flores-Vergara, M. A., Krasynanski, S., Kumar, S. & material available at https://doi.org/10.1038/s41477-026-02246-3.
+Thompson, W. F. A modified protocol for rapid DNA isolation from
+plant tissues using cetyltrimethylammonium bromide. Correspondence and requests for materials should be addressed to
+Nat. Protoc. 1, 2320–2325 (2006). Yuling Jiao.
+43. Hao, Y. et al. Pm23: a new allele of Pm4 located on chromosome
+2AL in wheat. Theor. Appl. Genet. 117, 1205–1212 (2008). Peer review information Nature Plants thanks Jin-Ying Gou,
+44. Ma, S. et al. WheatOmics: a platform combining multiple omics Helmy M. Youssef and the other, anonymous reviewer(s) for their
+data to accelerate functional genomics studies in wheat. Mol. contribution to the peer review of this work.
+Plant 14, 1965–1968 (2021).
+45. Kosambi, D. D. in D. D. Kosambi: Selected Works in Mathematics Reprints and permissions information is available at
+and Statistics (ed. Ramaswamy, R.) 125–130 (Springer India, 2016). www.nature.com/reprints.
+46. Xing, H.-L. et al. A CRISPR/Cas9 toolkit for multiplex genome
+editing in plants. BMC Plant Biol. 14, 327 (2014). Publisher’s note Springer Nature remains neutral with regard to
+47. Ishida, Y., Tsunashima, M., Hiei, Y. & Komari, T. in Agrobacterium jurisdictional claims in published maps and institutional affiliations.
+Protocols Vol. 1 (ed. Wang, K.) 189–198 (Springer New York, 2015).
+48. Livak, K. J. & Schmittgen, T. D. Analysis of relative gene expression Springer Nature or its licensor (e.g. a society or other partner) holds
+data using real-time quantitative PCR and the 2−ΔΔCT method. exclusive rights to this article under a publishing agreement with
+Methods 25, 402–408 (2001). the author(s) or other rightsholder(s); author self-archiving of the
+49. Tamura, K. et al. MEGA6: Molecular Evolutionary Genetics accepted manuscript version of this article is solely governed by the
+Analysis version 6.0. Mol. Biol. Evol. 30, 2725–2729 (2013). terms of such publishing agreement and applicable law.
+50. Zhang, Z., Tucker, E., Hermann, M. & Laux, T. A molecular
+framework for the embryonic initiation of shoot meristem stem © The Author(s), under exclusive licence to Springer Nature Limited
+cells. Dev. Cell 40, 264–277.e4 (2017). 2026
+Nature Plants
+
+===== PAGE 17 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+Extended Data Fig. 1 | See next page for caption.
+Nature Plants
+
+===== PAGE 18 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+Extended Data Fig. 1 | Plant modules and simulation loop for the grass components: ‘I’ represents the internode, ‘N’ represents the phytomer, and ‘IM’
+inflorescence model. a, Schematic illustration of a young wheat spike, defining represents the terminal meristem, thus establishing the spatial connectivity of
+the inflorescence meristem (IM) and the repeating phytomer units. b, Symbolic spike architecture. c, Algorithmic framework of the simulation loop. The model
+representation of the young spike topology within the L-system model. The iteratively updates the state of each module based on developmental rules
+L-string (for example, I-N-I-N-IM) formally maps recursive modules to physical governed by environmental and physiological parameters (F, Mor, and Δt).
+Nature Plants
+
+===== PAGE 19 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+Extended Data Fig. 2 | Computational modeling of AxM dynamics across the FM fate after branching. (b) In rice primary BM, F maintains the IM identity
+cereal species. a-c, Temporal progression of variables on AxMs, with red in basal phytomers but transitions to the SM identity in upper phytomers. (c) In
+triangles along the x-axis marking FM formation. Other diagram components maize tassel and ear BMs, F acquire the SPM fate following branching.
+follow the conventions established in Fig. 2d‒h. (a) In wheat SM, F declines to
+Nature Plants
+
+===== PAGE 20 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+Extended Data Fig. 3 | Targeted mutagenesis of WFZP-D via CRISPR/Cas9. Schematic of two sgRNA target sites in WFZP-D. PAM sequences are highlighted in red.
+The mutant allele features a 240-bp deletion.
+Nature Plants
+
+===== PAGE 21 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+Extended Data Fig. 4 | Comparative phenotyping of duo2 mutant under (n = 15 biologically independent samples). e-g, Quantitative trait analysis:
+controlled conditions. a, Analysis of the fertility of secondary spikelets in (e) Tiller number per plant (n = 15 biologically independent samples), (f) plant
+duo2 (n = 20 biologically independent samples). b, Comparison of fertile floret height (n = 20 biologically independent samples), and (g) 1000-grain weight
+number between primary and secondary spikelets in duo2 (n = 20 biologically (n = 10 biologically independent samples). Data are represented as means ± s.d.
+independent samples). PS, primary spikelet; SS, secondary spikelet. Statistically significance was determined using a two-sided Student’s t test in b
+c, Visualization of rachis architecture, where false-color labeling in purple and d-g. Box plots span the first and third quartiles, the center lines denote the
+highlights the elongated spikelet pedicels in duo2. Scale bar, 3 cm. medians, and the whiskers indicate the minimum and maximum sample values
+d, Statistical comparison of rachilla length between cv. NC4 and duo2 in a-b and d-g.
+Nature Plants
+
+===== PAGE 22 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+Extended Data Fig. 5 | See next page for caption.
+Nature Plants
+
+===== PAGE 23 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+Extended Data Fig. 5 | Field performance of duo2 at two different sowing index (n = 10 biologically independent samples). f, Grain yield per m2 (n = 10
+densities at two sites. Field trials were conducted during the 2021/2022 biologically independent samples). g, Tiller number per spike (n = 20 biologically
+growing season at two locations, in Zhaoxian (ZX), Hebei and Changping (CP), independent samples). h, Plant height (n = 20 biologically independent samples).
+Beijing, under low sowing density (180 seeds/m2) and high sowing density Data are represented as means ± s.d. Statistically significance was determined
+(360 seeds/m2). a, Grain number per spike (n = 20 biologically independent using a two-sided Student’s t test in a-h. Box plots span the first and third
+samples). b, Spikelet number per spike (n = 20 biologically independent quartiles, the center lines denote the medians, and the whiskers indicate the
+samples). c, 1000-grain weight (n = 10 biologically independent samples). minimum and maximum sample values in a-h.
+d, Spike fertility index (n = 10 biologically independent samples). e, Harvest
+Nature Plants
+
+===== PAGE 24 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+Extended Data Fig. 6 | Phylogenetic analyses of RA2-D homologs in selected Zea mays (Zm00001eb123060), Hordeum vulgare (HORVU.MOREX.
+eudicots and monocots. The maximum-likelihood tree was constructed using r3.3HG0233930.1), Physcomitrium patens (pp3c19_19400), Triticum urartu
+MEGA6 with the neighbor-joining method, and the numbers at each node (TuG1812G0300001042.01), Setaria italica (ETIT_002632mg), Glycine max
+indicate bootstrap values obtained for 1,000 replicates. The analysis includes (GLYMA_17G086300), Sorghum bicolor (SORBI_3003G052900), and Triticum
+the following species and their respective gene identifiers: Brachypodium aestivum (TraesCS3A02G093200 [RA2-A], TraesCS3B02G108500 [RA2-B] and
+distachyon (BRADI_2g04270v3), Aegilops tauschii (AET3Gv20202400), TraesCS3D02G093500).
+Oryza sativa (LOC_Os01 g07480), Arabidopsis thaliana (AT5G63090),
+Nature Plants
+
+===== PAGE 25 =====
+
+Article https://doi.org/10.1038/s41477-026-02246-3
+Extended Data Fig. 7 | Field evaluation of RA2 homeologs knockout mutants per spike (n = 20 biologically independent samples). d, 1000-grain weight (n = 10
+under contrasting sowing densities. CRISPR/Cas9-generated ra2 mutant alleles biologically independent samples). e, Grain weight per plant (n = 10 biologically
+(m1 and m2) and wild-type cv. Fielder were evaluated during 2021/2022 growing independent samples). f, Grain yield per m2 (n = 10 biologically independent
+season at two field sites: Zhaoxian (ZX), Hebei and Changping (CP), Beijing, under samples). Data are represented as means ± s.d. Statistically significance was
+low sowing density (180 seeds/m2) and high sowing density (360 seeds/m2). determined using a two-sided Student’s t test in a-f. Box plots span the first and
+a, Spikelet number per spike (n = 20 biologically independent samples). b, Tiller third quartiles, the center lines denote the medians, and the whiskers indicate the
+number per plant (n = 20 biologically independent samples). c, Grain number minimum and maximum sample values in a-f.
+Nature Plants
+
+===== PAGE 26 =====
+
+
+
+===== PAGE 27 =====
+
+
+
+===== PAGE 28 =====
+

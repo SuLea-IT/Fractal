@@ -1,0 +1,567 @@
+
+
+===== PAGE 1 =====
+
+PublishedasaconferencepaperatICLR2017
+FRACTALNET:
+ULTRA-DEEP NEURAL NETWORKS WITHOUT RESIDUALS
+GustavLarsson MichaelMaire GregoryShakhnarovich
+UniversityofChicago TTIChicago TTIChicago
+larsson@cs.uchicago.edu mmaire@ttic.edu greg@ttic.edu
+ABSTRACT
+Weintroduceadesignstrategyforneuralnetworkmacro-architecturebasedonself-
+similarity.Repeatedapplicationofasimpleexpansionrulegeneratesdeepnetworks
+whosestructurallayoutsarepreciselytruncatedfractals. Thesenetworkscontain
+interactingsubpathsofdifferentlengths,butdonotincludeanypass-throughor
+residualconnections;everyinternalsignalistransformedbyafilterandnonlinearity
+beforebeingseenbysubsequentlayers. Inexperiments,fractalnetworksmatch
+the excellent performance of standard residual networks on both CIFAR and
+ImageNetclassificationtasks,therebydemonstratingthatresidualrepresentations
+may not be fundamental to the success of extremely deep convolutional neural
+networks. Rather,thekeymaybetheabilitytotransition,duringtraining,from
+effectivelyshallowtodeep. Wenotesimilaritieswithstudent-teacherbehaviorand
+developdrop-path,anaturalextensionofdropout,toregularizeco-adaptationof
+subpaths in fractal architectures. Such regularization allows extraction of high-
+performancefixed-depthsubnetworks. Additionally,fractalnetworksexhibitan
+anytime property: shallow subnetworks provide a quick answer, while deeper
+subnetworks,withhigherlatency,provideamoreaccurateanswer.
+1 INTRODUCTION
+Residualnetworks(Heetal.,2016a),orResNets,leadarecentanddramaticincreaseinbothdepthand
+accuracyofconvolutionalneuralnetworks,facilitatedbyconstrainingthenetworktolearnresiduals.
+ResNetvariants(Heetal.,2016a;b;Huangetal.,2016b)andrelatedarchitectures(Srivastavaetal.,
+2015)employthecommontechniqueofinitializingandanchoring,viaapass-throughchannel,a
+networktotheidentityfunction. Trainingnowdiffersintworespects. First,theobjectivechanges
+tolearningresidualoutputs,ratherthanunreferencedabsolutemappings. Second,thesenetworks
+exhibitatypeofdeepsupervision(Leeetal.,2014),asnear-identitylayerseffectivelyreducedistance
+totheloss. Heetal.(2016a)speculatethattheformer,theresidualformulationitself,iscrucial.
+Weshowotherwise,byconstructingacompetitiveextremelydeeparchitecturethatdoesnotrelyon
+residuals. Ourdesignprincipleispureenoughtocommunicateinasingleword,fractal,andasimple
+diagram(Figure1). Yet,fractalnetworksimplicitlyrecapitulatemanypropertieshard-wiredinto
+previoussuccessfularchitectures. Deepsupervisionnotonlyarisesautomatically,butalsodrivesa
+typeofstudent-teacherlearning(Ba&Caruana,2014;Urbanetal.,2017)internaltothenetwork.
+Modularbuildingblocksofotherdesigns(Szegedyetal.,2015;Liao&Carneiro,2015)resemble
+specialcasesofafractalnetwork’snestedsubstructure.
+Forfractalnetworks,simplicityoftrainingmirrorssimplicityofdesign. Asingleloss,attachedtothe
+finallayer,sufficestodriveinternalbehaviormimickingdeepsupervision. Parametersarerandomly
+initialized. Astheycontainsubnetworksofmanydepths,fractalnetworksarerobusttochoiceof
+overalldepth;makethemdeepenoughandtrainingwillcarveoutausefulassemblyofsubnetworks.
+The entirety of emergent behavior resulting from a fractal design may erode the need for recent
+engineeringtricksintendedtoachievesimilareffects. Thesetricksincluderesidualfunctionalforms
+withidentityinitialization,manualdeepsupervision,hand-craftedarchitecturalmodules,andstudent-
+teachertrainingregimes. Section2reviewsthislargebodyofrelatedtechniques. Hybriddesigns
+couldcertainlyintegrateanyofthemwithafractalarchitecture;weleaveopenthequestionofthe
+degreetowhichsuchhybridsaresynergistic.
+1
+7102
+yaM
+62
+]VC.sc[
+4v84670.5061:viXra
+
+===== PAGE 2 =====
+
+PublishedasaconferencepaperatICLR2017
+zz x
+FractalExpansionRule
+z z
+Block1
+f
+C
+f
+C
+Block2
+f
+C
+Block3
+f pzq f pzq
+C C`1
+Block4
+LayerKey
+Convolution Block5
+Join
+Pool
+Prediction
+ff ppzzqq y
+44
+Figure1: Fractalarchitecture. Left: Asimpleexpansionrulegeneratesafractalarchitecturewith
+Cintertwinedcolumns.Thebasecase,f pzq,hasasinglelayerofthechosentype(e.g.convolutional)
+1
+between input and output. Join layers compute element-wise mean. Right: Deep convolutional
+networksperiodicallyreducespatialresolutionviapooling. Afractalversionusesf asabuilding
+C
+blockbetweenpoolinglayers. StackingBsuchblocksyieldsanetworkwhosetotaldepth,measured
+intermsofconvolutionlayers,isB¨2C´1. Thisexamplehasdepth40(B “5,C “4).
+Ourmaincontributionistwofold:
+• We introduce FractalNet, the first simple alternative to ResNet. FractalNet shows that
+explicitresiduallearningisnotarequirementforbuildingultra-deepneuralnetworks.
+• Throughanalysisandexperiments,weelucidateconnectionsbetweenFractalNetandan
+arrayofphenomenaengineeredintopreviousdeepnetworkdesigns.
+As an additional contribution, we develop drop-path, a novel regularization protocol for ultra-
+deep fractal networks. Without data augmentation, fractal networks, trained with drop-path and
+dropout(Hintonetal.,2012),exceedtheperformanceofresidualnetworksregularizedviastochastic
+depth (Huang et al., 2016b). Though, like stochastic depth, it randomly removes macro-scale
+components,drop-pathfurtherexploitsourfractalstructureinchoosingwhichcomponentstodisable.
+Drop-path constitutes not only a regularization strategy, but also provides means of optionally
+impartingfractalnetworkswithanytimebehavior. Aparticularscheduleofdroppedpathsduring
+learningpreventssubnetworksofdifferentdepthsfromco-adapting. Asaconsequence,bothshallow
+anddeepsubnetworksmustindividuallyproducecorrectoutput. Queryingashallowsubnetworkthus
+yieldsaquickandmoderatelyaccurateresultinadvanceofcompletionofthefullnetwork.
+Section 3 elaborates the technical details of fractal networks and drop-path. Section 4 provides
+experimental comparisons to residual networks across the CIFAR-10, CIFAR-100 (Krizhevsky,
+2009),SVHN(Netzeretal.,2011),andImageNet(Dengetal.,2009)datasets. Wealsoevaluate
+regularizationanddataaugmentationstrategies, investigatesubnetworkstudent-teacherbehavior
+during training, and benchmark anytime networks obtained using drop-path. Section 5 provides
+synthesis. Byvirtueofencapsulatingmanyknown,yetseeminglydistinct,designprinciples,self-
+similarstructuremaymaterializeasafundamentalcomponentofneuralarchitectures.
+2
+
+===== PAGE 3 =====
+
+PublishedasaconferencepaperatICLR2017
+2 RELATED WORK
+Deepeningfeed-forwardneuralnetworkshasgenerallyreturneddividendsinperformance. Astriking
+examplewithinthecomputervisioncommunityistheimprovementontheImageNet(Dengetal.,
+2009)classificationtaskwhentransitioningfromAlexNet(Krizhevskyetal.,2012)toVGG(Si-
+monyan & Zisserman, 2015) to GoogLeNet (Szegedy et al., 2015) to ResNet (He et al., 2016a).
+Unfortunately,greaterdepthalsomakestrainingmorechallenging,atleastwhenemployingafirst-
+orderoptimizationmethodwithrandomlyinitializedlayers. Asthenetworkgrowsdeeperandmore
+non-linear,thelinearapproximationofagradientstepbecomesincreasinglyinappropriate. Desireto
+overcomethesedifficultiesdrivesresearchonbothoptimizationtechniquesandnetworkarchitectures.
+Ontheoptimizationside,muchrecentworkyieldsimprovements. Topreventvanishinggradients,
+ReLUactivationfunctionsnowwidelyreplacesigmoidandtanhunits(Nair&Hinton,2010). This
+subjectremainsanareaofactiveinquiry,withvarioustweaksonReLUs,e.g.PReLUs(Heetal.,2015),
+andELUs(Clevertetal.,2016). EvenwithReLUs,employingbatchnormalization(Ioffe&Szegedy,
+2015)speedstrainingbyreducinginternalcovariateshift. Goodinitializationcanalsoameliorate
+thisproblem(Glorot&Bengio,2010;Mishkin&Matas,2016). Path-SGD(Neyshaburetal.,2015)
+offersanalternativenormalizationscheme. Progressinoptimizationissomewhatorthogonaltoour
+architecturalfocus,withtheexpectationthatadvancesineitherareripeforcombination.
+Notableideasinarchitecturereachbacktoskipconnections, theearliestexampleofanontrivial
+routingpatternwithinaneuralnetwork.Recentworkfurtherelaboratesuponthem(Maireetal.,2014;
+Hariharanetal.,2015). Highwaynetworks(Srivastavaetal.,2015)andResNet(Heetal.,2016a;b)
+offeradditionaltwistsintheformofparameterizedpass-throughandgating. Inworksubsequent
+toourown,Huangetal.(2016a)investigateaResNetvariantwithexplicitskipconnections. These
+methodssharedistinctionastheonlyotherdesignsdemonstratedtoscaletohundredsoflayersand
+beyond.ResNet’sbuildingblockusestheidentitymapasananchorpointandexplicitlyparameterizes
+anadditivecorrectionterm(theresidual).Identityinitializationalsoappearsinthecontextofrecurrent
+networks(Leetal.,2015). AtendencyofResNetandhighwaynetworkstofall-backtotheidentity
+mapmaymaketheireffectivedepthmuchsmallerthantheirnominaldepth.
+SomepriorresultshintatwhatweexperimentallydemonstrateinSection4. Namely,reductionof
+effective depth is key to training extremely deep networks; residuals are incidental. Huang et al.
+(2016b)provideoneclueintheirworkonstochasticdepth: randomlydroppinglayersfromResNet
+duringtraining,therebyshrinkingnetworkdepthbyaconstantfactor,providesadditionalperformance
+benefit. Webuilduponthisintuitionthroughdrop-path,whichshrinksdepthmuchmoredrastically.
+Thesuccessofdeepsupervision(Leeetal.,2014)providesanothercluethateffectivedepthiscrucial.
+Here,anauxiliaryloss,forkedoffmid-levellayers,introducesashorterpathduringbackpropagation.
+The layer at the fork receives two gradients, originating from the main loss and the auxiliary
+loss, that are added together. Deep supervision is now common, being adopted, for example, by
+GoogLeNet(Szegedyetal.,2015). However,irrelevanceoftheauxiliarylossattesttimeintroduces
+thedrawbackofhavingadiscrepancybetweentheactualobjectiveandthatusedfortraining.
+Exploration of the student-teacher paradigm (Ba & Caruana, 2014) illuminates the potential for
+interplaybetweennetworksofdifferentdepth. Inthemodelcompressionscenario,adeepernetwork
+(previouslytrained)guidesandimprovesthelearningofashallowerandfasterstudentnetwork(Ba
+&Caruana,2014;Urbanetal.,2017). Thisisaccomplishedbyfeedingunlabeleddatathroughthe
+teacherandhavingthestudentmimictheteacher’ssoftoutputpredictions. FitNets(Romeroetal.,
+2015)explicitlycouplestudentsandteachers,forcingmimicbehavioracrossseveralintermediate
+pointsinthenetwork. Ourfractalnetworkscaptureyetanotheralternative,intheformofimplicit
+coupling,withthepotentialforbidirectionalinformationflowbetweenshallowanddeepsubnetworks.
+Wideningnetworks,byusinglargermodulesinplaceofindividuallayers,hasalsoproducedper-
+formancegains. Forexample,anInceptionmodule(Szegedyetal.,2015)concatenatesresultsof
+convolutionallayersofdifferentreceptivefieldsize. StackingthesemodulesformstheGoogLeNetar-
+chitecture. Liao&Carneiro(2015)employavariantwithmaxoutinplaceofconcatenation. Figure1
+makesapparentourconnectionwithsuchwork. Asafractalnetworkdeepens,italsowidens. More-
+over,notethatstackingtwo2Dconvolutionallayerswiththesamespatialreceptivefield(e.g.3ˆ3)
+achievesalarger(5ˆ5)receptivefield. Ahorizontalcross-sectionofafractalnetworkisreminiscent
+ofanInceptionmodule,exceptwithadditionaljoinsduetorecursivestructure.
+3
+
+===== PAGE 4 =====
+
+PublishedasaconferencepaperatICLR2017
+3 FRACTAL NETWORKS
+WebeginwithamoreformalpresentationoftheideassketchedinFigure1. Convolutionalneural
+networksserveasourrunningexampleand,inthesubsequentsection,ourexperimentalplatform.
+However,itisworthemphasizingthatourframeworkismoregeneral. Inprinciple,convolutional
+layersinFigure1couldbereplacedbyadifferentlayertype,orevenacustom-designedmoduleor
+subnetwork,inordertogenerateotherfractalarchitectures.
+LetC denotetheindexofthetruncatedfractalf p¨q. Ournetwork’sstructure,connectionsandlayer
+C
+types,isdefinedbyf p¨q. Anetworkconsistingofasingleconvolutionallayeristhebasecase:
+C
+f pzq“convpzq (1)
+1
+Wedefinesuccessivefractalsrecursively:
+f pzq“rpf ˝f qpzqs‘rconvpzqs (2)
+C`1 C C
+where ˝ denotes composition and ‘ a join operation. When drawn in the style of Figure 1, C
+correspondstothenumberofcolumns,orwidth,ofnetworkf p¨q. Depth,definedtobethenumber
+C
+ofconvlayersonthelongestpathbetweeninputandoutput,scalesas2C´1. Convolutionalnetworks
+for classification typically intersperse pooling layers. We achieve the same by using f p¨q as a
+C
+buildingblockandstackingitwithsubsequentpoolinglayersBtimes,yieldingtotaldepthB¨2C´1.
+Thejoinoperation‘mergestwofeatureblobsintoone. Here,ablobistheresultofaconvlayer: a
+tensorholdingactivationsforafixednumberofchannelsoveraspatialdomain. Thechannelcount
+correspondstothesizeofthefiltersetintheprecedingconvlayer. Asthefractalisexpanded,we
+collapseneighboringjoinsintoasinglejoinlayerwhichspansmultiplecolumns,asshownonthe
+rightsideofFigure1. Thejoinlayermergesallofitsinputfeatureblobsintoasingleoutputblob.
+Severalchoicesseemreasonablefortheactionofajoinlayer,includingconcatenationandaddition.
+Weinstantiate eachjoin to compute the element-wise mean ofits inputs. Thisis appropriatefor
+convolutionalnetworksinwhichchannelcountissetthesameforallconvlayerswithinafractalblock.
+AveragingmightappearsimilartoResNet’sadditionoperation,buttherearecriticaldifferences:
+• ResNetmakescleardistinctionbetweenpass-throughandresidualsignals. InFractalNet,no
+signalisprivileged. Everyinputtoajoinlayeristheoutputofanimmediatelypreceding
+convlayer. Thenetworkstructurealonecannotidentifyanyasbeingprimary.
+• Drop-pathregularization,asdescribednextinSection3.1,forceseachinputtoajointobe
+individuallyreliable. Thisreducestherewardforevenimplicitlylearningtoallocatepartof
+onesignaltoactasaresidualforanother.
+• Experimentsshowthatwecanextracthigh-performancesubnetworksconsistingofasingle
+column(Section4.2). Suchasubnetworkiseffectivelydevoidofjoins,asonlyasinglepath
+isactivethroughout. Theyproducenosignaltowhicharesidualcouldbeadded.
+Together,thesepropertiesensurethatjoinlayersarenotanalternativemethodofresiduallearning.
+3.1 REGULARIZATIONVIADROP-PATH
+Dropout (Hinton et al., 2012) and drop-connect (Wan et al., 2013) modify interactions between
+sequential network layers in order to discourage co-adaptation. Since fractal networks contain
+additionalmacro-scalestructure, weproposetocomplementthesetechniqueswithananalogous
+coarse-scaleregularizationscheme.
+Figure 2 illustrates drop-path. Just as dropout prevents co-adaptation of activations, drop-path
+prevents co-adaptation of parallel paths by randomly dropping operands of the join layers. This
+discouragesthenetworkfromusingoneinputpathasananchorandanotherasacorrectiveterm(a
+configurationthat,ifnotprevented,ispronetooverfitting). Weconsidertwosamplingstrategies:
+• Local: ajoindropseachinputwithfixedprobability,butwemakesureatleastonesurvives.
+• Global: asinglepathisselectedfortheentirenetwork. Werestrictthispathtobeasingle
+column,therebypromotingindividualcolumnsasindependentlystrongpredictors.
+4
+
+===== PAGE 5 =====
+
+PublishedasaconferencepaperatICLR2017
+Iteration#1 Iteration#2 Iteration#3 Iteration#4
+(Local) (Global) (Local) (Global)
+Figure2: Drop-path. Afractalnetworkblockfunctionswithsomeconnectionsbetweenlayers
+disabled,providedsomepathfrominputtooutputisstillavailable. Drop-pathguaranteesatleastone
+suchpath,whilesamplingasubnetworkwithmanyotherpathsdisabled. Duringtraining,presenting
+adifferentactivesubnetworktoeachmini-batchpreventsco-adaptationofparallelpaths. Aglobal
+sampling strategy returns a single column as a subnetwork. Alternating it with local sampling
+encouragesthedevelopmentofindividualcolumnsasperformantstand-alonesubnetworks.
+Aswithdropout,signalsmayneedappropriaterescaling. Withelement-wisemeans,thisistrivial;
+eachjoincomputesthemeanofonlyitsactiveinputs.
+Inexperiments,wetrainwithdropoutandamixturemodelof50%localand50%globalsampling
+for drop-path. We sample a new subnetwork each mini-batch. With sufficient memory, we can
+simultaneouslyevaluateonelocalsampleandallglobalsamplesforeachmini-batchbykeeping
+separatenetworksandtyingthemtogetherviaweightsharing.
+Whilefractalconnectivitypermitstheuseofpathsofanylength,globaldrop-pathforcestheuseof
+manypathswhoselengthsdifferbyordersofmagnitude(powersof2). Thesubnetworkssampledby
+drop-paththusexhibitlargestructuraldiversity. Thispropertystandsincontrasttostochasticdepth
+regularizationofResNet,which,byvirtueofusingafixeddropprobabilityforeachlayerinachain,
+samplessubnetworkswithaconcentrateddepthdistribution(Huangetal.,2016b).
+Globaldrop-pathservesnotonlyasaregularizer,butalsoasadiagnostictool. Monitoringperfor-
+manceofindividualcolumnsprovidesinsightintoboththenetworkandtrainingmechanisms,as
+Section4.3discussesinmoredetail. Individuallystrongcolumnsofvariousdepthsalsogiveusers
+choicesinthetrade-offbetweenspeed(shallow)andaccuracy(deep).
+3.2 DATAAUGMENTATION
+Data augmentation can reduce the need for regularization. ResNet demonstrates this, achieving
+27.22%errorrateonCIFAR-100withaugmentationcomparedto44.76%without (Huangetal.,
+2016b). While augmentation benefits fractal networks, we show that drop-path provides highly
+effectiveregularization,allowingthemtoachievecompetitiveresultsevenwithoutdataaugmentation.
+3.3 IMPLEMENTATIONDETAILS
+WeimplementFractalNetusingCaffe(Jiaetal.,2014). Purelyforconvenience,wefliptheorder
+ofpoolandjoinlayersattheendofablockinFigure1. Wepoolindividualcolumnsimmediately
+beforethejoinsspanningallcolumns,ratherthanpoolingonceimmediatelyafterthem.
+Wetrainfractalnetworksusingstochasticgradientdescentwithmomentum. Asnowstandard,we
+employbatchnormalizationtogetherwitheachconvlayer(convolution,batchnorm,thenReLU).
+5
+
+===== PAGE 6 =====
+
+PublishedasaconferencepaperatICLR2017
+Method C100 C100+ C100++ C10 C10+ C10++ SVHN
+NetworkinNetwork(Linetal.,2013) 35.68 - - 10.41 8.81 - 2.35
+GeneralizedPooling(Leeetal.,2016) 32.37 - - 7.62 6.05 - 1.69
+RecurrentCNN(Liang&Hu,2015) 31.75 - - 8.69 7.09 - 1.77
+Multi-scale(Liao&Carneiro,2015) 27.56 - - 6.87 - - 1.76
+FitNetRomeroetal.(2015) - 35.04 - - 8.39 - 2.42
+DeeplySupervised(Leeetal.,2014) - 34.57 - 9.69 7.97 - 1.92
+All-CNN(Springenbergetal.,2014) - 33.71 - 9.08 7.25 4.41 -
+HighwayNet(Srivastavaetal.,2015) - 32.39 - - 7.72 - -
+ELU(Clevertetal.,2016) - 24.28 - - 6.55 - -
+ScalableBO(Snoeketal.,2015) - - 27.04 - - 6.37 1.77
+FractionalMax-Pool(Graham,2014) - - 26.32 - - 3.47 -
+FitResNet(Mishkin&Matas,2016) - 27.66 - - 5.84 - -
+ResNet(Heetal.,2016a) - - - - 6.61 - -
+ResNetby(Huangetal.,2016b) 44.76 27.22 - 13.63 6.41 - 2.01
+StochasticDepth(Huangetal.,2016b) 37.80 24.58 - 11.66 5.23 - 1.75
+IdentityMapping(Heetal.,2016b) - 22.68 - - 4.69 - -
+ResNetinResNet(Targetal.,2016) - 22.90 - - 5.01 - -
+Wide(Zagoruyko&Komodakis,2016) - 20.50 - - 4.17 - -
+DenseNet-BC(Huangetal.,2016a)1 19.64 17.60 - 5.19 3.62 - 1.74
+FractalNet(20layers,38.6Mparams) 35.34 23.30 22.85 10.18 5.22 5.11 2.01
++drop-path+dropout 28.20 23.73 23.36 7.33 4.60 4.59 1.87
+ëdeepestcolumnalone 29.05 24.32 23.60 7.27 4.68 4.63 1.89
+FractalNet(40layers,22.9Mparams)2 - 22.49 21.49 - 5.24 5.21 -
+Table1: CIFAR-100/CIFAR-10/SVHN.Wecomparetesterror(%)withotherleadingmethods,
+trainedwitheithernodataaugmentation,translation/mirroring(+),ormoresubstantialaugmentation
+(++). Our main point of comparison is ResNet. We closely match its benchmark results using
+dataaugmentation,andoutperformitbylargemarginswithoutdataaugmentation. Trainingwith
+drop-path,wecanextractfromFractalNetsingle-column(plain)networksthatarehighlycompetitive.
+4 EXPERIMENTS
+The CIFAR, SVHN, and ImageNet datasets serve as testbeds for comparison to prior work and
+analysisofFractalNet’sinternalbehavior. Weevaluateperformanceonthestandardclassificationtask
+associatedwitheachdataset. ForCIFARandSVHN,whichconsistof32ˆ32images,wesetour
+fractalnetworktohave5blocks(B “5)with2ˆ2non-overlappingmax-poolingandsubsampling
+appliedaftereach. Thisreducestheinput32ˆ32spatialresolutionto1ˆ1overthecourseofthe
+entirenetwork. Asoftmaxpredictionlayerattachesattheendofthenetwork. Unlessotherwisenoted,
+wesetthenumberoffilterchannelswithinblocks1through5asp64,128,256,512,512q,mostly
+matchingtheconventionofdoublingthenumberofchannelsafterhalvingspatialresolution.
+For ImageNet, we choose a fractal architecture to facilitate direct comparison with the 34-layer
+ResNetofHeetal.(2016a). WeusethesamefirstandlastlayerasResNet-34,butchangethemiddle
+ofthenetworktoconsistof4blocks(B “ 4),eachof8layers(C “ 4columns). Weuseafilter
+channelprogressionofp128,256,512,1024qinblocks1through4.
+4.1 TRAINING
+Forexperimentsusingdropout,wefixdroprateperblockatp0%,10%,20%,30%,40%q,similar
+toClevertetal.(2016). Localdrop-pathuses15%droprateacrosstheentirenetwork.
+1Denselyconnectednetworks(DenseNets)areconcurrentwork,appearingsubsequenttoouroriginalarXiv
+paper on FractalNet. A variant of residual networks, they swap addition for concatenation in the residual
+functionalform.Wereportperformanceoftheir250-layerDenseNet-BCnetworkwithgrowthratek“24.
+2Thisdeeper(4column)FractalNethasfewerparameters.Wevarycolumnwidth:p128,64,32,16qchannels
+acrosscolumnsinitially,doublingeachblockexceptthelast. Alinearprojectiontemporarilywidensthinner
+columnsbeforejoins.AsinIandolaetal.(2016),weswitchtoamixof1ˆ1and3ˆ3convolutionalfilters.
+6
+
+===== PAGE 7 =====
+
+PublishedasaconferencepaperatICLR2017
+Method Top-1(%) Top-5(%) Model Depth TrainLoss Error(%)
+VGG-16 28.07 9.33 Plain 5 0.786 36.62
+ResNet-34C 24.19 7.40 Plain 10 0.159 32.47
+FractalNet-34 24.12 7.39 Plain 20 0.037 31.31
+Plain 40 0.580 38.84
+Table2: ImageNet(validationset,10-crop).
+FractalCol#1 5 0.677 37.23
+FractalCol#2 10 0.141 32.85
+Cols. Depth Params. Error(%)
+FractalCol#3 20 0.029 31.31
+1 5 0.3M 37.32 FractalCol#4 40 0.016 31.75
+2 10 0.8M 30.71
+FractalFull 40 0.015 27.40
+3 20 2.1M 27.69
+4 40 4.8M 27.38
+5 80 10.2M 26.46 Table4: Fractalstructureasatrainingappara-
+6 160 21.1M 27.38 tus(CIFAR-100++).Plainnetworksperformwellif
+moderatelydeep,butexhibitworseconvergencedur-
+Table 3: Ultra-deep fractal networks ingtrainingifinstantiatedwithgreatdepth. How-
+(CIFAR-100++). Increasingdepthgreatlyim- ever,asacolumntrainedwithin,andthenextracted
+proves accuracy until eventual diminishing from,afractalnetworkwithmixeddrop-path,we
+returns. Contrastwithplainnetworks,which recoveraplainnetworkthatovercomessuchdepth
+arenottrainableifmadetoodeep(Table4). limitation(possiblyduetoastudent-teachereffect).
+Werunfor400epochsonCIFAR,20epochsonSVHN,and70epochsonImageNet. Ourlearning
+ratestartsat0.02(forImageNet,0.001)andwetrainusingstochasticgradientdescentwithbatch
+size100(forImageNet,32)andmomentum0.9. ForCIFAR/SVHN,wedropthelearningratebya
+factorof10wheneverthenumberofremainingepochshalves. ForImageNet,wedropbyafactorof
+10atepochs50and65. WeuseXavierinitialization(Glorot&Bengio,2010).
+Awidelyemployed(Linetal.,2013;Clevertetal.,2016;Srivastavaetal.,2015;Heetal.,2016a;b;
+Huangetal.,2016b;Targetal.,2016)schemefordataaugmentationonCIFARconsistsofonly
+horizontalmirroringandtranslation(uniformoffsetsinr´4,4s),withimageszero-paddedwhere
+needed after mean subtraction. We denote results achieved using no more than this degree of
+augmentationbyappendinga“+”tothedatasetname(e.g.CIFAR-100+). A“++”marksresults
+reliantonmoredataaugmentation;hereexactschemesmayvary. Ourentryinthiscategoryismodest
+andsimplychangesthezero-paddingtoreflect-padding.
+4.2 RESULTS
+Table1comparesperformanceofFractalNetonCIFARandSVHNwithcompetingmethods. Frac-
+talNet(depth20)outperformstheoriginalResNetacrosstheboard. Withdataaugmentation,our
+CIFAR-100accuracyisclosetothatofthebestResNetvariants. Withneitheraugmentationnorregu-
+larization,FractalNet’sperformanceonCIFARissuperiortobothResNetandResNetwithstochastic
+depth,suggestingthatFractalNetmaybelesspronetooverfitting. Mostmethodsperformsimilarly
+onSVHN.Increasingdepthto40,whileborrowingsomeparameterreductiontricks(Iandolaetal.,
+2016),revealsFractalNet’sperformancetobeconsistentacrossarangeofconfigurationchoices.
+Experimentswithoutdataaugmentationhighlightthepowerofdrop-pathregularization. OnCIFAR-
+100,drop-pathreducesFractalNet’serrorratefrom35.34%to28.20%. UnregularizedResNetisfar
+behind(44.76%)andResNetwithstochasticdepth(37.80%)doesnotcatchuptoourunregularized
+startingpointof35.34%. CIFAR-10mirrorsthisstory. Withdataaugmentation,drop-pathprovidesa
+boost(CIFAR-10),ordoesnotsignificantlyinfluenceFractalNet’sperformance(CIFAR-100).
+Notethattheperformanceofthedeepestcolumnofthefractalnetworkisclosetothatofthefull
+network(statisticallyequivalentonCIFAR-10). Thissuggeststhatthefractalstructuremaybemore
+importantasalearningframeworkthanasafinalmodelarchitecture.
+Table2showsthatFractalNetscalestoImageNet,matchingResNet(Heetal.,2016a)atequaldepth.
+Notethat,concurrentwithourwork,refinementstotheresidualnetworkparadigmfurtherimprovethe
+state-of-the-artonImageNet. Wideresidualnetworks(Zagoruyko&Komodakis,2016)of34-layers
+reducesingle-cropTop-1andTop-5validationerrorbyapproximately2%and1%,respectively,over
+7
+
+===== PAGE 8 =====
+
+PublishedasaconferencepaperatICLR2017
+101
+100
+10-1
+0 50 100 150 200 250 300 350 400
+Epochs
+ssoL
+gniniarT
+Plain Networks
+101
+5 layers
+10 layers
+20 layers
+40 layers
+100
+10-1
+0 50 100 150 200 250 300 350 400
+Epochs
+ssoL
+gniniarT
+FractalNet
+Col #1: 5 layers
+Col #2: 10 layers
+Col #3: 20 layers
+Col #4: 40 layers
+FractalNet
+Figure3: Implicitdeepsupervision. Left: Evolutionoflossforplainnetworksofdepth5,10,20
+and40trainedonCIFAR-100. Trainingbecomesincreasinglydifficultfordeepernetworks. At40
+layers,weareunabletotrainthenetworksatisfactorily. Right: Wetraina4columnfractalnetwork
+withmixeddrop-path,monitoringitslossaswellasthelossesofitsfoursubnetworkscorresponding
+toindividualcolumnsofthesamedepthastheplainnetworks. Asthe20-layersubnetworkstartsto
+stabilize,drop-pathputspressureonthe40-layercolumntoadapt,withtherestofthenetworkasits
+teacher. Thisexplainstheelbow-shapedlearningcurveforCol#4thatoccursaround25epochs.
+ResNet-34bydoublingfeaturechannelsineachlayer. DenseNets(Huangetal.,2016a)substantially
+improveperformancebybuildingresidualblocksthatconcatenateratherthanaddfeaturechannels.
+Table3demonstratesthatFractalNetresistsperformancedegradationasweincreaseC toobtain
+extremely deep networks (160 layers for C “ 6). Scores in this table are not comparable to
+those in Table 1. For time and memory efficiency, we reduced block-wise feature channels to
+p16,32,64,128,128qandthebatchsizeto50forthesupportingexperimentsinTables3and4.
+Table4providesabaselineshowingthattrainingofplaindeepnetworksbeginstodegradebythetime
+theirdepthreaches40layers. Inourexperience,aplain160-layercompletelyfailstoconverge. This
+tablealsohighlightstheabilitytouseFractalNetanddrop-pathasanengineforextractingtrained
+networks(columns)withthesametopologyasplainnetworks,butmuchhighertestperformance.
+4.3 INTROSPECTION
+WithFigure3,weexaminetheevolutionofa40-layerFractalNetduringtraining. Trackingcolumns
+individually(recordingtheirlosseswhenrunasstand-alonenetworks),weobservethatthe40-layer
+column initially improves slowly, but picks up once the loss of the rest of the network begins to
+stabilize. Contrastwithaplain40-layernetworktrainedalone(dashedblueline),whichnevermakes
+fastprogress. Thecolumnhasthesameinitialplateau,butsubsequentlyimprovesafter25epochs,
+producingalosscurveuncharacteristicofplainnetworks.
+Wehypothesizethatthefractalstructuretriggerseffectsakintodeepsupervisionandlateralstudent-
+teacherinformationflow. Column#4joinswithcolumn#3everyotherlayer,andineveryfourth
+layer this join involves no other columns. Once the fractal network partially relies on the signal
+goingthroughcolumn#3,drop-pathputspressureoncolumn#4toproduceareplacementsignal
+whencolumn#3isdropped. Thistaskhasconstrainedscope. Aparticulardroponlyrequirestwo
+consecutivelayersincolumn#4tosubstituteforoneincolumn#3(aministudent-teacherproblem).
+This explanation of FractalNet dynamics parallels what, in concurrent work, Greff et al. (2017)
+claimforResNet. Specifically,Greffetal.(2017)suggestresidualnetworkslearnunrollediterative
+estimation,witheachlayerperformingagradualrefinementonitsinputrepresentation. Thedeepest
+FractalNetcolumncouldbehaveinthesamemanner,withtheremainderofthenetworkactingasa
+scaffoldforbuildingsmallerrefinementstepsbydoublinglayersfromonecolumntothenext.
+8
+
+===== PAGE 9 =====
+
+PublishedasaconferencepaperatICLR2017
+TheseinterpretationsappearnottomeshwiththeconclusionsofVeitetal.(2016),whoclaimthat
+ensemble-likebehaviorunderliesthesuccessofResNet. Thisiscertainlyuntrueofsomeverydeep
+networks,asFractalNetprovidesacounterexample: wecanextractasinglecolumn(plainnetwork
+topology)anditalone(noensembling)performsnearlyaswellastheentirenetwork. Moreover,the
+gradualrefinementviewmayofferanalternativeexplanationfortheexperimentsofVeitetal.(2016).
+Ifeachlayermakesonlyasmallmodification,removingonemaylook,tothesubsequentportion
+ofthenetwork,likeinjectingasmallamountofinputnoise. Perhapsnoisetoleranceexplainsthe
+gradualperformancedegradationthatVeitetal.(2016)observewhenremovingResNetlayers.
+5 CONCLUSION
+Our experiments with fractal networks provide strong evidence that path length is fundamental
+for training ultra-deep neural networks; residuals are incidental. Key is the shared characteristic
+ofFractalNetandResNet: largenominalnetworkdepth,buteffectivelyshorterpathsforgradient
+propagation during training. Fractal architectures are arguably the simplest means of satisfying
+thisrequirement,andmatchresidualnetworksinexperimentalperformance. Fractalnetworksare
+resistanttobeingtoodeep;extradepthmayslowtraining,butdoesnotimpairaccuracy.
+Withdrop-path,regularizationofextremelydeepfractalnetworksisintuitiveandeffective. Drop-path
+doublesasamethodofenforcingspeed(latency)vs.accuracytradeoffs. Forapplicationswherefast
+responseshaveutility,wecanobtainfractalnetworkswhosepartialevaluationyieldsgoodanswers.
+Ouranalysisconnectstheinternalbehavioroffractalnetworkswithphenomenaengineeredintoother
+networks. Theirsubstructureresembleshand-craftedmodulesusedascomponentsinpriorwork.
+Theirtrainingevolutionmayemulatedeepsupervisionandstudent-teacherlearning.
+ACKNOWLEDGMENTS
+WegratefullyacknowledgethesupportofNVIDIACorporationwiththedonationofGPUsusedfor
+thisresearch. ThisworkwaspartiallysupportedbytheNSFawardRI:1409837.
+REFERENCES
+JimmyBaandRichCaruana. Dodeepnetsreallyneedtobedeep? NIPS,2014.
+Djork-ArnéClevert,ThomasUnterthiner,andSeppHochreiter. Fastandaccuratedeepnetworklearningby
+exponentiallinearunits(ELUs). ICLR,2016.
+JiaDeng,WeiDong,RichardSocher,Li-JiaLi,KaiLi,andLiFei-Fei. ImageNet:Alarge-scalehierarchical
+imagedatabase. CVPR,2009.
+XavierGlorotandYoshuaBengio. Understandingthedifficultyoftrainingdeepfeedforwardneuralnetworks.
+AISTATS,2010.
+BenjaminGraham. Fractionalmax-pooling. arXiv:1412.6071,2014.
+KlausGreff,RupeshKumarSrivastava,andJürgenSchmidhuber. Highwayandresidualnetworkslearnunrolled
+iterativeestimation. ICLR,2017.
+BharathHariharan,PabloArbelaez,RossGirshick,andJitendraMalik. Hypercolumnsforobjectsegmentation
+andfine-grainedlocalization. CVPR,2015.
+KaimingHe,XiangyuZhang,ShaoqingRen,andJianSun. Delvingdeepintorectifiers:Surpassinghuman-level
+performanceonImageNetclassification. ICCV,2015.
+KaimingHe,XiangyuZhang,ShaoqingRen,andJianSun.Deepresiduallearningforimagerecognition.CVPR,
+2016a.
+KaimingHe,XiangyuZhang,ShaoqingRen,andJianSun. Identitymappingsindeepresidualnetworks. ECCV,
+2016b.
+GeoffreyE.Hinton,NitishSrivastava,AlexKrizhevsky,IlyaSutskever,andRuslanSalakhutdinov. Improving
+neuralnetworksbypreventingco-adaptationoffeaturedetectors. arXiv:1207.0580,2012.
+9
+
+===== PAGE 10 =====
+
+PublishedasaconferencepaperatICLR2017
+Gao Huang, Zhuang Liu, and Kilian Q. Weinberger. Densely connected convolutional networks.
+arXiv:1608.06993,2016a.
+GaoHuang,YuSun,ZhuangLiu,DanielSedra,andKilianWeinberger. Deepnetworkswithstochasticdepth.
+ECCV,2016b.
+ForrestN.Iandola,MatthewW.Moskewicz,KhalidAshraf,SongHan,WilliamJ.Dally,andKurtKeutzer.
+SqueezeNet:AlexNet-levelaccuracywith50xfewerparametersandă1MBmodelsize. arXiv:1602.07360,
+2016.
+SergeyIoffeandChristianSzegedy. Batchnormalization: Acceleratingdeepnetworktrainingbyreducing
+internalcovariateshift. ICML,2015.
+YangqingJia,EvanShelhamer,JeffDonahue,SergeyKarayev,JonathanLong,RossGirshick,SergioGuadar-
+rama,andTrevorDarrell. Caffe:Convolutionalarchitectureforfastfeatureembedding. arXiv:1408.5093,
+2014.
+AlexKrizhevsky. Learningmultiplelayersoffeaturesfromtinyimages. Technicalreport,2009.
+AlexKrizhevsky,IlyaSutskever,andGeoffreyE.Hinton. ImageNetclassificationwithdeepconvolutional
+neuralnetworks. NIPS,2012.
+QuocVLe,NavdeepJaitly,andGeoffreyEHinton. Asimplewaytoinitializerecurrentnetworksofrectified
+linearunits. arXiv:1504.00941,2015.
+Chen-YuLee,SainingXie,PatrickGallagher,ZhengyouZhang,andZhuowenTu. Deeply-supervisednets.
+NIPSWorkshoponDeepLearningandRepresentationLearning,2014.
+Chen-YuLee,PatrickWGallagher,andZhuowenTu. Generalizingpoolingfunctionsinconvolutionalneural
+networks:Mixed,gated,andtree. AISTATS,2016.
+MingLiangandXiaolinHu. Recurrentconvolutionalneuralnetworkforobjectrecognition. CVPR,2015.
+ZhibinLiaoandGustavoCarneiro. Competitivemulti-scaleconvolution. arXiv:1511.05635,2015.
+MinLin,QiangChen,andShuichengYan. Networkinnetwork. ICLR,2013.
+MichaelMaire,StellaX.Yu,andPietroPerona. Reconstructivesparsecodetransferforcontourdetectionand
+semanticlabeling. ACCV,2014.
+DmytroMishkinandJiriMatas. Allyouneedisagoodinit. ICLR,2016.
+VinodNairandGeoffreyEHinton. Rectifiedlinearunitsimproverestrictedboltzmannmachines. ICML,2010.
+YuvalNetzer,TaoWang,AdamCoates,AlessandroBissacco,BoWu,andAndrewY.Ng. Readingdigitsin
+naturalimageswithunsupervisedfeaturelearning. NIPSWorkshoponDeepLearningandUnsupervised
+FeatureLearning,2011.
+BehnamNeyshabur,RuslanSalakhutdinov,andNathanSrebro. Path-SGD:Path-normalizedoptimizationin
+deepneuralnetworks. NIPS,2015.
+AdrianaRomero,NicolasBallas,SamiraEbrahimiKahou,AntoineChassang,CarloGatta,andYoshuaBengio.
+Fitnets:Hintsforthindeepnets. ICLR,2015.
+KarenSimonyanandAndrewZisserman. Verydeepconvolutionalnetworksforlarge-scaleimagerecognition.
+ICLR,2015.
+JasperSnoek,OrenRippel,KevinSwersky,RyanKiros,NadathurSatish,NarayananSundaram,MdPatwary,
+MostofaAli,RyanPAdams,etal. Scalablebayesianoptimizationusingdeepneuralnetworks. ICML,2015.
+JostTobiasSpringenberg,AlexeyDosovitskiy,ThomasBrox,andMartinRiedmiller. Strivingforsimplicity:
+Theallconvolutionalnet. ICLR(workshoptrack),2014.
+RupeshKumarSrivastava,KlausGreff,andJürgenSchmidhuber. Highwaynetworks. ICML,2015.
+ChristianSzegedy,WeiLiu,YangqingJia,PierreSermanet,ScottReed,DragomirAnguelov,DumitruErhan,
+VincentVanhoucke,andAndrewRabinovich. Goingdeeperwithconvolutions. CVPR,2015.
+Sasha Targ, Diogo Almeida, and Kevin Lyman. Resnet in resnet: Generalizing residual architectures.
+arXiv:1603.08029,2016.
+10
+
+===== PAGE 11 =====
+
+PublishedasaconferencepaperatICLR2017
+Gregor Urban, Krzysztof J. Geras, Samira Ebrahimi Kahou, Ozlem Aslan, Shengjie Wang, Abdelrahman
+Mohamed,MatthaiPhilipose,MattRichardson,andRichCaruana. Dodeepconvolutionalnetsreallyneedto
+bedeepandconvolutional? ICLR,2017.
+AndreasVeit,MichaelWilber,andSergeBelongie. Residualnetworksbehavelikeensemblesofrelatively
+shallownetworks. NIPS,2016.
+LiWan,MatthewZeiler,SixinZhang,YannLCun,andRobFergus. Regularizationofneuralnetworksusing
+dropconnect. ICML,2013.
+SergeyZagoruykoandNikosKomodakis. Wideresidualnetworks. BMVC,2016.
+11

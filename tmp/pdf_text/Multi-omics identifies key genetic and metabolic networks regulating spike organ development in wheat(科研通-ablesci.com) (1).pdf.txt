@@ -1,0 +1,2027 @@
+
+
+===== PAGE 1 =====
+
+Multi-omics identifies key genetic and metabolic networks
+1
+regulating spike organ development in wheat
+2
+T
+3
+4 Yangyang Liu1,12, +, Lili Zhang1,12+, Anting Zhu2,3+, Liping Shen1,1,12,13,+, JiaqPi Zhang7,+, Jun
+5 Chen4,+, Guowei Chang5 +, Changbin Yin6 +, Ziying Wang1,9,12, Zhiwen Sun1,9,12, Kuocheng
+I
+6 Shen1,9,12, Xiaowan Xu4, Mengjing Sun4, Mingming Xin7, Jianhui W R u8, Zefu Lu4, Yiping
+7 Tong5,9, Zhonghu He4,11, Fei Lu6,9,10*, Yuanfeng Hao4*, Wei Chen2*, Zifeng Guo1,9,12,13*
+C
+8
+9 1. State Key Laboratory of Forage Breeding-by-Design and Utilization, Institute of Botany, Chinese Academy
+S
+10 of Sciences, Beijing 100093, China.
+U
+11 2. National Key Laboratory of Crop Genetic Improvement and National Center of Plant Gene Research (Wuhan),
+12 Huazhong Agricultural University, Wuhan 430070, China.
+N
+13 3. State Key Laboratory of Biocatalysis and Enzyme Engineering, Environmental Microbial Technology Center
+14 of Hubei Province, College of Life Sciences, HubeiA University, Wuhan 430062, China.
+15 4. Institute of Crop Sciences, Chinese Academy of Agricultural Sciences (CAAS), Beijing, 100081, China.
+16 5. State Key Laboratory of Seed Innovation,M Institute of Genetics and Developmental Biology, Chinese Academy
+17 of Sciences, Beijing 100101, China.
+18 6. Laboratory of Advanced Breeding Tech nologies，Institute of Genetics and Developmental Biology, Chinese
+D
+19 Academy of Sciences, Beijing 100101, China
+20 7. State Key Laboratory for Agrobiotechnology, Key Laboratory of Crop Heterosis and Utilization (MOE),
+E
+21 Beijing Key Laboratory of Crop Genetic Improvement, China Agricultural University, Beijing, 100193, China.
+T
+22 8. State Key Laboratory of Crop Stress Biology for Arid Areas, Northwest A&F University, Yangling, Shaanxi
+23 712100, China.
+P
+24 9. University of Chinese Academy of Sciences, Beijing 100049, China.
+E
+25 10. CAS-JIC Centre of Excellence for Plant and Microbial Science (CEPAMS), Institute of Genetics and
+26 DeveloCpmental Biology, Chinese Academy of Sciences, Beijing, China.
+27 11. International Maize and Wheat Improvement Center (CIMMYT) China Office, c/o CAAS, Beijing 100081,
+C
+28 China.
+2 A 9 12. Key Laboratory of Plant Molecular Physiology, Institute of Botany, Chinese Academy of Sciences, Beijing
+30 100093, China.
+31 13. China National Botanical Garden, Beijing 100093, China.
+32 +. These authors contributed equally to this work.
+33
+34 * Corresponding authors:
+35 Fei Lu (flu@genetics.ac.cn)
+© The Author(s) 2025. Published by Oxford University Press on behalf of American Society of Plant Biologists.
+All rights reserved. For commercial re-use, please contact reprints@oup.com for reprints and translation
+rights for reprints. All other permissions can be obtained through our RightsLink service via the Permissions
+link on the article page on our site—for further information please contact journals.permissions@oup.com.
+1
+
+===== PAGE 2 =====
+
+1 Yuanfeng Hao (haoyuanfeng@caas.cn)
+2 Wei Chen (chenwei0609@mail.hzau.edu.cn)
+3 Zifeng Guo (guozifeng@ibcas.ac.cn)
+4 T
+5 Short title: Exploring developmental metabolite networks in the 3-level structureP of wheat spike.
+6 I
+R
+7 ABSTRACT
+8 Wheat (Triticum aestivum L.) spike development is tightlyC regulated by genetic and
+9 metabolic programs that drive organ growth and morphological changes. However,
+S
+10 the dynamic interplay between metabolic shifts, gene expression patterns, and their
+U
+11 regulatory roles during spike development, remains poorly characterized. To address
+12 this knowledge gap, we performed integrated metabolomic and transcriptomic
+N
+13 profiling across 12 stages of wheat spike organ development. Our analysis detected
+14 1,105 metabolites in 233 spike, spikele A t, and floret samples, uncovering an uneven
+15 distribution of phytohormone-related metabolites. The exogenous phytohormone
+16 treatments validated the regulatorMy roles of phytohormones in spike morphogenesis.
+17 High-resolution spatiotemporal data from carpel organs enabled the reconstruction
+18 of a regulatory network, identif ying key genes (including 12-oxo-phytodienoic acid
+D
+19 reductase3 (TaOPR3), Grain Length1 (GL1), and Grain Length2 (GL2)) as critical
+20 determinants of grain size. Genomic analyses revealed geographical differentiation
+E
+21 in gene haplotypes and their selective retention during breeding, with superior alleles
+22 associated with inTcreased grain size. This comprehensive dataset provides a valuable
+23 resource for u P nderstanding the molecular basis of wheat grain yield and offers
+24 potential targets for crop improvement.
+E
+25
+26 INTRCODUCTION
+27 Wheat (Triticum aestivum L.) is one of the three major global staple crops, requires
+C
+28 genetic improvement and precision agronomy to enhance its yield for meeting
+2A9 worldwide food demands1. Optimizing spike architecture (particularly regulating
+30 spikelet fertility and grain arrangement) represents an effective strategy for yield
+31 improvement. The wheat spike is a compound spike inflorescence with alternately
+32 arranged spikelets along the rachis2. In hexaploidy wheat, a single spike typically
+33 bears 15-30 spikelets, each capable of developing 3-5 fertile florets2,3. Florets consist
+34 of structures including awns, lemma, palea, anthers, and carpels2, with their
+35 developmental progression directly determining spike morphology and grain
+36 numbers 4,5.
+37 Recent advances in multi-omics integration have accelerated the dissection of spike
+2
+
+===== PAGE 3 =====
+
+1 development mechanisms. Systematic transcriptome, chromatin accessibility, and
+2 histone modification analyses across eight critical developmental stages have
+3 revealed dynamic transcriptional networks governing spikelet formation6. Integrated
+4 metabolomic, transcriptomic, and genetic approaches have identified key genes
+T
+5 controlling spike morphogenesis7,8. Metabolomics provides mechanistic insights
+6 into plant organ development, complementing limitations of P genomic and
+7 transcriptomic studies7,8. The past decade has witnessed significant progress in
+I
+8 wheat genomics, including high-quality genome assem R blies9-14, alongside
+9 widespread applications of QTL mapping and genome-wide association studies
+10 (GWAS) for investigating wheat development and abioticC/biotic stress resistance15-
+11 18. High-throughput metabolite profiling technologies have substantially enhanced
+S
+12 metabolic phenotyping efficiency19, th`ough current research predominantly focuses
+U
+13 on mature grain composition20,21, lacking systematic evaluation of metabolites
+14 across different developmental stages and spatial positions within wheat spikes.
+N
+15 Large-scale transcriptome analyses have systematically identified wheat spike
+16 regulatory modules, deepening under A standing of floral organ development22-25.
+17 Bread wheat, an allohexaploid species (2n = 6x = 42, AABBDD), with genome
+18 derived from three distinct diploiMd progenitors, has revealed through transcriptomic
+19 studies how polyploidization influences gene expression, genomic imprinting, and
+20 heterosis—collectively regDulating hexaploid wheat's spike morphology, grain size,
+21 and numbers 26-29. However, no study has systematically profiled gene expression
+E
+22 throughout wheat carpel development. While rice (Oryza sativa L.), tomato
+23 (Solanum lycopeTrsicum), kiwifruit (Actinidia chinensis cv Hongyang) have
+24 established m P etabolic dynamics and transcriptional networks across life cycles30-32,
+25 the transcriptome-metabolome integrative network during wheat carpel
+E
+26 development remains unexplored. This study constructed spatiotemporal metabolic
+27 atlaseCs for 233 wheat spike organs, uncovering metabolite distribution patterns
+28 across developmental windows. Organ-specific metabolic profiles provide a
+C
+29 framework for deciphering complex biological processes involving multi-organ
+3A0 coordination. We established the most comprehensive carpel development
+31 transcriptome and metabolome dataset to date (covering 12 developmental stages),
+32 with multi-omics integration revealing: 1. Core genes and regulatory networks
+33 governing grain size. 2. Genetic signatures of geographical differentiation, breeding
+34 selection, and domestication. 3. Functionally significant non-synonymous
+35 SNPs/Indels in target genes. Notably, introgression of favorable alleles at these loci
+36 significantly increased grain size, confirming their yield-enhancing potential. This
+37 research establishes a resource foundation for investigating metabolic regulation of
+38 wheat growth, development, and nutrient accumulation.
+3
+
+===== PAGE 4 =====
+
+1 RESULTS
+2 High-spatiotemporal-resolution dissection of spike components in wheat
+3 To systematically capture metabolic dynamics during wheat spike development, we
+T
+4 established the Wheat Spike Metabolomics Network Dataset—a resource that
+P
+5 achieves high spatiotemporal-resolution monitoring of metabolic dy I namics through
+R
+6 metabolomic analysis (LC-MS/MS19) across 12 developmental stages and multiple
+C
+7 organ types, with transcriptomic data (RNA-seq) integrated for carpel (Fig. 1A-D).
+S
+8 Our sampling strategy encompassed: 1. Spatial Dissection: 1) Spike-level: spikelets
+U
+9 and rachis organs from five positions including top, upper middle (30%), middle,
+N
+10 lower middle (70%), and bottom (Fig. 1A). 2) Spikelet-level: florets (F1–F4) and
+A
+11 glumes within individual spikelets (Fig. 1B). 3) Floret-level: five floral organs-awn,
+M
+12 lemma, palea, anther, and carpel (Fig. 1C). 2. Temporal Dissection: samples were
+13 collected at 12 developmental stages: 1) Pre-anthesis: green anther (GrA), yellow
+D
+14 anther (YA), tipping (TP), heading (HD). 2) anthesis (AN). 3) Post-anthesis: 5-35
+E
+15 days post-anthesis (DPA) in 5-day increments (Fig. 1D). Anthers were sampled only
+T
+16 until AN, while other organs were tracked through 35 DPA.
+P
+17 Given the carpel’s critical role in grain yield, we generated the most comprehensive
+E
+18 metabolomic and transcriptomic dataset for this organ (Table S1), providing a
+C
+19 foundational resource for studying spike development and metabolic regulation.
+C
+20
+A
+21 Developmental Dynamics of Spike Morphology
+22 Comprehensive phenotyping generated 1,040 datasets that systematically
+23 documented spatiotemporal variations in spike, spikelet and floral organ (awn,
+24 lemma, glume, carpel) weights and spike length parameters across 12 developmental
+25 stages and 5 spatial positions (Table S2) During the developmental stages, a rapid
+26 increase in spike weight and grain weight was observed from AN to 35DPA (Fig.
+27 1E, F). Spike length exhibited a sharp increase from GrA to TP, followed by a more
+28 gradual rise, peaking at the HD stage (Fig. 1G). Chaff weight increased at a higher
+4
+
+===== PAGE 5 =====
+
+1 rate during the TP-10DPA phase than during the 10DPA-35DPA phase (Fig. 1H).
+2 Analysis of spikelet weight, floret weight, awn weight, palea weight, glume weight,
+3 and carpel weight at different spike positions revealed that organ development
+4 occurred earlier in the middle region compared to the top and bottom regions (Fig.
+T
+5 1I, 1J, Table S2), supported by multiple lines of evidence: anthers in middle spikelets
+6 were dehisced at anthesis, while those in top and bottom spikelets re P mained green
+7 (Fig. S1A); there was a developmental gradient among florets (F1-F4) in middle
+I
+8 spikelets, with F1 grains completed pollination and F4 stigma R s still receptive (Fig.
+9 S1B). Additionally, dynamic changes in organs (including awn, glume, lemma, and
+10 carpel) within the middle florets indicated that F1 and FC2 florets exhibited more
+11 advanced development than other florets (Fig. 1K, Supplementary Table 2).
+S
+12 Meanwhile, the overall spike developmental stages were significantly correlated
+U
+13 with weight (r = 0.89, p<0.01), with spikelets in the middle (with dehisced anthers)
+14 showing significantly higher weight than immature top spikelets (p = 0.003286),
+N
+15 suggesting an association between developmental progression and biomass
+16 accumulation. A
+17
+18 Spatiotemporal metabolite proMfiling
+19 To gain a deep understanding of the dynamics of metabolites during spike
+20 developmental process, wDe used widely targeted tandem mass spectrometry (LC-
+21 MS/MS)19 to determinEe the metabolites. A total of 1,105 metabolites were identified,
+22 of which 313 metTabolites were annotated. These annotated metabolites included 33
+23 flavonoids, 50P amino acid derivates, 30 lipids, 7 organic acids, 29 nucleic acid
+24 derivativeEs, 25 phenolamides, 38 phytohormone derivatives, 33 polyphenols, 9
+25 sugarCs and 10 vitamins (Fig. 2A, Table S3). Analysis of this metabolites across
+26 dCifferent spike tissues revealed stage-specific metabolic patterns during spike
+2A7 development. However, metabolic profiles were similar among spikelets and florets
+28 from different positions, whereas significant differences existed between the rachis
+29 and spikelet tissues. Moreover, distinct metabolic patterns were also observed
+30 among different tissues within a single floret. For instance, metabolites such as
+31 flavonoids and phenolamides preferentially accumulated in the rachis, glumes, and
+32 lemma, palea, concomitant with increasing lignification; in contrast, levels of amino
+5
+
+===== PAGE 6 =====
+
+1 acid derivatives, lipids, nucleic acid derivatives, and vitamins were markedly higher
+2 in spikelet and floret tissues (Fig. 2A). Notably, despite the elevated abundance of
+3 these primary metabolites in reproductive tissues (spikelet/floret), their
+T
+4 compositional ratios varied significantly depending on developmental stages,
+P
+5 suggesting dynamic metabolic reprogramming during organ matura I tion. Flavonoids,
+R
+6 phenolamides, and polyphenols showed strong correlations in lemma, glume, palea,
+C
+7 and rachis organs. Similarly, phytohormone derivatives and polyphenols were highly
+S
+8 correlated in spikelet, carpel, and floret organs (Fig. S2, Tables S4-S5). Principal
+U
+9 component analysis revealed three distinct developmental phases: early phase (GrA-
+N
+10 HD), transition phase (AN-5DPA), maturation phase (10DPA-35DPA) (Fig. 2B).
+11 Hierarchical clustering confirmed theseA developmental groupings (Fig. 2C).
+12
+M
+13 Spatiotemporal Metabolic Signatures Reveal Tissue-Specific Roles in Wheat
+14 Spike Development
+D
+15 To dissect tissue-specific metabolic dynamics during wheat spike development, we
+E
+16 profiled 313 annotated metabolites across 233 samples derived from spikelets,
+T
+17 florets, carpels, and other organs spanning 12 developmental stages. Clustering
+P
+18 analysis revealed nine distinct organ-enrichment patterns (Fig 3A). Notably, Cluster
+E
+19 5 was specifically enriched in anthers and contained 11 hormone-related metabolites,
+C
+20 including cytokinin and auxin derivatives (Table S6). Clusters 3 and 6 were mainly
+C
+21 accumulated in glume, lemma, and palea, whereas clusters 8 and 9 were enriched in
+A
+22 spikelets, florets (F1–F4), and carpels (Fig. 3B; Table S3). These clusters reflected
+23 clear spatial signatures of metabolite distribution across different spike organs.
+24
+25 Hormone-associated metabolites peak in anthers and relate to developmental
+26 transitions
+6
+
+===== PAGE 7 =====
+
+1 Cluster 5 metabolites were significantly enriched in phytohormones and associated
+2 pathways, including ascorbate metabolism, zeatin biosynthesis, and plant hormone
+3 signal transduction. Among them, cytokinin dehydrogenase (CKX; EC 1.5.99.12)
+T
+4 was identified as a key enzyme to regulate cytokinin degradation and anther
+P
+5 development33 (Fig. 3B, Table S7). Notably, several auxin conjug I ates (e.g., IAA-
+R
+6 Asp, IAA-Trp, IAA-Glu) and oxidative products (OxIAA-Asp) peaked in abundance
+C
+7 in anthers at the heading (HD) and anthesis (AN) stages (Figs. 3C, S3A).
+S
+8 Spatial distribution analysis revealed distinct auxin (IAA) accumulation patterns,
+U
+9 showing pronounced enrichment in anthers during the HD stage, whereas carpels
+N
+10 and spikelets exhibited elevated levels at 10 days post-anthesis (10DPA) (Fig. S3B).
+11 Notably, phytohormone, flavonoids, anAd lipid metabolites displayed anther-specific
+12 accumulation peaks during bot M h HD and AN stages (Fig. S3C, S3D). These
+13 metabolites were functionally linked to key metabolic pathways, such as fatty acid
+14 elongation, purine metaboDlism, aromatic amino acid biosynthesis, and linoleic acid
+15 metabolism (Fig. S3EE; Tables S8, S9).
+16 Morphological obTservations showed that anthers expanded rapidly between the GrA
+17 and HD stagesP, followed by pollen grain maturation and release during the HD-AN
+18 stage (FigEs. 3D, 3E). Correlation analysis indicated that cluster 5 metabolites
+19 (OxICAA, X5OHIAA, and IAA-Phe) were significantly positively correlated with
+20 aCnther size (Fig. 3G). This discovery strongly aligns with established auxin
+2A1 functions: in Arabidopsis, tomato and barley, IAA not only regulates inflorescence
+22 and floral development34-36, but its transport disruption (e.g., PIP5K-mediated) also
+23 leads to pollen development defectst37. Notably in barley, the pollen-specific enzyme
+24 HvYUCCA4 synthesizes auxin to directly activate energy metabolism gene
+25 expression, thereby fueling maturation processes like starch accumulation36.
+26 Collectively, these findings reveal a conserved "metabolic reprogramming-energy
+7
+
+===== PAGE 8 =====
+
+1 supply" mechanism through which auxin regulates pollen development, providing
+2 direct evidence for IAA signaling in wheat anther development regulation.
+3
+T
+4 Carpel-specific metabolic signatures point to sugar and nutrient transport
+P
+5 pathways I
+R
+6 Clusters 8 and 9 metabolites were specifically enriched in spikelet, F1-F4 floret, and
+C
+7 carpel organs. These clusters comprised: 9 amino acid derivatives, 5 lipids, 2 nucleic
+S
+8 acid derivatives, 3 sugars, 2 vitamins (Fig. 3B, Table S3).
+U
+9 Notably, cluster 9 metabolites exhibited dramatic accumulation at 20 days post-
+N
+10 anthesis (20DPA) during carpel development (Fig. S4A). KEGG enrichment
+11 analysis highlighted starch and sucroseA metabolism histidine metabolism, and ABC
+12 transporters (Fig. S4B, Table SM7). β-alanine metabolism, Within the starch and
+13 sucrose metabolism pathway (ath00500), which contains key regulatory enzymes
+D
+14 including β-fructofuranosidase (EC 3.2.1.26), α-glucosidase (EC 3.2.1.20), and
+E
+15 sucrose-phosphate phosphatase (EC 3.1.3.24) (Table S7).Through BLASTp analysis
+T
+16 of amino acid sequences derived from wheat gene indices (ats) in KEGG, 14 wheat
+P
+17 homologs encoding these enzymes were identified, among which grain incomplete
+E
+18 filling 1 (TaGIF1) was screened as a candidate gene with the highest alignment rate
+C
+19 (Table S10). TaGIF1 is a known regulator of grain development. Comparative
+C
+20 analysis revealed functional conservation of GIF1 homologs in Arabidopsis and rice,
+A
+21 where they mediate grain morphogenesis, organ size regulation, and iron
+22 absorption38-42.
+23 TaGIF-D1 (TraesCS2D02G293200) was highly expressed in developing spike and
+24 grain organs (Fig. S4C, Table S11). Intriguingly, TaGIF-D1 expression exhibited a
+25 significant negative correlation with sucrose and cellotriose levels in carpel organ,
+26 suggesting that it may participate in modulating sucrose partitioning during grain
+27 filling (Fig. S4D). These findings parallel the established mechanism in rice, where
+28 GIF1 regulates sucrose transport to control grain filling efficiency.
+8
+
+===== PAGE 9 =====
+
+1 The spatial distribution differences of hormones significantly affect spike
+2 morphology
+3 Through analyzing 313 metabolites across 12 developmental stages and 5 spikelet
+4 positions, we identified six temporally distinct metabolic modules (Sp_cTluster1-6),
+5 each displaying characteristic stage-specific expression peaks P(Fig. 4A-B).
+I
+6 Importantly, Sp_cluster1, 3, 5, and 6 were significant enrichment in plant hormone
+R
+7 signal transduction pathways (Fig. 4C, Table S12), suggesting the involvement of
+C
+8 hormonal networks in the temporal regulation of spikelet development.
+S
+9 Building on this finding, we systematically analyzed spatial differences in hormone-
+U
+10 related metabolites among five spikelet positions using Fisher's
+11 LSD multiple comparisons. The results re N vealed significant spatial distribution
+12 differences (present in ≥2 developm A ental stages) for metabolites including 2-
+13 oxindole, abscisic acid (ABA), is M opentenyl adenosine (IP), salicylic acid (SA), IAA-
+14 ALA, IAM, and OxIAAsp (Fig. 4D, Tables S13-S14), demonstrating the natural
+15 heterogeneity of endogenDous hormone levels within spike organs.
+16 To investigate the eEffects of hormonal signals on spikelet development, we
+17 conducted systemTatic exogenous hormone treatments from the GrA to 35 DPA stages
+18 (Fig. 4E-H). PWhile whole-plant spraying cannot precisely replicate endogenous
+19 spatial diEstribution patterns, it effectively validates the responsiveness of spike
+20 tissueCs to hormonal signals. The experimental results demonstrated significant
+21 pCosition-specific responses to hormone treatments (Fig. 4E-H): Cytokinin (CK)
+2A2 application specifically promoted the development of basal spikelets, as evidenced
+23 by a dramatic 96.97% reduction in abortion rate (p<0.001) and an increase of 3.33
+24 fertile spikelets number (Table S15). Furthermore, the number of florets per spikelet
+25 in bottom spike position increased by 3.14 numbers, accompanied by a significant
+26 21.97% increase in grain number (2.17 more grains, p < 0.01) (Table S16). In
+27 contrast, ABA treatment exhibited inhibitory effects across all spikelet positions,
+9
+
+===== PAGE 10 =====
+
+1 resulting in an overall 35.31% decrease in dry weight (p<0.05) and a reduction of
+2 11.7 grains per spike (p<0.01) (Table S16). Notably, the middle and down position
+3 spikelets showed particularly pronounced sensitivity to ABA, with significantly
+T
+4 decreased grain number per individual spikelet (Table S16). SA, IAA, and JA
+P
+5 treatments selectively decreased grain number and weight in top p I osition spikelets
+R
+6 (Table S16), and GA application caused top spikelet thinning and degeneration
+C
+7 compared to wild type (Fig. 4E-H). These findings reveal that spikelets at different
+S
+8 positions may possess intrinsic and position-specific hormonal response
+U
+9 mechanisms. Future studies should employ more precise spatial manipulation
+N
+10 techniques to directly validate the causal relationship between endogenous hormone
+11 distribution patterns and spike developAment.
+M
+12
+Integrated transcriptDomic and metabolomic analyses reveal key
+13
+E
+regulatory networks governing grain development and size in wheat
+14
+T
+15 To elucidate tPhe molecular regulators of carpel development, we constructed a co-
+16 expressioEn network using transcriptome and metabolome data from 12
+17 deveClopmental stages. This analysis identified 42,435 genes co-regulated with at
+18 lCeast one metabolite (Table S17). Genes and metabolites were grouped into six co-
+1 A 9 response clusters (I–VI) (Fig. 5A, 5B; Tables S3, S18).
+20 Cluster I was enriched for functions related to nutrient storage (e.g., α-amylase
+21 inhibitor activity), starch biosynthesis, seed development, and carbohydrate
+22 metabolism (Tables S19–S21), suggesting its role in supplying energy and substrates
+23 for carpel growth. Leveraging the Plant Metabolic Network (PlantCyc) and prior
+10
+
+===== PAGE 11 =====
+
+1 research43, we identified 89 starch synthesis-associated genes in Cluster I, including
+2 starch branching enzymes (TaSBEI), sucrose synthase (Susy 5, TaSuSy5), granule-
+3 bound starch synthase I (TaGBSSI), starch synthase (TaSSlc), ADP-glucose
+T
+4 pyrophosphorylase large subunit 1 (TaAGPL1), isoamylase 1 (TaISA1), and
+P
+5 pullulanases (TaPUL). Notably, TaAGPL-D1 (TraesCS1D02G427 I 400) showed the
+R
+6 highest expression (Table S22). This gene encodes ADP-glucose pyrophosphorylase,
+C
+7 a rate-limiting enzyme in starch biosynthesis; its overexpression enhances starch
+S
+8 accumulation in wheat44. We also detected trehalose-6-phosphate phosphatase
+U
+9 (TaTPP-7A, TraesCS7A02G180800) in Cluster I, which increases grain size when
+N
+10 overexpressed45.
+11 In cluster III, transcriptome data reveaAled significant enrichment of KEGG terms
+12 related to grain size and hormon M al regulation (Table S20). Within these pathways,
+13 we identified 49 auxin-related genes, including PIN-FORMED 1(TaPIN1), TaARF12,
+14 and TaIAA21 (Table S23D), which are known regulators of grain size and spike
+15 development in wheaEt46-48. Notably, these auxin-related genes exhibited strong
+16 positive correlatioTns with phytohormone derivatives such as IP, indole, 2-oxindole,
+17 iPRMP, and BPA9G (Fig. 5C, Table S23), indicating a functional interplay between
+18 auxin sigEnaling and hormone metabolism in grain development. These results
+19 demoCnstrate the biological relevance of our clustering approach and highlight key
+20 mColecular mechanisms underlying grain development.
+2A1 Metabolic pathway analysis revealed that multiple pathways co-occurred within
+22 individual clusters (Tables S19-S21), demonstrating the complex coordination of
+23 metabolic processes during distinct developmental stages. Notably, we observed
+24 cluster-specific pathway enrichment patterns: phenolamide biosynthesis was
+25 prominent in clusters I and III, suggesting its functional importance during early-to-
+26 intermediate developmental stages. Flavonoid-associated metabolites were
+11
+
+===== PAGE 12 =====
+
+1 predominantly enriched in clusters II, IV, and VI, implicating their roles in later
+2 developmental phases (Fig. 5B).
+3 These findings delineate stage-specific metabolic reprogramming during wheat
+T
+4 development. By mapping these dynamic pathway activities to developmental
+P
+5 transitions, our work provides a framework for investigating I the metabolic
+R
+6 regulation of wheat growth, offering targets for future mechanistic studies.
+C
+7 To identify key transcription factors (TFs) associated with metabolic regulation
+S
+8 during grain development, we analyzed 2,066 TFs from the carpel development
+U
+9 transcriptome using PlantTFDB (http://planttfdb.gao-lab.org/index.php?sp=Tae)
+N
+10 (Table S24). Cluster I was enriched for heat stress transcription factors (HSFs) and
+11 NAC family TFs, while cluster III contaAined diverse regulators including ABI3/VP1,
+12 AP2/EREBP, ARFs, bHLH, TCPM, YABBY, GRAS, MADSⅡ, MYB-related, SBP,
+13 and WRKY TFs (Table S24), suggesting specialized roles in metabolic pathway
+D
+14 regulation.
+E
+15 Correlation analysis revealed strong positive (r > 0.85) or negative (r < -0.85)
+T
+16 relationships between TFs and metabolites. Key TFs associated with carpel
+P
+17 development included: SEP3-like MADS-box (TaSEP349), TaARF12, TaARF2550,
+E
+18 AGAMOUS LIKE 6 (TaAGL651), BRASSINAZOLE-RESISTANT1 (TaBZR152),
+C
+19 Reduced height-B1b (Rht-B1b53).
+C
+20 Notably, cluster I metabolites (raffinose, cellotriose, alanine) showed negative
+A
+21 correlations with cluster III TFs (ARF, AP2/EREBP, MADSⅡ, BES1) (Fig. 5D,
+22 Table S3), likely reflecting a growth-stress tradeoff where stress-responsive
+23 metabolite accumulation coincides with growth pathway suppression (Tables 19-20,
+24 Fig. 5A).
+25 WGCNA of carpel development (GrA to 35DPA) identified 10 co-expression
+12
+
+===== PAGE 13 =====
+
+1 modules (9,636 genes, CV≤25%) (Fig. S5A, Table S25). The greenyellow module,
+2 positively correlated with seed dimensions (Fig. S5B), contained 21 low molecular
+3 glutenin genes (19 in cluster I). Our network analysis highlighted stronTg positive
+4 associations between Squamosa Promoter Binding Protein-likPe (TaSPL16,
+I
+5 TraesCS7A02G260500, TraesCS7B02G158500, TraesCS7D02G261500) alleles
+R
+6 and hormones (Indole, tZOG, IP, iPRMP) (Tables S17, S25), consistent with
+C
+7 TaSPL16's known role in enhancing grain size54. These results establish a
+S
+8 comprehensive regulatory map linking metabolic pathways, TFs, and phenotypic
+U
+9 outcomes during wheat grain development.
+N
+10 To elucidate the regulatory network governing grain/carpel development in wheat,
+11 we analyzed the transcriptome and me A tabolome datasets, focusing on co-response
+12 cluster Ⅵ, which exhibits high gene expression and metabolite accumulation at the
+M
+13 AN stage. Integrated analysis revealed the α-linolenic acid metabolism pathway—
+14 critical for jasmonic acid (JA) b iosynthesis (Table S19, S20). Gene Ontology (GO)
+D
+15 enrichment of cluster Ⅵ transcriptome data highlighted JA-associated processes,
+16 including JA-mediated signaling, response to JA, and JA hydrolase activity. Key JA
+E
+17 biosynthesis genes like lipoxygenases (LOX), allene oxide synthase (AOS), allene
+18 oxide cyclas1 (AOTC1), and 12-oxo-phytodienoic acid reductase3 (OPR3) (Fig. 6A)
+19 were identifie P d, with prior studies linking OPR3 mutations to male sterility in
+20 Arabidopsis, wheat, and rice55-61 .
+E
+21 In our previous research, TaOPR3 (TraesCS7A02G412400, TraesCS7B02G311600,
+C
+22 TraesCS7D02G405500) was shown to modulate the jasmonic acid (JA) pathway,
+C
+23 enhancing heat tolerance in Arabidopsis and wheat61. However, its role in grain
+A
+24 development remained uncharacterized. Notably, TaOPR-A3 displayed higher
+25 expression in carpels compared to TaOPR-B3 and TaOPR-D3 at AN stage (Table
+26 S26). To investigate TaOPR3’s contribution to grain morphology, we generated
+27 overexpression (OE-1, OE-2, OE-4) and RNA interference (RNAi-1, RNAi-2,
+28 RNAi-3) lines of TaOPR-A361. The RNAi lines exhibited reduced grain length and
+29 width relative to wild-type (KN199), while overexpression lines showed no
+13
+
+===== PAGE 14 =====
+
+1 significant phenotypic changes (Fig. 6B–E).
+2 Sequencing of TaOPR-A3 in two Chinese wheat accessions (Jingshuang16 and
+3 Bainong64) revealed a nonsynonmous SNP (+230 protein sequence, ArgT/Gly). To
+4 assess its functional impact, we developed near-isogenic linePs (NILs) by
+I
+5 introgressing the TaOPR-A3-Gly allele from Bainong64 into Jingshuang16 (genetic
+R
+6 background equivalent to Chinese Spring). Compared to the parental Jingshuang16
+C
+7 (TaOPR-A3-Arg, grain length:7.24mm; grain width:3.44mm), NILs harboring the
+S
+8 TaOPR-A3-Gly allele showed increased grain dimensions (length:7.63mm for
+U
+9 NIL1TaOPR-A3-Gly, 3.56mm for NIL1TaOPR-A3-Gly; width:7.87mm for NIL1TaOPR-A3-Gly,
+N
+10 3.79mm for NIL2TaOPR-A3-Gly) (Fig. S6A,B,Table S27).
+A
+11 These results demonstrate that TaOPR3, particularly the TaOPR-A3 isoform,
+M
+12 regulates grain size in wheat. The Arg→Gly substitution significantly influences
+13 grain morphology, as validate d by NIL comparisons, suggesting TaOPR3 as a
+D
+14 promising target for wheat grain improvement.
+E
+15 Gene Ontology (GO) analysis of cluster VI identified two cytokinin-related
+T
+16 pathways (Tables S18, S21). Previous studies in Arabidopsis and rice have
+P
+17 demonstrated that cytokinin signaling is modulated by KISS ME DEADLY (KMD)
+E
+18 F-box proteins, which regulate transcriptional responses through targeted
+C
+19 degradation of transcription factors62,63. Within this cluster, we detected 43 F-box-
+C
+20 related genes, including four homologs of Oryza sativa OsKMD4
+A
+21 (TraesCS4B02G087600, TraesCS4B02G087800, TraesCS4D02G084900,
+22 TraesCS4D02G085000). Notably, TraesCS4D02G085000 exhibited markedly
+23 higher expression in spikes and grains compared to its homologs (Fig. S7).
+24 Functional characterization revealed that overexpression of TraesCS4D02G085000
+25 significantly reduced grain length without affecting width (Fig. 6F-I). Given this
+26 phenotype, we designated this gene as Grain Length1 (GL1).
+14
+
+===== PAGE 15 =====
+
+1 KEGG pathway analysis of Cluster III identified several key regulators of seed
+2 development and size, including TaARF21, TaPIN1, TaIAA21(Table S18, S20). This
+3 cluster was particularly enriched for ATP-dependent RNA helicase genes (Table
+4 S18), among which TraesCS6A02G416700 showed high homology to known seed
+T
+5 development regulators: AtRH02 (At3g19760), and AtRH34 (At1g51380) in
+6 Arabidopsis, and OsRH2 (LOC_Os03g36930.1), OsRH34 (Os01g451 P 90.1) in rice64-
+7 66. We developed two mutants (mut-1 and mut-2) based on Kronos (wild type, a
+I
+8 tetraploid wheat accession). Phenotypic analysis showed that g R rain lengths of GL2-
+9 6A mutant lines were increased by 6.91% to 7.96% in the greenhouses, respectively,
+10 compared with the wild-type Kronos. But no significant dCifference was observed in
+11 grain width between mutants and wildtype (Figure 6J-M). Based on this phenotype,
+S
+12 we designated TraesCS6A02G416700 as Grain Length2 (GL2).
+U
+13 To further explore the potential contribution of GL2 to grain size, we sequenced the
+14 GL2 in two Chinese wheat accessions (Jingshuang16 and Bainong64). We detected
+N
+15 a 15bp insertion (116 bp upstream of the ATG start codon) in Bainong64 relative to
+16 Jingshuang16. To determine the effect A of this indel on grain size, we constructed
+17 NILs that carry the GL2-indel from Bainong64 through repeated backcrossing into
+18 Jingshuang16 which same asM Chinese spring. Compared to the parental
+19 Jingshuang16 line (grain length:7.24mm), the improved Jingshuang16 lines carrying
+20 the GL2-indel had longer grains : grain length (8.11mm for NIL1GL2-indel, 8.15mm for
+D
+21 NIL2GL2-indel, 7.97mm for NIL3GL2-indel) (Fig. S6C, D, Table S27).
+22
+E
+23 Comprehensive Analysis of TaOPR3 Haplotype Variation in Wheat Populations
+T
+24 1. Population Structure and Study Design
+P
+25 We systematically analyzed TaOPR3 variation across four distinct wheat populations:
+E
+26 1) Global diversity panel, 306 worldwide accessions (landraces and traditional
+C
+27 cultivars). 2) Regional comparison, 355 Chinese and USA wheat accessions. 3)
+C
+28 Breeding history, 829 Chinese wheat accessions released between 1900 and 2020.
+A
+29 4) Domestication analysis, 172 hexaploid accessions and 242 additional accessions
+30 (121 Aegilops tauschii, 121 tetraploid wheat).
+31
+32 2. TaOPR-A3 Haplotype Analysis
+33 2.1 Global Distribution Patterns In the worldwide panel, we indicated four major
+34 TaOPR-A3 haplotypes: Hap-1TaOPR-A3 (28.10% frequency), Hap-2TaOPR-A3 (53.92%,
+15
+
+===== PAGE 16 =====
+
+1 matches Chinese Spring reference), Hap-3TaOPR-A3 (5.88%) and Hap-4TaOPR-A3
+2 (10.13%) ( Fig. 7A, Table S28). These haplotypes showed distinct geographical
+3 distributions (Fig. 7B, Table S28) and significant differences in thousand grain
+T
+4 weight (TGW): Hap-3TaOPR-A3 :36.49g (lowest), Hap-1: 41.41g - Hap-2: 40.64g, Hap-
+P
+5 4: 41.79g (highest) (Fig. 7C, Table S29) I
+R
+6 2.2 Breeding Selection in China Analysis of 829 Chinese breeding accessions
+C
+7 revealed: 55 SNPs defining 4 haplotypes. Progressive increase in non-reference
+S
+8 haplotypes during breeding, Hap-c4TaOPR-A3 (reference) frequency decreased over
+U
+9 time. This suggests strong selection pressure on TaOPR-A3 in Chinese breeding
+N
+10 programs. (Fig. 7D. Table S30).
+11 2.3 China-USA Comparison In 355A accessions, we observed: Hap-cu1TaOPR-A3
+12 predominated across categories, H M ap-cu2TaOPR-A3 more frequent in landraces (13.89%)
+13 vs cultivars (CHN-CV: 1.00% and USA-CV: 0.00%). Hap-cu3TaOPR-A3 showed
+14 regional divergence (ChinDa: 17.00%, USA: 6.94%) (Fig. 7E, Table S31).
+15 E
+16 3. DomesticationT History Phylogenetic network analysis revealed: Hexaploid
+17 wheat dividedP into 4 haplotypes (Hap-IV-IX), distinct haplotypes in wild progenitors:
+18 Hap-I: einEkorn wheat, Hap-II/III: urartu Hap-VII/VIII: emmer wheat. Haplotype
+19 similCarity between hexaploid and tetraploid wheat suggests tetraploid origin (Fig.
+20
+7CF).
+2A1 For TaOPR3-B3 (TraesCS7B02G311600), we identified three haplotypes: Hap-
+22 1TaOPR-B3 (61.76%, 189 of 306 accessions), Hap-2TaOPR-B3 (15.03%, 46 of 306
+23 accessions) and Hap-3TaOPR-B3 (23.20%, 71 of 306 accessions) in the 306 worldwide
+24 wheat accessions. Hap-1TaOPR-B3 had the same sequence as the reference genome
+25 (Chinese Spring) (Fig. S8A, Table S32). The three major haplotypes of TaOPR-B3
+26 displayed worldwide geographical differentiation. Hap-1TaOPR-B3 accounted for
+27 relatively high percentages in most regions (57.14-76.74%) except Oceania and
+28 South America, Hap-2TaOPR-B3 was more widely distributed in Oceania (41.17%) and
+29 South America (30.95%) and not found in Africa, Hap-3TaOPR-B3 was more widely
+16
+
+===== PAGE 17 =====
+
+1 distributed in USA and Europe, and less prevalent in Middle East (4.65%) (Fig. S8B,
+2 Table S32). In addition, we explored the history of TaOPR-B3 haplotypes in 829
+3 Chinese accessions. Hap-c1TaOPR-B3 had the same sequence as the reference genome
+4 (Chinese Spring) and decreased in frequency from 80.17% to 45.91%, while other
+T
+5 two haplotypes all increased (Hap-c2TaOPR-B3:16.37 to 44.90%; Hap-c3TaOPR-B3:3.45%
+6 to 18.18%) (Fig. S8C, Table S33). For 355 Chinese and USA accessio P ns, five major
+7 haplotypes were identified, in which the percentage of Hap-cu1TaOPR-B3 was higher
+I
+8 in Chinese cultivars (CHN-CV) (54.37%) than in landrace (7 R .82%) and USA-CV
+9 (18.06%) categories. Hap-cu2TaOPR-B3 was the major haplotype in landrace and USA-
+10 CV, Hap-cu3TaOPR-B3 and Hap-cu4TaOPR-B3 were only detectCed in landrace and CHN-
+11 CV, Hap-cu5TaOPR-B3 was only identified in landraces (Fig. S8D, Table S34).
+S
+12 For TaOPR3-D3 (TraesCS7D02G405500), we identified five, four and four main
+U
+13 haplotypes in 306 worldwide accessions, 829 Chinese accessions and 355 Chinese
+14 and USA accessions, respectively. These haplotypes displayed differences in
+N
+15 geography and breeding selection (Fig. S8E-H).
+16 A
+17 DISCUSSION
+18 Enhancing grain yield represenMt a primary objective in modern wheat breeding
+19 programs, with spike architecture serving as fundamental determinant of yield
+20 potential. The hormonal regul ation of inflorescence development in cereal crops
+D
+21 combines conserved and species-specific patterns. Maize (Zea mays), barley
+22 (Hordeum vulgare), and rice (Oryza sativa) all utilize IAA and CK gradients to
+E
+23 regulate inflorescence architecture, demonstrated by: 1) the spatiotemporal
+24 expression of IAAT/CK/GA/JA-related genes in maize ears67. 2) the conserved auxin
+25 and cytokinin P concentration gradient in barley spikes, higher at the base than the
+26 apex, which is critical for architecture68. 3). OsPID-mediated auxin transport
+E
+27 controlling rice floral organ development69. Nevertheless, interspecies divergences
+28 existC: maize employs dynamic JA/ABA/SA/ethylene signaling for sexual
+29 differentiation70. while barley exhibits apical ABA accumulation triggering
+C
+30 programmed tip degeneration (PTD), with auxin/cytokinin promote basal growth71
+3A1 Metabolites, particularly hormones, play crucial regulatory roles in spike
+32 morphology, influencing not only yield but also environmental adaptation and
+33 stresses resistance. Our findings demonstrate that spatiotemporal hormone
+34 distribution patterns regulate spikelet organogenesis through metabolic gradient
+35 establishment. The observed "position-specific hormone perturbation →
+36 morphological response" relationship provides a theoretical framework for
+37 optimizing spike architecture in crop improvement. To systematically understand
+38 these relationships, we generated a comprehensive spatiotemporal metabolome atlas
+17
+
+===== PAGE 18 =====
+
+1 of wheat spike development, mapping metabolite distributions across distinct spike
+2 components and twelve developmental stages using high-resolution metabolomics.
+3 Our study uniquely integrates morphological data with single-metabolite
+4 distribution patterns, revealing both spatial and temporal metabolic dynamics. Key
+T
+5 findings demonstrate that: 1) Identical metabolites exhibit organ-specific
+6 concentration gradients within the same developmental stage 2 P ) Individual
+7 metabolites show temporal fluctuation patterns within specific organs 3) These
+I
+8 spatiotemporal variations create complex metabolic network R s coordinating spike
+9 development. Notably, multi localizing metabolites appear to function through:
+10 Spatial confinement of activity within specific compaCrtments, Stage-dependent
+11 concentration modulation enabling pleiotropic regulation
+S
+12 This systems-level perspective facilitates identification of hub metabolites
+U
+13 governing spike-wide developmental networks. Supporting previous reports of
+14 gibberellin (GA) transport through vascular systems72,73 , we observed substantial
+N
+15 GA accumulation in rachis post-anthesis, suggesting dual roles in transport and
+16 storage. A
+17 The carpel is the key organ for grain yield in wheat. Previous studies reported the
+18 gene expression profiles for sevMeral stages after anthesis22,43,74,75, but few works
+19 display the overall information of gene expression from initiation of grain/carpel to
+20 the maturity.
+D
+21 We constructed the most comprehensive transcriptome and metabolome dataset for
+22 carpel development. We demonstrated a network by integrating of the temporal
+E
+23 metabolome and transcriptome data. Based on the network, we identified the critical
+24 genes regulating gTrain size in wheat, confirming its effectiveness.
+25 Furthermore, P we established the most complete transcriptome-metabolome dataset
+26 for carpel development, enabling network-based identification of key grain size
+E
+27 regulators. Building upon recent genomic advances9-14, 76-79., we characterized
+28 haploCtype distributions of three target genes (TaOPR3, GL1, GL2) across global
+29 geographical populations, century-long Chinese breeding history and diploid-to-
+C
+30 hexaploid wheat domestication(Fig7,S8-9 Table S28-38).
+A
+31 Collectively, our findings support that spatiotemporal dynamics of hormone-related
+32 metabolites and the position-specific developmental responses elicited by exogenous
+33 hormone application underscore the critical importance of localized hormone levels
+34 and their spatial imbalances in regulating spikelet development and grain setting. In
+35 summary, we have established a high-resolution metabolomic atlas of wheat spike
+36 development that reveals insights into the spatiotemporal regulation of spike
+37 morphology. Our integrated analysis demonstrates the utility of these datasets for
+38 investigating multiple facets of grain yield determination. This comprehensive
+18
+
+===== PAGE 19 =====
+
+1 resource enables: 1) Systematic hypothesis generation regarding metabolic control
+2 of spike architecture. 2) Validation of spatial-temporal metabolic networks governing
+3 spikelet and floret development. 3) Identification of key genetic regulators of grain
+4 size through combined transcriptome-metabolome analysis
+T
+5 Furthermore, our findings establish a framework for comparative s P tudies across
+6 cereal species to elucidate: Evolutionary conservation of developmental regulation
+I
+7 networks. Species-specific metabolic adaptations in spike development.
+R
+8
+C
+9 MATERIALS AND METHODS
+10 Plant materials and Sampling S
+U
+11 The wheat cultivar Longchun35 (Triticum aestivum L.) were cultivated under field
+12 conditions at the Institute of Botany, ChineseN Academy of Sciences (Beijing, China).
+13 Samples were collected from the green aAnther stage (GrA), yellow anther stage (YA),
+14 tipping stage (TP), heading stageM(HD), anthesis (AN), and 5–35 days post-anthesis
+15 (DPA) in 5-day increments (DPA), with developmental staging following established
+D
+16 protocols80.
+E
+17
+T
+18 Spatial Sampling Protocol:
+P
+19 1. Spike Partitioning: Each spike was divided longitudinally into five equal
+E
+20 segments: 1) the top of spike (top), 2) 30% of spike length (upper middle), 3) the
+C
+21 center of spike (middle), 4) 70% of spike length (lower middle), 5) the bottom of
+C
+22 spike (bottom). The samples of spikelet and rachis were collected at the five
+A
+23 positions.
+24 2. Organ Collection:
+25 1) Spikelets and rachis were sampled from all five positions. 2) Central spikelet
+26 components were dissected into: florets(F1-F4), glumes. 3）F1 florets were further
+27 separated into: anthers, lemma, palea, awns and carpel (used for transcriptome and
+28 metabolomics analysis). Samples from more than ten individual plants were pooled
+19
+
+===== PAGE 20 =====
+
+1 as one biological replicate and immediately frozen in liquid nitrogen. Two biological
+2 replicates were used for metabolome and three biological replicates were used for
+3 transcriptome analysis, respectively.
+T
+4 The experiment was conducted in a test field with uniform soil conditions. To avoid
+P
+5 marginal effects, all samples were collected from the center of the f I ield (at least 0.5
+R
+6 meters from the edge). Ten individual plants were randomly selected as samples at
+C
+7 each developmental stage, and the spacing between the sampled plants was at least
+S
+8 30 cm to ensure sample independence. All samples were collected at 9:00-11: 00 a.m.
+U
+9 (in the morning) during the day.
+N
+10
+11 Phenotype A
+12 Spike morphology traits including spike length, spike weight, grain weight, chaff
+13 weight, rachis weight, spikelet wMeight at different stages, were measured following
+14 our previous established protocol81. Each trait was measured using samples collected
+15 from four distinct individual p lants, which served as biological replicates. These
+D
+16 individual plants were randomly selected from the experimental population to ensure
+17 that the replicates were independent and representative of the overall population
+E
+18 variability.
+19 During the 12 stagTes of spike development, we also measured the glume weight and
+20 the weights of P different floret organs (lemma weigh, awn weight, and carpel weight)
+21 at five spike position. For these measurements, the biological replicates were again
+E
+22 four separate individual plants.
+23 ImagCes of the samples were captured using a Stereo microscope (SZ810, CNOPTEC,
+24 Chongqing, China). Anther length, anther width, grain length and grain width were
+C
+25 measured using ImageView software based on the microscope images.
+2A6 For measuring the anther length and width, ten individual plants were utilized as
+27 biological replicates. Given that anther characteristics can exhibit significant
+28 variation among plants, a larger number of replicates was employed to increase the
+29 precision of the measurements and enhance the reliability of the statistical inferences.
+30 In contrast, for measuring grain length and grain width, three individual plants were
+31 used as biological replicates. Ten biological replicates were used for grain length and
+32 grain width.
+33
+34 Preparation of metabolic samples
+20
+
+===== PAGE 21 =====
+
+1 Samples were first freeze-dried and ground into powder using a mixer mill (MM400,
+2 Retsch) for 50 s at 30 Hz. For each sample, 50 mg fine-dry powder was weighed and
+3 extracted by 20 min sonication after 0.5 ml of 70% methanol w/v containing internal
+4 standards (0.1 mg/l acyclovir) was added. The supernatants were collected and
+T
+5 passed through filter (SCAA-104, 0.22 mm pore size; ANPEL Shanghai, China,
+6 www.anpel.com.cn/) after centrifugation for 10 min at 10,000 g. P
+7
+I
+8 Metabolome profiling analysis R
+9 The metabolome analysis was generally followed the previously developed LC-
+C
+10 MS/MS-based widely targeted metabolic profiling method82. To be specific, high
+S
+11 resolution MS data were obtained in an untargeted metabolite analysis, the mixed
+U
+12 samples were analyzed using a time–of–flight mass spectrometry platform (HPLC,
+N
+13 Shim‐pack UFLC SHIMADZU CBM20A system, Triple TOF 5600; Applied
+A
+14 Biosystems). The identification of metabolites was performed based on comparisons
+M
+15 of the obtained MS/MS spectra, exact mass numbers, and retention times with those
+16 of authentic standards and putatively annotated compounds that described in
+D
+17 previous studies20,21,83,84. The relative levels of metabolites in samples were analyzed
+E
+18 by an LC-ESI-MS/MS system (Shimadzu CBM20A UFLC system, 5500 QTRAP;
+T
+19 Applied Biosystems, Framingham, MA, USA). An internal standard and a quality
+P
+20 control sample were used to monitor detection performance. The sMRM algorithm
+E
+21 was used with an MRM detection window of 90 s and a target scan time of 1.0 s
+C
+22 using Analyst 1.6 software. The components were separated using a C18 column
+C
+23 (Accucore C18, 150 × 2.1 mm; Thermo Scientific, Waltham, MA, USA). The mobile
+A
+24 phases were 0.1% formic acid in water (buffer A) and acetonitrile (buffer B). The
+25 flow rate was set to 0.35 mL per min, and the following operational gradient was
+26 used: 0 min, 5% B; 20 min, 95% B; 22 min, 95% B; 22.1 min, 5% B; 25 min, 5% B.
+27 The injection volume was five μl and the column temperature was set to 40 ℃.
+28 Metabolite identification was performed according to previously published
+29 methods84-86.
+21
+
+===== PAGE 22 =====
+
+1
+2 RNA isolation and sequencing
+3 Total RNA was isolated from the carpel of Longchun35 (a hexaploid wheat
+T
+4 accession). Total RNA was extracted using TRIzol reagent (Invitrogen), treated with
+P
+5 DNase I, and purified using RNeasy columns (QIAGEN). One µg I total RNA per
+R
+6 sample was used as input material for the preparation of sequencing libraries using
+C
+7 a NEBNext UltraTM RNA Library Prep Kit for Illumina (NEB, USA) following the
+S
+8 manufacturer’s recommendations. Index codes were added to attribute sequences to
+U
+9 each sample following sequencing and demultiplexing. The clustering of index-
+N
+10 coded samples was performed on a cBot Cluster Generation System using a TruSeq
+11 PE Cluster Kit v3-cBot-HS (Illumina) aAccording to the manufacturer’s instructions.
+12 After cluster generation, the libr M aries preparations were sequenced on an Illumina
+13 Novaseq 6000 platform and 150-bp paired-end reads were generated (Novogene,
+14 Beijing, China). D
+15 E
+16 Read mapping aTnd transcript profiling
+17 The Chinese sPpring reference genome (IWGSC Annotation v1.1) was downloaded
+18 from E http://ftp.ensemblgenomes.org/pub/plants/release-
+19 46/faCsta/triticum_aestivum/dna/Triticum_aestivum.IWGSC.dna.toplevel.fa.gz. Raw
+20 RCNA-seq reads were processed using Trimmonmatic87 to remove adapter and low-
+2A1 quality sequence, and salmon88 was used to map the reads to wheat reference
+22 genome. Following alignments, raw counts for each wheat gene were normalized to
+23 transcripts per million (TPM) by using R package tximport (v1.18.0)89. We
+24 calculated the Pearson correlation coefficient between three biological replications
+25 with the log (TPM+1) and replaced the samples with low correlation with the mean
+2
+26 of both samples. The transformed and normalized gene expression values with
+22
+
+===== PAGE 23 =====
+
+1 log (TPM +1) were used for hierarchical clustering, and the z-scores of the genes
+2
+2 were used for the analysis of PCA.
+3
+T
+4 Metabolic Correlation and Enrichment Pattern Statistics
+P
+5 Metabolic data were log 2 (metabolic expression values +1) transfor I med to improve
+R
+6 normality and homogeneity, and then got the normalized metabolic expression
+C
+7 values with Z-score. Z-score were used for hierarchical clustering and PCA by R
+S
+8 software. Pearson correlation coefficient was calculated on Z-score to estimate inter-
+U
+9 organ and intra-organ metabolite pair correlations.
+N
+10
+11 Metabolite Clustering Analysis A
+12 To systematically analyze the c M lustering patterns of metabolites across different
+13 samples and organs, we performed metabolite clustering analysis. This analysis was
+14 divided into two categorieDs: one based on metabolites across all samples and the
+15 other based on metabEolites within the same organ types, including spike, rachis,
+16 floret, and ovaryT. In each clustering analysis, we first applied the fviz_nbclust
+17 function fromP the factoextra (v1.0.7) R package to calculate the Within-Cluster Sum
+18 of SquareEs (WSS) for different numbers of clusters. WSS was used as a measure to
+19 assesCs the clustering performance. Next, the WSS values for all clusters were
+20 sCummed to obtain the Total Sum of Squares within Clusters (TSSE), and the TSSE
+2A1 was plotted against the number of clusters (k). Following the elbow method, we
+22 selected the optimal number of clusters by observing the TSSE curve. Subsequently,
+23 we used the Mfuzz R package90 to perform the clustering and generate corresponding
+24 cluster plots, providing a visual representation of the clustering patterns of
+25 metabolites in different tissues. These clustering analyses allowed us to uncover the
+26 distribution patterns of metabolites across various samples and tissues, which
+23
+
+===== PAGE 24 =====
+
+1 provides valuable data support for subsequent functional studies and metabolic
+2 pathway inference.
+3
+T
+4 Co-expression/Co-regulation Cluster Identification and Analysis
+P
+5 A total 313 metabolites were clustered using Mfuzz R package90 I into significant
+R
+6 discrete clusters. After obtaining the average TPM value of each gene, Pearson
+C
+7 correlation analysis was performed with the carpel metabolites. The genes with
+S
+8 correlation of R > |0.85| with any of the metabolites were retained. A total 42,434
+U
+9 genes were retained. The 42,434 genes were clustered into six clusters using Mfuzz
+N
+10 R package90. Visualization of all associations between genes and metabolites was
+11 carried out using Cytoscape software91A.
+12 M
+13 KEGG Enrichment Analysis and GO Analysis
+14 For Metabolite KEDGG data analysis, we used the web
+15 (https://www.metaboaEnalyst.ca/MetaboAnalyst/upload/ConvertView.xhtml) to
+16 change the metabTolite ID to KEGG ID. FELLA R package was used for metabolite
+17 KEGG enrichPment analysis92. Transcription GO term enrichment and KEGG term
+18 enrichmenEt was performed using eggnog mapper93 with the “-i wheat_V1.fasta -d
+19 virNOCG -m diamond” options to get the codes of the corresponding genes in GO
+20 tCerm and KEGG term. Applying a hypergeometric test with FDR correction
+2A1 (adjusted p value < 0.05), the analyses of GO term and KEGG term were conducted
+22 using the R package clusterProfiler94.
+23
+24 Identification of candidate genes in starch and sucrose metabolism pathway
+25 Starch and sucrose metabolism pathway (KEGG ID: ath00500) was identified in
+26 cluster9 through metabolic pathway enrichment analysis. Key regulatory enzymes
+24
+
+===== PAGE 25 =====
+
+1 involved in this pathway, including β-fructofuranosidase (EC 3.2.1.26), α-
+2 glucosidase (EC 3.2.1.20), and sucrose-phosphate phosphatase (EC 3.1.3.24), were
+3 retrieved from the KEGG database (https://www.genome.jp/kegg/). TFor each
+4 enzyme, the corresponding wheat gene indices (ats) were obtained froPm the "Gene"
+I
+5 section of KEGG, and amino acid sequences were extracted from the linked
+R
+6 webpages. These sequences were used for BLASTp analysis to screen candidate
+C
+7 genes, with the highest alignment rate as the selection criterion. Among the identified
+S
+8 candidates, grain incomplete filling 1 (TaGIF1) was confirmed as a key gene
+U
+9 involved in grain development.
+N
+10
+A
+11 Weighted gene co-expression network analysis
+M
+12 In the carpel samples, co-expression network modules were identified based on
+13 log2(TPM+1) value using WGCNA package in R95. Genes with a low coefficient of
+D
+14 variation of count (CV < 0.25) among carpel samples were discarded and the
+E
+15 remaining 9,636 genes were used for the analysis. Co-expression modules were
+T
+16 obtained using the TOMtype “unsigned” and a Pearson correlation matrix was
+P
+17 calculated between all pairs of selected genes from which adjacency matrix was
+E
+18 constructed by raising the correlation matrix to the power of 12 (Fig. S10). Average
+C
+19 linkage hierarchical clustering was carried out for grouping genes with highly
+C
+20 similarity for co-expression patterns. The modules were identified using Dynamic
+A
+21 Hybrid Tree cut algorithm96， with the minimum module size to 50. The expression
+22 profile of each module was summarized by module eigen-gene defined as its first
+23 principal component, and modules with highly correlated (>0.8) eigen-genes were
+24 merged.
+25
+26 Exogenous hormone treatments and spike phenotype identification
+25
+
+===== PAGE 26 =====
+
+1 The hormones of 6-Benzylaminopurine (6-BA, 100mg/L), abscisic acid (ABA,
+2 100uM), salicylic acid (SA, 100uM), 3-Indoleacetic acid (IAA, 100mg/L), methyl
+3 jasmonate (MeJA, 100uM) and gibberellic acid (GA, 100 μM) were used for
+T
+4 treatments. 6-BA was first solubilized with 1% (w/v) NaOH, and then diluted with
+P
+5 double-distilled H 2 O to appropriate concentration97. ABA, IAA, I MeJA and GA
+R
+6 solubilized with 95% alcohol, and then diluted with double-distilled H O to
+2
+C
+7 appropriate concentration98-101. Tween 20 (0.01%, v/v) was added as a surfactant and
+S
+8 mixed thoroughly. All the chemicals used were purchased from Sigma-Aldrich. The
+U
+9 treatments were performed daily from inflorescences initiation to spikes maturation.
+N
+10 The solutions were sprayed on the entire plants. The control lines were sprayed with
+11 the same volume of deionized water coAntaining the same concentrations Tween-20
+12 without hormones. M
+13 To evaluate the effects of exogenous hormone treatments on panicle development
+14 and yield-related traits, weD conducted a systematic phenotypic assessment of spikes
+15 after the hormone appElication. The phenotypic measurements were performed at two
+16 levels: T
+17 Overall paniPcle trait measurement
+18 Key agronEomic traits of the entire spike were measured, including spike length, spike
+19 weigCht, total spikelet number, number of sterile spikelets at the top position, number
+20 oCf sterile spikelets at the bottom position, fertile spikelet number, and grain number.
+2A1 This analysis aimed to reflect the impact of hormone treatments on the general
+22 morphology and yield components of the spike, and therefore, the positional effects
+23 along the spike were not considered in this part.
+24 Spikelet trait measurement at different positions
+25 To further assess the direct effects of hormone treatments on spikelets from different
+26 positions within the spike, five fixed positions (e.g., Top, Up, Middle, Down,
+26
+
+===== PAGE 27 =====
+
+1 Bottom) were selected for representative spikelet sampling. For each sampled
+2 spikelet, the floret number per spikelet, grain number per spikelet, grain weight per
+3 spikelet, and spikelet weight were recorded.
+T
+4 In this analysis, comparisons were made between spikelets located at the same spike
+P
+5 positions from hormone-treated plants and the corresponding water- I treated controls.
+R
+6 This design allows for the elimination of positional effects, thereby providing a more
+C
+7 accurate estimation of the local phenotypic responses to hormone treatments.
+S
+8
+U
+9 Mutants
+10 The OPR3 gene, as previously described in tNhe study61, is utilized in our research to
+11 examine the effects of various wheat grain development models on grain growth.
+A
+12 The information for the development of overexpression and RNAi lines were
+13 described in our previous work61.
+M
+14 To get GL-D1 overexpression plants, the coding sequences of GL-D1 was
+15 individually amplified using D NA polymerase KOD FX (Toyobo, Osaka, Japan)
+D
+16 from WT cDNA and cloned into the pMWB110 vector102 using an In-Fusion
+E
+17 Advantage PCR cloning kit (Clontech Laboratories, Takara, Tokyo, Japan). The
+T
+18 resulting plasmids were transformed into the spring wheat cultivar Fielder via
+P
+19 Agrobacterium-mediated transformation103. All primer sequences used in this study
+E
+20 are listed in Table S39.
+C
+21 The Kronos (Triticum turgidum, tetraploid, AABB genome) GL2 mutants mut-1 and
+C
+22 mut-2 are both single mutants with mutations exclusively located on chromosome
+2A3 6A. Wild-type seeds were treated with 0.7% EMS for 16 h at 25 °C to generate an
+24 EMS mutant library (http://wheatomics.sdau.edu.cn/). The GL2 mutant was
+25 backcrossed with the wild-type Kronos and grown for two generations with no
+26 change in phenotype. GL2 mutant was identified by PCR sequencing.
+27
+28 RT-qPCR Analysis
+29 Fresh leaves of overexpression transgenic lines were collected and immediately
+30 frozen in liquid nitrogen. The samples were thoroughly grounded and transferred to
+27
+
+===== PAGE 28 =====
+
+1 centrifuge tubes. Total RNA was isolated with a Plant RNA Kit (TIANGEN, #
+2 DP441), first-strand cDNA was synthesized with a qPCR RT Kit (TOYOBO, #FSQ-
+3 101) according to the manufacturer’s instructions. Real-time PCR analysis was
+T
+4 performed using CFX real-time machine (Bio-Rad) and SYBR Premix Ex Taq Mix
+P
+5 (Takara, #RR420A). Wheat TaACTIN was used as an internal contr I ol. The real-time
+R
+6 PCR results were analyzed using CFX Maestro analysis software. Each experiment
+C
+7 had three technical replicates. All primers used for RT–qPCR were listed in Table
+S
+8 S39.
+U
+9
+N
+10 Haplotype analysis of TaOPR3, GL1 and GL2
+11 The SNPs in the 2 kb upstream and dowAnstream region of TaOPR3, GL1, GL2 were
+12 filtered by applying a MAF ≥ 5% M cut-off and low-frequency haplotypes could arise
+13 owing to errors in SNP calling; we therefore filtered the haplotypes by retaining the
+14 ones with frequency ≥ 5. TDo analyze the variation of TaOPR3, GL1, GL2, we used
+15 306 worldwide wheaEt accession, 172 hexaploidy accessions and 242 additional
+16 accessions (121 ATegilops tauschii, 121 tetraploid wheat varieties)76,77, 829 Chinese
+17 wheat accessioPns released between 1900 and 202078,104, 355 Chinese and American
+18 wheat accEessions79. Phylogenetic network were used popArt105 to plot.
+19
+C
+20 ACccession Numbers
+2A1 Sequence data from this article can be found in the EnsemblePlants
+22 database(https://plants.ensembl.org/Triticum_aestivum/Info/Index)under the
+23 following accession numbers: TaGIF-D1 (TraesCS2D02G293200),
+24 TaSPL16(TraesCS7A02G260500, TraesCS7B02G158500, TraesCS7D02G261500),
+25 TaOPR3 (TraesCS7A02G412400, TraesCS7B02G311600, TraesCS7D02G405500),
+26 Grain Length1 (TraesCS4D02G085000), Grain Length2(TraesCS6A02G416700)_.
+28
+
+===== PAGE 29 =====
+
+1 Funding
+2 This work was supported by the Strategic Priority Research Program of the National
+3 Natural Science Foundation of China (32272122) to Z.G., the Chinese Academy of
+T
+4 Sciences (Grant No. XDA24010104-2) to Z.G., the China Postdoctoral Science
+P
+5 Foundation (GZB20240820, 2024M763526) to Y.Y.L., the Nation I al Key Research
+R
+6 and Development Program (2022YFF1002904) to F.L, the Strategic Priority
+C
+7 Research Program of the Chinese Academy of Sciences (XDA24020201) to F.L.
+S
+8
+U
+9 We thank Professor Lijun Zhang and Professor Wentao Zhang from Gansu Academy
+10 of Agricultural Sciences for providing seeds of Longchun35.
+N
+11
+12 AUTHOR CONTRIBUTIONS A
+13 Z.G. initiated the project. Z.G. and W.C. designed the experiments. Z.G., W.C., Y.H.
+M
+14 and F.L. supervised the experiments. C.Y. and F.L. performed sequencing, and
+15 genomic-variant calls. Y.L., K.S. and Z.L. carried out transcriptome and metabolome
+16 analysis. Y.L. and L.Z. colDlected samples for transcriptome and metabolome analysis.
+17 A.Z. and W.C. conducted measurements of metabolites. L.S. carried out genotyping
+18 of NILs. J.Z., J.C., G.CE., M.X. and Y.T. developed overexpression lines, RNAi lines
+19 and mutants. Z.W. and Z.S. collected phenotypic data of spike development. X.X.,
+T
+20 M S., Y.H. and Z.H. developed NILs. Y.L. and L.Z. plotted manuscript figures. All
+21 authors were iPnvolved in the writing and editing of the manuscript.
+22 E
+23 Figure legends
+C
+24 Figure 1. The high-spatiotemporal-resolution dissection of spike components in
+25 w C heat. A, Spike dissection: spikelets and rachis from five positions across individual
+26 spike. B, Spikelet dissection: four florets at different positions within individual
+A
+27 spikelet. C, Floret dissection: awn, palea, carpel, lemma, anther. D, Temporal
+28 dissection of carpel development: carpel form green anther stage (GrA) to 35 days
+29 post anthesis (DPA) stage. All of the above organ samples were taken at 12 stages
+30 from GrA to 35 DPA, except anthers from five stages from GrA to AN. A-D images
+31 were digitally extracted for comparison, and their scale bars were adjusted to be
+32 consistent for ease of comparison. The same images were used to show “carpel”
+33 in 1C and “AN” in 1D. E-H, Spike weight (E), spike length (F), grain weight (G)
+29
+
+===== PAGE 30 =====
+
+1 and chaff weight (H) at 12 stages form GrA to 35DPA stages. i, Spikelet weight of
+2 five positions from TP to 35DPA. J, The weight of the first floret from the bottom of
+3 the spikelet (F1 weight) from the spikelets at five positions during spike
+4 developmental process. K, The weight of four florets within individual spikelet at 10
+T
+5 stages from TP to 35DPA stage. GrA: green anther stage, YA: yellow anther stage,
+6 TP: tipping stage, HD: heading stage, AN: anthesis stage, DPA: days P post anthesis.
+7 Figure 2. Fig. 2. Summary of metabolome data of wheat spike. A, Overview of the
+I
+8 313 annotated metabolites. Different colors on the Y-axis R represent different
+9 categories of metabolites. The X-axis represents different organs at 12 development
+10 stages. B, Principal component analysis (PCA) results Cof metabolites from 233
+11 samples. C, Hierarchical clustering analysis results based on Pearson correlation
+S
+12 coefficients of metabolites among 233 samples.
+U
+13 Figure 3. Global metabolite profiling of spike organs reveals common and organ-
+14 specific metabolic signatures. A, Fuzzy C-means clustering identifies nine different
+N
+15 temporal patterns of metabolites. The x-axis represents 22 organs at 12
+16 developmental stages. Different colors A indicate different organs. Rachis and spikelet
+17 organs were taken at five positions (top, upper middle, middle, lower middle and
+18 bottom of spike); while the Y-axiMs represents log2-transformed, normalized Z-score
+19 values at each stage. "Membership" represents the degree of affiliation of
+20 metabolites to a specific cluster . B, The number of metabolites for the nine clusters
+D
+21 (cluster1-9). ACD: amino acid derivatives, Fla: flavonoid, Lip: lipid, NAD: nucleic
+22 acid derivative, OrA: organic acid, Phe: phenolamide, Phy: phytohormone derivative,
+E
+23 Plo: polyphenol, Sug: sugar, Va: vitamin. The number represent the number of the
+24 corresponding meTtabolites for each cluster. C, Metabolite enrichment patterns of
+25 cluster 5 for a P nther development at five stages (GrA, YA, TP, HD, AN). The colors
+26 represent the log2-transformed, normalized Z-score values in each stage, the redder
+E
+27 the color the higher the enrichment. GrA: green anther stage, YA: yellow anther stage,
+28 TP: tCipping stage, HD: heading stage, AN: anthesis stage. D, Anthers at five stages
+29 (CGrA, YA, TP, HD, AN). The bar represents 1000 μm. E-F, Anther length (E) and
+3A0 width (F) at five stages (GrA, YA, TP, HD, AN). Data are presented as the mean (n
+31 = 10 plants). For box plots: the box represents the interquartile range (IQR),
+32 encompassing the first quartile (Q1), median, and third quartile (Q3); whiskers
+33 extend to values within 1.5× IQR relative to the box boundaries; individual points
+34 denote outliers. Statistical analysis of significance was conducted via one-way
+35 analysis of variance (ANOVA), followed by the least significant difference (LSD)
+36 post hoc test. Different lowercase letters indicate statistically significant differences
+37 among groups (P < 0.001). G, Correlation between metabolites in cluster5 and anther
+30
+
+===== PAGE 31 =====
+
+1 length/width. The correlation coefficient is indicated by color: red hues (ranging
+2 from light to dark, corresponding to 0.3–0.9) represent positive correlations, while
+3 the color gradient from yellow to purple (0.0–-0.3) represents negative co T rrelations.
+4 The symbol "r" next to the color scale denotes the correlation coeffi P cient, and the
+5 numerical labels clearly indicate the correlation coefficient values corresponding to
+I
+6 each color interval. R
+7 Figure 4. Uneven distribution of hormones affects spike morphology. A, Fuzzy C-
+8 means clustering identified six temporal patterns of metabColites across five spikelet
+9 positions. Each line represents the expression pattern of metabolites assigned to a
+S
+10 cluster. The X-axis represents individual samples, grouped by spikelet position and
+U
+11 developmental stage. Samples 1-12 correspond to the top spikelet at 12
+12 developmental stages, samples 13-24 to the upper middle spikelet at 12 stages,
+N
+13 samples 25-36 to the middle spikelet at 12 stages, samples 37-48 to the lower middle
+14 spikelet at 12 stages, and samples 49-60 A to the bottom spikelet at 12 stages. Different
+15 colors represent different spikelet positions (see legend). The Y-axis represents log2-
+16 transformed, normalized Z-scorMe values for each sample. B, The number of
+17 metabolites assigned to each of the six clusters (Sp-cluster1-6). ACD: amino acid
+18 derivative, Fla: flavonoid, Lip : lipid, NAD: nucleic acid derivative, OrA: organic
+D
+19 acid, Phe: phenolamide, Phy: phytohormone derivative, Plo: polyphenol, Sug: sugar,
+20 Va: vitamin. The number represent the number of the corresponding metabolites for
+E
+21 each cluster. C, Network diagram of KEGG results of the six metabolite enrichment
+22 patterns. The coloTr represents the KEGG -log10(p value). D, The significance of the
+23 differences am P ong the five positions for each stage (P < 0.05, ANOVA). The red
+24 color indicates the significant differences of the hormone derivatives among the five
+E
+25 positions at different stages. E, Representative images of wheat spikes from wild-
+26 type C(WT) plants and plants subjected to exogenous hormone treatments (CK:
+27 cytokinin, ABA: abscisic acid, SA: salicylic acid, IAA: auxin, JA: jasmonate, GA:
+C
+28 gibberellin). The images were digitally extracted for comparison, and their scale bars
+2A9 were adjusted to be consistent for ease of comparison. F-H, Spikelet dry weight (F),
+30 floret number per spikelet (G) and grain number per spikelet (H) across individual
+31 spike. The Y-axis represents the spike axis direction (from top to bottom), and the
+32 values on the axis correspond to the measured values of the respective traits for
+33 spikelets at different positions on a single spike. The X-axis represents the measured
+34 data of each trait, where the X-axis unit in Panel F is grams (g), and the X-axis unit
+35 in Panels G and H is "number". To more clearly display the characteristics of spike
+36 shape changes, we performed a mirroring process on the data to enhance the visual
+37 presentation effect of the patterns in spike shape changes.
+31
+
+===== PAGE 32 =====
+
+1 Figure 5. The regulation network of metabolome and transcriptome for carpel
+2 development in wheat. A, Dynamics of metabolites and gene expression during
+3 carpel developmental process. Fuzzy C-means clustering identified six different
+4 temporal patterns of carpel metabolite and gene expression. The x-axis represents
+T
+5 carpel development stages, X-axis number indicates stages:1. GrA, 2. YA, 3. TP, 4.
+6 HD, 5. AN, 6. 5DPA, 7. 10DPA, 8. 15DPA, 9. 20DPA, 10. 25DPA, 1 P 1. 30DPA, 12.
+7 35DPA. Y-axis represents log2-transformed, normalized Z-score values of
+I
+8 metabolites and gene expression for each stage. B, The numb R er of metabolites for
+9 the six clusters (clusterⅠ, Ⅱ, Ⅲ, Ⅳ, Ⅴ, Ⅵ). ACD: amino acid derivative, Fla:
+C
+10 flavonoid, Lip: lipid, NAD: nucleic acid derivative, OrA: organic acid, Phe:
+S
+11 phenolamide, Phy: phytohormone derivative, Plo: polyphenol, Sug: sugar, Va:
+U
+12 vitamin. C, A network based on the correlations among genes and hormone
+13 derivatives in cluster Ⅲ. Pearson correlatioNn coefficients were calculated between
+A
+14 genes and metabolites in cluster Ⅲ. Pink and yellow colors represent genes and
+15 metabolites, respectively. The thMickness of the line represents the size of R2. D, A
+16 network based on the correlations among metabolites and transcription factors (TFs).
+17 Pearson correlation coefficients were calculated for each TF and metabolite in six
+D
+18 clusters. Red and blue lines indicate positive and negative correlations, respectively.
+19 Circle and triangle represent metabolites and genes, respectively. Different colors of
+E
+20 circles indicate different classes of metabolites.
+21 Figure 6. TaOPRT3, GL1, and GL2 are associated grain size. A, Genes related to
+22 jasmonic acid P synthesis pathway in cluster VI. B, C, Grains of KN199 (wild type),
+23 TaOPR3 RNAi lines (RNAi-1, RNAi-2, RNAi-3) and overexpression (OE) lines
+E
+24 (OE-1, OE-2, OE-3). D, E, Grain length and width of KN199 (wild type), TaOPR3
+25 RNACi and OE lines. F, G, Grains of Fielder (wild type) and Grain Length 1 (GL1)
+26 overexpression lines (F.OE-1, F.OE-2, F.OE-3,F.OE-4). H, I, Grain length and grain
+C
+27 width of Fielder (wild type) and overexpression lines (F.OE-1, F.OE-2, F.OE-3,
+2A8 F.OE-4). J, K, Grains of Kronos (wild type) and Grain Length 2 (GL2) mutants (mut-
+29 1, mut-2) lines. L, M, Grain length and grain width of Kronos (wild type) and Grain
+30 Length 2 (GL2) mutants (mut-1, mut-2) lines. All statistical analyses in this figure
+31 were performed using the following methods: data are mean (n = 10 plants). Data
+32 were analyzed using the t-test function. Significant differences were determined at *
+33 P < 0.05, ** P < 0.01, and *** P < 0.001 levels compared with wild type and mutant
+34 or overexpression lines.
+35 Figure 7. Geographical differentiation, breeding selection, and domestication for the
+36 haplotypes of TaOPR-A3. A, The four major haplotypes of TaOPR-A3. Alleles that
+32
+
+===== PAGE 33 =====
+
+1 are identical to or different from the ones in the Chinese Spring (IWGSC RefSeq
+2 v1.0 reference) genome are indicated by purple and red bars, respectively. B,
+3 Geographical distribution of the four haplotypes (n = 86 accessions [Hap-A1TaOPR-
+4 A3], 165 accessions [Hap-A2TaOPR-A3], 18 accessions [Hap-A3TaOPR-A3]), 31 accessions
+T
+5 [Hap-A4TaOPR-A3]) based on worldwide wheat accessions. AF, Africa; AS, Asia
+6 (except Middle East); EU, Europe; ME, Middle East; NoA, North A P merica; OA,
+7 Oceania; SA, South America. C, Thousand grain weight for accessions carrying each
+I
+8 of the four haplotypes (n = 86 accessions [Hap-A1TaOPR-A3], 1 R 65 accessions [Hap-
+9 A2TaOPR-A3], 18 accessions [Hap-A3TaOPR-A3]), 31 accessions [Hap-A4TaOPR-A3]) of
+10 TaOPR-A3. The significance analysis was performed accorCding to one-way analysis
+11 of variance (ANOVA) and least significant difference test, LSD. Different letters
+S
+12 indicate significant differences (P < 0.01). Values are means+SD; D, Frequency of
+U
+13 four haplotypes among 829 Chinese wheat accessions released from 1900 to 2020.
+14 E, Frequency of four haplotypes among 352 Chinese and USA wheat accessions. F,
+N
+15 Haplotype networks for TaOPR-A3. The haplotype networks were developed based
+16 on the SNPs in high linkage disequili A brium in a haplotype using 124 hexaploidy
+17 accessions and 148 additional accessions (91 Aegilops tauschii, 57 tetraploid wheat
+18 varieties). M
+19
+20 REFERENCES
+D
+21 1. Shewry, P.R. & Hey, S.J. The contribution of wheat to human diet and health. Food Energy Secur 4,
+22 178-202 (2015).
+E
+23 2. Dobrovolskaya, O. et al. FRIZZY PANICLE drives supernumerary spikelets in bread wheat. Plant
+24 Physiology 167 T , 189-199 (2015).
+25 3. Guo, Z.F., Slafer, G.A. & Schnurbusch, T. Genotypic variation in spike fertility traits and ovary size as
+P
+26 determinants of floret and grain survival rate in wheat. Journal of Experimental Botany 67, 4221-4230
+E
+27 (2016).
+28 4. CXie, Q., Mayes, S. & Sparkes, D.L. Carpel size, grain filling, and morphology determine individual grain
+29 weight in wheat. Journal of Experimental Botany 66, 6715-6730 (2015).
+C
+30 5. Guo, Z.F. et al. Manipulation and prediction of spike morphology traits for the improvement of grain
+3 A 1 yield in wheat. Scientific Reports 8, 14435 (2018).
+32 6. Lin, X. et al. Systematic identification of wheat spike developmental regulators by integrated multi-
+33 omics, transcriptional network, GWAS, and genetic analyses. Molecular Plant 17, 438-459 (2024).
+34 7. Yang, D.F. et al. Transcriptomics, proteomics, and metabolomics to reveal mechanisms underlying
+35 plant secondary metabolism. Engineering in Life Sciences 14, 456-466 (2014).
+36 8. Fu, A.Z. et al. Combined genomic, transcriptomic, and metabolomic analyses provide insights into
+37 chayote (Sechium edule) evolution and fruit development. Horticulture Research 8, 35-49 (2021).
+38 9. International Wheat Genome Sequencing, C. A chromosome-based draft sequence of the hexaploid
+39 bread wheat (Triticum aestivum) genome. Science 345, 1251788 (2014).
+33
+
+===== PAGE 34 =====
+
+1 10. Brenchley, R. et al. Analysis of the bread wheat genome using whole-genome shotgun sequencing.
+2 Nature 491, 705-710 (2012).
+3 11. Clavijo, B.J. et al. An improved assembly and annotation of the allohexaploid wheat genome identifies
+4 complete families of agronomic genes and provides genomic evidence for chromosomal
+T
+5 translocations. Genome Research 27, 885-896 (2017).
+6 12. Zimin, A.V. et al. The first near-complete assembly of the hexaploid bread wheat Pgenome, Triticum
+7 aestivum. Gigascience 6, 1-7 (2017).
+I
+8 13. Appels, R. et al. Shifting the limits in wheat research and breeding using a fully annotated reference
+R
+9 genome. Science 361, 661-673 (2018).
+10 14. Walkowiak, S. et al. Multiple wheat genomes reveal global variation C in modern breeding. Nature 588,
+11 277-283 (2020).
+S
+12 15. Pang, Y.L. et al. High-Resolution Genome-wide Association Study Identifies Genomic Regions and
+U
+13 Candidate Genes for Important Agronomic Traits in Wheat. Molecular Plant 13, 1311-1327 (2020).
+14 16. Liu, Y. et al. A high-resolution genotype–phenotype map identifies the TaSPL17 controlling grain
+N
+15 number and size in wheat. Genome Biology 24, 196-223 (2023).
+16 17. Li, S.N. et al. Genome-edited powdery milAdew resistance in wheat without growth penalties. Nature
+17 602, 455-460 (2022).
+18 18. Liu, Y.Y. et al. Genomic insights iMnto the modifications of spike morphology traits during wheat
+19 breeding. Plant Cell and Environment 47, 5470-5482 (2024).
+20 19. Chen, W. et al. A novel integrate d method for large-scale detection, identification, and quantification
+D
+21 of widely targeted metabolites: application in the study of rice metabolomics. Mol Plant 6, 1769-80
+22 (2013).
+E
+23 20. Chen, J. et al. Metabolite-based genome-wide association study enables dissection of the flavonoid
+24 decoration pat T hway of wheat kernels. Plant Biotechnol J 18, 1722-1735 (2020).
+25 21. Shi, T. et al. Metabolomics analysis and metabolite-agronomic trait associations using kernels of wheat
+P
+26 (Triticum aestivum) recombinant inbred lines. The Plant Jouranl 103, 279-292 (2020).
+E
+27 22. Zhao, L. et al. Dynamic chromatin regulatory programs during embryogenesis of hexaploid wheat.
+28 CGenome Biology 24, 7-35 (2023).
+29 23. Koppolu, R. & Schnurbusch, T. Developmental pathways for shaping spike inflorescence architecture
+C
+30 in barley and wheat. Journal of Integrative Plant Biology 61, 278-295 (2019).
+3 A 1 24. Yu, X.R. et al. Cytological and molecular characteristics of delayed spike development in wheat under
+32 low temperature in early spring. Crop Journal 10, 840-852 (2022).
+33 25. Rangan, P., Furtado, A. & Henry, R. Transcriptome profiling of wheat genotypes under heat stress
+34 during grain-filling. Journal of Cereal Science 91(2020).
+35 26. Yang, G. et al. Genomic imprinting was evolutionarily conserved during wheat polyploidization The
+36 Plant Cell 30, 37-47 (2018).
+37 27. Li, A.L. et al. mRNA and Small RNA Transcriptomes Reveal Insights into Dynamic Homoeolog
+38 Regulation of Allopolyploid Heterosis in Nascent Hexaploid Wheat. The Plant Cell 26, 1878-1900
+39 (2014).
+34
+
+===== PAGE 35 =====
+
+1 28. Pfeifer, M. et al. Genome interplay in the grain transcriptome of hexaploid bread wheat. Science 345,
+2 286-294 (2014).
+3 29. Xiang, D.Q. et al. The Transcriptional Landscape of Polyploid Wheats and Their Diploid Ancestors
+4 during Embryogenesis and Grain Development. Plant Cell 31, 2888-2911 (2019).
+T
+5 30. Yang, C. et al. Rice metabolic regulatory network spanning the entire life cycle. Mol Plant 15, 258-275
+6 (2022). P
+7 31. Li, Y. et al. MicroTom Metabolic Network: Rewiring Tomato Metabolic Regulatory Network throughout
+I
+8 the Growth Cycle. Mol Plant 13, 1203-1218 (2020).
+R
+9 32. Wang, R. et al. Integrative analyses of metabolome and genome-wide transcriptome reveal the
+10 regulatory network governing flavor formation in kiwifruit (Actinidia C chinensis). New Phytol 233, 373-
+11 389 (2022).
+S
+12 33. Bartrina, I., Otto, E., Strnad, M., Werner, T. & Schmulling, T. Cytokinin regulates the activity of
+U
+13 reproductive meristems, flower organ size, ovule formation, and thus seed yield in Arabidopsis thaliana.
+14 Plant Cell 23, 69-80 (2011).
+N
+15 34. Yao, X.Z. et al. Auxin production in diploid microsporocytes is necessary and sufficient for early stages
+16 of pollen development. Plos Genetics 14, 1A-19 (2018).
+17 35. Hu, G.J. et al. The auxin-responsive transcription factor SlDOF9 regulates inflorescence and flower
+18 development in tomato. Nature PlaMnts 8, 419-433 (2022).
+19 36. Amanda, D. et al. Auxin boosts energy generation pathways to fuel pollen maturation in barley. Current
+20 Biology 32, 1798-1811 (2022).
+D
+21 37. Feng, X.L. et al. Auxin flow in anther filaments is critical for pollen grain development through
+22 regulating pollen mitosis. Plant Molecular Biology 61, 215-226 (2006).
+E
+23 38. Zheng, L.Y. et al. The SOD7/DPA4–GIF1 module coordinates organ growth and iron uptake in
+24 Arabidopsis. N T ature Plants 9, 1318-1332 (2023).
+25 39. Lee, B.H. et al. The Arabidopsis GRF-INTERACTING FACTOR Gene Family Performs an Overlapping
+P
+26 Function in Determining Organ Size as Well as Multiple Developmental Properties. Plant Physiology
+E
+27 151, 655-668 (2009).
+28 40. CLiu, Z.P., Li, N., Zhang, Y.Y. & Li, Y.H. Transcriptional repression of GIF1 by the KIX-PPD-MYC repressor
+29 complex controls seed size in Arabidopsis. Nature Communications 11, 1846-1851 (2020).
+C
+30 41. Li, S. et al. Modulating plant growth-metabolism coordination for sustainable agriculture. Nature 560,
+3 A 1 595-600 (2018).
+32 42. Wu, H.L. & Li, Y.H. A molecular link between organ size control and iron uptake in plants. Nature Plants
+33 9, 1182-1183 (2023).
+34 43. Pei, H. et al. Chromatin accessibility landscapes revealed the subgenome-divergent regulation
+35 networks during wheat grain development. aBIOTECH 4, 8-19 (2023).
+36 44. Dong, J. et al. PDIL1-2 can indirectly and negatively regulate expression of the AGPL1 gene in bread
+37 wheat. Biological Research 52, 56-66 (2019).
+38 45. Liu, H.X. et al. TaTPP-7A positively feedback regulates grain filling and wheat grain yield through T6P-
+39 SnRK1 signalling pathway and sugar-ABA interaction. Plant Biotechnology Journal 21, 1159-1175
+35
+
+===== PAGE 36 =====
+
+1 (2023).
+2 46. Yao, F.Q. et al. Down-expression of TaPIN1s Increases the Tiller Number and Grain Yield in Wheat.
+3 BMC Plant Biology 21, 443-453 (2021).
+4 47. Jia, M.L. et al. TaIAA21 represses TaARF25-mediated expression of required for grain size and weight
+T
+5 development in wheat. The Plant Journal 108, 1754-1767 (2021).
+6 48. Kong, X.C. et al. Grain yield improvement by genome editing of TaARF12 that dePcoupled peduncle
+7 and rachis development trajectories via differential regulation of gibberellin signalling in wheat. Plant
+I
+8 Biotechnology Journal 21, 1990-2001 (2023).
+R
+9 49. Zhang, L. et al. Wheat MADS-box gene TaSEP3-D1 negatively regulates heading date. Crop Journal
+10 9, 1115-1123 (2021). C
+11 50. Jia, M.L. et al. TaIAA21 represses TaARF25-mediated expression of TaERFs required for grain size and
+S
+12 weight development in wheat. Plant Journal 108, 1754-1767 (2021).
+U
+13 51. Kong, X.C. et al. The wheat AGL6-like MADS-box gene is a master regulator for floral organ identity
+14 and a target for spikelet meristem development manipulation. Plant Biotechnology Journal 20, 75-88
+N
+15 (2022).
+16 52. Yang, R.Z. et al. TaBZR1 enhances wheat Asalt tolerance via promoting ABA biosynthesis and ROS
+17 scavenging. Journal of Genetics and Genomics 50, 861-871 (2023).
+18 53. Song, L. et al. Reducing brassinosteMroid signalling enhances grain yield in semi-dwarf wheat. Nature
+19 617, 118-124 (2023).
+20 54. Cao, R.F. et al. Identification and Functional Characterization of Promoter Binding Protein-Like Gene
+D
+21 TaSPL16 in Wheat (Triticum aestivum L.). Frontiers in Plant Science 10, 1-14 (2019).
+22 55. Yang, T.H., Lenglet-Hilfiker, A., Stolz, S., Glauser, G. & Farmer, E.E. Jasmonate Precursor Biosynthetic
+E
+23 Enzymes LOX3 and LOX4 Control Wound-Response Growth Restriction. Plant Physiology 184, 1172-
+24 1180 (2020). T
+25 56. Wasternack, C. & Hause, B. Jasmonates: biosynthesis, perception, signal transduction and action in
+P
+26 plant stress response, growth and development. An update to the 2007 review in. Annals of Botany
+E
+27 111, 1021-1058 (2013).
+28 57. CFarmer, E.E. & Goossens, A. Jasmonates: what ALLENE OXIDE SYNTHASE does for plants. Journal of
+29 Experimental Botany 70, 3373-3378 (2019).
+C
+30 58. Stintzi, A. & Browse, J. The Arabidopsis male-sterile mutant, opr3, lacks the 12-oxophytodienoic acid
+3 A 1 reductase required for jasmonate synthesis. Proceedings of the National Academy of Sciences of the
+32 United States of America 97, 10625-10630 (2000).
+33 59. Chini, A. et al. An OPR3-independent pathway uses 4,5-didehydrojasmonate for jasmonate synthesis.
+34 Nature Chemical Biology 14, 171-176 (2018).
+35 60. Pak, H. et al. Creation of male-sterile lines that can be restored to fertility by exogenous methyl
+36 jasmonate for the establishment of a two-line system for the hybrid production of rice (Oryza sativa
+37 L.). Plant Biotechnology Journal 19, 365-374 (2021).
+38 61. Tian, X.J. et al. Heat shock transcription factor A1b regulates heat tolerance in wheat and Arabidopsis
+39 through OPR3 and jasmonate signalling pathway. Plant Biotechnology Journal 18, 1109-1111 (2020).
+36
+
+===== PAGE 37 =====
+
+1 62. Steiner, E. et al. KISS ME DEADLY F-box proteins modulate cytokinin responses by targeting the
+2 transcription factor TCP14 for degradation. Plant Physiology 185, 1495-1499 (2021).
+3 63. Tsai, Y.C. et al. Characterization of Genes Involved in Cytokinin Signaling and Metabolism from Rice.
+4 Plant Physiology 158, 1666-1684 (2012).
+T
+5 64. Ru, J.N. et al. Genome-Wide Analysis of DEAD-box RNA Helicase Family in Wheat (Triticum aestivum)
+6 and Functional Identification of TaDEAD-box57 in Abiotic Stress Responses. FrontiePrs in Plant Science
+7 12, 1-22 (2021).
+I
+8 65. Yadav, S. et al. Genome-wide identification, in silico characterization and expression analysis of the
+R
+9 RNA helicase gene family in chickpea (C. arietinum L.). Scientific Reports 12, 9778 (2022).
+10 66. Huang, C.K., Sie, Y.S., Chen, Y.F., Huang, T.S. & Lu, C.A. Two highly s C imilar DEAD box proteins, OsRH2
+11 and OsRH34, homologous to eukaryotic initiation factor 4AIII, play roles of the exon junction complex
+S
+12 in regulating growth and development in rice. BMC Plant Biology 16, 1-15 (2016).
+U
+13 67. Shen, X. et al. Dynamic transcriptome landscape of developing maize ear. the plant journal 116, 1856-
+14 1870 (2023).
+N
+15 68. Youssef, H.M. et al. VRS2 regulates hormone-mediated inflorescence patterning in barley. Nature
+16 Genetics 49, 157-161 (2017). A
+17 69. Wu, H.M., Xie, D.J., Tang, Z.S., Shi, D.Q. & Yang, W.C. PINOID regulates floral organ development by
+18 modulating auxin transport and intMeracts with MADS16 in rice. Plant Biotechnology Journal 18, 1778-
+19 1795 (2020).
+20 70. Sun, Y. et al. Progressive meriste m and single-cell transcriptomes reveal the regulatory mechanisms
+D
+21 underlying maize inflorescence development and sex differentiation. Molecular Plant 17, 1019-1037
+22 (2024).
+E
+23 71. Shanmugaraj, N. et al. Multilayered regulation of developmentally programmed pre-anthesis tip
+24 degeneration o T f the barley inflorescence. Plant Cell 35, 3973-4001 (2023).
+25 72. Regnault, T. et al. The gibberellin precursor GA12 acts as a long-distance growth signal in Arabidopsis.
+P
+26 Nature Plants 1, 1-6 (2015).
+E
+27 73. Mäkilä, R. et al. Gibberellins promote polar auxin transport to regulate stem cell fate decisions in
+28 Ccambium. Nature Plants 9, 631-644 (2023).
+29 74. Guo, Y.W. et al. The translational landscape of bread wheat during grain development. The Plant Cell
+C
+30 35, 1848-1867 (2023).
+3 A 1 75. Liu, G.Y. et al. TaMADS29 interacts with TaNF-YB1 to synergistically regulate early grain development
+32 in bread wheat. Science China Life Sciences 66, 1647-1664 (2023).
+33 76. Zhao, X.B. et al. Population genomics unravels the Holocene history of bread wheat and its relatives.
+34 Nature Plants 9, 403-419 (2023).
+35 77. Zhou, Y. et al. population sequencing provides insights into wheat adaptation. Nature Genetics 52,
+36 1412-1422 (2020).
+37 78. Sun, C.W. et al. The Wheat 660K SNP array demonstrates great potential for marker-assisted selection
+38 in polyploid wheat. Plant Biotechnology Journal 18, 1354-1360 (2020).
+39 79. Niu, J.Q. et al. Whole-genome sequencing of diverse wheat accessions uncovers genetic changes
+37
+
+===== PAGE 38 =====
+
+1 during modern breeding in China and the United States. The Plant Cell koad235, 1-18 (2023).
+2 80. Guo, Z., Chen, D. & Schnurbusch, T. Variance components, heritability and correlation analysis of
+3 anther and ovary size during the floral development of bread wheat. Journal Experimental Botany 66,
+4 3099-111 (2015).
+T
+5 81. Guo, Z. et al. Genome-wide association analyses of 54 traits identified multiple loci for the
+6 determination of floret fertility in wheat. New Phytologist Foundation 214, 257-270P (2017).
+7 82. Chen, W. et al. A Novel Integrated Method for Large-Scale Detection, Identification, and Quantification
+I
+8 of Widely Targeted Metabolites: Application in the Study of Rice Metabolomics. Molecular Plant 6,
+R
+9 1769-1780 (2013).
+10 83. Chen, W. et al. Genome-wide association analyses provide gene C tic and biochemical insights into
+11 natural variation in rice metabolism. Nature Genetics 46, 714-721 (2014).
+S
+12 84. Zhu, A.T. et al. Metabolomic analysis of the grain pearling fractions of six bread wheat varieties. Food
+U
+13 Chemistry 369(2022).
+14 85. Yin, H.R. et al. A wheat phytohormone atlas spanning major tissues across the entire life cycle provides
+N
+15 novel insights into cytokinin and jasmonic acid interplay. Molecular Plant 18, 366-382 (2025).
+16 86. Tian, Z.T. et al. PMhub 1.0: a comprehensiveA plant metabolome database. Nucleic Acids Research 52,
+17 D1579-D1587 (2024).
+18 87. Bolger, A.M., Lohse, M. & UsadelM, B. Trimmomatic: a flexible trimmer for Illumina sequence data.
+19 Bioinformatics 30, 2114-2120 (2014).
+20 88. Patro, R., Duggal, G., Love, M.I., Irizarry, R.A. & Kingsford, C. Salmon provides fast and bias-aware
+D
+21 quantification of transcript expression. Nature Methods 14, 417-+ (2017).
+22 89. Soneson, C., Love, M. I., & Robinson, M. D. . Differential analyses for RNA-seq: transcript-level
+E
+23 estimates improve gene-level inferences. F1000Research 4(2015).
+24 90. Kumar, L. & M, T E.F. Mfuzz: a software package for soft clustering of microarray data. Bioinformation 2,
+25 5-7 (2007).
+P
+26 91. Shannon, P. et al. Cytoscape: A software environment for integrated models of biomolecular
+E
+27 interaction networks. Genome Research 13, 2498-2504 (2003).
+28 92. CPicart-Armada, S., Fernandez-Albert, F., Vinaixa, M., Yanes, O. & Perera-Lluna, A. FELLA: an R package
+29 to enrich metabolomics data. BMC Bioinformatics 19, 538 (2018).
+C
+30 93. Cantalapiedra, C.P., Hernández-Plaza, A., Letunic, I., Bork, P. & Huerta-Cepas, J. eggNOG-mapper v2:
+3 A 1 Functional Annotation, Orthology Assignments, and Domain Prediction at the Metagenomic Scale.
+32 Molecular Biology and Evolution 38, 5825-5829 (2021).
+33 94. Wu, T. et al. clusterProfiler 4.0: A universal enrichment tool for interpreting omics data. Innovation
+34 (Camb) 2, 1-10 (2021).
+35 95. Langfelder, P. & Horvath, S. WGCNA: an R package for weighted correlation network analysis. BMC
+36 Bioinformatics 9, 1-13 (2008).
+37 96. Langfelder, P., Zhang, B. & Horvath, S. Defining clusters from a hierarchical cluster tree: the Dynamic
+38 Tree Cut package for R. Bioinformatics 24, 719-720 (2008).
+39 97. Wu, C. et al. Heat-induced phytohormone changes are associated with disrupted early reproductive
+38
+
+===== PAGE 39 =====
+
+1 development and reduced yield in rice. Scientific reports 6, 34978 (2016).
+2 98. Zhang, Z. et al. Proteomic and phosphoproteomic determination of ABA’s effects on grain-filling of
+3 Oryza sativa L. inferior spikelets. Plant Science 185-186, 259-73 (2012).
+4 99. Yang, J. et al. Dynamic Regulation of Auxin Response during Rice Development Revealed by Newly
+T
+5 Established Hormone Biosensor Markers. Frontiers in Plant Science 8, 256 (2017).
+6 100. Cai, Q. et al. Jasmonic acid regulates spikelet development in rice. Nature CommuPnications 5, 3476
+7 (2014).
+I
+8 101. Muhammad, I. et al. A systematic in silico prediction of gibberellic acid stimulated GASA family
+R
+9 members: A novel small peptide contributes to floral architecture and transcriptomic changes induced
+10 by external stimuli in rice. Journal of Plant Physiology 234-235, 117 C -132 (2019).
+11 102. Bradley, D., Carpenter, R., Sommer, H., Hartley, N. & Coen, E. Complementary Floral Homeotic
+S
+12 Phenotypes Result from Opposite Orientations of a Transposon at the Plena-Locus of Antirrhinum.
+U
+13 Cell 72, 85-95 (1993).
+14 103. Wang, K., Liu, H.Y., Du, L.P. & Ye, X.G. Generation of marker-free transgenic hexaploid wheat via an
+N
+15 Agrobacterium-mediated co-transformation strategy in commercial Chinese wheat varieties. Plant
+16 Biotechnology Journal 15, 614-623 (2017).A
+17 104. Liu, Y.Y. et al. Genetic basis of geographical differentiation and breeding selection for wheat plant
+18 architecture traits. Genome BiologyM 24, 114-138 (2023).
+19 105. Leigh, J.W. & Bryant, D. POPART: full-feature software for haplotype network construction. Methods
+20 in Ecology and Evolution 6, 1110 -1116 (2015).
+D
+21 106. Chen, T.T. et al. The Genome Sequence Archive Family: Toward Explosive Data Growth and Diverse
+22 Data Types. Genomics Proteomics & Bioinformatics 19, 578-583 (2021).
+E
+23 107. Xue, Y.B. et al. Database Resources of the National Genomics Data Center, China National Center for
+24 Bioinformation T in 2022. Nucleic Acids Research 50, D27-D38 (2022).
+25 P
+26
+E
+27
+C
+28
+C
+2A9
+30
+31 COMPETING INTERESTS
+32 The authors declare no competing interests.
+33
+34 AVAILABILITY OF DATA AND MATERIALS
+39
+
+===== PAGE 40 =====
+
+1 The genotype of 306 wheat accession used in this study have been deposited in the
+2 Genome Variation Map (https://bigd.big.ac.cn/gvm) under accession number
+3 GVM000463. The sequence data of the 355 wheat accessions used in this study were
+5 project CRA005878. The genotype data in variant call formats (VC I F) are available
+R
+6 in the NGDC database under accession number GVM000315. The carpel RNA-seq
+C
+7 raw sequence data reported in this paper have been deposited in the Genome
+S
+8 Sequence Archive106 in National Genomics Data Center107 China National Center for
+U
+9 Bioinformation / Beijing Institute of Genomics, Chinese Academy of Sciences
+N
+10 (GSA: CRA013211) that are publicly accessible at https://ngdc.cncb.ac.cn/gsa. Two
+11 replicates of the metabolomic data are aAvailable in Supplementary Table S40 and the
+12 raw datas have been deposited M in the Open Archive for Miscellaneous Data in
+13 National Genomics Data Center China National Center for Bioinformation / Beijing
+14 Institute of Genomics, ChDinese Academy of Sciences (OMIX011559).
+15 CODE AVAILABILITY
+E
+16 The custom code for RNA-seq and metabolism analysis are available at
+17
+https://github.comT/halo9369/Yangyang-Liu.
+18 P
+E
+C
+C
+A
+40
+
+===== PAGE 41 =====
+
+T
+P
+I
+R
+C
+S
+U
+N
+A
+M
+D
+E
+T
+P
+E
+C
+C
+A
+1
+2 Figure 1
+3 170x244 mm ( x DPI)
+4
+41
+
+===== PAGE 42 =====
+
+T
+P
+I
+R
+C
+S
+U
+N
+A
+M
+D
+E
+T
+P
+E
+C
+C
+A
+1
+2 Figure 2
+3 171x209 mm ( x DPI)
+4
+42
+
+===== PAGE 43 =====
+
+T
+P
+I
+R
+C
+S
+U
+N
+A
+M
+D
+E
+T
+P
+E
+C
+C
+A
+1
+2 Figure 3
+3 170x257 mm ( x DPI)
+4
+43
+
+===== PAGE 44 =====
+
+T
+P
+I
+R
+C
+S
+U
+N
+A
+M
+D
+E
+T
+P
+E
+C
+C
+1
+A
+2 Figure 4
+3 170x172 mm ( x DPI)
+4
+44
+
+===== PAGE 45 =====
+
+T
+P
+I
+R
+C
+S
+U
+N
+A
+M
+D
+E
+T
+P
+E
+C
+C
+1
+A
+2 Figure 5
+3 170x167 mm ( x DPI)
+4
+45
+
+===== PAGE 46 =====
+
+T
+P
+I
+R
+C
+S
+U
+N
+A
+M
+D
+E
+T
+P
+E
+C
+C
+A
+1
+2 Figure 6
+3 170x220 mm ( x DPI)
+4
+46
+
+===== PAGE 47 =====
+
+T
+P
+I
+R
+C
+S
+U
+N
+A
+M
+D
+E
+T
+P
+E
+1
+C
+2 Figure 7
+3 C 128x155 mm ( x DPI)
+A
+47

@@ -1,0 +1,1466 @@
+
+
+===== PAGE 1 =====
+
+Article
+Self-organization of vascular strands drives their
+patterning in the Arabidopsis shoot apex
+Graphical abstract Authors
+AgataBurian,AndrzejKokosza,
+MagdalenaRaczyn�ska-Szajgin,
+PavelSolansky,MarjaC.
+P.Timmermans,WojciechPalubicki
+Correspondence
+agata.burian@us.edu.pl(A.B.),
+wojciech.palubicki@amu.edu.pl(W.P.)
+In brief
+Burianetal.showthattheemergenceof
+newvascularstrandsisindependentof
+organogenesisattheshootapical
+meristemandthattheirspatial
+organizationdependsoninternalauxin
+transport.Vascularpatterningis
+governedbylocalrepulsiveinteractions
+betweenstrands,revealingtheself-
+organizingcapacityoftheplantvascular
+system.
+Highlights
+•
+Vascularstrandsariseindependentlyofsurface-
+derivedauxin
+•
+StrandtrajectoriesdependoninternalPIN1-mediatedpolar
+auxintransport
+•
+Localstrandinteractionsresultinvascularpatterningaligned
+withphyllotaxis
+Burianetal.,2026,DevelopmentalCell61,1–16
+March11,2026©2025ElsevierInc.Allrightsarereserved,includingthosefor
+textanddatamining,AItraining,andsimilartechnologies.
+ll
+https://doi.org/10.1016/j.devcel.2025.10.012
+
+===== PAGE 2 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+Self-organization of vascular strands
+drives their patterning in the Arabidopsis
+shoot apex
+AgataBurian,1,2,6,*AndrzejKokosza,3,5MagdalenaRaczyn�ska-Szajgin,1PavelSolansky,4MarjaC.P.Timmermans,4
+andWojciechPalubicki3,*
+1InstituteofBiology,BiotechnologyandEnvironmentalProtection,UniversityofSilesiainKatowice,Jagiellon�ska28,40-032Katowice,
+Poland
+2SPIN-LabCenterforMicroscopicResearchonMatter,UniversityofSilesiainKatowice,PułkuPiechoty75/1A,41-500Chorzo´w,Poland
+3FacultyofMathematicsandComputerScience,AdamMickiewiczUniversity,UniwersytetuPoznan�skiego4,61-614Poznan�,Poland
+4CenterforPlantMolecularBiology,UniversityofTu¨bingen,AufderMorgenstelle32,72076Tu¨bingen,Germany
+5Presentaddress:DepartmentofComputerScience,UniversityofCalgary,602ICTBuilding,2500UniversityDriveNW,Calgary,ABT2N1N4,
+Canada
+6Leadcontact
+*Correspondence:agata.burian@us.edu.pl(A.B.),wojciech.palubicki@amu.edu.pl(W.P.)
+https://doi.org/10.1016/j.devcel.2025.10.012
+SUMMARY
+Inplants,thedevelopmentoftheshootvascularsystemiscloselycoordinatedwithlateralorganformationat
+the shoot apical meristem. Despite extensive studies on leaf initiation and vascular patterning, it remains
+unclearhowvasculardevelopmentrelatestoorganogenesis.CurrenthypothesesemphasizePIN1-mediated
+polarauxintransportfromthemeristemsurfaceininitiatingandintegratingnewvascularstrandsintotheex-
+isting vasculature. Usinghigh-resolution 3Dimaging of auxinreporters andgenetic analysis, weshow that
+vascularstrandsformwithinthevascularcylinderindependentlyofsurface-derived auxin,yettheirorgani-
+zationreflectsthephyllotacticpatternofleafprimordia.Toresolvethisparadox,wedevelopedacomputa-
+tional model based on repulsive interactions between strands, which reproduces the dynamic spatial
+arrangementofstrandsobservedinplanta.Ourfindingsrevealabiphasicdevelopmentoftheshootvascular
+system,governedbyself-organizingprinciplesthatdetermineitspatterning.
+INTRODUCTION suggested that vascular strands differentiate acropetally (up-
+ward) from pre-existing vasculature toward the SAM before
+Thefunctioningofmulticellularorganismsdependsoneffective visible primordium emergence, leading to the hypothesis that
+communicationbetweencells,tissues,andorgans.Invascular vasculardevelopmentisindependentoforganformation.5,6
+plants, long-distance communication relies on an intercon- Recentadvancesingeneticsandimaging,however,havere-
+nected network of vascular strands that transport water, vealedthatcriticalmolecularsignalingeventsprecedeprimor-
+nutrients,andsignalingmoleculessuchashormones,proteins, dium emergence. In Arabidopsis, organ initiation is triggered
+andRNAs,1andtransmitelectrical signalsforrapidresponses by local auxin accumulation at the SAM surface, mediated by
+to biotic and abiotic stresses.2 To fulfill these roles, vascular thePIN-FORMED1(PIN1)auxintransporterintheL1.7–9Subse-
+strands extend throughout the plant body, connecting roots quentPIN1-mediatedbasipetalauxintransportfromthesurface
+withstems,leaves,andflowers.Thevascular systemishighly induces formation of a vascular strand, including the future
+plastic,reorganizingafterwoundingorinresponsetodevelop- midvein,tosupplythedevelopingorgan.10–12Thisleadstothe
+mental or physiological changes induced by environmental opposinghypothesisthatauxinfromtheSAMsurfaceinitiates
+cues,3andcontinuouslyexpandingasneworgansform. vascular strand formation within the primordium, which then
+In the shoot, lateral organs such as leaves are supplied by extends basipetally (downward) to connect with pre-existing
+vascular strands that integrate into a complex 3D network.4 vasculature, implying that phyllotaxis determines vascular
+The formation of new strands must therefore be coordinated patterning. However, computer simulations predict that basip-
+with the initiation of new organs and their spatial arrangement etalauxintransportalonecannotconnecttopre-existingvascu-
+(phyllotaxis) at the shoot apical meristem (SAM). The funda- laturebeyondashortdistance.12,13Toenabletheconnection,a
+mentalquestionthusarisesofhowthevasculaturedevelopsin hypothetical attraction factor diffusing from the pre-existing
+relation to organogenesis. Early anatomical studies in dicots vasculaturehasbeenproposed.11
+DevelopmentalCell61,1–16,March11,2026©2025ElsevierInc. 1
+Allrightsarereserved,includingthosefortextanddatamining,AItraining,andsimilartechnologies.
+
+===== PAGE 3 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+Despite extensive studies on the molecular mechanisms of iVsofolderprimordiabelongington+5,n+8,orn+13parasti-
+vascularpatterning,14–16howshootvasculaturedevelopsinrela- chies(Figures1Fand1G).Forexample,theiVofp2isconnected
+tion to organogenesis at the SAM remains unclear,4,17 largely totheiVsofp7andp10(n+5andn+8parastichies),theiVofp3
+due to the complex architecture and limited accessibility of the isconnectedtotheiVofp11(n+8parastichy),whiletheiVofp-1
+vascularnetwork.Here,weovercamethischallengebyimaging isconnectedtotheiVsofp12(n+13parastichy).Thesefindings
+auxin-relatedreportersinisolatedArabidopsisshootapicesusing agree with previous observations22–25 and indicate that the
+laser confocal microscopy, capturing the earliest stages of pattern of vascular interconnections is variable but aligns with
+vascularstrandformationbelowtheSAM.3Dreconstructionsof theparastichiesdescribingphyllotaxisattheSAM.
+vascularnetworksfromoverahundredapicesrevealthatstrand Importantly,althoughmostiVsareconnectedtoleafprimordia,
+emergenceandpositioningoccurindependentlyofauxinaccumu- weobservedasubsetofiVsthatarefreeendingandcharacterized
+lationattheSAMsurface,yetvascularspatialarrangementaligns byweakerDR5expression(Figures1E–1G,asterisks).Thesepre-
+withphyllotaxisattheSAM.Computationalmodelingshowsthat viously unnoticed free-ending iVs emerge from pre-existing iVs
+local repulsive interactions between developing strands can andextendwithinthevascularcylindertowardthecenterofthe
+explain their dynamic geometry, diverse interconnections, and apexinterior(c′).Strikingly,thesefree-endingiVsaredirectedto-
+alignment with primordium positions. Our findings uncover a wardthesitesunderneathsuccessiveincipientprimordia.These
+biphasic development of the shoot vascular system, with self- observationsindicatethatnotonlydothevascularinterconnec-
+organizingcapabilitiesguidedbylocalstrandinteractions. tionsalignwithparastichiesbutalsothatnewlyemergingiVsarise
+inapatternconsistentwiththeprimordiaarrangementattheSAM.
+RESULTS Tofurtherexaminethis,weusedthe3DreconstructionsofiVnet-
+works, which provide a unique opportunity to quantitatively
+Organizationoftheshootvascularnetworkislinkedto analyzetherelationbetweeniVspatialarrangementandphyllo-
+phyllotaxis taxis. Analogous to the quantification of divergence angles be-
+Auxin acts as an instructive signal for organ formation and tween successive primordia, we measured the angles between
+vasculardevelopment.18,19Torelateleafprimordia initiationto endpointsofiVsbeforeorjustaftertheirconnectiontoDR5max-
+underlying vascular development, we used the ER-localized imaattheSAMsurface(Figures1Hand1I).Thedivergenceangles
+auxin transcriptional reporter pDR5revV2:YFP20 and imaged betweeniVs(mean137.82◦,standarddeviation[SD]8.17,n=268
+shootapiceswithlaserconfocal microscopy(STARMethods). measurements) are similar to those between primordia (mean
+ExpressionofpDR5revV2:YFP(DR5)radiatesfromtheSAMcen- 137.81◦,SD5.85,n=1,128measurements).Thisconfirmsthat
+ter (central zone) toward the periphery, forming local maxima newiVsextendfrompre-existingvasculaturewithinthevascular
+that mark the position of incipient and early leaf primordia as cylinder,creatingapatternaligningwiththephyllotacticpattern
+observedpreviously21(Figure1A). attheSAM.
+Thespatialarrangementofleafprimordiaattheapexfollowsthe
+spiral Fibonacci phyllotactic pattern, where contacting neigh- iVsinitiateindependentlyofsurface-derivedauxin
+boringprimordiaarealignedincharacteristicspiralscalledcon- The pattern of free-ending iVs raises the question of whether
+tactparastichies (Figure 1B).Twotypes ofcontact parastichies auxin at primordium initiation sitescontrols their formation. To
+areobserved:n+5andn+8parastichiesthatconnecteverysuc- test this, we compared the timing of iV emergence with the
+cessive 5th and 8th primordium, respectively. In addition, every establishment of local DR5 maxima at the SAM surface. We
+13th non-contacting primordium is aligned in a steeper spiral consideredfourpossibleclasses(Figure2A):inclassI,neither
+(n+13parastichy).Thenumberofparastichiesofeachtype(5, a free-ending iV nor a DR5 maximum is present; in class II,
+8,and13)formsconsecutiveelementsoftheFibonaccisequence. onlyafree-endingiVispresent;inclassIII,bothaDR5maximum
+Tovisualizethevasculature,weimagedtheapextoadepthof and an underlying iV are present; and in class IV, only a DR5
+130–140μmfromtheSAMsummit.Strikingly,wefoundthatthe maximum is present. Across more than 100 apices, class IV
+DR5 maxima at incipient (p-1) and emerging (p1) primordia, wasneverobserved.Instead,DR5maximasincetheirestablish-
+whichincludeprecursorsoftheleafmidvein,21arealreadycon- ment at p-2 or p-1 are always connected to underlying iVs
+nectedtounderlyingnarrowDR5-expressingstrands(Figure1C, (Figures2A,2B–2D,andS2A,classIII).Ontheotherhand,we
+arrowheads).Thesestrands,heredenotedasincipientvascular foundthatfree-endingiVsemergeuptofourplastochronsbefore
+strands (iVs), are characterized by strong DR5 expression. DR5 maxima form (Figures 2A, 2B–2D, and S2A, class II),
+Based on cell morphology, they consist of pre-procambial or implyingthatiVemergenceisnotcontrolledbyauxinaccumu-
+procambialcellsthatconnecttheDR5maximaattheSAMsur- latingatsitesofprimordiuminitiation.
+facetothevascularcylinder(Figure1D),whichisapproximately Although our observations suggest that free-ending iVs
+cone-shapedinArabidopsisrosettes(FigureS1A).Afterthepri- emerge independently of auxin-induced leaf initiation, the iVs
+mordiumemergence(p4),eachDR5maximumbecomesgradu- eventually become connected to DR5 maxima at incipient
+allyrestrictedtoanarrowdomainintheprimordiumthatmarks primordia. This implies that iVs extend acropetally from the
+thefuturemidvein(Figure1C,mv). vascularcylindertowardtheSAMsurface,and/orthatsurface-
+ToanalyzehowiVsareorganizedrelativetophyllotaxis,were- derived auxin flows basipetally to the underlying iVs. To test
+constructed their 3D geometry and topology from confocal z whetherauxinattheSAMsurfaceisrequiredforiVconnection,
+stacks (Figures 1E–1G and S1B–S1E; Video S1; STAR weexaminedtherelationbetweenthegeometryoftheiVtrajec-
+Methods). The iVs connected to incipient or early emerging tory and the intensity of surface DR5 expression. Trajectory
+primordia are also interconnected to one or two pre-existing shape was quantified by the ratio of the arc-length distance
+2 DevelopmentalCell61,1–16,March11,2026
+
+===== PAGE 4 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+Figure1. Organizationoftheshootvascularnetworkislinkedtophyllotaxis
+(A)TopviewofshootapexwithpDR5revV2:YFP(DR5)markingincipientandexistingleafprimordia.
+(B)Transversesectionshowingcontact(n+5,blue;n+8,red)andnon-contact(n+13,white)parastichies.
+(C)LongitudinalsectionsofprimordiashowingDR5maximaatincipient(p-1)andexisting(p1andp4)primordiaconnectedtoDR5-expressingincipientvascular
+strands(iVs,arrowheads).mv,futuremidvein.
+(D)Longitudinalsectionofp1primordiumwithDR5expressioninpre-procambial(yellowdots)andprocambialcells(whitedots).
+(E)Transversesection∼100μmbelowSAMsummitshowingiVarrangement.Asterisks,free-endingiVs.
+(F)ReconstructionoftheiVnetwork(red)from(E)withiVsconnectedtoprimordia(dots)andfree-endingiVs(asterisks).
+(G)3DsideviewoftheiVnetwork(topviewinEandF).
+(HandI)DivergenceanglesbetweensuccessiveiVs(H)orprimordia(I).Boxes,25thto75thpercentile;whiskers,5thto95thpercentile;bluesquare,mean;black
+dots,data.In(H),n=22((cid:0) 5/(cid:0) 4),68((cid:0) 4/(cid:0) 3),96((cid:0) 3/(cid:0) 2),and82((cid:0) 2/(cid:0) 1)iVs;in(I),n=76–111primordia.
+Leafprimordia(p)arenumberedsequentially(p1,firstvisiblebulge;p<1,incipientprimordia).iVsarestagedbytheprimordiathey(will)supply.PrimordiaandiVs
+formcyclicallyinaspiralphyllotacticpattern;theirspatialarrangementreflectsdevelopmentalorder.c,SAMsurfacecenter;c′,apexinteriorcenter.
+Scalebars,25μm(CandD),50μm(AandE–G),and100μm(B).
+SeealsoFigureS1andVideoS1.
+DevelopmentalCell61,1–16,March11,2026 3
+
+===== PAGE 5 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+Figure2. iVsinitiateindependentlyofsurface-derivedauxin
+(A)ClassesofspatiotemporalrelationsbetweenDR5maximaattheSAMsurfaceandiVemergenceatsuccessiveprimordia(right,classschemes).n=102–110
+sitesperstage.
+(B)ProjectionofDR5signalontotheapexsurface(colorscale).Dashedlines,planesoflongitudinalsectionsatp-3andp-1(showninD).c,SAMcenter.
+(CandD)Transverse(C)andlongitudinal(D)sectionsofp-3withfree-endingiV(asterisks)belowtheregionwithlowDR5surfaceexpression(classII,upper
+panel),andofp-1withiVconnectedtoDR5maximum(classIII,lowerpanel).Whitedots,cellswithlowDR5expression;reddottedlines,out-of-planeiVs
+extendingintop5andp7.
+(legendcontinuedonnextpage)
+4 DevelopmentalCell61,1–16,March11,2026
+
+===== PAGE 6 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+along the iV curve (D) and the straight-line Euclidean distance contrast, PIN1 associated with free-ending iVs is polarized
+(d)measuredbetweentheiVs’startandendpoints(Figure2E). toward pre-existing iVs (Figures 2H, 2J–2L, S2F, and S2H),
+AD/dratioequaltoornearing1indicatesthattheiVtrajectory similartothepolarizationpatternobservedforinitiatingveinsin
+isclosetoastraightline,whereasaD/dratiohigherthan1indi- leaves.29,30 These opposing polarization patterns suggest that
+catesacurvediVtrajectory.PlottingtheD/dratioagainstDR5in- PIN1-mediatedpolarauxintransportattheSAMsurfaceandin
+tensityrevealsastrongcorrelationbetweenthegeometryofiV thevascularcylinderoperateasindependentprocesses.
+trajectoriesandtheDR5intensity.Specifically,whentheiVtra- Importantly, throughout the early stages of iV development,
+jectories are nearly straight, the DR5 intensity is low. In fact, wefoundnoevidenceforbasipetalPIN1polarizationintheL1,
+weneverobservedaninstancewheretheiVtrajectoryisnearly L2, or L3 layers (Figure 2L) to mediate the transport of auxin
+straight (D/d < 1.05) and DR5 intensity at the corresponding fromtheSAMsurfacetowardunderlyingvasculature.Inagree-
+siteatthesurfaceishigh(Figure2E).Theseobservationsfurther mentwiththis,analysisofadoublepPIN1:PIN1-GFPpDR5v2:
+supporttheideathatauxinattheSAMsurfaceisdispensablefor NLS-GFP(nuclearlocalization)reporter(FiguresS2I–S2L)shows
+iVemergenceanditssubsequentextensiontobeneathanincip- that basipetal PIN1 polarization occurs only when a local DR5
+ientprimordium.Ontheotherhand,theiVtrajectoriesarecurved maximum marks an incipient primordium. PIN1 polarization
+whentheDR5intensityishigh.Accordingly,iVsultimatelycon- thenreorientsandconvergestowardtheDR5maximumatthe
+necttothesitesofincipientprimordia,butonlyinthepresence SAM surface (Figures S2J–S2L). In addition, PIN1 levels inter-
+ofDR5localmaxima.Thus,incontrasttotheinitialiVdevelop- nallyincrease,andPIN1polarizesbasipetallyintheL1,L2,and
+mentin the vascular cylinder, we propose thatthe connection L3 (Figures 2M–2P), indicative of auxin transport from the
+ofiVstoincipientprimordiaislinkedtoauxinattheSAMsurface. surface(orthetipoftheincipientprimordium)downtotheunder-
+Several lines of evidence support these ideas. Our previous lyingiVsuponleafinitiation,butnotbefore.
+analysisusingthequantitativeR2D2auxinsensorshowedthat, Furthermore,iVformationpersistsinthepin1mutantcomple-
+underourgrowthconditions,auxinfirstaccumulatesatthesite mented by expression of a GFP fusion to the PIN1 coding
+of an incipient leaf primordium at p-4,21 whereas free-ending sequence(pPIN1:cPIN1-GFPpin131),inwhichPIN1expression
+iVsareobservedpriortothisstage(Figures1E,2F,and2A).In islargely absent inthe L1but presentin underlying cell layers
+addition, similar to DR5, the auxin-responsive transcription andinthevascularcylinder(Figures2Q–2S).Giventhatphyllo-
+factor DNA BINDING WITH ONE FINGER5.8 (DOF5.8), which taxis is driven by PIN1-mediated polar auxin transport in the
+regulates leaf growth and venation,26,27 is expressed in the L1,32 the phyllotactic pattern is impaired at pPIN1:cPIN1-GFP
+vascular cylinder prior to its expression at the SAM surface pin1apices(Figure2Q).However,thelackofPIN1attheSAM
+(Figures 2F and 2G). Specifically, pDOF5.8:NLS-2xYPet is surfacehasnoobservableeffectontheemergenceofiVs,and
+broadlyexpressedatthesitesoffree-endingiVs(Figure2G)at similar to the control (Figure 2J), free-ending iVs in pPIN1:
+least2plastochronsbeforelocalDOF5.8maximamarkincipient cPIN1-GFPpin1aremarkedwithhighlypolarizedPIN1oriented
+primordiaatthesurface(Figure2F). towardpre-existingiVs(Figure2S).
+Moreover,weinvestigatedpotentialrolesforpolarauxintrans- Finally, iVformation persists eveninthe non-complemented
+portiniVemergenceandtheireventualconnectiontoprimordia pin1 mutant, despite temporary arrests of organ initiation
+byanalyzingthelocalizationandpolarityofthepPIN1:PIN1-GFP throughout the vegetative phase.33 When local DR5 maxima
+reporterattheSAMsurfaceandinternally(Figures2H–2P).Atthe areabsentattheSAMsurface,indicatingthearrestofleafiniti-
+timeofiVemergenceinthevascularcylinder,PIN1intheouter- ation, free-ending iVs still form within the vascular cylinder
+most(L1)celllayeroftheSAMispolarizedtowardtheSAMcen- (Figure 2T), although their spatial arrangement is abnormal
+ter(Figures2H,2I,2L,S2F,andS2G).AminorPIN1signalinthe (compareFigure2T,left,andFigure1F).
+underlyingL2andL3layersshowsthesamepolarity(Figure2L). Collectively,thesedatarefutethehypothesisthatPIN1-medi-
+ThisindicatesanauxinflowfromtheSAMperipherytowardthe atedauxintransportfromtheSAMsurfaceinducesiVformation.
+central zone, consistent with previous observations.21,28 By Infact,thedataimplythatnewiVsforminamannerindependent
+(E)CorrelationbetweenDR5surfacesignalintensityandD/dratio(right,schemesforD/d=1and>1).R,Pearson’scorrelationcoefficient;blackline,linearfitting.
+n=426sitesofp-5-p1primordiafrom94apices.
+(FandG)pDOF5.8:GFPexpressionattheapexsurfaceandinterior.QuantificationoftheDOF5.8surfacesignal(F)andtransversesection(G)showingfree-
+endingiVs(asterisks)andiVsconnectedtosurfaceDOF5.8maxima.Inset,magnifiedfree-endingiVatp-3.
+(H–P)pPIN1:PIN1-GFPexpressionatapexsurfaceandinterior.Topviews(HandM)showoverallPIN1expression.Arrowheads/dotsmarkfree-endingiV(H,
+asterisks)atp-2andconnectediV(M)atp0(arrowheads,cellswithpolarizedPIN1;dots,cellswithdiminishingPIN1expressionandthickercellwallsindicatingiV
+differentiation,J,O).Framedregions(HandM)indicatesitesofsurface(L1)PIN1polarity(arrowheads)quantification(IandN).Transversesectionsofcorre-
+spondingsitesshowfree-ending(J)andconnected(O)iVs.Inset(K),magnifiedfree-endingiV(J,arrow)withPIN1polaritytowardpre-existingiV.Longitudinal
+sectionsshowPIN1polarityacrossSAMlayersandatfree-ending(L,left)orconnected(P,left)iVs,andmagnifiedviewsshowPIN1polaritytowardtheSAM
+center(L,right)orconvergent/basipetalpatterns(P,right).
+(Q–S)Free-endingiVsinpPIN1:cPIN1-GFPpin1apex.Thetopview(Q,upper)showsoverallPIN1expressionandaberrantprimordiaarrangement.Thelon-
+gitudinalsection(Q,bottom)showsabsenceofPIN1intheL1withexpressionretainedinunderlyingcells.QuantificationofPIN1surfacesignal(R).Topview(S,
+upper)andtransversesection(S,bottom)revealfree-endingiV(asterisks,arrowheads/dots)identifiedasin(J)and(O).p,primordia.
+(T)Free-endingiVsinpin1apex.Thetopview(left)showsoverallDR5expressionwithreconstruction(redlines)offree-ending(asterisks)andconnectediVs.
+QuantificationofDR5surfacesignal(right).Dissectedprimordia(p)outlined(dotted).
+Representativeexamplesfromn=11(FandG),13(H,K,andM–O),11(LandP),15(Q-S),and13(T)apices.Scalebars,50μm(B–D,F–H,M,andQ–T),25μm(I,J,
+L[left],andN–P[left]),and10μm(K,L[right],andP[right]).
+SeealsoFigureS2.
+DevelopmentalCell61,1–16,March11,2026 5
+
+===== PAGE 7 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+Figure 3. Biphasic development of shoot
+vasculature is marked by distinct genetic
+regulators
+(AandB)Thefirstphase:pYUC1:GFP,pPEAR1:
+YFP, and pTCSn:GFP (green). Transverse sec-
+tionsshowexpressioninthevascularcylinder(A).
+Longitudinal sections show expression in free-
+ending (B, asterisks) and connected (B, arrow-
+head)iVs.
+(C and D) The second phase: pATHB8:YFP,
+pTMO5:GFP, and pSHR:YFP (magenta). Top
+views show overall expression at SAM and
+primordia (C). Longitudinal sections show
+expression connecting the p-1 primordium and
+vascularcylinder(D).
+Representativeexamplesfromn=10(YUC1),13
+(PEAR1),12(TCS),11(ATHB8),13(TMO5),and7
+(SHR)apices.Scalebars,50μm.
+SeealsoFigureS3.
+By contrast, expression of ATHB8
+(pATHB8:YFP),acommonlyusedmarker
+ofpre-procambiumandprocambium,25,29
+of auxinactionattheSAM.However,theconnection ofiVsto uniquelymarksthesecondphase(Figures3Cand3D).Atthetime
+incipient primordia is linked to the basipetal transport of auxin of leaf initiation, coincident with PIN1-mediated basipetal auxin
+fromtheSAMtowardanunderlyingiV. transport, ATHB8 expression extends approximately 6–7 cells
+below the SAM surface (Figure 3D). This expression connects
+Biphasicdevelopmentofshootvasculature the iVs in the vascular cylinder to incipient leaf primordia but
+Ourdatarevealthatshootvasculaturedevelopsintwodistinct is notably absent from the iVs themselves. A similar pattern
+phases.Inthefirst,newiVsemergefrompre-existingvascula- of expression is observed for TARGET OF MONOPTEROS5
+ture and extend as free-ending iVs over >100 μm within the (pTMO5:GFP)38,39 and SHORT-ROOT (pSHR:YFP)40,41 (Figures
+vascularcylinderbeneathincipientleafprimordia(FigureS2B). 3Cand3D).
+Thisphase,lastingatleast4plastochrons,occursindependently Theexpressionpatternsofthesereporters,togetherwithDR5
+ofsurface-derivedauxin.Inthesecond,shorterphase,iVscon- and PIN1 data, strongly support the biphasic development of
+necttoincipientprimordiaover∼40μmwithinoneplastochron shootvasculature.Theyalsoindicatethatvascularformationin
+(FiguresS2C–S2E),coincidingwithDR5-markedauxinmaxima differentregionsisregulatedbygeneticallydistinctmechanisms.
+andPIN1-mediatedbasipetalauxintransportfromtheSAMsur- Notably,TMO5,ATHB8,andSHRarenotexpressediniVsex-
+face. Because these phases occur in different developmental tending within the vascular cylinder. This suggests that early
+contexts—the vascular cylinder and the SAM with initiating vasculardevelopment inthisregionoperatesindependently of
+leaves—they may be governed by distinct molecular mecha- vascularregulatorsassociatedwiththeSAM.Theformationof
+nisms. To explore this possibility, we analyzed the expression newiVsinthevascularcylinder,independentofsurface-derived
+pattern of additional vascular markers and hormone-related auxin,may insteadrelyon specific internalprocesses suchas
+reporters. YUC1-mediatedlocalauxinbiosynthesis.
+TheauxinbiosynthesisreporterpYUC1:GFP34islocallyupre-
+gulatediniVsassoonastheyemergefrompre-existingiVs,and LocalinteractionsbetweeniVscanexplaintheir
+its expression intensifies as iVs develop (Figures 3A and 3B). trajectory
+YUC1 expression at free-ending iVs closely matches that of Ourdataindicatethatfree-endingiVsinthevascularcylinderare
+DR5,exceptthatexpressionofYUC1isstrictlyconfinedtothe preciselypositionedaccordingtophyllotaxisbeforeconnecting
+vascularcylinderwithnoapparentactivityinincipientprimordia to incipient primordia. Paradoxically, this spatial arrangement
+(Figure S3A). Likewise, expression of the transcription factor arises independently of surface-derived auxin, suggesting
+PHLOEM EARLY DOF1 (pPEAR1:YFP)35 and the cytokinin regulation by inner-tissue signals. Such patterning may reflect
+responsereporterpTCSn:GFP36–38markstheiVsinthevascular pre-existingapical-basalshootpolarityofgroundtissueestab-
+cylinder (Figures 3A, 3B, and S3B). Although, compared with lishedduringembryogenesis42oremergefromlocalinteractions
+PEAR1 and YUC1, expression of TCS is temporally delayed among neighboring iVs, suggesting self-organization. To test
+andisfirstdetectediniVsaroundthetimetheyconnecttoincip- these possibilities, we developed tissue-level computational
+ient primordia (Figures 3A and 3B). Thus, these reporters, ex- modelssimulatingiVextensionwithinthevascularcylinder.
+pressedinemergingiVsinthevascularcylinderbutnotinincip- We first tested whether local interactions are required to
+ient leaf primordia in the SAM, clearly mark the first phase of reproduce iV trajectories. A naive agent-based simulation
+vasculardevelopment. (random model; STAR Methods), in which a free-ending iV
+6 DevelopmentalCell61,1–16,March11,2026
+
+===== PAGE 8 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+Figure 4. Local interactions between iVs
+canexplaintheirtrajectory
+(A)Transversesectionofapexsitewithfree-ending
+iV(n)extendingbetweenconnectedn+13andn+
+8 iVs. Left, confocal image; right, reconstruction
+(redlines)offree-ending(asterisks)andconnected
+(reddots)iVs.Bluelines,10simulatediVtrajectories
+undertherandommodel.Scalebar,50μm.
+(B)ObservedversussimulatediVshapesquantified
+bythemaximaldifferenceoftherelativedistance
+between emerging and pre-existing iVs. Boxes,
+25th to 75th percentile; whiskers, 5th to 95th
+percentile; white dots, median. Two-sample
+Kolmogorov-Smirnov test; n = 464 (observation)
+and4,640(model)measurementsfrom30apices.
+(C–E) Interaction-based local model expressing
+differentiVinteractions:repulsion(C),attraction(D),
+and mixed repulsion-attraction (E). Extension of
+emergingiVisrepresentedbyavector(v,green),
+which is a linear combination of an interaction
+vector(s)definingrepulsion(es,blue)orattraction
+n n
+(es,red)andthevector(es,gray)definingthe
+p p s s
+attraction toward the apex interior center, with
+interactionstrength(s)asafunctionofdistance(d).
+(F)Piechartplotof1,000mostsimilarparameter
+optimizationresults(from100,000)showingprev-
+alenceofrepulsion.Interactioncategories:repul-
+sion, weak repulsion, attraction, weak attraction,
+andmixedrepulsion-attraction(TableS1).
+(GandH)Setsofparametervaluesof1,000simu-
+lationsforrepulsion(G)andattraction(H)relativeto
+theattractiontowardtheapexinteriorcenter(s/s
+n s
+ands/s)plottedonthefirsttwoprincipalcom-
+p s
+ponents(PCs).Pointcolorscale,thecostfunction
+value(modelloss);backgroundcolorscale,relative
+repulsion/attraction.Lowmodellosscoincideswith
+highrepulsionandlowattraction.
+(IandJ)StreamplotsofiVtrajectories(streamlines,
+blue) simulated according to repulsion (I) and
+attraction (J) mechanisms versus reconstructed
+(red)realfree-endingandconnected(reddots)iVs
+from(A).
+SeealsoTableS1.
+we constructed a self-organizing model
+of iV extension (interaction-based local
+model; STAR Methods). In addition to
+the extension toward the apex center,
+themodelincorporatesdistance-depen-
+dentattractionorrepulsionfrompre-ex-
+istingiVs:anemergingiVcanberepelled
+whennearby(Figure4C),orattractedat
+greater distances (Figure 4D). We also
+modeled mixed interactions, where
+extendsrandomlytowardthecenteroftheapexinteriorwithout repulsioncanswitchtoattractiondependingondistance,allow-
+interactingorinterconnectingwithotheriVs(Figure4A),failsto ing,forexample,aniVtobeinitiallyrepelledfromanearbypre-
+generate realistic iV geometries compared with observed iVs existing iV and subsequently attracted to a more distant iV
+(Figure4B).Thus,emergingiVtrajectoriescannotbeexplained (Figure4E).
+bysimpleextensiontowardtheapexcenter. To test these mechanisms in silico, we generated 100,000
+Classicalexperimentshaveshownthatafterauxinmicroappli- random parameter sets expressing attraction, repulsion, and
+cationtorootsorstems,thepre-existingvasculatureappearsto mixed interactions. Model performance was assessed by the
+attract or repel newly induced vascular strands.43,44 To test squaredaveragedistancebetweensimulatedandobservediV
+whether similar local interactions underlie vascular patterning, geometries (model loss), with lower values indicating closer
+DevelopmentalCell61,1–16,March11,2026 7
+
+===== PAGE 9 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+Figure5. Repulsion-basedmodelreproducesdynamicvascularpatterningduringapexgrowth
+(A)CorrelationbetweenSAMradiusandplantage(DAG,daysaftergermination).R,Pearson’scorrelationcoefficient;blackline,linearfitting.Infurtheranalyses,
+apiceswereclassifiedaccordingtotheirsizesassmall(38<radius≤55μm),medium(55<radius≤65μm),andlarge(65.01<radius≤81μm).n=117apices.
+(B)Representativeapicesat29,41,and52DAG,classifiedassmall,medium,andlarge.DR5expression(red)marksprimordia.c,theSAMcenter.
+(C)SimulationofiVnetworkdevelopmentfromtemplate(t1=1h).Overtime(t2=85h,t3=314h),free-endingiVsemergefromconnectediVs(graydots).Black
+dot,apexcenter;hashes,iVpatterns,whosegenerationisillustratedin(E)and(F).
+(D)ProgressionofsimulatediVinterconnectionsinrelationtoparastichyorderover480h.InterconnectionsweredeterminedafteriVsconnectedtotheSAM
+surface.
+(legendcontinuedonnextpage)
+8 DevelopmentalCell61,1–16,March11,2026
+
+===== PAGE 10 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+agreement. The top 1 % of simulations were overwhelmingly andS4K).Here,then+8bifurcationprecedesthatofn+5.To
+dominated by repulsion-based simulations, whereas attrac- validateourmodel,wecomparedsimulationswithrealapices,
+tion-dominated mechanisms almost never accounted for real- wherevascularinterconnectionsalignwithparastichiesthatpro-
+isticsimulationsofiVtrajectories(Figure4F;TableS1). gressivelyshiftfromlowertohigherorderduringdevelopment25
+Principal-componentanalysis(PCA)onthesemostaccurate (Figures1Band1F).
+simulationsshowsthatparametersdefiningastrongrepulsion Initially,iVinterconnectionsalignwithn+8andn+5parasti-
+or weak attraction are correlated with low model loss chies, but as the vascular space expands, they progress to
+values, and their clustering in parameter space indicates higher-orderparastichies(Figures5Cand5D;VideoS2).Specif-
+robustnesstoperturbations(Figures4Gand4H).Toillustrate ically,earlyinsimulations,twoiVsdivergesuccessivelyfromn+
+differences between the mechanisms, we visualized 8andn+5iVsandmergebeforeconnectingtotheSAMsurface
+possible iV trajectories as stream plots, showing that repul- (Mpattern;Figures5C,t1-t2,and5E).Later,aniVdivergingfrom
+sion-based simulations produce more realistic trajectories n + 8 connects to the surface faster than the one from n + 5
+than attraction-based simulations (Figures 4I and 4J). Collec- (Figures5C,t3,and5F),repellingit(Rpattern).TherepellediV
+tively, these analyses indicate that repulsion-based local extends further, and a secondary iV joins the connected iV to
+interactionsaresufficienttoexplainiVextensioninthevascular the repelled iV before its surface connection (R + M pattern).
+cylinder. Thus,relativetotherepellediV(n),vascularinterconnectionsul-
+timately align with the n + 13 and n + 8 parastichies (R + M
+Therepulsion-basedmodelreproducesdynamic pattern)followingatransientn+8alignment(Rpattern).
+vascularpatterningduringapexgrowth Tovalidatethemodelquantitatively,wecomparedsimulated
+While repulsion-based mechanisms accurately describe iV andobservediVpatternsinapicesclassifiedassmall,medium,
+trajectories, they do not explain the interconnected vascular and large. While the M pattern dominates in small apices, in
+network(Figure1F).Toforminterconnections,repulsiondynamics largeapicesnearly60%showtheR+Mpatternand30%the
+must change, likely through developmental or physiological R pattern, with a mixture of all patterns in medium apices
+changesintheiVs.StudiesbyT.Sachs43–45suggestthatvascular (Figures5Gand5H).Inlargeapices,theRpatternpredominates
+interconnectionsduringregenerationuponauxinmicroapplication atearlierstagesandshiftstotheR+Mpatternovertime,match-
+dependonauxinlevelsinvascularstrands:pre-existingstrands— ingmodelpredictions(Figures5Iand5J).Consistentwithsimu-
+wellsuppliedwithauxin—repelnearbyinducedstrands,whereas lations(Figures5Eand5F),theMandR+Mpatternscorrespond
+auxin-depletedstrandsmergewiththem.IntheArabidopsisshoot to n + 8, n + 5 and n + 13, n + 8 parastichies, respectively
+apex,theauxinleveliniVsmaydependontheirconnectiontoan (Figures5Hand5J),withoccasionalsinglen+8alignmentsin
+auxinmaximumattheSAMsurfaceviaPIN1-mediatedbasipetal mediumandlargeapices(Figures5Gand5I).
+transport.8,11 Thus, iVs connected to the surface are well Furthermore, the different iV patterns were quantified by
+suppliedwithauxinandrepelnewlyformingiVs,whereasnon-con- measuringthedistancebetweeniVsdivergingfrompre-existing
+nected iVs are poorly supplied with auxin and can merge with n+8andn+5iVs.Thisdistancerapidlydecreasestozeroin
+otheriVs. smallapices,correspondingtotheMpattern(FiguresS4Land
+Totesttherepulsion-basedmechanisminarealisticgrowing S4M), but remains above zero in large apices with R and R +
+environment, we extended our model with a data-driven tem- Mpatterns,indicatingrepulsion(FiguresS4LandS4N).Compar-
+plateintegratingglobalvascularorganizationandlong-termtis- ison of these measurements between real apices and simula-
+suegrowth(interaction-basedglobalmodel;methodsS1;STAR tions shows closeagreement, providing quantitative validation
+Methods).Asreference,weusedvegetativeshootapicesgrown ofthemodel(Figures5Kand5L).
+undershort-dayconditions,whereSAMsizeincreases∼50%in Together, the extended model emergently reproduces the
+∼20days(Figures5Aand5B). developmental shift in iV interconnections—from merging to
+Simulations were initialized with a template reflecting the repulsion—througharepulsion-basedmechanism.Theresulting
+vascularnetworkinsmallapices(Figure5C,t1;VideoS2),where iV patterns closely match those observed in growing apices,
+theiV(n)supplyingaleafprimordiumformsbymergingtwoiVs supporting the role of local iV interactions in global vascular
+diverged from pre-existing n + 8 and n + 5 iVs (Figures S4J patterning.
+(EandF)GenerationofiVinterconnectionpatterns.Mpattern(E):twoiVs(n,blue,red)mergebeforesurfaceconnection.RandR+Mpatterns(F):n+8-derivediV
+(n,blue)connectstothesurfaceandrepelsn+5-derivediV(red),whichfurtherextendsandeventuallyconnectstothesurface(n(cid:0) 8).AnotheriV(black)linksn
+andn(cid:0) 8iVs.Graydots,iVconnectionstosurface;hashes,iVsshownat(C).
+(G)FrequenciesofM(darkgray),R(gray),andM+R(lightgray)patterns(withschemesontheright),andpatternswithn+8-derivediVs(white)inrealsmall,
+medium,andlargeapices(n=29,36,and35apices;iVstagesfrom(cid:0) 5to3).
+(H)TransversesectionsofapicesshowingM,R,andM+Rpatterns.Arrowheads,n+5-derivediVbefore/aftermergingwithn+8-derivediV;arrow,iVlinkingn
+andn+8iVs.
+(I)FrequenciesofiVpatternsacrossiVstagesinreallargeapices.n=5((cid:0) 5),23–29((cid:0) 4to2),18(3)iVs.
+(J)TransversesectionsofapexshowingRandM+Rpatternsatnumberedstages.Arrowhead,n+13-derivedrepellediV((cid:0) 5);arrow,iVlinking(cid:0) 1and7iVs.
+(KandL)Distance(d)betweenn+5andn+8-derivediVsasafunctionofiVageinrealobservedapices(K)andmodel(L).In(K),meanvalues(dots)±standard
+n
+deviation(SD)werecomputedbasedondatafromFigureS4L.n=3–32,14–36,and6–36iVsperageforsmall,medium,andlargeapices.In(L),meanvalues
+(dots)arecomputedbasedonmeasurementsofindividualiVs(dottedlines).
+Scalebars,25μm(H),50μm(BandJ),and100μm(C).
+SeealsoFigureS4,TableS2,andVideoS2.
+DevelopmentalCell61,1–16,March11,2026 9
+
+===== PAGE 11 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+Figure 6. Repulsion-based model predicts
+vascular arrangement consistent with
+variousphyllotacticpatterns
+(A, D, and G) Shoot apices with Fibonacci (A),
+Lucas(D),andbijugate(G)phyllotacticpatterns.
+DR5 expression (red) marks primordia. c, SAM
+center.Scalebars,50μm.
+(B,E,andH)SimulationofiVnetworksmatching
+Fibonacci(B,t=186h),Lucas(E,t=265h),and
+bijugate(H,t=252h)phyllotacticpatterns.Gray
+dots, iV connections to SAM surface; red dots,
+successive iVs (or pairs of iVs) between which
+divergenceanglesweremeasured(soliddot,older
+iV);blackdot,apexcenter.
+(C, F, and I) Divergence angles between real
+primordia(left)orsimulatediVs(right).Redlines/
+numbers,mean;blackdots,data.TheiVangles
+weremeasuredjustbeforeandafteriVconnection
+to the SAM surface. No significant differences
+between observation and model (two-sample t
+test;p=0.7273,C;p=0.9742,F;p=0.32773,I).
+n=111p1–p2primordia,n=48iVs(C);n=31p0–
+p12primordiafrom3apices(F);n=36iVs;n=26
+p0–p7primordiafrom2apices,n=40iVs(I).
+SeealsoVideosS3andS4.
+Unlike the Fibonacci and Lucas pat-
+terns,whereasingleprimordiuminitiates
+perplastochron,inabijugatephyllotaxis,
+two primordia initiate simultaneously or
+almostsimultaneouslyonoppositesides
+oftheSAM(Figure6G).Here,thediver-
+gence angles between successive pairs
+of primordia are ∼68.76◦46 (Figures 6G
+and 6I, primordia). Starting from a tem-
+Therepulsion-basedmodelpredictsvascular platereflectingthismorecomplexpattern(STARMethods),the
+arrangementsconsistentwithvariousphyllotactic simulation again reproduces over time aniV arrangement with
+patterns divergence angles similar to those observed in primordia
+Therepulsion-basedmodelnotonlyreproducestheobservedpat- (Figures6Hand6I,iVs;VideoS4).
+ternsofiVinterconnectionsingrowingapices,butitalsogenerates Thus, the repulsion-based model accurately replicates iV
+aspatialarrangementoffree-endingiVsconsistentwithphyllo- arrangements associated with diverse phyllotactic patterns,
+taxis.Inmostobservedapices,free-endingiVsaccuratelyextend indicatingthatlocalinteractionsbetweeniVssufficetogenerate
+within the vascular cylinder to positions below incipient leaf thesecomplexpatternswithoutdirectionalcuesfromtheSAM
+primordia, aligning with a spiral Fibonacci pattern (Figures 1H surface.
+and1I).Similarly,thedivergenceanglesbetweentwosuccessive
+iVsinthesimulationcloselyresemblethoseobservedforprimordia VasculararrangementdependsoninternalPIN1-
+(Figures6A–6C).Sinceourmodellacksaguidancemechanism mediatedpolarauxintransport
+fordirectingfree-endingiVstowardprojectedDR5maxima,these Exploringtheroleofrepulsioninvascularpatterning,wetested
+results indicate thatlocal iV interactions alone can reproduce a how varying repulsion strength affects iV arrangement consis-
+phyllotactic Fibonacci spiral pattern without a surface-derived tent with the Fibonacci pattern, providing a measure of the
+signal. model’s robustness to parameter value changes. The most
+Tofurthervalidatetherepulsion-basedmodel,wenexttested robust iV arrangements occur around a repulsion strength of
+itsabilitytoreproduceiVarrangementsofotherphyllotacticpat- s =2.7,withdivergenceanglesremainingcloseto137.5◦over
+n
+ternsthatariseoccasionallyonplantsgrowingunderSDcondi- 20days(Figure6C;themeanis137.59◦,andSDis2.33).Varying
+tions.IntheLucasspiralpattern,thedivergenceanglesbetween therepulsionstrengthby±55%(1.2<s <4.2)relativetothe
+n
+primordia are ∼ 99.5◦46 (Figures 6D and 6F, primordia). In the optimal value (s = 2.7) results in similarly robust iV patterns
+n
+simulation, initiated on a template with a Lucas spiral pattern over 10 days, with only minor shifts between iV merging and
+(STARMethods),thedivergenceanglesofsimulatediVsduring repulsionpatterns(FiguresS5A–S5C).However,reducingrepul-
+20 days of constant growth again very closely mirror those sion strength by > 70% (s = 0.7) rapidly disrupts iV merging,
+n
+observedfortheprimordia(Figures6Eand6F,iVs;VideoS3). proper interconnections, and divergence angles within a few
+10 DevelopmentalCell61,1–16,March11,2026
+
+===== PAGE 12 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+(legendonnextpage)
+DevelopmentalCell61,1–16,March11,2026 11
+
+===== PAGE 13 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+days (Figures 7A–7C), reflected in altered trajectories of free- numberandspacingofVsinthislineremainsimilartopin1alone
+endingiVsandtheirspacingrelativetopre-existingiVs.Specif- anddiffersignificantlyfromthecontrol(Figures7I–7K).Thus,L1-
+ically,weakerrepulsionleadstostrongerattractiontowardthe specific PIN1 expression and normal flower formation cannot
+apex center, causing emerging iVs to follow straighter trajec- rescue the aberrant vascular patterns observed in pin1.
+tories that remain closer to their parental iVs (Figures 7D and Conversely,internalPIN1expressioninpPIN1:cPIN1-GFPpin1
+7E). This reduces spacing and promotes rapid connection of stemspartiallyrescuesthepin1vascularphenotype,shiftingit
+iVstotheSAMsurface,preventingthemfrommergingwithother toward the control by increasing Vs spacing and reducing Vs
+iVs.Bycontrast,intheoptimizedsimulation(s =2.7),iVtrajec- number, although flower formation and phyllotaxis remain
+n
+toriesaremorecurved,withemergingiVsextendingfurtherfrom impaired(Figures7H–7K).
+pre-existing iVs, resulting in greater spacing and merging with ThesefindingsdemonstratethatinternalPIN1-mediatedpolar
+otheriVsbeforereachingthesurface.Thispredictsthatthetra- auxintransportisrequiredforthelocalvascularinteractionsun-
+jectory of free-ending iVs is driven by repulsive interactions, derlyingpatterning,largelyindependentofpolarauxintransport
+whicharekeydeterminantsiniVpatterning. attheSAMsurface.Theincompleterescueofthepin1vascular
+GiventheaberrantiVpatterningobservedinvegetativeapices phenotype by internal PIN1 expression suggests a possible
+ofthepin1mutant(Figure2T),weproposethatlocalinteractions indirect influence of primordia on repulsive iV interactions.
+betweeniVsdependonPIN1-mediatedauxintransport.Inthis Collectively, the formation of new vascular strands in the
+scenario,thepin1mutantmayrepresentasystemwithreduced vascularcylinderisindependentoforganogenesisattheSAM,
+repulsion,providingatestforourmodel’spredictions.Toquan- while patterning is locally regulated by strand interactions, re-
+titatively analyze iV patterns, we imaged inflorescence stems, flecting the self-organizing capabilities of the shoot vascular
+where the simple cylindrical shape and high DR5 expression system.
+facilitate iV reconstruction and measurements (Figures 7F and
+7G). As predicted by the repulsion-based model, iVs in the DISCUSSION
+pin1mutantextendclosertoeachotherandalongnearlystraight
+trajectories,consistentwithweakrepulsion(Figures7Fand7A). Theprevailinghypothesisproposesthatauxinderivedfromthe
+Conversely, wild-type inflorescences display curved iV trajec- SAMsurfacedirectstheformationofnewvascularstrandsand
+tories with greater spacing, reflecting stronger repulsion their integration with pre-existing vasculature, shaping the
+(Figures7Gand7B).Theseresultssupporttheconclusionthat vascular network in the shoot apex.10–13,32,47,48 Historically,
+therepulsion-basedmechanismunderlyingtheiVpatterningde- vascularstrandinitiationhasbeenexplainedbyT.Sachs’auxin
+pendsonPIN1-mediatedpolarauxintransport. canalizationhypothesis,45whichpositsthatauxinflowsfroma
+Inthe interaction-based global model, the repulsionmecha- source—an auxin accumulation site—forming an auxin canal
+nismactivatesonceaniVconnectstoaleafprimordium,sug- thatconnectstoasink,suchasapre-existingvascularstrand.
+gesting that primordia may indirectly influence iV interactions IntheSAMcontext,ithasbeenproposedthatauxinfromincip-
+andpatterning.TofurthertesttheroleofPIN1-mediatedpolar ient leaf primordia is canalized through PIN1-mediated polar
+auxintransportinvascularpatterningrelativetoorganogenesis auxin transport toward the pre-existing vasculature, assisted
+attheSAM,weanalyzeddifferentiatingvascularstrands(Vs)in by a vein attraction factor.11,12 Without this additional guiding
+the pin1 mutant complemented with epidermal- or inner-tis- signal originating from the vasculature, the auxin canal fails to
+sue-specificPIN1expression.31 reachthesink.
+As observed previously,31,32 PIN1 expression driven by Ourresearchintroducesashiftinthisperspective,revealing
+the epidermis-specific ARABIDOPSIS THALIANA MERISTEM thattheformationofiVsneededtosupplyfutureleavesdevelops
+LAYER1promoter(pATML1:cPIN1-GFP)inthepin1background through a biphasic process. In the first phase, free-ending iVs
+restores normal flower formation (Figure 7H). By contrast, the emerge from pre-existing vasculature and extend within the
+Figure7. VasculararrangementdependsoninternalPIN1-mediatedpolarauxintransport
+(AandB)SimulationsofiVnetworkdevelopmentunderlow(A,s =0.7)andoptimized(B,s =2.7)repulsionstrengthatt=100h.Graydots,iVconnectionstothe
+n n
+SAMsurface;blackdot,apexcenter.
+(C)DivergenceanglesbetweensimulatediVsunderlowandoptimizedrepulsionstrengthover314h.n=29iVs.
+(DandE)QuantificationofiVtrajectoriesbasedontheD/dratio(D,arc-lengthdistance;d,straight-lineEuclideandistance[D;right,schemesforD/d=1and>1])
+anddistancebetweenemergingandpre-existingiVs(E)underlowandoptimizedrepulsionstrength.pvaluesdeterminedbytwo-sampleKolmogorov-Smirnov
+test(D)orttest(E).n=25(D),23(E)iVs.
+(FandG)Sideviewofinflorescenceapicesofpin1(F)andwildtype(WT)(G).Redlines,iVreconstructionbasedonDR5.c,SAMcenter.n=9apicesperline.
+(HandI)Inflorescenceapices(H)andstems(I)ofpATML1:cPIN1-GFPpin1andpPIN1:cPIN1-GFPpin1comparedwiththecontrolandpin1.Topviews(H,upper)
+andlongitudinalsectionsofapices(H,bottom)showsurfaceand/orinternal(arrowheads)PIN1expression.Transversesectionsofstems(I)showdifferentiating
+vascularstrands(Vs).Thecontrol:pPIN1:PIN1-GFPpin1(H),afullycomplementedlineindistinguishablefromWT32;WT(I).Reddots,protophloemcellsidentified
+bythickercellwalls.c,SAMcenter.
+(JandK)Quantificationofvascularstrandspacing(J)andnumber(K)inlinesisshownin(I).StatisticalsignificancewasdeterminedbyKruskal-WallisANOVAwith
+posthocDunn’stest(p<0.01).
+Boxes,25thto75thpercentile;whiskers,5thto95thpercentile;blackline,median;bluesquare,mean;blackdots,data(D,E,J,K;inJ,dots,theaveragedistance
+persection).Representativeexamplesfromn=12apicesperline(H),n=36(WT),26(pin1),43(pATML1:cPIN1-GFPpin1),and34(pPIN1:cPIN1-GFPpin1)stems
+(I–K).
+Scalebars,100μm(F,G,andI)and50μm(H).
+SeealsoFigureS5.
+12 DevelopmentalCell61,1–16,March11,2026
+
+===== PAGE 14 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+vascular cylinder toward sites beneath incipient leaf primordia Further,byvaryingrepulsionstrengthinourmodel,wefound
+overseveralplastochrons.Thisprocessisindependentofsur- that weak repulsion alters iV trajectories, producing defects in
+face-derived auxin, yet the spatial arrangement of iVs aligns the overall vascular pattern. This prediction was validated in
+with phyllotaxis. In the second phase, iVs connect to incipient pin1 inflorescence stems, consistent with previous studies on
+leaf primordia within less than a plastochron, coinciding stemsandleavesshowingthatsuppressedpolarauxintransport
+with local auxin transcriptional response at the SAM surface resultedinadensenetworkofvascularstrandsextendingparal-
+and PIN1-mediated basipetal auxin transport. Therefore, this leltotheorganaxiswithfrequentlateralfusionsbetweendiffer-
+biphasicformationoftheshootvasculaturereconcilestwocon- entiatedstrands.51–53Notably,thedefectivevascularpatternin
+trastinghypothesespositingthatvascularsystemdevelopment thepin1mutantisnotrescuedbyepidermalPIN1-mediatedpo-
+iseitherindependentof5,6orguidedbyorganformationatthe lar auxin transport and normal organ formation at the SAM,
+SAM.11,47,48Whiletheemergenceofnewvascularstrandsand whereas inner-tissue-specific auxin transport substantially re-
+theprimaryvascularpatterningaregovernedbyinner-tissuesig- storesnormalvascularpatterning.Thesefindingspointtointer-
+nals, the connection to incipient organs relies on surface- nalPIN1-mediatedpolarauxintransportasacrucialcomponent
+derivedauxin. generatingrepulsiveinteractionsbetweenvascularstrands.
+Ourfindingsalsoquestiontheneedforaveinattractionfac- Then,howdoesapre-existingiVrepelanearbyfree-ending
+tor.11 Instead, we propose that free-ending iVs positioned iV?WehypothesizethatconnectediVs,wellsuppliedwithauxin
+beneathincipientprimordiacanactassinksforauxincanaliza- fromleafprimordia,maintainhighauxinlevels.Thisissupported
+tion. Simulations using realistic 3D templates show that PIN1- by substantially higher DR5 expression in connected versus
+dependentauxincanalscaneffectivelyfindandconnecttosinks free-endingiVs(Figure1E),implyinganincreaseinauxinlevels
+whenpositionedbeneathsitesofauxinaccumulationattheSAM post-connection.ExpressionofYUC1furthersuggeststhatiVs
+surface.13 Nonetheless, in the pin1 mutant, leaf primordia still inthevascularcylindermayalsobesuppliedwithauxinthrough
+connect to underlying vasculature, suggesting that alternative local biosynthesis, which increases over developmental time.
+mechanismssuchasfacilitatedauxindiffusion49maycontribute. AssumingthatPIN1expressionisauxininduced9,54andvascu-
+Furthermore,ourfindingschallengethenotionthatphyllotaxis laturewithhighauxinlevelpossesseshighauxintransportca-
+viasurface-derivedauxingovernsvascularpatterning.Whilethis pacity,55 connected iVs are expected to generate increased
+ideahasbeenimplementedinacomputationalmodelreproduc- auxinflux,potentiallyrepellingnearbyfree-endingiVsandinhib-
+ingcomplexvascularpatternsininflorescenceapicesofseveral iting new interconnections. This mechanism is analogous to
+Asteraceaespecies,48ourstudyclearlyshowsthatintheArabi- apical dominance, where the vasculature in the main stem,
+dopsis vegetative apex, new iVs develop from pre-existing well supplied with auxin from the dominant apex, inhibits the
+vasculaturebeforetheformationofsurfaceauxinresponsemax- activationoflateralbudsbypreventingtheconnectionofauxin
+imaandPIN1basipetalpolarization.Instead,theirformationand fluxesfromthebudstothestem.54,56Inhibitionbyapre-existing
+patterningareregulatedbyinternalsignals.Vascularpatterning auxinfluxinthevasculaturecanalsooccurwithoutassumingits
+could conceivably involve species- or organ-specific mecha- increasedcapacity,relyinginsteadonthetemporalsequenceof
+nisms.47,48Notably,higher-orderveinformationinArabidopsis emerging auxin sources.57 Altogether, these findings suggest
+leaves, contrary to earlier models,50 is controlled not by PIN1 thatiVrepulsioncouldbemediatedbyauxinflux-basedmecha-
+convergencepointsattheepidermalleafmarginbutbyPIN1ac- nisms,58,59 with leaf primordia acting as auxin sources that
+tivitywithinthe vasculartissues.31 Thissuggests that leafvein modulate the strength of repulsive interactions. Consequently,
+formationandpatteringarealsoindependentofauxintransport connection to lateral organs at the SAM may further influence
+fromthesurface. Our findings revealthat localinternal signals vascularpatterning,potentiallyexplainingtheincompleterescue
+and dynamic interactions in the vascular tissues suffice to of the pin1 vascular phenotype by internal PIN1 expression in
+explainthefirstphaseofvasculardevelopmentinshootapices. plantswithdefectiveflowerformation.
+Moreover,despitetheabsenceofguidancefromtheSAMsur- Analternativemolecularmechanismforrepulsiveinteractions
+face,iVarrangementisnotrandombutcloselyalignswithphyl- isthatconnectediVswithhighauxinlevelsgenerateinhibition
+lotaxis.Altogether,thesedatasuggestthatlocalinteractionsbe- fields through polar auxin transport, analogous to models
+tween vascular strands coordinate the spatial pattern of the proposedforphyllotaxis.10,46,60Insuchmodels,inhibitionfields
+vascularnetworkthroughaself-organizingprocess. formaroundexistingprimordiawithhighauxinlevels,inhibiting
+Ourcomputationalmodelingfurthersupportsthisview.iVtra- the formation of new primordia nearby and spacing primordia
+jectories can be explained by self-organizing repulsive interac- in characteristic phyllotactic patterns. Similarly, vascular
+tionsbetweenemergingandpre-existing iVs,suggestingthata patterning may rely on self-organizing properties that create
+simplerepulsion-basedmechanismunderliesvascularpatterning. localinhibitionfields,explainingthespatiotemporalcoordination
+Totestthis,wedevelopedanextendedmodelsimulatinglong- between vascular development and organ formation. Future
+term shoot apex growth dynamics and capturing ontogenetic studiesdissectingthemolecularbasisofshootvascularnetwork
+developmentaleventsobservedinrealapices.Themodelfullyre- formation and its interplay with meristem activity and organo-
+constructsfree-endingiVarrangementscorrespondingtodistinct genesis will provide deeper insights into the mechanisms
+phyllotacticpatternsandthealignmentofiVinterconnectionsac- underlyingplantmorphogenesisandpatterning.
+cordingtoincreasingparastichyorder.Thus,themodel’sabilityto
+accuratelyreproducetheglobalvascularnetworkinagrowingtis- Limitationsofthestudy
+suestrengthenstheplausibilityofsimplerepulsion-basedmech- Whileourextendedmodelaccuratelyreproducesthekeyspatial
+anismsasfundamentalcontributorstovascularpatterning. featuresofvascularnetworkdevelopment,itlacksprecisionin
+DevelopmentalCell61,1–16,March11,2026 13
+
+===== PAGE 15 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+capturing temporal dynamics, particularly the timing of iV ○ Divergenceangles
+branchingandiVextensionrate.Theseparametersmaydepend ○ Plastochronlength
+ontheiVdevelopmentalstageandapexsize;however,withouta ○ ExtensionrateofiVs
+○ Arrangementofdifferentiatingvascularstrands
+detailed understanding of the precise regulatory mechanisms
+involved,ourmodelcanonlyapproximatetheseprocesses.In
+SUPPLEMENTALINFORMATION
+realplants,vascularbranchingandextensionarelikelyregulated
+by multiple factors such as auxin and/or other hormone
+Supplemental information can be found online at https://doi.org/10.1016/j.
+gradients, mechanical forces, and spatial constraints. Studies devcel.2025.10.012.
+unraveling the mechanistic and temporal aspects of vascular
+development will facilitate the creation of more robust models Received:August8,2025
+ofplantvascularnetworks. Revised:September9,2025
+Accepted:October15,2025
+RESOURCEAVAILABILITY
+Leadcontact REFERENCES
+Requestsforfurtherinformationandresourcesshouldbedirectedtoandwill
+befulfilledbytheleadcontact,AgataBurian(agata.burian@us.edu.pl). 1.Lough, T.J., and Lucas, W.J. (2006). Integrative plant biology: role of
+phloemlong-distancemacromoleculartrafficking.Annu.Rev.PlantBiol.
+Materialsavailability 57,203–232.https://doi.org/10.1146/annurev.arplant.56.032604.144145.
+Arabidopsislinesgeneratedinthisstudyareavailableuponrequest. 2.Hedrich,R.,Salvador-Recatala`,V.,andDreyer,I.(2016).ElectricalWiring
+andLong-DistancePlantCommunication.TrendsPlantSci.21,376–387.
+Dataandcodeavailability https://doi.org/10.1016/j.tplants.2016.01.016.
+• Thispaperdoesnotreportanydatasets. 3.Sachs,T.,Novoplansky,A.,andCohen,D.(1993).Plantsascompeting
+• Codesfor3Dvascularreconstruction,computationalmodels,andz-stack populations of redundant organs. Plant Cell Environ. 16, 765–770.
+stitching are available at https://github.com/Fingal/VeinMapper3D and https://doi.org/10.1111/j.1365-3040.1993.tb00498.x.
+https://github.com/Fingal/VeinStitcher.
+4.Dengler, N.G. (2006). The shoot apical meristem and development of
+• Anyadditionalinformationrequiredtoreanalyzethedatareportedinthis
+vasculararchitectureThisreviewisoneofaselectionofpaperspublished
+paperisavailablefromtheleadcontactuponrequest.
+ontheSpecialThemeofShootApicalMeristems.Can.J.Bot.84,1660–
+1671.https://doi.org/10.1139/b06-126.
+ACKNOWLEDGMENTS 5.Esau,K.(1965).PlantAnatomy(JohnWiley&Sons,Inc.).
+6.Larson,P.R.(1975).Developmentandorganizationoftheprimaryvascular
+We thank Dorota Kwiatkowska for discussions and critical reading of the systeminPopulusdeltoidesaccordingtophyllotaxy.Am.J.Bot.62,1084–
+manuscriptandThomasGreb,EnricoScarpella,BertDeRybel,HeleneRobert 1099.https://doi.org/10.1002/j.1537-2197.1975.tb11774.x.
+Boisivon,BarbaraWo´jcikowska,andLauraRagniforsharingplantmaterial. 7.Benkova´,E.,Michniewicz,M.,Sauer,M.,Teichmann,T.,Seifertova´,D.,
+TheworkissupportedbyresearchgrantsSONATABIS6(2016/22/E/NZ3/ Ju¨rgens,G.,andFriml,J.(2003).Local,efflux-dependentauxingradients
+00342) from the National Science Centre, Poland, to A.B., and TI864/6-1 asacommonmoduleforplantorganformation.Cell115,591–602.https://
+fromtheGermanResearchFoundationtoM.C.P.T. doi.org/10.1016/S0092-8674(03)00924-3.
+8.Reinhardt,D.,Pesce, E.-R.,Stieger,P.,Mandel, T.,Baltensperger, K.,
+AUTHORCONTRIBUTIONS
+Bennett,M.,Traas,J.,Friml,J.,andKuhlemeier,C.(2003).Regulationof
+phyllotaxis by polar auxin transport. Nature 426, 255–260. https://doi.
+A.B.andW.P.designedtheprojectandexperiments.A.B.,M.R.-S.,andP.S.
+org/10.1038/nature02081.
+performed the experiments anddataanalyses. A.K.constructed analytical
+tools and computational models and analyzed modeling data. A.B., W.P., 9.Heisler,M.G.,Ohno,C.,Das,P.,Sieber,P.,Reddy,G.V.,Long,J.A.,and
+A.K.,andM.C.P.T.wroteandeditedthemanuscript. Meyerowitz,E.M.(2005).Patternsofauxintransportandgeneexpression
+during primordium development revealed by live imaging of the
+Arabidopsisinflorescencemeristem.Curr.Biol.15,1899–1911.https://
+DECLARATIONOFINTERESTS
+doi.org/10.1016/j.cub.2005.09.052.
+Theauthorsdeclarenocompetinginterests. 10.Smith,R.S.,Guyomarc’h,S.,Mandel,T.,Reinhardt,D.,Kuhlemeier,C.,
+and Prusinkiewicz, P. (2006). A plausible model of phyllotaxis. Proc.
+STAR★METHODS Natl. Acad. Sci. USA 103, 1301–1306. https://doi.org/10.1073/pnas.
+0510457103.
+Detailedmethodsareprovidedintheonlineversionofthispaperandinclude 11.Bayer, E.M., Smith, R.S., Mandel, T., Nakayama, N., Sauer, M.,
+thefollowing: Prusinkiewicz, P., and Kuhlemeier, C. (2009). Integration of transport-
+based models for phyllotaxis and midvein formation. Genes Dev. 23,
+• KEYRESOURCESTABLE 373–384.https://doi.org/10.1101/gad.497009.
+• EXPERIMENTALMODELANDSTUDYPARTICIPANTDETAILS
+12.Smith,R.S.,andBayer,E.M.(2009).Auxintransport-feedbackmodelsof
+○ PlantMaterialandGrowthConditions patterninginplants.PlantCellEnviron.32,1258–1271.https://doi.org/10.
+○ Constructionofatransgenicline 1111/j.1365-3040.2009.01997.x.
+• METHODDETAILS
+○ Experimentalmethods 13.Hartmann,F.P.,BarbierdeReuille,P.,andKuhlemeier,C.(2019).Toward
+○ Computationalmodels a3Dmodelofphyllotaxisbasedonabiochemicallyplausibleauxin-trans-
+• QUANTIFICATIONANDSTATISTICALANALYSIS portmechanism.PLOSComput.Biol.15,e1006896.https://doi.org/10.
+○ Identificationofpre-procambialandprocambialcells 1371/journal.pcbi.1006896.
+○ ApexSize 14.Can˜o-Delgado,A.,Lee,J.Y.,andDemura,T.(2010).Regulatorymecha-
+○ Primordiumradialdistances nisms for specification and patterning of plant vascular tissues. Annu.
+14 DevelopmentalCell61,1–16,March11,2026
+
+===== PAGE 16 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+Rev.CellDev.Biol.26,605–637.https://doi.org/10.1146/annurev-cellbio- 33.Guenot,B.,Bayer,E.,Kierzkowski,D.,Smith,R.S.,Mandel,T.,Z�a´dnı´kova´,
+100109-104107. P.,Benkova´,E.,andKuhlemeier,C.(2012).PIN1-independentleafinitia-
+15.Fa`bregas,N.,Formosa-Jordan,P.,Confraria,A.,Siligato,R.,Alonso,J.M., tion in Arabidopsis. Plant Physiol. 159, 1501–1510. https://doi.org/10.
+Swarup, R., Bennett, M.J., Ma¨ho¨nen, A.P., Can˜o-Delgado, A.I., and 1104/pp.112.200402.
+Iban˜es,M.(2015).Auxininfluxcarrierscontrolvascularpatterningandxy- 34.Robert,H.S.,Grones,P.,Stepanova,A.N.,Robles,L.M.,Lokerse,A.S.,
+lemdifferentiationinArabidopsisthaliana.PLOSGenet.11,e1005183. Alonso,J.M.,Weijers,D.,andFriml,J.(2013).Localauxinsourcesorient
+https://doi.org/10.1371/journal.pgen.1005183. theapical-basalaxisinArabidopsisembryos.Curr.Biol.23,2506–2512.
+16.Chiang,M.-H.,andGreb,T.(2019).Howtoorganizebidirectionaltissue https://doi.org/10.1016/j.cub.2013.09.039.
+production?Curr.Opin.PlantBiol.51,15–21.https://doi.org/10.1016/j. 35.Smetana,O.,Ma¨kila¨,R.,Lyu,M.,Amiryousefi,A.,Sa´nchezRodrı´guez,F.,
+pbi.2019.03.003. Wu,M.F.,Sole´-Gil,A.,LealGavarro´n,M.,Siligato,R.,Miyashima,S.,etal.
+17.Banasiak,A.,andGola,E.(2023).OrganPatterningattheShootApical (2019).Highlevelsofauxinsignallingdefinethestem-cellorganizerofthe
+Meristem(SAM):ThePotentialRoleoftheVascularSystem.Symmetry vascularcambium.Nature565,485–489.https://doi.org/10.1038/s41586-
+15.https://doi.org/10.3390/sym15020364. 018-0837-0.
+18.Scarpella,E.,Barkoulas,M.,andTsiantis,M.(2010).Controlofleafand 36.Zu¨rcher, E., Tavor-Deslex, D., Lituiev, D., Enkerli, K., Tarr, P.T., and
+vein development by auxin. Cold Spring Harb. Perspect. Biol. 2, Mu¨ller, B. (2013). A robust and sensitive synthetic sensor to
+a001511.https://doi.org/10.1101/cshperspect.a001511. monitor thetranscriptional output ofthecytokinin signaling networkin
+planta. Plant Physiol. 161, 1066–1075. https://doi.org/10.1104/pp.112.
+19.Leyser, O. (2011). Auxin, self-organisation, and the colonial nature of
+211763.
+plants. Curr. Biol. 21, R331–R337. https://doi.org/10.1016/j.cub.2011.
+02.031. 37.DeRybel,B.,Adibi,M.,Breda,A.S.,Wendrich,J.R.,Smit,M.E.,Nova´k,O.,
+20.Brackmann,K.,Qi,J.,Gebert,M.,Jouannet,V.,Schlamp,T.,Gru¨nwald, Yamaguchi,N.,Yoshida,S.,VanIsterdael,G.,Palovaara,J.,etal.(2014).
+K.,Wallner,E.S.,Novikova,D.D.,Levitsky,V.G.,Agustı´,J.,etal.(2018). Plantdevelopment.Integrationofgrowthandpatterningduringvascular
+Spatialspecificityofauxinresponsescoordinateswoodformation.Nat. tissueformationinArabidopsis.Science345,1255215.https://doi.org/
+Commun.9,875.https://doi.org/10.1038/s41467-018-03256-2. 10.1126/science.1255215.
+21.Burian,A.,Paszkiewicz,G.,Nguyen,K.T.,Meda,S.,Raczyn�ska-Szajgin, 38.Ohashi-Ito,K.,Saegusa,M.,Iwamoto,K.,Oda,Y.,Katayama,H.,Kojima,
+M.,andTimmermans,M.C.P.(2022).Specificationofleafdorsiventrality M.,Sakakibara,H.,andFukuda,H.(2014).AbHLHcomplexactivates
+viaaprepatternedbinaryreadoutofauniformauxininput.Nat.Plants8, vascularcelldivisionviacytokininactioninrootapicalmeristem.Curr.
+269–280.https://doi.org/10.1038/s41477-022-01111-3. Biol.24,2053–2058.https://doi.org/10.1016/j.cub.2014.07.050.
+22.Gunckel,J.E.,andWetmore,R.H.(1946).Studiesofdevelopmentinlong 39.DeRybel,B.,Mo¨ller,B.,Yoshida,S.,Grabowicz,I.,BarbierdeReuille,P.,
+shootsandshortshootsofGinkgobilobaL.II.Phyllotaxisandtheorgani- Boeren,S.,Smith,R.S.,Borst,J.W.,andWeijers,D.(2013).AbHLHcom-
+zationoftheprimaryvascularsystem;primaryphloemandprimaryxylem. plexcontrolsembryonicvasculartissueestablishmentandindeterminate
+Am.J.Bot.33,532–543.https://doi.org/10.2307/2437588. growthinArabidopsis.Dev.Cell24,426–437.https://doi.org/10.1016/j.
+devcel.2012.12.013.
+23.Larson,P.R.(1980).Interrelationsbetweenphyllotaxis,leafdevelopment
+andtheprimary-secondaryvasculartransitioninPopulusdeltoides.Ann. 40.Helariutta, Y., Fukaki, H., Wysocka-Diller, J., Nakajima, K., Jung, J.,
+Bot.46,757–769.https://doi.org/10.1093/oxfordjournals.aob.a085973. Sena, G., Hauser, M.T., and Benfey, P.N. (2000). The SHORT-ROOT
+gene controls radial patterning of the Arabidopsis root through radial
+24.Kirchoff,B.K.(1984).Ontherelationshipbetweenphyllotaxyandvascula-
+signaling. Cell 101, 555–567. https://doi.org/10.1016/S0092-8674(00)
+ture:asynthesis.Bot.J.Linn.Soc.89,37–51.https://doi.org/10.1111/j.
+80865-X.
+1095-8339.1984.tb00999.x.
+41.Gardiner,J.,Donner,T.J.,andScarpella,E.(2011).Simultaneousactiva-
+25.Kang,J.,Tang,J.,Donnelly,P.,andDengler,N.(2003).Primaryvascular
+tionofSHRandATHB8expressiondefinesswitchtopreprocambialcell
+patternandexpressionofATHB-8inshootsofArabidopsis.NewPhytol.
+stateinArabidopsisleafdevelopment.Dev.Dyn.240,261–270.https://
+158,443–454.https://doi.org/10.1046/j.1469-8137.2003.00769.x.
+doi.org/10.1002/dvdy.22516.
+26.Konishi,M.,andYanagisawa,S.(2015).Transcriptionalrepressioncaused
+byDof5.8isinvolvedinproperveinnetworkformationinArabidopsisthali- 42.Bowman,J.L.,andFloyd,S.K.(2008).Patterningandpolarityinseedplant
+analeaves.J.PlantRes.128,643–652.https://doi.org/10.1007/s10265- shoots.Annu.Rev.PlantBiol.59,67–88.https://doi.org/10.1146/annurev.
+015-0712-0. arplant.57.032905.105356.
+27.Larrieu,A.,Brunoud,G.,Gue´rault,A.,Laine´,S.,Hennet,L.,Stigliani,A., 43.Sachs,T.(1968).Onthedeterminationofthepatternofvasculartissuein
+Gildea,I.,Just,J.,Soubigou-Taconnat,L.,Balzergue,S.,etal.(2022). peas.Ann.Bot.32,781–790.https://doi.org/10.1093/oxfordjournals.aob.
+Transcriptional reprogramming during floral fate acquisition. iScience a084249.
+25,104683.https://doi.org/10.1016/j.isci.2022.104683. 44.Sachs,T.(1969).Polarityandtheinductionoforganizedvasculartissues.
+28.Galvan-Ampudia, C.S., Cerutti, G., Legrand, J., Brunoud, G., Martin- Ann. Bot. 33, 263–275. https://doi.org/10.1093/oxfordjournals.aob.
+Arevalillo, R., Azais, R., Bayle, V., Moussu, S., Wenzl, C., Jaillais, Y., a084281.
+etal.(2020).Temporalintegrationofauxininformationfortheregulation 45.Sachs,T.(1981).TheControlofthePatternedDifferentiationofVascular
+ofpatterning.eLife9,e55832.https://doi.org/10.7554/eLife.55832. Tissues.Adv.Bot.Res.9,151–262.https://doi.org/10.1016/S0065-2296
+29.Scarpella,E.,Marcos,D.,Friml,J.,andBerleth,T.(2006).Controlofleaf (08)60351-1.
+vascularpatterningbypolarauxintransport.GenesDev.20,1015–1027. 46.Smith,R.S.,Kuhlemeier,C.,andPrusinkiewicz,P.(2006).Inhibitionfields
+https://doi.org/10.1101/gad.1402406. for phyllotactic pattern formation: a simulation study. Can. J. Bot. 84,
+30.Marcos,D.,andBerleth,T.(2014).Dynamicauxintransportpatternspre- 1635–1649.https://doi.org/10.1139/b06-133.
+ceding vein formation revealed by live-imaging of Arabidopsis leaf 47.O’Connor, D.L., Runions, A., Sluis, A., Bragg, J., Vogel, J.P.,
+primordia.Front.PlantSci.5,235.https://doi.org/10.3389/fpls.2014.00235. Prusinkiewicz,P.,andHake,S.(2014).AdivisioninPIN-mediatedauxin
+31.Govindaraju, P., Verna, C., Zhu, T., and Scarpella, E. (2020). Vein patterning during organ initiation in grasses. PLOS Comput. Biol. 10,
+patterning by tissue-specific auxin transport. Development 147, e1003447.https://doi.org/10.1371/journal.pcbi.1003447.
+dev187666.https://doi.org/10.1242/dev.187666. 48.Owens,A.,Zhang,T.,Gu,P.,Hart,J.,Stobbs,J.,Cieslak,M.,Elomaa,P.,
+32.Kierzkowski, D., Lenhard, M., Smith, R., and Kuhlemeier, C. (2013). andPrusinkiewicz,P.(2024).Thehiddendiversityofvascularpatternsin
+Interaction between meristem tissue layers controls phyllotaxis. Dev. flower heads. New Phytol. 243, 423–439. https://doi.org/10.1111/
+Cell26,616–628.https://doi.org/10.1016/j.devcel.2013.08.017. nph.19571.
+DevelopmentalCell61,1–16,March11,2026 15
+
+===== PAGE 17 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+49. Cieslak,M.,Owens,A.,andPrusinkiewicz,P.(2022).ComputationalModels Development, E. Za�zı´malova´, J. Petra´�sek, and E. Benkova´, eds.
+ofAuxin-DrivenPatterninginShoots.ColdSpringHarb.Perspect.Biol.14, (Springer),pp.315–357.https://doi.org/10.1007/978-3-7091-1526-8_15.
+a040097.https://doi.org/10.1101/cshperspect.a040097. 60.Jo¨nsson, H., Heisler, M.G., Shapiro, B.E., Meyerowitz, E.M., and
+50. Linh,N.M.,Verna,C.,andScarpella,E.(2018).Coordinationofcellpolarity Mjolsness,E.(2006).Anauxin-drivenpolarizedtransportmodelforphyllo-
+and the patterning of leaf vein networks. Curr. Opin. Plant Biol. 41, taxis.Proc.Natl.Acad.Sci.USA103,1633–1638.https://doi.org/10.1073/
+116–124.https://doi.org/10.1016/j.pbi.2017.09.009. pnas.0509839103.
+51. Ga¨lweiler,L.,Guan,C.,Mu¨ller,A.,Wisman,E.,Mendgen,K.,Yephremov, 61.Lampropoulos,A.,Sutikovic,Z.,Wenzl,C.,Maegele,I.,Lohmann,J.U.,
+A.,andPalme,K.(1998).RegulationofpolarauxintransportbyAtPIN1in andForner,J.(2013).GreenGate–anovel,versatile,andefficientcloning
+Arabidopsisvasculartissue.Science282,2226–2230.https://doi.org/10. systemforplanttransgenesis.PLOSOne8,e83043.https://doi.org/10.
+1126/science.282.5397.2226. 1371/journal.pone.0083043.
+52. Mattsson, J., Sung, Z.R., and Berleth, T. (1999). Responses of plant 62.Hamant,O.,Das,P.,andBurian,A.(2019).Time-lapseimagingofdevel-
+vascularsystemstoauxintransportinhibition.Development126,2979– oping shoot meristems using a confocal laser scanning microscope.
+2991.https://doi.org/10.1242/dev.126.13.2979. MethodsMol.Biol.1992,257–268.https://doi.org/10.1007/978-1-4939-
+9469-4_17.
+53. Banasiak,A.,Biedron�,M.,Dolzblasz,A.,andBerezowski,M.A.(2019).
+63.Kurihara, D., Mizuta, Y., Sato, Y., and Higashiyama, T. (2015).
+Ontogenetic Changes in Auxin Biosynthesis and Distribution
+Determine the Organogenic Activity of the Shoot Apical Meristem in ClearSee:arapidopticalclearingreagentforwhole-plantfluorescence
+pin1 Mutants. Int. J. Mol. Sci. 20, 180. https://doi.org/10.3390/ imaging. Development 142, 4168–4179. https://doi.org/10.1242/dev.
+ijms20010180. 127613.
+64.Barbier de Reuille, P., Routier-Kierzkowska, A.-L., Kierzkowski, D.,
+54. Bennett, T., Hines, G., van Rongen, M., Waldie, T., Sawchuk, M.G.,
+Bassel, G.W., Schu¨pbach, T., Tauriello, G., Bajpai, N., Strauss, S.,
+Scarpella,E.,Ljung,K.,andLeyser,O.(2016).ConnectiveAuxinTransport
+Weber,A.,Kiss,A.,etal.(2015).MorphoGraphX:Aplatformforquanti-
+in the Shoot Facilitates Communication between Shoot Apices. PLOS
+fying morphogenesis in 4D. eLife 4, 05864. https://doi.org/10.7554/
+Biol.14,e1002446.https://doi.org/10.1371/journal.pbio.1002446.
+eLife.05864.
+55. Li,C.J.,andBangerth,F.(1999).Autoinhibitionofindoleaceticacidtrans- 65.Ma,Y.,Miotk,A.,S�utikovic�,Z.,Ermakova,O.,Wenzl,C.,Medzihradszky,
+portintheshootsoftwo-branchedpea(Pisumsativum)plantsanditsrela-
+A., Gaillochet, C., Forner, J., Utan, G., Brackmann, K., et al. (2019).
+tionshiptocorrelativedominance.Physiol.Plant.106,415–420.https://
+WUSCHELactsasanauxinresponserheostattomaintainapicalstem
+doi.org/10.1034/j.1399-3054.1999.106409.x.
+cells in Arabidopsis. Nat. Commun. 10, 5093. https://doi.org/10.1038/
+56. Balla, J., Medved�ova´, Z., Kalousek, P., Matije�sc�ukova´, N., Friml, J., s41467-019-13074-9.
+Reino¨hl,V.,andProcha´zka,S.(2016).Auxinflow-mediatedcompetition
+66.Gregory,R.A.,andRomberger,J.A.(1972).Theshootapicalontogenyof
+betweenaxillarybudstorestoreapicaldominance.Sci.Rep.6,35955.
+thePiceaabiesseedling.I.Anatomy,apicaldomediameter,andplasto-
+https://doi.org/10.1038/srep35955.
+chronduration.Am.J.Bot.59,587–597.https://doi.org/10.1002/j.1537-
+57. Prusinkiewicz, P., Crawford, S., Smith, R.S., Ljung, K., Bennett, T., 2197.1972.tb10133.x.
+Ongaro,V.,andLeyser,O.(2009).Controlofbudactivationbyanauxin
+67.Landrein,B.,Refahi,Y.,Besnard,F.,Hervieux,N.,Mirabet,V.,Boudaoud,
+transportswitch.Proc.Natl.Acad.Sci.USA106,17431–17436.https://
+A.,Vernoux,T.,andHamant,O.(2015).Meristemsizecontributestothe
+doi.org/10.1073/pnas.0906696106.
+robustness of phyllotaxis in Arabidopsis. J. Exp. Bot. 66, 1317–1324.
+58. Bennett, T., Hines, G., and Leyser, O. (2014). Canalization: what the https://doi.org/10.1093/jxb/eru482.
+flux? Trends Genet. 30, 41–48. https://doi.org/10.1016/j.tig.2013. 68.Liao,C.-Y.,Smet,W.,Brunoud,G.,Yoshida,S.,Vernoux,T.,andWeijers,
+11.001. D. (2015). Reporters for sensitive and quantitative measurement of
+59. Runions, A., Smith, R.S., and Prusinkiewicz, P. (2014). Computational auxin response. Nat. Methods 12, 207–210. https://doi.org/10.1038/
+Models of Auxin-Driven Development. In Auxin and Its Role in Plant nmeth.3279.
+16 DevelopmentalCell61,1–16,March11,2026
+
+===== PAGE 18 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+STAR★METHODS
+KEYRESOURCESTABLE
+REAGENTorRESOURCE SOURCE IDENTIFIER
+Chemicals,peptides,andrecombinantproteins
+agaroseSPI Duchefa Cat#A1203
+low-meltingpointagarosePPC Duchefa Cat#L1204
+PropidiumIodide Sigma-Aldrich Cat#81845
+FluorescentBrightener28 Sigma-Aldrich Cat#F3543
+Murashige-Skoogmedium(basalsaltmixture) Duchefa Cat#M0221
+sucrose Sigma-Aldrich Cat#S9378
+gibberellicacidGA3 Sigma-Aldrich Cat#G7645
+kinetin Sigma-Aldrich Cat#K3378
+PPM PlantCellTechnology N/A
+paraformaldehyde Sigma-Aldrich Cat#158127
+xylitol Sigma-Aldrich Cat#X3375
+sodiumdeoxycholate Sigma-Aldrich Cat#30970
+urea Sigma-Aldrich Cat#U5378
+Experimentalmodels:Organisms/strains
+Arabidopsis:pDR5revV2:YFP Brackmannetal.20 N/A
+Arabidopsis:pin1-7 Smithetal.10 N/A
+Arabidopsis:pin1-7crossedwithpDR5revV2:YFPline Thispaper N/A
+Arabidopsis:pPIN1:PIN1-GFPpin1 Kierzkowskietal.32 N/A
+Arabidopsis:pDR5v2:GFP Liaoetal.68 N/A
+Arabidopsis:pDR5v2:GFPcrossedwith Thispaper N/A
+pPIN1:PIN1-GFPpin1
+Arabidopsis:pDOF5.8:NLS-2xYPet Thispaper N/A
+Arabidopsis:pPIN1:cPIN1-GFPpin1-051 Govindarajuetal.31 N/A
+Arabidopsis:pATML1:cPIN1-GFPpin1-051 Govindarajuetal.31 N/A
+Arabidopsis:pin1-051 Govindarajuetal.31 N/A
+Arabidopsis:pYUC1:GFP Roberttal.34 N/A
+Arabidopsis:pPEAR1:YFP Smetanaetal.35 N/A
+Arabidopsis:pTCSn:GFP Zurcheretal.36 N/A
+Arabidopsis:pATHB8:EYFP Gardineretal.41 N/A
+Arabidopsis:pSHR:EYFP Gardineretal.41 N/A
+Arabidopsis:pTMO5:GFP DeRybeletal.39 N/A
+Oligonucleotides
+PrimerATDOFp_F;ACAAGGTCTCAAC Thispaper N/A
+CTGTGCATTCGATTGTTATAGCTTG
+PrimerATDOFp_R;ACAAGGTCTCAT Thispaper N/A
+GTTGTTGTTGAGAAGAGAGGTTATCTG
+Softwareandalgorithms
+Fiji opensource https://fiji.sc
+MorphoGraphX BarbierdeReuilleetal.64 https://morphographx.org
+Python PythonSoftwareFoundation https://www.python.org/
+Origin OriginLab https://www.originlab.com/
+AdobePhotoshop Adobe https://www.adobe.com
+Codesusedforvascularreconstructionandmodels Thispaper https://github.com/Fingal/VeinMapper3D
+Codesusedforz-stackstitching Thispaper https://github.com/Fingal/VeinStitcher
+DevelopmentalCell61,1–16.e1–e7,March11,2026 e1
+
+===== PAGE 19 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+EXPERIMENTALMODELANDSTUDYPARTICIPANTDETAILS
+PlantMaterialandGrowthConditions
+Arabidopsisthalianaplantsweregrownonsoilundereithershort-day(SD)conditions(8hlight,220C;16hdark,200C)toextendthe
+vegetative phase, or long-day (LD) conditions (16 h light, 22-240C; 8 h dark, 20-220C). SD-grown vegetative shoot apices were
+imaged between28and54DAG(DaysAfterGermination),LD-growninflorescence apicesandstemswereimagedbetween29
+and35DAG.Alllinesusedinthisstudy(listedinthekeyresourcestable)areintheCol-0background.
+Constructionofatransgenicline
+ThefluorescentreportercassetteforthepATDOF5.8promoterreporterlinewasassembledusingGreenGatecloning.61Apromoter
+fragment of 3042 bp, including the 5′ UTR, was amplified from the genomic DNA with ATDOFp_F and ATDOFp_R primers (key
+resourcestable)andinsertedintoanentrymodule.Therespectiveentrymoduleswereusedtoassembletheinsertioncassette,
+whichincludedpATDOF5.8,SV40NLS,9xAlalinker,2xYpetintandemseparatedbya10xAlalinker,E9terminator,andFastRed
+selectionmoduleinpCAMBIAvectormodifiedtobecompatiblewithGreenGate.TheconstructwastransformedintotheCol-0back-
+groundbyfloraldipping.
+METHODDETAILS
+Experimentalmethods
+ApexPreparationandImaginginLaserConfocalMicroscope
+Arabidopsis rosettes were dissected under a stereo-microscope (Nikon) using fine tip tweezers and medical needles to remove
+allleafprimordiacoveringtheSAM.62Isolatedshootapiceswiththeyoungestprimordia(p1-p3)werethenimagedeither(i)invivo
+or(ii)afteraClearSee-basedclearingmethod.63
+For in vivo imaging (i) (Figures 2Q, 5B, 6A, 6D, 6G, 7H, S1A, S2C, and S2I; Video S5) isolated apices were mounted in Petri
+dishes with 1.5% agarose. Cell walls were stained with 0.1 % propidium iodide (PI) for 3-5 min. Apices were imaged in a laser
+confocalmicroscope(seebelow)using63xor40xlong-workingdistancewater-immersionobjectives.
+Fortime-lapseimaging(necessaryforestimatingplastochronlength,FigureS4I),isolatedapicesweretransferredtoPetridishes
+withMurashige-Skoog(MS)medium(pH5.8adjustedwithKOH)containing2%sucrose,1.5%agarose,0.1mMgibberellicacid
+GA3,0.1mMkinetin,and1mL/mlPlantPreservativeMixture(PPM)asapreservativeforinvitroculture.Cellwallswerestained
+with0.1%PIfor3-5min.Theapiceswereimagedinaconfocalmicroscopeattwotimepointswithintervalsofapproximately24h.
+To identify parastichies (Figure 1B) or image geometric details of iVs (Figure 4A), isolated apices (without the fixation) were
+embeddedina5%low-meltingpointagarose,andtheapicalportionsofSAMs(approximately40-70μmfromtheSAMsummit)
+werecutoffbyaseriesof10μm-thicktransversesectionsusingavibratome(LeicaVT1000).Then,theremainingbasalportions
+ofapiceswereimmediatelyimagedinaconfocalmicroscope.Cellwallswerestainedwith0.05%FluorescentBrightener28(FB)
+dissolvedinwaterfor1-2min.
+FortheClearSee-basedclearingmethod(ii)(Figures1A,1C–1E,1G,2B–2D,2F–2P,2S,2T,3,5H,5J,7F,7G,7I,S1B–S1E,S2A,
+S2D–S2H,S3,S4F,andS4K),aprotocolbasedontheoriginalmethodbyKuriharaetal.63wasused.Apicesisolatedfromvegetative
+rosettesor1cm-longinflorescencestems,aswellashand-cuttransversesectionsofstemswerefixedwith4%paraformaldehyde
+(PFA)inPBSbufferforatleast2hundervacuum.AftertwowashesinPBSforatleast2min,apiceswereincubatedinClearSee
+solution(25%urea,10%xylitol,15%sodiumdeoxycholate)foratleast4weeksatroomtemperaturewithgentlestirring.The
+ClearSeesolutionwaschangedevery1-2daysforthefirst2weeksandthenevery4-5days.Cellwallswerestainedwith0.1%
+FB dissolved in ClearSee solution for at least 40 min, followed by rinsing in pure ClearSee solution and washing in water for
+1-2min.Apicesaremountedeither(1)inasmallcontainer(1.5cmdiameter)filledwith5%low-meltingpointagaroseandimaged
+inaconfocalmicroscopewitha40xlong-workingdistancewater-immersionobjective,or(2)directlyonamicroscopyslidewith
+ClearSeesolution,coveredwithacoverglass,andimagedusingobjectivesof10xor40x.
+TocaptureanatomicaldetailsofiVs(Figure1D)orPIN1polarizationacrosstheapex(Figures2Land2P),isolatedapiceswere
+manuallyhalvedlongitudinally,fixed(seeabove),andthenincubatedovernightinClearSeesolution.Cellwallswerestainedwith
+0.1%FBdissolvedinClearSeesolutionforatleast40min.HalvesweremountedonamicroscopicslidewithadropofClearSee
+solution,coveredwithacoverglass,andimagedfromthecuttingsideusingaconfocalmicroscopewith40xor60xoil-immersion
+objectives.
+Imagingwasperformedusingeither(1)anupright(LeicaTCSSP8)oraninverted(LeicaSTELLARISDMi8)confocallaser-scanning
+microscopewith40xor63xlong-workingdistancewater-immersionobjectives,or(2)aninvertedconfocallaser-scanningmicro-
+scope(Olympus,FV1000)with10xdryor60xoil-immersionobjectives,and40xlong-workingdistancewater-immersionobjective.
+For(1),thefollowingexcitation(ex.)andemission(em.)wavelengthswereused:forYFP-488nm(ex.)and505-545nm(em.);for
+GFP–488nm(ex.)and500-540nm(em.);forPI-488nm(ex.)and600-665nm(em.);forFB-405nm(ex.)and425-475nm(em.).
+Imageswerecollectedat12bits,withascanningspeedat400Hzwith512x512or1024x1024-pixelframes.Thepinholewassetat
+1AE.Laserpowerandpinholesettingsremainedconstantduringsamplescanning,exceptforinvivoimagingofiVs,wherebothlaser
+powerandpinholeweregraduallyincreased.
+e2 DevelopmentalCell61,1–16.e1–e7,March11,2026
+
+===== PAGE 20 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+For(2),thefollowingexcitation(ex.)andemission(em.)wavelengthswereused:forYFP-488nm(ex.)and505-540nm(em.);forFB
+-405nm(ex.)and425-475nm(em.).Scanningspeedwassetat4-10μs/pxwith800x800or1024x1024-pixelframes.
+ImageProcessing
+Originalconfocalz-stackimages(LIForOIB)wereconvertedtoTIFFfilesusingFijiandprocessedwithMorphoGraphX(MGX)soft-
+ware.64Opticallongitudinalandtransversesections(5-20μmthickness)throughapices(Figures1C,1E,2C,2D,2G,2J,2O,2Q,
+bottom,2S,bottom,3A,3B,3D,5H,5J,7H,bottom;S1B–S1E,S2A,right,S2D,right,S2E,right,S2H,S3,S4F,andS4K)weregener-
+atedbymergingPIorFBchannelswiththeYFPorGFPchannels.ToquantifytheDR5,DOF5.8,andPIN1signalintensityattheouter-
+mostcelllayer(L1)oftheapex(Figures2B,2F,2I,2N,2R,2T,right,S2G,andS2J–S2L),thesignalwasprojectedontotheapexsur-
+facefromadefineddepth(1-6μm).
+The3DReconstructionofiVNetwork
+ToreconstructthegeometryandtopologyofiVsandtheirconnectionto(incipient)leafprimordia,adedicatedsoftwarewasdevel-
+opedinPython(VeinMapper3D).Thissoftwareenablesthegenerationof3Dskeletongraphs,composedofvertices(pointsin3D
+space)andedges(lines),basedonfluorescencesignalsatconfocalz-stackimages.Forgraphconstruction,DR5-expressingstrands
+andDR5localmaximaweremanuallyidentifiedatsuccessiveslides,markedbypoints,andjoinedintolinesegments.Thissoftware
+wasalsousedtomeasuredifferentparametersassociatedwithgeometryofiVs,apices,andprimordia(seebelow).
+Inaddition,iVswerealsoreconstructedwithasemi-automatictool(‘Semi-autonode’inVeinMapper3D)thatenablesgenerationof
+iVgraphsemployinganagent-basedmodel.ThismethodinvolvedmanualidentificationoftheiVstartingposition,followedbyauto-
+maticagentmovementalongthedirectionofhighestsignalintensitywithspecifiedparameters.Whilethistoolaccuratelyrecon-
+structsconnectediVswithgoodsignalcontrast,itwaslesseffectiveincaseofiVswithhighersignalnoiseandthepresenceofnearby
+DR5-expressingdomainsunrelatedtoiVs(e.g.,instipulesorepidermisofolderprimordia).Consequently,themajorityofiVswere
+reconstructedmanually.
+ReconstructionsofiVnetworks,initiallysavedasSKEfiles,wereconvertedtoTIFFforvisualizationintheMGXsoftwarewithother
+channels.
+TheiVnetworkswerereconstructedbasedonz-stackimagesofclearedapices(Figures1F,1G,2T,left,7F,7G,S1B–S1E,S2A,
+S2D,andS2E)orliveapices(anexemplaryz-stackimageisshownatVideoS5).Reconstructionsbasedonliveimagingwereusedfor
+analysesshowninFigures1H,1I,2A,2E,4B,4G–4J,5G,5I,5K,S2B,S2C,S4A,S4D–S4J,andS4L).Theliveimageswerecomposed
+of3–8individualz-stacksfromagivenapexstitchedtogetherwithaPythonscript(VeinStitcher).
+Computationalmodels
+RandomModel
+TheRandomModelservesasabaselinetodiscernwhetherthetrajectoryofiVscanbesolelyattributedtoextensiontowardthecen-
+teroftheapexinterior(c′),withoutanylocalinteractionsbetweeniVs.Thissimplistic,na¨ıvemodel,usinganagent-basedapproach,
+encapsulatestheextensionprocessofemergingiVsfrompre-existingiVsasarandomwalk,orientedtowardstheapexcenter.Sim-
+ulationsofthismodelwereperformedontemplatesfromrealreconstructedemergingandpre-existingiVs(seebelow)andreliedona
+fewparameters:
+1.InitialpointofsimulatediV(p ):ThestartingpointofiVextensionlocalizedatrealemergingiV.
+S
+2.Apexcenter(p ):Thetargetpoint,projectedfromtheSAMcenteratthesurface,towardswhichtheiVextends.
+C
+3.Minimumdistance(d ):ThepredeterminedminimumdistancebetweentheiVendpointiVandtheapexcenter(p ),reflecting
+m C
+themaximallengthofextendingiVs.
+Thesimulationcommences withthepositioning oftheagentatp .Eachstepofthesimulationinvolvesthecomputationofa
+̅→ S ̅→
+tangentvector A ,directedfromtheagent’scurrentpositiontowardsp .Concurrently,asecondvector A israndomlygenerated
+c ̅→ C ̅→ n
+throughuniformsamplingfromalldirectionsperpendicularto A .TheextensionvectorA isthencalculatedusingtheformulav =
+̅→ ̅→ c E
+slerp(A
+c
+; A
+n
+;s)where‘s’isarandomvaluesampledfromanormald
+̅
+is
+→
+tributionwithStandardDeviation(SD)σ=1/3andmeanμ=0.
+Theagent’spositionA isupdatedbytranslatingitalongthevector A .Theprocessisreiterateduntiltheagent’sdistancetothe
+P E
+centerp fallsbelowd .
+C m
+TocomparetheshapeofrealobservedandsimulatedemergingiVs(Figure4B),wequantifiedhowemergingiVsdeviatefromthe
+straight trajectory directed toward the apex center expressed by an averaged random walk. Specifically, the distance between
+observedorsimulatedemergingiVs(n)andnearbypre-existingiVs(n+5,n+8,n+13)wasmeasuredalongasetofpositionsofthe
+iVtrajectory,andthenthemaximaldifference(Hausdorffdistance)wascalculatedbetweensimulatedandrealiVs.
+ThedistanceforobservediVswasmeasuredin30iVnetworkreconstructions(usually10-20measurementsperreconstruction)
+thatgivesintotal464measurements.IfthegiveniVdevelopedfromthemergingtwoiVs,thedistancewasmeasuredseparatelyfor
+eachofthem.Similarmeasurementswereperformedforthesimulation,where10iVsweresimulatedbasedoneachrealiVtemplate
+givingintotaln=4640measurements.
+Interaction-basedLocalModel
+Thismodel,inadditiontoiVextensiontowardtheapexcenter,introducesdifferentlocalinteractionsbetweeniVstosimulatethe
+extensionofemergingiVs.Themodelincludesvariableparametervaluestoexpresseitherattractionorrepulsionasafunctionof
+thedistancetopre-existingiVs.Specifically,anemergingfree-endingiVcanberepelledfromapre-existingiVwhenthedistance
+DevelopmentalCell61,1–16.e1–e7,March11,2026 e3
+
+===== PAGE 21 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+isrelativelyshort(Figure4C),oritcanbeattractedtoaniVwhenthedistanceexceedsacertaindistance(Figure4D).Wealsoconsid-
+eredthepossibilityofmixedrepulsion-attractioninteractionsbetweeniVs.Inthismixedmodel,interactionscanswitchbetween
+repulsionandattractioninadistance-dependentmanner.Forexample,anemergingiVcaninitiallyberepelledfromanearbypre-
+existingiV,butsubsequentlyattractedbyanotherpre-existingiVatagreaterdistance(Figure4E).
+LiketheRandomModel,simulationsinthismodelwereperformedontemplatesfromrealiVsreconstructedfrom10apicesand
+useanagent-basedapproach.TheaimofthismodelistosimulatetheiVextensiononashorttimescaleofafewhours,wheretissue
+growthisassumedtoplayaminorrole.
+First,wereconstructskeletongraphsrepresentingiVsfromempiricaldataasasetSofgraphsG ∈{V,E,U}(iVGraph),whereVis
+1.n
+asetofverticesdefinedby3DpositionsinEuclideanspace,Eisasetofedgesdefinedbypairsofvertices,Uisasetofglobal,scalar
+parametersincludingiVageA andabinaryparameterCindicatingwhetheraniViseitherfree-endingorconnectedtoaprimordium.
+V
+AskeletalgraphG representsthestructureofaniV,wheretheindex‘i’definesitschronologicalorderingnumber(i.e.whenitwas
+i
+attachedtotheexistingsetS).Consequently,iVdevelopmentinoursimulationisexpresseddiscretelybytheiterativeadditionofnew
+vertices,edgesandiVgraphs.
+WeassumedthatearlydevelopmentofiVsoccursinanarrowregionof1-2cellswideataconstantdistancefromtheapexsurface.
+Therefore,wesimplifiedthespatialsimulationdomainofourmodelbyprojectingallverticesandedgesontoacone-shapedsurface
+byminimizingthemeansquareddistancebetweenverticesandconesurface.ThismeansthatextensionofsimulatediVsiscon-
+strainedtoa2Dsurfacecalledvascularspacecorrespondingtothevascularcylinder.
+ThedevelopmentofaniVisrepresentedbyanagentanddefinedbya3DpositionA ,extensionvectorA ,andasetofextension
+P G
+parametersA .Whenanagentisintroducedintothesimulation,anewgraphG iscreatedandaddedtothesetS.Thenewgraph
+U n+1
+G isdefinedbyonlyonevertexV atthepositiontheagentisintroduced.Ineachsimulationstep,weupdatethechronologicalage
+n+1 0
+andtheagentpositionisincrementedbyaddinganextensionvectortotheagent’scurrentposition.Atthenewlycalculatedagent
+position,anewvertexV forG isinducedandconnectedwithanedgetothepreviousvertex.Thismeansthatthegeometryofa
+n+1 n+1
+skeletalgraphGisupdatedineachsimulationstepbyaddingverticesatpositionsindicatedbyextensionvectors.Inotherwords,the
+i
+developmentofiVsisexpressedbythedynamic,iterativeupdatesofagentattributes(Algorithm1,seebelow).
+Algorithm1.AlgorithmforcalculatingiVbasedoniVSM.
+1: Input: Set of pre-existing iVs G , Starting position p , Center position p , Distance margin d , Maximum influence dis-
+P S C m
+tancemax
+D
+2: Output:SimulatediVpolyline
+3: Initialize:Setinitialagent’spositionA tostartingpositionp .
+̅P→ → S
+4: Initialize:Setinitialextensionvector A to 0 vector.
+G
+5: Initialize:InitializegraphG .
+n+1
+6: Initialize:Addp tographG .
+S n+1
+7: repeat
+8: CalculatedistancefromA top .
+P C
+9: ifdistance≤d then
+m
+10: Stopthesimulation.
+11: endif
+12: forG ∈G do
+p,i P
+13: CalculatevectorI andvalues usinginteractionfunction.
+i i
+14: endfor
+̅→
+15: Compute ̅→ A G = normalize(s 1 I 1 + s 2 I 2 + … + s n I n + s C I C :)
+16: Update A tothenewlycomputedvalue.
+G ̅→
+17: Projectagent’sposition A togrowthcone.
+̅→ G
+18: UpdateA byadding A toA .
+P G P
+19: Addagent’spositionA toG
+P n+1
+20: untilsimulationstops
+21: ReturnG
+n+1
+Ineachsimulationstep,wecalculatetheextensionvectorforeachgraphG asthelinearcombinationofthepreviousheadingvec-
+i
+torHofA
+G
+andasetofinteractionvectors(I
+1
+;…;I
+n
+),whicharecomputedateachsimulationstep.Aninteractionvectordescribesthe
+influence of neighboring pre-existing iV on an emerging iV. Specifically, we assumed that pre-existing iVs can repel or attract
+emergingiVs.Formally,aninteractionvectorisdefinedbycomputingtheminimumdistancebetweentheagentpositionandan
+iVG orprimordiumvertexP.WeignoreallverticesV atadistancedV>maxDbyassumingthatdistantiVscannotnoticeablyin-
+i i i
+fluencetheextensionofotheriVs.OnceasetofinteractionvectorsforagivenagentA hasbeencalculated,weobtaintheextension
+i
+vectoras:
+e4 DevelopmentalCell61,1–16.e1–e7,March11,2026
+
+===== PAGE 22 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+A
+G
+= normalize(s
+A
+H+s
+1
+I
+1
++…+s
+n
+I
+n
++s
+c
+I
+c
+),wheres
+c
+I
+c
+representsattractiontotheapexcenter,‘s
+i
+’isafunctionoftheminimum
+distancebetweenagentandG ∪P,Htheheadingvectoroftheprevioussimulationstep,andthechronologicalageofA.Thefunc-
+i i i
+tion‘s’iscalledtheinteractionfunction.
+i
+Theinteractionfunctionincorporatesseveralparameters,suchasnegativerange(r ),therangeofnegativeinteraction(repulsion);
+n
+positiverange(r ),therangeofpositiveinteraction(attraction);negativestrength(s ),thestrengthofnegativeinteraction(repulsion);
+p n
+positivestrength(s ),thestrengthofpositiveinteraction(attraction);peakposition(p ),thepeakofpositiveinteraction(attraction)
+p p
+(Figure S6); and also age modifier (a ), the factor extending the range of negative interaction with iV age, and age cutoff (a ),
+m min
+theminimalageofpre-existingiVsincewhentheiVbeginstorepeltheemergingiV.
+ParameterOptimizationintheInteraction-basedLocalModel
+Acriticalaspectofthismodelistheoptimizationofitsparameterstoenhancepredictiveaccuracyandreliability.Thisoptimization
+processiscenteredaroundasetofkeyparameters:s ,s ,r ,r ,s ,s ,a ,anda .Theeffectivenessoftheseparametersiseval-
+A c n p n p m min
+uatedbysimulatingeachemergingiVinourdatasetandcomparingthesimulatediV,denotedasL
+a
+= (p
+a1
+;p
+a2
+;…;p
+an
+),againstthe
+corresponding real iV, referred to as G . The comparison utilizes a distance metric defined by the equation: d(L ; G ) =
+e a e
+max({d(p;G )2:p∈ L })+end distance,where‘end_distance’isthesquareddistancebetweentheendpointoftheemergingiV
+e a
+andthelastpointp inthesimulation.d(p;G )representstheminimumdistancebetweenapointpinthesimulatedpolylineand
+an e
+therealiVG .Thisevaluationprocessaggregatesallindividuald(L ;G )valuesintoasinglemetric,D(s ;s ;r ;r ;s ;s ;a ;a ),
+e a e A c n p n p m min
+computedastherootmeansquareofthesedistances.
+Giventhenon-differentiablenatureofourcostfunction(modelloss),traditionalgradient-basedoptimizationtechniquesarenot
+applicable.Therefore,weadoptedatwo-stepstrategyforparametertuning.Theinitialphaseinvolvedexploringa9Dparameter
+spacewith100000randomlysampledcombinations,spreaduniformlyacrossaplausiblerangeofvalues.Thisbroadsearchhelped
+usidentifypromisingparametercombinations,whichwerethenrefinedthrougharandomsearchmethod.Thismethoditeratively
+samplescostfunctionvaluesnearacurrentpositioninparameterspace,progressivelymovingtowardsthepointwiththelowest
+cost.Thesearchradiusisdynamicallyadjustedbasedonperformance,andtheprocessterminateseitherafterapredefinednumber
+ofiterationsorifnobetterpositionisfound.
+Thisoptimizationprocedureyielded600differentparametercombinations,withcostfunctionvaluesrangingfrom320to380.To
+visualizetheseresults,weemployedPrincipalComponentAnalysis(PCA),projectingthehigh-dimensionalparameterdataintoa
+two-dimensional scatter plot (Figures 4G and 4H).The first two principal components explained 41% and 21% of the variance,
+respectively.Thisapproachfacilitatedtheidentificationofaregionintheparameterspacecharacterizedbyparticularlylowcost
+functionvalues,indicativeofmodelstabilityandaccuracy.ThePCAanalysisrevealedseveralinsightfultrends.Notably,theregion
+withthelowesterrorvaluesfeaturedanattractionparameterlowerthan0.1.Therepulsionparametervariedbetween1.2and2.5,
+whiletheattractiontotheapexcenterfluctuatedbetween2and3.3.However,inmostresults,theratiobetweenthesetwoparam-
+etersremainedaround0.75.Otherparametersmaintainedstablevalues:agecoefficientaround0.1,agecutoff1,negativerange45.
+Tofurtherexplorerepulsionandattractionparameters,wecategorizedthetop1000(1%)results(withmeandistance≤4.2μm
+indicatingahighdegreeofsimilarity)basedontheirrepulsion-to-attractionratiointofivegroups:repulsion,weakrepulsion,mixed,
+weakattraction,attraction(Figure4F;TableS1).Acrossthesecategories,theaveragecostfunctionswereasfollows:318.3(repul-
+sion),326.3(weakrepulsion),328.2(mixed),330.8(weakattraction),334.3(attraction).Thebest-performingresultswithineachcate-
+gorywere:309.8(repulsion),318.6(weakrepulsion),321.8(mixed),322.1(weakattraction),333.6(attraction).Notably,themajorityof
+parametercombinations(61.8%)fellintotherepulsioncategory(Figure4F),whichalsoexhibitedthelowestaverageandbest-per-
+formingcostfunctions.
+Interaction-basedGlobalModel
+Thismodelextendsthecapabilitiesofthepreviouslocalmodeltorepresentlong-termdevelopmentoftheglobaliVnetworkinan
+expanding tissue (Methods S1) corresponding to the vegetative shoot apex growing over 20 days under short day conditions
+(Figures5Aand5B).Inthismodel,tissuegrowthisacriticalfactorwhichextendsthecone-shapedvascularspaceanddisplaces
+iVsawayfromtheapexcenter,allowingfortheemergenceofnewfree-endingiVsfromthepre-existingiVsandtheirsubsequent
+connectiontotheincipientprimordia.Specifically,asfree-endingiVsapproachtheapexcenter,theirextensionhalts,andtheytran-
+sitionintopre-existingiVsuponconnectingwithDR5maximarepresentingleafprimordia.Thisprocessistimedwiththeintroduction
+ofDR5maximaatregularintervals(plastochrons),whicharepositionedatapredefineddistancefromtheapexcenterandoriented
+accordingtothephyllotacticangle(seebelow).
+ParametersofiVsandapexgrowthdynamicsimplementedinthemodel(TableS2)arebasedonempiricaldata(FigureS4)ob-
+tainedfromapicesclassifiedaccordingtotheSAMsizeassmall,medium,andlarge,reflectingsuccessivestagesofapexdevelop-
+mentduringprolongedvegetativephase.Theseparameterswereimplementedtothemodelbylinearapproximationstotransition
+betweenthesestages.Theextensionoffree-endingiVsisgovernedbytheinteractionfunctionestablishedintheInteraction-based
+LocalModel,utilizingitsoptimizedparameterset.
+Simulations(Figures5C,6B,7A,7B,andS5A;VideoS2)wereperformedonatemplatepreparedbasedonempiricaldataderived
+fromtheanalysisofrealiVnetworkinsmallapiceswithspiralFibonacciphyllotacticpattern,whereiVsarerepresentedasskeleton
+graphswithadditionalattributessuchasiVage,stageorindex.AsintheLocalModel,eachemergingiVisinducedbyanagent.
+Simulationsoperateonadiscrete-timebasis,witheachsteprepresenting20minutesofactualapexgrowth.Duringthesesteps,tis-
+suegrowthisappliedtoallcomponentsofskeletongraphs,movingthemawayfromtheapexcenterbyacertaindistancepertime
+DevelopmentalCell61,1–16.e1–e7,March11,2026 e5
+
+===== PAGE 23 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+unit(radialgrowthrate,μm/h).Thetissuegrowthismodeledusingafunction,computedbasedontheradialdistancebetweenthe
+SAMcenterandsuccessiverealleafprimordia(FiguresS4GandS4H;seebelow).
+TheiVextensionisimplementedbymovingagentsbyacertaindistancepertimeunit(iVextensionrate,μm/h)inthedirectiondefined
+byrepulsiveinteractionsbetweeniVsandtheiVattractiontotheapexcenter.Inaddition,toenablethemergingoftwofree-endingiVs(i.
+e.toformiVinterconnections),anagentisattractedtonearbyiVifthedistancebetweenthemissmallerthanthe‘interconnection
+attractionthreshold’.Then,aftersurpassingthe‘interconnectionthreshold’,theagentisremoved,andiVsaremerged.TheiVsextend
+bymovingagentsuntilreachingthe‘minimaldistanced’relativetotheapexcenter,whichinhibitsfurtheriVextension.
+r
+ToexpresstheiVconnectiontoleafprimordiaattheSAMsurface,weintroduced‘projectedDR5maxima’.Whenthedistance
+betweeniVendpointandDR5maximasurpasses‘primordiumconnectiondistance’,theiVsbecomeconnected.Theconnection
+ofiVstotheSAMinitiatestheirmaturation.New‘projectedDR5maxima’areintroducedindependentlyofiVsateachplastochron.
+TheradialpositionofnewDR5maximarelativetotheapexcenterisdefinedby‘minimaldistanced’,andtheangulardistancefrom
+r
+thefinalpositionofthepreviousDR5maximumisequaltothe‘primordiumdivergenceangle’.Oncethemaximumisintroduced,it
+awaitsafree-endingiVthatwillbeatadistanceofd+2μmfromtheapexcenterandwithinan‘angularthreshold’equalto250ofthe
+r
+angulardistancebetweentheDR5maximumandiVendpoint(withrespecttotheapexcenter).IfsuchaniVappears,itconnectsto
+themaximum,andthisiVistransformedintoapre-existingiV.IfthepositionsoftheDR5maximumandiVendpointdonotoverlap,
+themaximumpositionischangedtotheiVendpoint.ThisnewpositionoftheDR5maximumisusedincalculatingthenextmaximum
+position.Itenablestoavoidcumulativeerror,forexamplewhentheiVdivergenceanglefromtheInteraction-basedGlobalModelis
+differentfromthe‘primordiumdivergenceangle’.Thisapproach,togetherwithawideangularthreshold,allowstocontrolthediver-
+genceanglewiththeInteraction-basedGlobalModel,whilethetemporalaspectoftransformingfree-endingiVintopre-existingis
+controlledbytheDR5maximaattheSAMsurface.
+Thebifurcationofpre-existingiVsgivingrisetonewemergingiVsissimulatedbyintroducinganewagentatpre-definedlocali-
+zationsrelativetothemergingpoint(FigureS4F).Onlyifthebifurcatingpre-existingiVisveryclosetoitsneighboriV(whichcanoccur
+whentheiVisrepelledlatefromanotheriV),thenewagentissetattheiVsjustabovetheregionofminimaldistancebetweenthose
+iVs.NewiVsemergeontheleftorrightsideofpre-existingiVsafterreachingthe’leftbifurcationageb’or’rightbifurcationageb’,
+l r
+respectively.
+TemplatesusedinsimulationsofiVdevelopmentintheapiceswithLucasandbijugatephyllotaxis(Figures6Eand6H;VideosS3
+andS4)werepreparedanalogicallyasinsimulationsfortheFibonaccipattern,assumingthatiVsmergeaccordingtotheMpattern.
+BasedonmeasurementsofSAMradius,theapiceswithLucasandbijugatephyllotaxiswereclassifiedassmallandmediumones,
+respectively.Consequently,growthdynamicsandotherrelatedparametershavebeenadoptedfromsmallandmediumapiceswith
+Fibonacciphyllotaxis,whiletheotherparameterswereoptimized(e.g.iVextensionrate,plastochronlength,iVbifurcationage,repul-
+sionstrength)(TableS2).
+ModelParameterSignificance
+TherepulsionbetweeniVsrelativetotheirattractiontotheapexcenteristhemostcriticalparameterdeterminingiVtrajectories.A
+lackofrepulsion,orasubstantialreductioninitsstrength,resultsinabnormaliVtrajectoriesandleadstoarapidcollapseoftheover-
+alliVpattern(Figures4Gand7A–7E).SpatiotemporaldynamicsofiVs–includingtheiremergence,extension,interactions,andapex
+growth—playaroleinlong-termiVpatterning.Changestorelatedparameters(TableS2)canalterthetimingofiVmergingandrepul-
+sion,whichinturnaffectstheprogressionofiVpatternsduringapexdevelopment.SurfaceDR5maxima,introducedaccordingtothe
+phyllotacticpattern,donotdirectlyinfluenceiVtrajectories.TheyonlyaffectthetemporalorderofiVconnectiontothesurface,and
+may indirectly influence repulsion timing. Finally, iV interconnection-related parameters—the attraction threshold and strength
+(TableS2)—haveonlylocaleffectsonthegeometryofiVinterconnectionanddoesnotinfluencetheoveralltrajectoryofiVextension.
+TissueGrowthDynamics
+Inthemodel,alliVsaredisplacedfromtheapexcenterwiththerate,whichisrelatedtothedistancefromtheapexcenter.Tosimulate
+thisprocessduringtimeperiodcorrespondingtoapexdevelopmentatthevegetativephase,growthdynamicsischaracterizedfor
+apicesclassifiedbasedontheirsizes(i.e.SAMradius,Figures5Aand5B).Foreachclass,radialdistancesbetweensuccessivep1-
+p12 primordia and the SAM center were measured (Figure S4G). Based on plastochron length assigned to each apex class
+(FigureS4I),theprimordiastageswereexpressedasprimordiaageinhours(FigureS4H).Then,theleastmeansquaremethod
+wasusedtofitaquadraticfunctiontotherelationshipbetweentheageoftheprimordiaandtheirdistancefromtheSAMcenter.
+Thisquadraticfunction,representedasf(t) = A⋅r2+B⋅r+C,hasbeenfoundtoyieldthelowesterrorwhencomparedwithother
+functionslikeexponentialorlinear.
+AnalyticalCalculationofPost-GrowthPosition
+Eachsimulationstepinvolvesacalculationofthepost-growthpositionforeverypointineveryiV.Givenapointp,theradialdistancer
+between p and the apex center is determined. Subsequently, the inverse function is computed to ascertain the time factor t ,
+p
+definedas:
+√̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+(cid:0) )
+B2 (cid:0) 4⋅A⋅C
+t = g(r) = f(cid:0) 1(r) = (cid:0) B+ :
+p 2⋅A
+Followingthis,themodelcalculatesanewradialdistancer′,whichisthefunctionoftimetplusasmallincrementΔt.Thepointpis
+thenmovedawayfromtheapexcenterbythedifferencebetweenr′andr.
+e6 DevelopmentalCell61,1–16.e1–e7,March11,2026
+
+===== PAGE 24 =====
+
+Pleasecitethisarticleinpressas:Burianetal.,Self-organizationofvascularstrandsdrivestheirpatterningintheArabidopsisshootapex,Develop-
+mentalCell(2025),https://doi.org/10.1016/j.devcel.2025.10.012
+ll
+Article
+QUANTIFICATIONANDSTATISTICALANALYSIS
+Identificationofpre-procambialandprocambialcells
+Todistinguishbetweenpre-procambialandprocambialcells,nearlyisodiametricpre-procambialcellsandelongatedprocambial
+cells(definedasatleastthreetimeslongerthanwide;Figure1D)werequantified.Celldimensionsweremeasuredalongtwoperpen-
+dicularaxesusingthe‘SegmentedLine’toolinFijisoftware.
+ApexSize
+Thesizeofshootapices,asexpressedbytheSAMradius(Figure5A),wascalculatedasthemeanradialdistancefromthecenterof
+theSAMsurface‘c’totwosuccessiveDR5maximaatthesurface(correspondingtop0andp1primordia).TheSAMcenterwasiden-
+tifiedbasedonalocallydecreasedDR5expressionattheSAMsummit,correspondingtothepositionofstemcells.65
+Primordiumradialdistances
+Toassessapexgrowrate,theradialdistance(FigureS4G)wasmeasuredfromtheSAMcenter‘c’toDR5maximaattheSAMsurface
+(correspondingtothepositionsofsuccessiveleafprimordia).Incaseswhereolderprimordiawerecutoff,theDR5expressioncor-
+respondingtoiVssupplyingtheseprimordiaservedasaproxyfortheprimordiumposition.
+Divergenceangles
+Thedivergenceanglesweremeasuredbetweentwosuccessiveleafprimordia(Figures1I,6C,6F,and6I)oriVsbeforeorjustafter
+theirconnectiontoincipientprimordia(Figures1H,6C,6F,6I,7C,andS5B).Intheformer,DR5maximaattheSAMsurfaceor,in
+caseswhereprimordiawerecutoff,theDR5expressionatiVssupplyingtheseprimordia,servedasaproxyfortheprimordiumpo-
+sition.Inthelatter,theanglesweremeasuredbetweentheendpointsoffree-endingiVswithinthevascularcylinder.Forconnected
+iVsextendingacropetallyoutofthevascularcylinder,theanglesweremeasuredatthemostdistantiVpointslocalizedinthevascular
+cylinder.IftwoiVsemergedfrompre-existingn+8andn+5iVs,thelongeriVs(usuallyn+8-derivediVs)wereusedformeasurements.
+Plastochronlength
+Forlargeapices(n=8),theplastochronlengthwasestimatedbasedontime-lapseimagingattwotime-points,t0handt+24h.In
+eachapex,theshapesof6-9primordiaatthet+24hwerecomparedtothoseatt0htoidentifycorrespondingstagesandtocalculate
+thenumberofplastochronsbetweenthem.Then,theplastochronlengthwascomputedbydividingthenumberofplastochrons(usu-
+ally3)bythetimeinterval(24h).Theplastochronlengthwas8hinthe75%primordia(47/63)(FigureS4I).
+Toestimatetheplastochronlengthinsmallandmediumapices,thenumberofplastochronswascountedineachapexfromthe
+appearanceofthefirstDR5maximum(usuallycorrespondingtop-1incipientprimordium)untilthelast(undissected)primordium
+apparentattheapex(usuallyp2andp3primordiainsmallandmediumapices,respectively).Forexample,insmallandmedium
+apices,thenumberofplastochronsinthisperiodwastypically3and4,respectively.Then,thecorrespondingperiodwasidentified
+inlargeapicesandexpressedinhours.Forexample,inlargeapices,therearetypically5plastochronsfromthefirstDR5maximum
+(correspondingtop-2primordium)tothep3primordiumthatgives40h(assuming1plastochron=8h).
+Tocalculatetheplastochronlengthinsmallandmediumapices,theknownperioddurationestimatedforlargeapices(e.g.,40h)
+wasdividedbythenumberofplastochronsinsmallandmediumapices.Intotal,36smalland34mediumapiceswereanalysed,and
+based on mode values, the plastochron length was determined to be 13 h and 10 h in small and medium apices, respectively
+(Figure S4I). This is in agreement with previous studies which show that the plastochron length decreases withincreasing SAM
+size.66,67
+ExtensionrateofiVs
+Toestimatetheextensionrateoffree-endingiVs(FigureS4E),thelengthoftwosuccessivereconstructediVswasmeasured.To
+calculatetheextensionrate,thedifferenceinlengthbetweenthesetwoiVswasdividedbytheplastochronlength.
+Arrangementofdifferentiatingvascularstrands
+Differentiatingvascularstrandsinhandtransversesectionsofinflorescencestems(Figure7I)wereidentifiedbasedonthepresence
+ofprotophloemcells,whichweredistinguishedbytheirthickercellwalls.Thedistancebetweenstrandswasmeasuredalongthe
+innermostcorticallayerusingthe‘SegmentedLine’toolinFijisoftware.
+Allstatisticalanalyses,includingtestsused,significancelevels,andsamplesizes(n)arereportedintherespectivefigurelegends.
+PlotsandstatisticalanalyseswereperformedusingOrigin(OriginLabCorporation)orPython.
+DevelopmentalCell61,1–16.e1–e7,March11,2026 e7

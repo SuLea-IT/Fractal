@@ -1,0 +1,1529 @@
+
+
+===== PAGE 1 =====
+
+nature plants
+Article https://doi.org/10.1038/s41477-025-02176-6
+Imputation integrates single-cell and
+spatial gene expression data to resolve
+transcriptional networks in barley shoot
+meristem development
+Received: 2 June 2025 A list of authors and their affiliations appears at the end of the paper
+Accepted: 17 November 2025
+Published online: 7 January 2026 Grass inflorescences are composite structures, featuring complex sets
+of meristems as stem cell niches that are initiated in a repetitive manner.
+Check for updates
+Meristems differ in identity and longevity, generate branches or split to form
+flower meristems that finally produce seeds. Within meristems, distinct cell
+types are determined by positional information and the regional activity of
+gene regulatory networks. Understanding these local microenvironments
+requires precise spatio-temporal information on gene expression profiles,
+which current technology cannot achieve.
+Here we investigate transcriptional changes during barley development,
+from the specification of meristem and organ founder cells to the
+initiation of distinct floral organs, on the basis of an imputation approach
+integrating deep single-cell RNA sequencing with spatial gene expression
+data. The expression profiles of more than 40,000 genes can now be
+analysed at cellular resolution in multiple barley tissues using the new
+web-based graphical interface BARVISTA, which enables precise virtual
+microdissection to analyse any sub-ensemble of cells. Our study pinpoints
+previously inaccessible key transcriptional events in founder cells during
+primordia initiation and specification, characterizes complex branching
+mutant phenotypes by barcoding gene expression profiles, and defines
+spatio-temporal trajectories during flower development. We thus uncover
+the genetic basis of complex developmental processes, providing novel
+opportunities for precisely targeted manipulation of barley traits.
+Plant development depends on the activities of stem cell systems, mutants or genetic variation affecting meristem behaviour during
+the meristems, that give rise to organ primordia or new meristems domestication. For example, the evolution of maize from teosinte
+in distinct patterns. In the grass family, flower development involves involved the repression of axillary meristems (AMs), enlargement of
+the sequential specification of meristematic identities at the inflores- the inflorescence meristem (IM), and a switch from distichous to spiral
+cence meristem, leading to diverse architectures1,2. Rice and oat plants inflorescence phyllotaxis, forming multiple kernels at each node4.
+develop multiple branched panicles, whereas teosinte, rye, wheat and In barley, a spike-type inflorescence axis (rachis) generates an AM
+barley form simpler spikes that generate rows of floret meristems, prob- at each node in a distichous pattern subtended by a developmentally
+ably reflecting an ancestral state3. There is a strong genetic basis for repressed leaf meristem. AMs differentiate into triple spikelet meris-
+these inflorescence architectures which can be explored by studying tems (TSMs) that separate to form three distinct spikelet meristems
+e-mail: ruediger.simon@hhu.de
+Nature Plants | Volume 12 | January 2026 | 107–124 107
+
+===== PAGE 2 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+(SMs), two lateral (LSM) and one central (CSM)5. Each spikelet initiates A comprehensive single-cell gene expression
+a determinate meristem that forms a short axis (rachilla), subtend- atlas of barley meristems
+ing bracts and a single floret meristem (FM) that generates the floral Development of the barley SAM and spike can be described using the
+organs. When the indeterminate IM at the tip of the rachis has gener- Waddington scale (Waddington stages, W)33. From W0 to W1, the vSAM
+ated a finite number of TSMs, the IM and several SMs undergo gradual forms lateral leaf primordia in a distichous pattern, which ensheathe the
+degeneration in a basipetal sequence, indicating that position along base of the vSAM (Fig. 1a,b). The vSAM then elongates and transitions
+the rachis is a key fate determinant. Each CSM forms a fertile flower to the reproductive stage (IM), characterized by the formation of SMs
+and a single grain, whereas LSMs develop to fertility only in six-rowed instead of leaf primordia. By W3.5, the spike has generated two rows
+barley varieties, but remain small and sterile in two-rowed barley. of spikelets with a complex developmental gradient. TSMs form from
+Analysis of barley mutants uncovered that LSM fertility and the deter- small protrusions on the IM lateral surface (Fig. 1c–e). At P7, the TSM has
+minacy of TSMs is regulated by the LOB-domain transcription factor separated into the CSM and two LSMs. Towards the base, P11–P15 are floral
+(TF) VRS4 (Hordeum vulgare RAMOSA2, or HvRA2) and the TCP-family meristems (FM) subtended by lemma primordia. P17–P31 carry one car-
+TF INT-C6,7. Loss-of-function mutations in the INT-M gene, encoding pel and three stamen primordia, but formation and differentiation of fur-
+an AP2-like TF, or in COMPOSITUM1 (COM1), encoding a TB1/CYC/PCF ther floral organs is delayed (Fig. 1f–i). To identify transcriptional changes
+(TCP)-like TF whose expression at the IM–SM boundary depends on underpinning formation and differentiation of IM, TSM, CSM, LSM and
+HvRA2, cause the rachilla to give rise to a new branch or generate more FM, we generated scRNA-seq data from vSAMs at W0.5 and spikes at W3.5
+florets per spikelet8,9, indicating that COM1 promotes meristem deter- for the barley reference cultivar Golden Promise (GP). Stage W3.5 cap-
+minacy. Mutations in HvCLV1, encoding a CLAVATA1 family receptor tures gene expression information for all meristem types that finally con-
+kinase, or in HvFCP1, encoding a secreted signalling peptide that acts tribute to flower organs (Fig. 2a). Enzymatic digestion of meristem cell
+through HvCLV1, enhance rachilla indeterminacy and fail to maintain walls and release of viable protoplasts from meristems can be hindered by
+COM2 expression and AM initiation at the IM10. At higher temperatures, differences in cell wall composition compared to leaf cells34. We assessed
+rachilla determinacy is promoted by the MADS-box transcription factor the ability to capture the full diversity of spike cells and tissues by repre-
+(MADS TF) HvMADS33/HvMADS1, a member of the LOFSEP clade asso- sentation of cell/protoplast sizes, comparing intact with protoplasted
+ciated with inflorescence architecture in rice and several dicot species11. tissues. We also used the reporter line pHvFCP1:mVenus-H2B, which
+The homeodomain TF KNOTTED1 (KN1), first described in maize, expresses Venus in specific meristematic tissues including the stem
+promotes meristem indeterminacy during vegetative and reproductive cells10 (Supplementary Fig. 1a,b,h). Protoplast viability was monitored by
+development and is expressed in vegetative shoot apical meristems differential staining with calcein-acetoxymethyl ester, which fluoresces
+(vSAM) and IMs, but not in organ founder cells12. Lateral meristems later in the cytoplasm of viable cells following uptake and esterase cleav-
+regain KN1 expression. KN1 RNA is mostly absent from the outermost cell age, and DRAQ7, which stains nuclei only in membrane-compromised
+layer (the L1) of meristems, but KN1 protein together with KN1-mRNA or dead cells35. Samples with more than 65% viable protoplasts were
+can enter the L1 via plasmodesmata13–15. Local auxin accumulation loaded for microwell-based cell isolation. Cells from inflorescence
+and absence of KN1 expression mark organ initiation in meristems of spikes and vSAMs were isolated in three independent experiments,
+many species16. However, gene regulatory networks (GRNs) respon- and we obtained high-quality transcriptome information from 16,528
+sible for primordia specification, their identities, determinacy and individual cells for W3.5 (ref. 36). We detected the expression of an aver-
+fates are still unknown1,2,8,17. To explore GRNs underlying meristem age of 4,527 genes per cell and 17,553 transcripts, mapping to 46,495
+specification and organ initiation in an unbiased manner, we generated gene models, including low- and high-confidence models, of the ref-
+single-cell RNA-sequencing (scRNA-seq) data for the barley vSAM and erence genome assembly for barley cultivar Morex (Morex V3). Addi-
+inflorescence (spike). Several scRNA-seq datasets are available in grass tional libraries from wild-type (WT) vSAM and com1a;com2g mutant
+species18–31, and deduced developmental trajectories can illustrate spikes recovered data from 919 and 5,196 cells, respectively (Fig. 2b
+shifts in cell fate and gene expression patterns. However, the origin and and Supplementary Table 1). Comparing bulk RNA-seq data from intact
+fate of cells within complex tissues can only be inferred indirectly from and protoplasted tissues identified 3,684 genes that were differentially
+the known expression profiles of prominent marker genes32. We could expressed in response to protoplasting (Supplementary Fig. 1c–g and
+precisely localize and quantify transcripts of 86 genes on tissue sections Table 2). Removing the protoplasting-induced differentially expressed
+at cellular resolution using the Molecular Cartography (MC) platform genes (DEGs) in bulk RNA-seq increased the positive correlation between
+for multiplexed single-molecule RNA fluorescence in situ hybridization transcriptomes coming from protoplast versus intact meristems. We
+(smRNA-FISH). We integrated the scRNA-seq and smRNA-FISH data to then subtracted the protoplasting-induced DEGs and integrated the
+generate imputed transcriptome-wide single-cell expression matrices. scRNA-seq data for the three independent experiments using the most
+The combined datasets are presented in the user-friendly, searchable variable 7,500 genes, followed by dimensional reduction for cluster-
+online database BARVISTA (barley virtual in situ transcriptome atlas), ing analysis, reducing the noise due to protoplasting. We identified
+developed in-house as part of this study, which visualizes the expression 27 clusters with 4,256 putative unique markers genes (Fig. 2a–d and
+of 48,904 barley genes at cellular resolution on tissue sections repre- Supplementary Table 3). Cluster ontogenies were determined using
+senting different developmental stages. BARVISTA enables the virtual known marker genes (Supplementary Table 4).
+microdissection of cell populations from these sections, followed by
+reclustering and mining for regionally specific gene expression profiles. scRNA-seq identifies markers specific for tissue
+We used BARVISTA to show that HvKN1 transcripts, which are absent lineages
+from most meristem L1 cells14, can be detected in a subpopulation of We identified four distinct populations of cells: vasculature, tunica,
+L1 cells at the tip of incipient primordia, where HvKN1 is co-expressed corpus and dividing cells (Fig. 2b–d and Supplementary Fig. 2). Each
+with cytokinin biosynthesis genes, which could establish a positive population comprised multiple clusters, separated by groups of cells
+feedback loop that promotes meristem indeterminacy. We observed potentially derived from specific meristem types. We first used HvKN1
+rapid changes in gene expression complexity during SM development, (4HG0339120) to identify clusters of meristematic and vascular tissues.
+revealing expression fingerprints that allowed us to phenotype the com- A complementary group of clusters representing the tunica expressed
+plex cell identities of meristem mutants. Our integrated dataset revealed HvHDZIV8 (2HG0198150), which encodes a homeodomain-leucine
+gene expression dynamics with unprecedented spatio-temporal reso- zipper TF related to maize OUTER CELL LAYER and the Arabidopsis L1
+lution, providing a framework for the formation and specification of marker MERISTEM LAYER1 (AtML1)37. Additional marker genes identi-
+meristems and organ primordia during barley development. fied specific subpopulations in the tunica and corpus: for the IM and
+Nature Plants | Volume 12 | January 2026 | 107–124 108
+
+===== PAGE 3 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+a c d e
+IM
+SAM
+P1
+TSM
+P3
+P5
+CSM
+P7
+LP
+P9
+LSM
+P11
+FM P13
+P15
+P17
+W0.5 g
+b GyP P19
+f
+P21
+StP
+SAM
+P23
+LP
+P25
+P27 h i
+P29
+P31
+W0.5 W3.5
+Fig. 1 | Organ formation in developing spikes of barley. a, Scanning electron where the TSM is specified and apparent as a protrusion on the surface axillary
+micrograph (SEM) of the vegetative shoot apical meristem (vSAM), highlighting to the IM (arrow). e, A sagittal section through the IM and TSM. The earliest
+leaf primordium (LP) formation (green). b, Sagittal section of the vSAM. c, At sign of the TSM is cell proliferation where the primordium is formed (arrow). f,
+W3.5, the inflorescence meristem (IM) at the top of the spike is determined to SEM of an FM with lemma primordium (arrow). g, FM sagittal section showing
+form lateral meristems specified as triple spikelet meristems (TSMs), which will the outgrowing lemma (arrow). h, SEM of one floret developing StP and GyP.
+then generate two lateral spikelet meristems (LSMs) and one central spikelet i, Sagittal section through one floret. Dotted lines in d, f and h are equivalent
+meristem (CSM). In the Golden Promise genetic background, a two-row type of in position to the sagittal sections in e, g and i, respectively. SEM images are
+barley, only the CSM continues its development and will form a floret meristem representative of their respective developmental stage. Scale bars, 200 µm (c);
+(FM), which then generates gynoecium (GyP) and stamen primordia (StP). 100 µm (d,e); 50 µm (a,b,f–i).
+Plastochrons are indicated as P1–P31. d, SEM of the top part of a developing spike,
+TSM, HvMADS42/MADS34 (5HG0511250); for the lemma and CSM, previously named by homology to characterized rice genes are shown
+HvMADS33/MADS1 (4HG0396400); for the CSM and floret organs, with both names (MADS, Supplementary Table 6). We selected 100 genes
+HvMADS68/MADS7 (7HG0684020); for TSM founder cells, glumes and from the scRNA-seq data with known or predicted expression patterns
+LSM, VRS4 (3HG0233930); for the floret meristem, HvMADS50/MADS6 based on studies from barley and other organisms (3–4 per cluster) to
+(6HG0604360); and for stamen primordia, HvMADS24/MADS2 generate multiplex smRNA-FISH probes. We detected transcripts from 86
+(3HG0307160) and HvMADS76/MADS16 (7HG0721170). Similarly, genes tested, with a spatial resolution of <140 nm. For example, HvHDZIV8,
+markers were identified for the vascular tissues: cambium, HvPXY two HDZIV-related TFs (7HG0702200 and 6HG0618540) and a pleiotropic
+(7HG0701280); xylem, HvVND1 (4HG0410880); phloem, HvSMXL3 drug resistance ABC transporter gene (3HG0240110) were specifically
+(2HG0167230); and rachis, HvPSAN (2HG0113750)38. For the cell expressed in the tunica of the vSAM (Fig. 3a and Supplementary Table 7)
+cycle, we identified S-phase histone markers, H3 (7HG0658120), H4 and IM at stage W3.5 (Fig. 3b), whereas HvKN1 transcripts located to cor-
+(6HG0550690), H2A (5HG0518610) and H2B (1HG0067590); G2-phase pus cells. To determine whether the smRNA-FISH data reflected overall
+markers Cyclin-A (3HG0249410) and CDKB (7HG0680610); and M-phase expression levels, we compared the number of RNA-seq reads with the
+markers HvTANGLED1 (1HG0073890), closely related to maize TAN- number of spots detected by smRNA-FISH, and found a Pearson corre-
+GLED1 encoding a microtubule-binding protein associated with mitotic lation of 0.73 for genes with a wide range of expression levels, indicat-
+division39; EARLY NODULIN-LIKE PROTEIN (1HG0082450) and eisosome ing that spot number in smRNA-FISH can serve as a reliable proxy for
+protein (4HG0411400) (Supplementary Fig. 2 and Table 4). Our diverse expression levels (Supplementary Fig. 4a). Following cell segmentation,
+dataset ranged from cell-lineage initials to differentiated cells. On the we assigned counts per gene and per cell and generated an expression
+basis of 7,500 variable genes, we captured cell-cycle specific transcrip- matrix for the 86 genes detected across 22,082 segmented cells, with a
+tomes for the tunica and corpus, as well as phase-specific markers. To dynamic range of up to 536 transcripts of a single gene per cell, a maxi-
+avoid biases due to cell-cycle phases, we then focused on cells in G1. mum of 627 total transcripts per cell and a mean of 95.35 transcripts per
+cell (Supplementary Fig. 4b–e and Table 5).
+Combination of smRNA-FISH and scRNA-seq
+identifies meristem subdomains Integrating scRNA-seq with smRNA-FISH data for
+We validated cluster annotations by smRNA-FISH40 (Supplementary gene expression imputation
+Table 5 and Supplementary Fig. 3). To simplify MADS-box nomencla- A cell’s position and its gene expression profile inform on develop-
+ture, we use the most recent barley annotation (HvMADS)41, and genes mental time and progression, and the clonal origin of a cell. Current
+Nature Plants | Volume 12 | January 2026 | 107–124 109
+
+===== PAGE 4 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+10
+21
+14
+5 25 16 3 8 17
+22 18 26
+2 11
+1 4
+24
+0
+7 6 20
+19 0 23 12 –5 15
+13 5 10 9
+–5 0 5 10
+UMAP_1
+Nature Plants | Volume 12 | January 2026 | 107–124 110
+2_PAMU
+a
+25Vascular tissue
+14Vascular tissue: Pith
+21Vascular tissue: Pith (two veins)
+17Vascular tissue/Meristem base
+24Vascular tissue: Pith + Xylem
+Corpus
+11 L1 - epidermis, TSM
+22L1 - epidermis, LSM 1 L1 - epidermis, FM
+Tunica
+1
+7
+6V
+L
+a
+1
+s
+-
+c
+e
+u
+p
+la
+id
+r
+e
+t
+r
+is
+m
+su
+is
+e/Meristem base
+3 Meristem
+G1 26Meristem
+transition 8 Meristem - SM, LSM
+18Meristem - IM, TSM
+2 Meristem - IM, TSM
+4 Meristem - FM, F organs
+12 M phase
+M 10 G2 phase 15 G2 phase 23G2 phase
+S
+Corpu
+Tu
+s nica
+G2 1
+9
+5 3
+S
+S S
+p
+p p
+h
+h h
+a
+a a
+s
+s s
+e
+e e 0 S phase
+19G1 transition- Vascular
+6 G1 transition- Meristems
+20G1 transition - Epidermis L1
+erutalucsaV
+acinuT
+suproC
+sllec
+gnidiviD
+Tissue
+Validation
+collection Protoplasting Partitioning
+10 21
+14
+0
+5
+7 1
+2121
+2
+2
+0
+5 16
+6
+2361
+2
+8
+2
+81
+4
+7
+4
+–5 19 1 0 3151 2 0 312
+59
+–5 0 5 10
+Hordeum vulgare Fluorescence Sorted by gravity UMAP_1 Multiplex
+GP W3.5 viability test in microwells Data filtering FISH
+pseudotime analysis
+b
+24,4
+17,2
+2_PAMU
+Cluster analysis
+c d
+0 2 4 6 8 10 12 14 16 18 20222426
+1 3 5 7 9 11 13 15 17 19 21 2325
+Vasculature Tunica Cell cycle Corpus
+retsulc
+rep
+srekram
+eneg
+evitatneserper
+01
+poT
+Clusters 4HG0349450
+3HG0290580
+5HG0463930
+7HG0733220
+2HG0131550
+2HG0153410
+7HG0677390
+5HG0470990
+3HG0298210
+5HG0508470
+7HG0747330
+2HG0134720
+2HG0183890
+5HG0474980
+3HG0296370
+1HG0016790
+7HG0721170
+6HG0616500
+6HG0599190
+5HG0457160
+5HG0501270
+5HG0421570
+2HG0167570
+2HG0182800
+1HG0073320
+6HG0558870
+5HG0522380
+1HG0091770
+1HG0047290
+6HG0573950
+5HG0491790
+2HG0140950
+7HG0736150
+6HG0612790
+6HG0611880
+2HG0196520
+4HG0417410
+2HG0205980
+1HG0067760
+4HG0339120
+5HG0444960
+4HG0338620
+3HG0250540
+2HG0193990
+25 21 24 22 7 6 0 5 23 10 16 26 18 4
+Expression 14 17 11 1 20 19 13 9 15 12 3 8 2
+Average expression
+2 1 0–1–2 Percent expressed
+25 50 75 0 0.51.0 1.52.0 2.5
+Fig. 2 | A single-cell atlas from developing barley spikes. a, Workflow for the tunica, corpus and dividing cells (abbreviations as in Fig. 1). c, Heat map of 10
+isolation, sequencing, analysis and validation of protoplast scRNA-seq from representative marker genes per cluster. d, Expression of two representative
+developing barley spikes at W3.5. b, UMAP for dimension reduction revealed that marker genes organized by cell populations. Scale bars, 200 and 50 µm (a).
+the cluster identities are organized as four populations containing vasculature,
+
+===== PAGE 5 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+technologies for quantitative spatial gene expression analysis are lim- comparison of imputed vs experimentally measured values. Validating
+ited by probe number, sensitivity in molecularly crowded environ- with the same 81 anchor genes gave a mean CS of 0.84 ± 0.10, and valida-
+ments and retention or transferability of RNA to capture devices40,42. tion with all 48,904 genes gave a still robust, although slightly lower CS
+We therefore used the spatially resolved quantitative data as anchors of 0.73 ± 0.10 (Supplementary Table 8). We then explored the impact
+and mapped each cell in the scRNA-seq dataset to its nearest neighbour of cell number and gene selection on the accuracy of imputation.
+in the MC dataset. Of the 86 genes in the MC dataset, 81 were expressed Accuracy improved linearly with increasing reference cell number, but
+in a sufficient number of cells and at differing levels to be regarded as plateaued at ~2,500 cells (Supplementary Fig. 9). We found that genes
+informative. Integration of the datasets in Seurat43 following the nor- with substantial variations in expression across samples performed bet-
+malization of gene expression values yielded clusters whose numbers ter than less variably expressed genes. Genes selected using PERSIST,
+depended on the clustering resolution (cr) parameter, with settings of which identifies representative gene sets for distinct cell populations46,
+0.1 to 2.0. Biologically relevant clusters representing ‘dividing cells’, outperformed hand-selected or randomly selected genes, and 20 genes
+‘floret meristem’, ‘xylem’ and ‘L1 – epidermis’ were identified at cr0.3, were sufficient for reliable cell similarity determination.
+indicating that these involve highly distinct gene expression patterns, Results are available through the new online gene expression atlas
+separating them from other cell populations (Supplementary Fig. 5). BARVISTA, which displays individual cell clusters, uniform manifold
+‘L1 – FM epidermis’, ‘L1 – F organ epidermis’ and ‘early TSM’ became approximation and projection (UMAP) plots and imputed gene expres-
+distinct only beyond cr1.1, indicating fewer differences in gene expres- sion data for all cells in a tissue section. Individual cells or groups can
+sion relative to other cell populations. be selected to extract gene expression data for further analysis.
+Spatially resolved data and scRNA-seq data can be aligned using
+published tools such as TANGRAM; however, these rely on large num- Exploring gene expression programs during
+bers of shared variable genes across datasets44. We therefore developed primordia initiation
+a custom data imputation approach to map gene expression values We used our integrated datasets in BARVISTA to probe gene expression
+from the scRNA-seq data onto MC cells, which operates reliably with a patterns in detail during early primordia initiation. KN1 is often used as
+much smaller gene set. In the initial cell similarity determination step, a marker for the meristem corpus, which is mostly absent in the L1 layer
+proximate cells from the scRNA-seq experiment were determined for and downregulated at sites of organ initiation14. Interestingly, maize
+each MC cell using cosine similarity (CS)45 (Supplementary Fig. 6a). scRNA-seq data identified some tunica cells expressing ZmKN1 (ref. 31),
+Gene expression values for each MC cell were then calculated as a and the rice orthologue of ZmKN1 (OsH1) is expressed in the L1 of FM,
+weighted average from the 25 most similar scRNA-seq cells, using in some cells of the IM, but not in L1 cells of the vSAM47. The function
+the CS as weight to ensure that most similar cells had the greatest and origin of these KN1 RNAs, which might bind to mobile KN1 protein
+influence on the calculated average (Supplementary Fig. 6b). Expres- in the corpus for co-transport to the tunica, is unknown. Expression
+sion levels were imputed for 48,904 genes in the inflorescence sec- of HvKN1 and HvHDZIV8 identified the tunica cells in our scRNA-seq
+tions and 27,656 genes in the vSAM. To validate the method, we data (Fig. 3a,b). In the spike, almost 9% (268 of 3,023) of all tunica
+compared imputed and experimentally determined gene expression cells expressed HvKN1 (Fig. 3c,d), and also the cytokinin biosynthesis
+values (Supplementary Fig. 6c) on a cell-by-cell basis for all 22,082 gene HvLOG1 (5HG0502720), as well as HvWOX9C.2 (3HG0278560)
+segmented cells, using expression data for the anchor genes to deter- and HvWOX9C.1 (1HG0088440), which are WUSCHEL-LIKE HOMEOBOX
+mine CS. A CS of +1 indicates that the entire gene expression profile genes related to rice OsWOX9C. HvLOG1 is expressed at the tips of the
+of a cell can be computationally reproduced. Mean CS values were SAM, IM, TSM and FM (Fig. 3e and Supplementary Table 9) and could
+0.84 ± 0.11 for the inflorescence sections and 0.78 ± 0.11 for the vSAM, potentially generate a cytokinin source at meristem apices that pro-
+showing that gene expression patterns in most cells could be recon- motes WOX9C expression. In the vSAM (Supplementary Fig. 10a–d and
+structed with only minor differences compared to measured values Table 10), ~12% (17 of 138) of all tunica cells expressed HvKN1, but at
+(Supplementary Fig. 7). Because the 81 anchor genes were used for both low levels according to smRNA-FISH data (Supplementary Fig. 10c,d).
+initial cell similarity determination and validation, we performed simu- Among genes differentially expressed between the corpus tissue and
+lations to validate the quality of imputation. The scRNA-seq data were tunica clusters, we found an ARGONAUTE gene (2HG0125150) related to
+split into a test set, for which gene expression was imputed (replacing OsAGO14 (Supplementary Fig. 10d). HvKN1 expression patterns in the
+the MC dataset in the workflow described above), and a reference data- tunica thus resemble those of OSH1 in rice, with minimal expression in
+set from which gene expression data were taken. For both imputations, the vSAM, but higher levels in reproductive meristem tips.
+the 81 anchor genes were used during the cell similarity determination In the IM, HvKN1 is absent in founder cells (Fo) of the TSM primor-
+step. For the first imputation, validation involved the same 81 genes dium, providing an early marker for Fo cell specification (Fig. 3b,f–h).
+(scSub IM 81 genes) (Supplementary Fig. 8). For the second validation, The TF encoded by HvHD-zip/HvHDZIV2/HvOCL2 (2HG0187460) was
+all 48,904 genes (scSub IM 48,904 genes) were used for the cell-by-cell previously reported as an IM or spike tip marker, but our smRNA-FISH
+Fig. 3 | Identification of genetic determinants in primordia and early meristem by VRS4 and HvLOG1 expression (yellow arrow). One of the earliest signs of triple
+specification. a, In vSAM, the formation of leaf primordia (LP) is preceded by spikelet meristem primordia is the expression of HvCOM1 (orange arrows). h,
+the depletion of HvKN1 mRNA (magenta dots) in the leaf founder cells (LFo) and Schematic representation showing the spikelet meristem Fo and the triple spikelet
+during LP growth. b, In inflorescence meristems (IM), spikelet founder cells (white meristem primordia (P) in a developing spike of barley. i, Founder and primordial
+arrows and dotted line) also show HvKN1 mRNA depletion, but this is restored cells can be subtracted from scRNA-seq populations using their expression
+once the primordia are organized (magenta arrow). c, The organization of tunica profiles. j, Candidate genes differentially expressed in triple spikelet meristem
+and corpus in the IM is reflected by their expression profiles, but in developing founder cells. k, By data integration and imputed gene expression, we can virtually
+spikes we see an overlap of HvKN1 in the tunica, especially in meristem tips. d, dissect the IM (dark blue), Fo (cyan) and P cells (purple). l, Heat map of the top
+Differentially expressed genes in tunica cells expressing HvKN1. e, Candidate 20 genes expressed differently in each group of cells. Heat maps show selected
+marker genes in tunica cells expressing HvKN1. f, In the SAM, HvHD-zip and HvCRC examples of imputed differentially expressed genes using a one-sided MAST, with
+are expressed in the leaf primordia founder cells (LFo), but in the established P < 0.05 and with an enrichment of cells expressing the genes in the analysed
+adj
+LP only HvCRC remains strongly expressed with no restoration of HvKN1 in the population more than double the level in the remaining cells (pct.1/pct.2 ≥ 2). m,
+primordia. g, In spikelet founder primordia, where HvKN1 mRNA is depleted, the Imputed expression of candidate genes specifically expressed in the founder cells
+suppressed bract is pre-patterned (green arrows) and expressing leaf-like marker or n, in TSM primordium. smRNA-FISH sections are representative of at least 5
+genes such as HvCRC, and the spikelet meristem founder cells (Fo) can be identified independent developing spikes. Scale bars, 50 µm.
+Nature Plants | Volume 12 | January 2026 | 107–124 111
+
+===== PAGE 6 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+data showed that it is also expressed at the tips of other meristems (5HG0502720), or upregulate CRABS CLAW (HvCRC, 4HG0396510)
+within the inflorescence48 (Fig. 3f,g). Pre-patterning of Fo cells into where the suppressed bract will form (Fig. 3b,g,h). Once the TSM visibly
+TSM and suppressed bract becomes apparent from Fo3 onwards. TSM protrudes from the IM, HvKN1 and HvHD-zip (HvHDZIV2 or HvOCL2) are
+founder cells lack HvKN1, but express VRS4 (3HG0233930) and HvLOG1 re-expressed within the TSM. Within the growing TSM, the expression
+j
+HvKN1 Percent expressed
+0
+2HG0183890 25
+50
+3HG0298390 75
+100
+5HG0526530
+Average expression
+2HG0170290
+0.9
+4HG0407900 0.6
+0.3
+VRS4 0
+Foun
+G
+de ro
+P
+r u
+ri
+n m d ordia
+Nature Plants | Volume 12 | January 2026 | 107–124 112
+2_PAMU
+a b c d
+IM
+Ground SAM
+LFo
+LP
+e
+HvKN1 Average expression
+2HG0111450 0.9
+HvLOG1 0.6
+0.3
+1HG0046000 0
+1HG0032470 Percent expressed
+0
+5HG0482470 25
+1HG0079880 7 5 5 0
+HvHDZIV8 100
+HvKN1 HvHDZIV8 7HG0702200
+f g 6HG0618540 3HG0240110 h Tunica-HvKN1 Tunica G Tu ro n u -K T n N u d n 1n -K e N g 1pos
+i
+Ground Founder
+Primordia
+IM
+Ground
+SAM
+LFo Fo1
+Fo2
+LP
+Fo3
+Fo4
+P1
+P2
+HvKN1 HvCRC HvLOG1 VRS4 HvKN1 HvCRC HvLOG1 VRS4 COM1 HvHD-zip COM1 HvHD-zip TSM founder cells (Fo1-4)
+k
+Tip IM Fo P1
+IM
+Fo
+P1
+retsulc
+rep
+srekram
+eneg
+evitatneserper
+02
+poT
+10
+5
+0
+–5
+–5 0 5 10
+W0.5
+HvKN1 HvHDZIV8 7HG0702200
+6HG0618540 3HG0240110
+10
+5
+0
+–5
+90 m
+W0.5
+90 m
+l m n
+CPM: 3HG0290400
+20
+1100 15
+10
+55
+5
+0 00
+CPM CPM
+2HG0108610 3HG0290400
+2_PAMU
+W3.5 W3.5
+Corpus G
+Tu
+ro
+n
+u
+–K
+n
+N
+d
+1neg Tunica Tun–KN1pos
+UMAP_1
+W3.5 W3.5
+Corpus
+Tunica
+–5 0 5 10
+UMAP_1
+Expression
+2 1 0 –1 –2
+
+===== PAGE 7 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+of HvCOM1 (5HG0479720), encoding a TCP-like TF, marks the forma- gynoecium primordia (Figs. 4c,d and 5a,b). Twelve MADS TF genes were
+tion of the rachilla (Fig. 3b,g,h). Using these expression profiles, we strongly modulated by pseudotime (Moran’s I ≥ 0.1 and q ≤ 3.4 × 10−162,
+were able to isolate the TSM Fo (Fig. 3i) and identify genes specifically Supplementary Fig. 14 and Table 16) and their expression profiles cor-
+expressed in these cells, including an Argonaute gene (4HG0334490), relate with their developmental activation, thus highlighting two axes,
+and those encoding HD-ZIP (6HG0611880), MADS-box (HvMADS84, one from the apex to the base of the spike, and another from the base
+1HG0054230), AT hook motif DNA-binding (7HG0647300) and MYB to the tip in the FM developing floret organs. According to pseudotime
+(7HG0698540) TFs (Fig. 3j and Table 11). We used smRNA-FISH data to (pT) analysis (Fig. 4f), we identify six trends in gene modulation, with
+characterize the TSM Fo in detail (Fig. 3,g,h,k), and isolated Fo, IM and P1 gene expression peaking around major meristem transitions such as
+cells by virtual microdissection in BARVISTA. The analysis of DEGs iden- IM to TSM (pT0.5), TSM to SM (pT5), SM to FM (pT9), FM to lemma
+tified candidates that were expressed in each cell population (Fig. 3l–n and palea primordia (pT14), and two from FM to stamen, gynoecium
+and Supplementary Table 12), including 27 expressed specifically in Fo and lodicule primordia, one group of genes starting earlier than the
+cells. The latter included DEGs encoding a leucine-rich repeat protein second group, but both having a late peak (pT18) (Fig. 4c–f). Clustering
+kinase-like receptor (2HG0108610, Fig. 3m), two BREVIS RADIX-like of modulated genes by pT revealed two main clades: those expressed
+transcriptional regulators (2HG0193530 and 5HG0535760)49 and two between IM to FM, and those involved later in floret organ organization.
+YABBY TFs (YABBY1/TONGARI-BOUSHI1-related, 2HG0184460 = HvTOB1 The first clade showed more complex gene expression patterns (IM to
+and YABBY15/TOB2-related, 6HG0598850 = HvTOB2), both involved in FM) than the second (FM to floret organ formation), whereas organ
+node/internode specification in rice and regulated by the homeodo- development involved more modulated genes but only two patterns in
+main TF OsH1 (ref. 47). HvTOB2 was detected using both approaches, late modulation (pT >14 or >18) (Fig. 4e). We found that 20 of 26 MADS
+suggesting YABBYs are involved in the specification of TSM Fo cells. TF genes were modulated during and after the establishment of the
+Among the markers for IM, we found HvFT2 (3HG0244930), a homo- FM, consistent with the proposed role of these TFs to define the floral
+logue of OsFT-L1, which is activated in rice IM by the mobile paralogues whorls after floret transition (Supplementary Fig. 14). On the basis of
+OsHd3a and OsRFT1. OsFT-L1 is also expressed in the undetermined the pT activation profiles, we can infer which other MADS TF genes are
+primary and secondary branch meristems, but not in mature IM50. expressed in specific floral whorls (Fig. 5 and Supplementary Fig. 14).
+The function and expression profile of HvFT2 in developing barley Grasses follow the ABCDE model of floral development, where organ
+spikes are unclear. Another flowering regulator, the bZIP TF HvFD7 determination is mediated by MADS TF multimers53,54. By analysing
+(2HG0111000) was enriched in the IM, similar to its rice orthologue the detailed expression profiles of 12 MADS TF genes, we were able to
+OsbZIP62, which physically interacts with OsFT-L1 (ref. 51). Primordia assign a putative A, B, C or E class to all such genes expressed in corpus
+also express one of the two AtSCR homologues, HvSCR1 (4HG0353780). subclusters and modulated by pT, taking as a reference the proposed
+In Arabidopsis, AtSCR is involved in the establishment of primordia and model for rice55 (Fig. 5c,d and Supplementary Fig. 14). On the basis of
+is expressed in FMs as early as P1 (ref. 52). genes modulated during major transitions, we can correlate pT and
+canonical time expressed as plastochrons (Fig. 4f). Within corpus sub-
+Gene expression programs governing meristem clusters, 4,733 cells expressed at least one of the 26 HvMADS -TF genes
+and floral organ identity (median = 5). By analysing the presence or absence of these HvMADS
+Subclustering in the vasculature revealed cell populations not pre- TF genes and their pT classes, we could then assign each cell to spe-
+viously detected by our general analysis (Fig. 2b), including phloem cific organs within florets (Supplementary Fig. 15), also revealing the
+cells (Supplementary Figs. 11 and 12, and Table 13). We therefore ana- transcriptional profiles for specific floral organs at incipient stages.
+lysed meristem-to-organ transitions in developing spikes, focusing
+on the highly diverse corpus cells, thereby avoiding developmental Gene expression patterns in distinct phases of
+trajectories in multiple directions (for example, leading from initial meristem development
+cells to vasculature, tunica or corpus cells simultaneously) (Fig. 2b,c, Using the BARVISTA virtual microdissection tool, we integrated the pT
+and Supplementary Figs. 2 and 3). Within the corpus, we identified data from the scRNA-seq dataset with our imputed gene expression data-
+18 new subclusters, including those annotated as TSM, CSM, FM and set and identified genetic determinants that are both temporally and
+primordia of developing floret organs, such as glumes, lemma, palea, spatially associated with specific developmental stages of primordia.
+lodicules and developing stamens (Fig. 4a, and Supplementary Fig. 13a Barley spikelet primordia develop in a distichous arrangement, with a
+and Table 14). To identify genes modulated along the developmental tra- developmental gradient along the apical–basal axis. We selected the first
+jectory from IM to floret organs, we applied pseudotime analysis start- 10 primordia on a single side of the sections (P1–P19, only odd numbers),
+ing from cells expressing COM1 and VRS4 (subcluster 16, Fig. 4a,b and and captured spatio-temporally defined DEGs throughout spikelet
+Supplementary Fig. 13b,c), as bona fide markers for the establishment development from the TSM to FM and the formation of floral organs.
+of SMs (Fig. 3g). The inferred pseudotime trajectory was used to track Each spikelet was defined by excluding the subtending lemma primor-
+the establishment of CSM and LSM from TSM, from CSM to FM, and dium, characterized by the expression of HvCRC, and cells expressing
+from FM to organ development (Fig. 4b and Supplementary Fig. 13d–s). VRS4 were used to delimit spikelet boundaries (Fig. 6a). We then iden-
+We then searched for potential master regulators of developmental tified 637 marker genes by comparing their expression levels in each
+progression by focusing on key TFs whose expression commences at the primordium with their expression in the total number of selected cells
+branch points of the pseudotime trajectory. Among the genes detected (Fig. 6a and Supplementary Table 17). Most DEGs were detected in the
+in corpus subclusters, we found 46 MADS TF genes, 26 of which were early stages P1–P9, reaching a peak of 303 DEGs in P5, which marks the
+differentially expressed between 0.24 and 74.7% of the 4,807 cells in transition between TSM and CSM/LSM. No DEGs were detected from
+the corpus (Fig. 4c,d and Supplementary Table 15). HvMADS42/MADS34 P11 to P15, and the number of DEGs gradually increased from P17 (5) to
+and HvMADS64/MADS5 are activated early and mostly co-expressed in P19 (150). This allowed us to subdivide spikelet development into three
+the IM and TSM. HvMADS42 expression declines following the differen- phases: first, SM identity is defined by transcriptional reprogramming
+tiation of the CSM, and later localized to the adaxial side. HvMADS64 in cells of the early spikelet primordia, which differentiate into various
+and HvMADS33 are both expressed in the CSM, but only HvMADS33 tissue types characteristic of the SM, becoming morphologically distinct
+will also mark the developing lemma and palea. HvMADS50/MADS6 at P11; second, rapid growth occurs during P11–P15 without significant
+expression arises in the established FM and, similar to HvMADS33, changes in gene expression; and third, the FM undergoes differentiation,
+continues in the lemma and lodicule primordia. HvMADS40/MADS8 with changes in the gene expression marking the differentiation of the
+is expressed in floret organ primordia, including lodicule, stamen and floret organs (GyP and StPs) (Fig. 6a). Among the DEGs, we identified
+Nature Plants | Volume 12 | January 2026 | 107–124 113
+
+===== PAGE 8 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+9 2 3 14 11 10 0 1 8 15 0 2 10 12 5 17 13 0 5 15 7 6 1 –2 16 4 4 0 –4 –8 umap_1
+Nature Plants | Volume 12 | January 2026 | 107–124 114
+2_pamu 0 Meristem ground 1 Stamen primordia 2 Unknown CSM Floret 3 IM/TSM ground meristem 4 Lemma 5 Rachilla/meristem base Glumes Pseudotime 6 Lemma/Palea Stamen 7 Lemma/Palea Lodicule 8 Stamen primordia 9 Floret meristem 10 Meristem base/Glumes 11 Unknown 12 Meristem rachis Gynoecium LSM 13 Floret organs Floral 14 Meristem base/Glumes Rachilla organs 15 Meristem base/Glumes TSM Lemma/Palea 16 Rachilla 17 Lodicules/Gynoecium 2_pamu a b 2 0 –2 4 0 –4 umap_1 d HvMADS42 IM HvMADS64 HvMADS33 HvMADS50 HvMADS40 TSM CSM
+FM
+OrP
+noisserpxE
+e c HORVU.MOREX.r3.5HG0511H25v0MADS42 10.0 1.0 0.1 0 5 10 15 HORVU.MOREX.r3.7HG065H49v3M0ADS64 30.0 10.0 3.0 1.0 0.3
+0 5 10 15 HORVU.MOREX.r3.4HG039H64v0M0ADS33
+30.0 10.0
+3.0
+1.0
+0.3
+0 5 10 15 HORVU.MOREX.r3.6HG060H4v3M60ADS50
+1e+01
+1e+00
+1e–01 1e–02
+1e–03
+0 HO5RVU.MOREX.1r03.5HG049411950 HvMADS40
+10.0
+1.0
+15
+0.1 Pseudotime 0 5 10 15
+Pseudotime q value = 0; Moran’s I > 0.25
+!"#$%&'"#()&*+&0!-.514,.. !"#$%&'"#()&*+&+!-.0+1,/. !"#$%&'"#()&*+&1!-.,4441. !"#$%&'"#()&*+&+!-.05202. !"#$%&'"#()&*+&0!-.53//1. !"#$%&'"#()&*+&/!-.+21,5. !"#$%&'"#()&*+&1!-.,233,. !"#$%&'"#()&*+&1!-.1./+4. !"#$%&'"#()&*+&0!-.54312. !"#$%&'"#()&*+&4!-.4/12+. !"#$%&'"#()&*+&,!-./05,4. !"#$%&'"#()&*+&4!-.4.350. !"#$%&'"#()&*+&,!-./2/52. !"#$%&'"#()&*+&4!-.13/.0. !"#$%&'"#()&*+&5!-..1,.1. !"#$%&'"#()&*+&+!-.0,.,,. !"#$%&'"#()&*+&1!-.151,.. !"#$%&'"#()&*+&4!-.40554. !"#$%&'"#()&*+&+!-.0/+44. !"#$%&'"#()&*+&+!-.0,.,/. !"#$%&'"#()&*+&,!-./4.+/. !"#$%&'"#()&*+&0!-.52+22. !"#$%&'"#()&*+&5!-..+501. !"#$%&'"#()&*+&/!-.+,3+2. !"#$%&'"#()&*+&1!-.,4+0/. !"#$%&'"#()&*+&1!-.104.5. !"#$%&'"#()&*+&/!-./.+.0. !"#$%&'"#()&*+&1!-.1+023. !"#$%&'"#()&*+&,!-.,.504. !"#$%&'"#()&*+&+!-.+0/2+. !"#$%&'"#()&*+&0!-.50,34. !"#$%&'"#()&*+&,!-.,0/4+. !"#$%&'"#()&*+&/!-.+,+,0. !"#$%&'"#()&*+&0!-.5/1++. !"#$%&'"#()&*+&+!-.0/+22. !"#$%&'"#()&*+&5!-..0+3.. !"#$%&'"#()&*+&4!-.4.//4. !"#$%&'"#()&*+&1!-.1+.14. !"#$%&'"#()&*+&,!-./124/. !"#$%&'"#()&*+&4!-.12,21. !"#$%&'"#()&*+&+!-.+..4.. !"#$%&'"#()&*+&4!-.4/1,4. !"#$%&'"#()&*+&+!-.01/3.. !"#$%&'"#()&*+&,!-.//+,+. !"#$%&'"#()&*+&5!-..45+.. !"#$%&'"#()&*+&5!-../,3+. !"#$%&'"#()&*+&,!-.//001. !"#$%&'"#()&*+&,!-.,.420. !"#$%&'"#()&*+&1!-.10335. !"#$%&'"#()&*+&0!-.51.04. !"#$%&'"#()&*+&/!-.+45,.. !"#$%&'"#()&*+&4!-.1+2+1. !"#$%&'"#()&*+&1!-.1.022. !"#$%&'"#()&*+&+!-.032/0. !"#$%&'"#()&*+&/!-.+3152. !"#$%&'"#()&*+&/!-.++,42. !"#$%&'"#()&*+&5!-..4233. !"#$%&'"#()&*+&/!-.++250. !"#$%&'"#()&*+&5!-..1441. !"#$%&'"#()&*+&,!-.//0.0. !"#$%&'"#()&*+&4!-.1///1. !"#$%&'"#()&*+&+!-.01+,1. !"#$%&'"#()&*+&5!-..5.11. !"#$%&'"#()&*+&1!-.10/.2. !"#$%&'"#()&*+&0!-.54+00. !"#$%&'"#()&*+&5!-...,1.. !"#$%&'"#()&*+&+!-.00405. !"#$%&'"#()&*+&0!-.5114+. !"#$%&'"#()&*+&,!-./30/4. !"#$%&'"#()&*+&,!-./2.//. !"#$%&'"#()&*+&,!-./0100. !"#$%&'"#()&*+&,!-./0100. !"#$%&'"#()&*+&,!-./2.//. !"#$%&'"#()&*+&,!-./30/4. !"#$%&'"#()&*+&0!-.5114+. !"#$%&'"#()&*+&+!-.00405. !"#$%&'"#()&*+&5!-...,1.. !"#$%&'"#()&*+&0!-.54+00. !"#$%&'"#()&*+&1!-.10/.2. !"#$%&'"#()&*+&5!-..5.11. !"#$%&'"#()&*+&+!-.01+,1. !"#$%&'"#()&*+&4!-.1///1. !"#$%&'"#()&*+&,!-.//0.0. !"#$%&'"#()&*+&5!-..1441. !"#$%&'"#()&*+&/!-.++250. !"#$%&'"#()&*+&5!-..4233. !"#$%&'"#()&*+&/!-.++,42. !"#$%&'"#()&*+&/!-.+3152. !"#$%&'"#()&*+&+!-.032/0. !"#$%&'"#()&*+&1!-.1.022. !"#$%&'"#()&*+&4!-.1+2+1. !"#$%&'"#()&*+&/!-.+45,.. !"#$%&'"#()&*+&0!-.51.04. !"#$%&'"#()&*+&1!-.10335. !"#$%&'"#()&*+&,!-.,.420. !"#$%&'"#()&*+&,!-.//001. !"#$%&'"#()&*+&5!-../,3+. !"#$%&'"#()&*+&5!-..45+..
+!"#$%&'"#()&*+&,!-.//+,+. !"#$%&'"#()&*+&+!-.01/3.. !"#$%&'"#()&*+&4!-.4/1,4.
+!"#$%&'"#()&*+&+!-.+..4.. !"#$%&'"#()&*+&4!-.12,21. !"#$%&'"#()&*+&,!-./124/. !"#$%&'"#()&*+&1!-.1+.14.
+!"#$%&'"#()&*+&4!-.4.//4. !"#$%&'"#()&*+&5!-..0+3..
+!"#$%&'"#()&*+&+!-.0/+22. !"#$%&'"#()&*+&0!-.5/1++.
+!"#$%&'"#()&*+&/!-.+,+,0.
+!"#$%&'"#()&*+&,!-.,0/4+.
+!"#$%&'"#()&*+&0!-.50,34.
+!"#$%&'"#()&*+&+!-.+0/2+.
+!"#$%&'"#()&*+&,!-.,.504. !"#$%&'"#()&*+&1!-.1+023. !"#$%&'"#()&*+&/!-./.+.0.
+!"#$%&'"#()&*+&1!-.104.5. !"#$%&'"#()&*+&1!-.,4+0/. !"#$%&'"#()&*+&/!-.+,3+2.
+!"#$%&'"#()&*+&5!-..+501. !"#$%&'"#()&*+&0!-.52+22. !"#$%&'"#()&*+&,!-./4.+/.
+!"#$%&'"#()&*+&+!-.0,.,/. !"#$%&'"#()&*+&+!-.0/+44. !"#$%&'"#()&*+&4!-.40554. !"#$%&'"#()&*+&1!-.151,.. !"#$%&'"#()&*+&+!-.0,.,,.
+!"#$%&'"#()&*+&5!-..1,.1. !"#$%&'"#()&*+&4!-.13/.0.
+!"#$%&'"#()&*+&,!-./2/52. !"#$%&'"#()&*+&4!-.4.350. !"#$%&'"#()&*+&,!-./05,4.
+!"#$%&'"#()&*+&4!-.4/12+.
+!"#$%&'"#()&*+&0!-.54312.
+!"#$%&'"#()&*+&1!-.1./+4. !"#$%&'"#()&*+&1!-.,233,.
+!"#$%&'"#()&*+&/!-.+21,5.
+!"#$%&'"#()&*+&0!-.53//1.
+!"#$%&'"#()&*+&+!-.05202. !"#$%&'"#()&*+&1!-.,4441. !"#$%&'"#()&*+&+!-.0+1,/.
+!"#$%&'"#()&*+&0!-.514,..
+!"#$%&'"#()&*+&,!-.///21.
+!"#$%&'"#()&*+&4!-.40554. !"#$%&'"#()&*+&+!-.0/+44. !"#$%&'"#()&*+&+!-.0,.,/. !"#$%&'"#()&*+&,!-./4.+/. !"#$%&'"#()&*+&0!-.52+22. !"#$%&'"#()&*+&5!-..+501. !"#$%&'"#()&*+&/!-.+,3+2. !"#$%&'"#()&*+&1!-.,4+0/. !"#$%&'"#()&*+&1!-.104.5. !"#$%&'"#()&*+&/!-./.+.0. !"#$%&'"#()&*+&1!-.1+023. !"#$%&'"#()&*+&,!-.,.504. !"#$%&'"#()&*+&+!-.+0/2+. !"#$%&'"#()&*+&0!-.50,34. !"#$%&'"#()&*+&,!-.,0/4+. !"#$%&'"#()&*+&/!-.+,+,0. !"#$%&'"#()&*+&0!-.5/1++. !"#$%&'"#()&*+&+!-.0/+22. !"#$%&'"#()&*+&5!-..0+3.. !"#$%&'"#()&*+&4!-.4.//4. !"#$%&'"#()&*+&1!-.1+.14. !"#$%&'"#()&*+&,!-./124/. !"#$%&'"#()&*+&4!-.12,21. !"#$%&'"#()&*+&+!-.+..4.. !"#$%&'"#()&*+&4!-.4/1,4. !"#$%&'"#()&*+&+!-.01/3.. !"#$%&'"#()&*+&,!-.//+,+. !"#$%&'"#()&*+&5!-..45+.. !"#$%&'"#()&*+&5!-../,3+. !"#$%&'"#()&*+&,!-.//001. !"#$%&'"#()&*+&,!-.,.420. !"#$%&'"#()&*+&1!-.10335. !"#$%&'"#()&*+&0!-.51.04. !"#$%&'"#()&*+&/!-.+45,.. !"#$%&'"#()&*+&4!-.1+2+1. !"#$%&'"#()&*+&1!-.1.022. !"#$%&'"#()&*+&+!-.032/0. !"#$%&'"#()&*+&/!-.+3152. !"#$%&'"#()&*+&/!-.++,42. !"#$%&'"#()&*+&5!-..4233. !"#$%&'"#()&*+&/!-.++250. !"#$%&'"#()&*+&5!-..1441. !"#$%&'"#()&*+&,!-.//0.0. !"#$%&'"#()&*+&4!-.1///1. !"#$%&'"#()&*+&+!-.01+,1. !"#$%&'"#()&*+&5!-..5.11. !"#$%&'"#()&*+&1!-.10/.2. !"#$%&'"#()&*+&0!-.54+00. !"#$%&'"#()&*+&5!-...,1.. !"#$%&'"#()&*+&+!-.00405. !"#$%&'"#()&*+&0!-.5114+. !"#$%&'"#()&*+&,!-./30/4. !"#$%&'"#()&*+&,!-./2.//. !"#$%&'"#()&*+&,!-./0100. !"#$%&'"#()&*+&0!-.5114+. !"#$%&'"#()&*+&+!-.00405. !"#$%&'"#()&*+&5!-...,1.. !"#$%&'"#()&*+&0!-.54+00. !"#$%&'"#()&*+&1!-.10/.2. !"#$%&'"#()&*+&5!-..5.11. !"#$%&'"#()&*+&+!-.01+,1. !"#$%&'"#()&*+&4!-.1///1. !"#$%&'"#()&*+&,!-.//0.0. !"#$%&'"#()&*+&5!-..1441. !"#$%&'"#()&*+&/!-.++250. !"#$%&'"#()&*+&5!-..4233. !"#$%&'"#()&*+&/!-.++,42. !"#$%&'"#()&*+&/!-.+3152. !"#$%&'"#()&*+&+!-.032/0. !"#$%&'"#()&*+&1!-.1.022. !"#$%&'"#()&*+&4!-.1+2+1. !"#$%&'"#()&*+&/!-.+45,.. !"#$%&'"#()&*+&0!-.51.04. !"#$%&'"#()&*+&1!-.10335. !"#$%&'"#()&*+&,!-.,.420. !"#$%&'"#()&*+&,!-.//001. !"#$%&'"#()&*+&5!-../,3+. !"#$%&'"#()&*+&5!-..45+.. !"#$%&'"#()&*+&,!-.//+,+. !"#$%&'"#()&*+&+!-.01/3.. !"#$%&'"#()&*+&4!-.4/1,4. !"#$%&'"#()&*+&+!-.+..4.. !"#$%&'"#()&*+&4!-.12,21. !"#$%&'"#()&*+&,!-./124/. !"#$%&'"#()&*+&1!-.1+.14. !"#$%&'"#()&*+&4!-.4.//4. !"#$%&'"#()&*+&5!-..0+3.. !"#$%&'"#()&*+&+!-.0/+22. !"#$%&'"#()&*+&0!-.5/1++. !"#$%&'"#()&*+&/!-.+,+,0. !"#$%&'"#()&*+&,!-.,0/4+. !"#$%&'"#()&*+&0!-.50,34. !"#$%&'"#()&*+&+!-.+0/2+. !"#$%&'"#()&*+&,!-.,.504. !"#$%&'"#()&*+&1!-.1+023. !"#$%&'"#()&*+&/!-./.+.0. !"#$%&'"#()&*+&1!-.104.5. !"#$%&'"#()&*+&1!-.,4+0/. !"#$%&'"#()&*+&/!-.+,3+2. !"#$%&'"#()&*+&5!-..+501. !"#$%&'"#()&*+&0!-.52+22. !"#$%&'"#()&*+&,!-./4.+/. !"#$%&'"#()&*+&+!-.0,.,/. !"#$%&'"#()&*+&+!-.0/+44. !"#$%&'"#()&*+&4!-.40554. !"#$%&'"#()&*+&1!-.151,.. !!""##$$%%&&''""##(())&&**++&&,+!!--./.00,1.0,,.0. !!""##$$%%&&''""##(())&&**++&&,5!-!-./..21.,/.1/.. !!""##$$%%&&''""##(())&&**++&&,4!-!.-/.1330//.04.. !!""##$$%%&&''""##(())&&**++&&0,!-!.-/.52/15142+.. !!""##$$%%&&''""##(())&&**++&&+4!!--..040.345005.. !!""##$$%%&&''""##(())&&**++&&5,!-!-./..0.,51.,.4. P1 ! ! ! ! " " " " # # # # $ $ $ $ % % % % & & & & ' ' ' ' " " " " # # # # ( ( ( ( ) ) ) ) & & & & * * * * + + + + & & & & 0 1 4 0! !! !- -- -. . 1 . . 45 50 /4 4/ 1 . + 3 2 2 0 1 + .2 0. . . !!""##$$%%&&''""##(())&&**++&&15!!--..1..5/+.141.. !!""##$$%%&&''""##(())&&**++&&1+!!--..,0231+3,1,.. P3 ! ! ! ! " " " " # # # # $ $ $ $ % % % % & & & & ' ' ' ' " " " " # # # # ( ( ( ( ) ) ) ) & & & & * * * * + + + + & & & & / 0 4 ,! ! - ! ! - . - - . / .+ . 1 5/ 2 0 / 3 /1 . /, /0 51 / . 1. . . !!""##$$%%&&''""##(())&&**++&&+5!!--..0.1452401.2. !!""##$$%%&&''""##(())&&**++&&/1!!--..,+4+424510.. !!""##$$%%&&''""##(())&&**++&&5+!!--..0.4+213,/3.. P5 ! ! ! ! " " " " # # # # $ $ $ $ % % % % & & & & ' ' ' ' " " " " # # # # ( ( ( ( ) ) ) ) & & & & * * * * + + + + & & & & / / 0 ,! ! !- !- -. -. ./ + + .5 / + 3/ 1 2 , 1 44 51 ,2 .2 ... . !"#$%&'"#()&*+&+!-.032/0. !"#$%&'"#()&*+&1!-.1.022. !"#$%&'"#()&*+&4!-.1+2+1. P7 !"#$%&'"#()&*+&/!-.+45,..
+!"#$%&'"#()&*+&0!-.51.04. !"#$%&'"#()&*+&1!-.10335. !"#$%&'"#()&*+&,!-.,.420.
+!"#$%&'"#()&*+&,!-.//001. P9 !"#$%&'"#()&*+&5!-../,3+. !"#$%&'"#()&*+&5!-..45+.. !"#$%&'"#()&*+&,!-.//+,+.
+P11 ! ! " " # # $ $ % % & & ' ' " " # # ( ( ) ) & & * * + + & & + 4 ! ! - - . . 0 4 1 / / 1 3 ,4 .. .
+!"#$%&'"#()&*+&+!-.+..4.. !"#$%&'"#()&*+&4!-.12,21.
+!"#$%&'"#()&*+&,!-./124/.
+!"#$%&'"#()&*+&1!-.1+.14.
+!"#$%&'"#()&*+&4!-.4.//4.
+!"#$%&'"#()&*+&5!-..0+3..
+!"#$%&'"#()&*+&+!-.0/+22. P13 !"#$%&'"#()&*+&0!-.5/1++. !"#$%&'"#()&*+&/!-.+,+,0.
+!"#$%&'"#()&*+&,!-.,0/4+. !"#$%&'"#()&*+&0!-.50,34. !"#$%&'"#()&*+&+!-.+0/2+.
+!"#$%&'"#()&*+&,!-.,.504. !"#$%&'"#()&*+&1!-.1+023. P15 !"#$%&'"#()&*+&/!-./.+.0.
+!"#$%&'"#()&*+&1!-.104.5. !"#$%&'"#()&*+&1!-.,4+0/. !"#$%&'"#()&*+&/!-.+,3+2. !"#$%&'"#()&*+&5!-..+501. !"#$%&'"#()&*+&0!-.52+22.
+!"#$%&'"#()&*+&,!-./4.+/. P17 !"#$%&'"#()&*+&+!-.0,.,/.
+!"#$%&'"#()&*+&+!-.0/+44. !"#$%&'"#()&*+&4!-.40554. !"#$%&'"#()&*+&1!-.151,..
+!"#$%&'"#()&*+&+!-.0,.,,.
+!"#$%&'"#()&*+&5!-..1,.1.
+P19 ! ! " " # # $ $ % % & & ' ' " " # # ( ( ) ) & & * * + + & & 4 ,!- ! . - / .1 2 3 /5 /. 2 0 . .
+!"#$%&'"#()&*+&4!-.4.350.
+!"#$%&'"#()&*+&,!-./05,4.
+!"#$%&'"#()&*+&4!-.4/12+. !"#$%&'"#()&*+&0!-.54312. !"#$%&'"#()&*+&1!-.1./+4.
+0 5 10 !"#$%&'"#()&*+&1!-.,233,.
+!"#$%&'"#()&*+&/!-.+21,5. !"#$%&'"#()&*+&0!-.53//1. !"#$%&'"#()&*+&+!-.05202. !"#$%&'"#()&*+&1!-.,4441.
+!"#$%&'"#()&*+&+!-.0+1,/. !"#$%&'"#()&*+&0!-.514,..
+!"#$%&'"#()&*+&,!-.///21.
+MI MST MSC MF aP/eL :MF
+PtS/PoL
+:MF
+PyG/PtS
+:MF
+P21
+f
+pT0.5 pT5 pT9 pT14 pT18
+Pseudotime
+Canonical
+time P1 P3 P5 P7 P9 P11 P13 P15 P17 P19 P21
+emitoduesp
+yb
+detaludom
+seneG
+Expression
+–2 –1 0 1 2
+Fig. 4 | Subclustering in corpus cells postulates MADS-box transcription factor transcription factor genes along the developing spike. OrP, floret organ primordia.
+genes as markers for specific meristems and organ formation. a, UMAP and d, Expression profile according to pseudotime analysis for selected MADS-box
+subclustering of corpus cells from developing spikes in barley. b, Pseudotime transcription factors. e, Genes with the highest differential expression according
+analysis in subclusters from corpus cells defines the formation of meristems and to pseudotime analysis grouped by hierarchical clustering (Moran’s I ≥ 0.25 and
+organs from inflorescence meristem to organs in the floret meristem (TSM, CSM). q = 0), showing the major developmental transitions during spike development.
+The yellow dot shows the starting point in pseudotime, the black line shows the f, Inferred equivalency of pseudotime and canonical time, as a plastochron, based
+developmental trajectory across the pseudotime, and endpoints for primordia on genes modulated by pseudotime. smRNA-FISH section in c is representative of
+formations are shown as circles. c, Expression profiles of selected MADS-box at least 5 independent developing spikes. Scale bar, 100 µm (c).
+
+===== PAGE 9 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+ZmYABBY14/TOB1/ABNORMAL FLOWER ORGANS, all related to leaf-like
+a b organs such as the lemma in barley56–61. On the adaxial side (FMad),
+StP Pa Pa StP GyP we found WUSCHEL-RELATED HOMEOBOX PROTEIN (HvWOX3,
+GyP StP 1HG0010970), the orthologue of LATERAL LEAF SYMMETRY/OsWOX3
+LoP
+LoP LoP StP in rice, ZmWOX3a/ZmWOX3b in maize, and PRESSED FLOWER in Arabi-
+Glu StP Glu Le dopsis, which are involved in lateral organ formation62–64. Other markers
+included HvMONOCULM1 (7HG0720900), the GRAS-TF gene related
+Glu
+Le to ZmGRAS43 in maize, MONOCULM1 in rice and LATERAL SUPPRES-
+HvMADS33HvMADS50HvMADS40HvCRC
+HvMADS68HvMADS5HvMADS20HvMADS52 SOR in Arabidopsis, which contribute to axillary meristem forma-
+c
+tion and branching in rice and Arabidopsis65–67. In the central domain
+(FMc), the top candidate was HvMADS50 (6HG0604360), related to
+rice OsMADS6/MOSAIC FLORAL ORGANS1, maize BEARDED EAR-1 and
+HvMADS11 HvMADS33 HvMADS50 HvMADS40 Arabidopsis AGL6, which supports floral meristem establishment68–70.
+We also detected HvLEAFY (2HG0194240)71 and 59 transposon-related
+genes specifically expressed in the FMc.
+These results show how we can use BARVISTA to subdivide spike-
+let development into different transcriptionally distinct phases and
+HvMADS68 HvMADS5 HvMADS20 HvMADS52
+d identify relevant TFs marking the differentiation of specific spikelet
+Stamen organs even before they become morphologically distinct. We then
+used PERSIST to identify gene expression combinations suitable as bar-
+codes for stages P1–P19 (ref. 46) (Fig. 6d and Supplementary Table 20).
+The barcode can be used to rapidly assign a cell of unknown origin to
+the correct primordium, on the basis of the similarity of gene expres-
+sion to the identified barcode genes. Such a barcoding system will
+determine single-cell identities more precisely in future experiments,
+estimating a cell’s position within a tissue even in the absence of spatial
+experimental data.
+Characterizing mutant phenotypes at the
+single-cell level via gene expression
+Spikelet identity is determined by the TFs COM1 and COM2, which act in
+partially independent pathways. Plants carrying mutations in both COM1
+and COM2 develop branched inflorescences, which was interpreted to be
+a reversion of CSMs into indeterminate IM-like structures that generate
+multiple spikelets on their flanks9,72 (Fig. 7a,b,d,g,h,j). Using expression
+markers for spikelet formation (VRS4, HvCRC and HvLOG1), we compared
+gene expression profiles in the apical and lateral meristems between WT
+and com1a;com2g inflorescences. Early expression profiles appeared
+identical (Fig. 7c,f), but when WT CSMs generated different spikelet
+organs, com1a;com2g CSMs grew indeterminately, and the onset of VRS4,
+HvCRC and HvLOG1 expression in the com1a;com2g background was
+36 TF genes expressed at specific spikelet development stages (Fig. 6b reduced and delayed (Fig. 7e,i; white asterisks), resembling expression
+and Supplementary Table 18). Corroborating our pT data, HvMADS42 patterns of WT inflorescence tips. We integrated smRNA-FISH data from
+(5HG0511250) was upregulated in P1–P7, HvMADS33 (4HG0396400) in WT and com1a;com2g spikes and identified cell-type-specific clusters on
+P7–P11 after the TSM-to-CSM transition, and HvMADS50 (6HG0604360) the basis of similar gene expression profiles, which were mapped onto
+from P11 onwards, when the FM is established. Other DEGs in P5 the corresponding spike section. At the gene expression level, WT SMs
+included those encoding nuclear factor Y subunit B-10 (HvNF-YB10, gradually acquired FM and floret profiles, whereas cells in com1a;com2g
+2HG0126410), two uncharacterized basic leucine zipper domain (bZIP) branches maintained tip-like profiles (Fig. 7k).
+TFs (6HG0570630, 7HG0746810) and the ethylene-responsive TF We identified transcriptional signatures underlying spikelet
+HvERF61 (1HG0090590). HvMADS64 (7HG0654930) was significantly determination by imputing gene expression differences between the
+upregulated in the CSM (P7). Between P11 and P17–P19, we observed inflorescence tips, spikelets and the com1a;com2g IM-like branches. The
+organ growth, but no specific marker genes were detected until floret IM-like branch bears four axillary SMs, so we selected the inflorescence
+organs started to differentiate (P17–P19). The TF genes characterizing tip including the first four spikelet primordia (Fig. 7l). In WT plants, we
+floret development included HvMADS7 (1HG0065060), HvMADS20 identified 674 DEGs between the inflorescence tip and determinate
+(3HG0243770) and HvMADS76 (HvMADS16, 7HG0721170). The transcrip- spikelet, whereas com1a;com2g branches showed no DEGs in com-
+tional and morphological similarity of primordia from P11 to P15, after parison to the inflorescence tip (Supplementary Table 21). This demon-
+the prominent transcriptional reprogramming during early spikelet strates how specific transcriptional signatures can be used to describe
+development, indicated the establishment of transcriptionally defined phenotypic profiles, independent of morphological comparisons. We
+spikelet organs at P11. To test this, we used BARVISTA to select cells then used PERSIST to generate gene expression barcodes for WT and
+from the adaxial part of spikelet P11 (FMad), which forms the rachilla, mutant inflorescence tips and AMs. WT inflorescence tip barcodes were
+from the floret meristem (FM) and from the abaxial side (FMab) where clearly distinct from those of the determinate spikelet, whereas those
+the lemma is initiated (Fig. 6c and Supplementary Table 19). We found of the com1a;com2g inflorescence tip and branches were indistinguish-
+two YABBY TF genes as markers for FMab: HvCRC (4HG0396510), the able. Interestingly, expression barcodes for the mutant inflorescence
+orthologue of DROOPING LEAF (OsDL) in rice, DL2 in maize and CRABS tip and branch shared commonalities with both WT inflorescence tip
+CLAW in Arabidopsis; and HvTOB1 (2HG0184460), the orthologue of and spikelet, indicating that both com1a;com2g inflorescence tip and
+Nature Plants | Volume 12 | January 2026 | 107–124 115
+ssalc-A
+Palea Lodicule
+Lemma
+ssalc-E
+ssalc-B
+ssalc-C
+Gynoecium
+HvMADS81, HvMADS5,
+HvMADS20, HvMADS45,
+HvMADS76, HvMADS52
+HvMADS40, HvMADS68,
+HvMADS24, HvMADS7
+HvMADS11, HvMADS22, HvMADS32, HvMADS41
+HvMADS33, HvMADS64, HvMADS12, HvMADS50
+Fig. 5 | Inferred roles of HvMADS genes in the ABCDE model of whorl
+organization. a, SEM of one floret. b, Expression profiles of HvMADS genes in
+floret organs (glumes, Glu; lemma, Le; palea, Pa; lodicule primordium, LoP).
+c, Individual expression profiles of selected HvMADS genes. d, Putative role of
+MADS-box transcription factors inferred by pseudotime analysis in the ABCDE
+model of floret whorl formation. The dashed line in a represents the approximate
+orientation in the section in b. smRNA-FISH sections are representative of at least
+2 independent developing spikes. Scale bars, 50 µm (a–c).
+
+===== PAGE 10 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+a
+P1
+P3
+P5
+P7
+P9
+P11
+P13
+P15
+P17
+P19
+P11
+FMad
+FMc
+FMab
+branches could represent an intermediate state at gene expression their neighbours, establishing local clones. Positional information
+levels. Comparison of MADS-TF gene expression revealed that COM1 is imparted by the perception of juxtacrine or symplasmic signals
+and COM2 promote HvMADS33 and HvMADS64 expression from P7 from direct neighbours and/or by exposure to specific concentrations
+onwards, and HvMADS20 and HvMADS50 expression in FMc from P11 of morphogens or abiotic factors such as light. Such spatial inputs
+onwards (Supplementary Fig. 16). modulate the same gene expression network operating in different
+Complete gene expression profiling and tissue/stage-specific cells and can generate different outputs depending on a cell’s position.
+expression barcodes thus facilitate the characterization of mutant phe- However, spatial transcriptome methods cannot yet accommodate
+notypes and underlying changes in gene expression, and the mapping the full complexity of transcripts in a cell. For probe-based meth-
+of cell and tissue expression profiles in complex genetic backgrounds. ods, this reflects the molecular crowding of bulky probes, which are
+needed for sensitivity or specificity of target RNA detection. Methods
+Extending spatial gene expression datasets via based on cDNA sequencing are limited by the efficacy of RNA capture
+gene expression imputation from tissues. Both methods generally detect transcripts from fewer
+A cell´s location in plant tissues is generally fixed, but cells can than 5,000 genes, with limited information on expression dynamics.
+be passively displaced during growth while keeping contact with Alternatively, scRNA-seq reveals the expression dynamics of many
+Nature Plants | Volume 12 | January 2026 | 107–124 116
+ytitnedi
+MS
+htworg
+nagrO
+terolF
+b
+Differentially expressed transcription factors along
+primordia development
+DEG
+P1
+P3
+P5
+P7
+P9
+P11
+P13
+P15
+P17
+P19
+c d
+FMc FMab FMad
+24SDAMvH 0146210GH2 0950900GH1 0360750GH6 21SDAMvH 46SDAMvH 0090310GH2 22SDAMvH 33SDAMvH 05SDAMvH 04SDAMvH 25SDAMvH 86SDAMvH 67SDAMvH 7SDAMvH
+P1
+P3
+P5
+P7
+P9
+P11
+P13
+P15
+P17
+P19
+Fraction of cells Mean expression
+in group (%) in group
+0 0.5
+0028550GH6 0047340GH5 0652130GH3 0562810GH2 0306020GH2 0617030GH3 0414170GH7 0410060GH6 0900740GH5 0431900GH1 0008860GH7 0843800GH1 0477000GH1 0380410GH2 0579700GH1 0504630GH4 0425700GH1 0693330GH4 0148260GH6 0516320GH3
+P1
+P3
+P5
+P7
+P9
+P11
+P13
+P15
+P17
+P19
+aidromirP
+0100 200 300 400
+1.5 1.0 1.2 0.751.0 1.5 2.5 1.5 1.5 1.0 2.0 1.5 1.5 1.5 1.5
+Expression level
+0521150GH5 0146210GH2 0950900GH1 0360750GH6 0786510GH2 0394560GH7 0090310GH2 0716820GH3 0046930GH4 0634060GH6 0914940GH5 0056160GH6 0204860GH7 0711270GH7 0605600GH1
+Expression
+2 1 0–1–2
+eneg
+evitatneserper
+03
+poT
+retsulc
+rep
+srekram
+20406080 100
+Fig. 6 | Isolation of stage- and domain-specific genetic determinants using adaxial (FMad) and abaxial (FMab) domains. Right: heat map with the top 30
+BARVISTA. a, Apical–basal gradient of spike development: formation of TSM DEGs for each FM region. The heat map shows selected examples of imputed
+(P1–P3), transition (P5) to CSM (P7–P9), establishment of FM (P11–P13) and DEGs using one-sided MAST, with P < 0.01 and with enrichment for cells that
+adj
+floret whorl organization (P15–P19). VRS4 expression (green) was used to express genes at double or more the level of the remaining cells (pct.1/pct.2 ≥ 2).
+delimit primordia boundaries. P5 shows the higher diversity in imputed DEGs. Scale bars, 100 µm (a); 50 µm (c). d, PERSIST identified 20 genes with specific
+b, Expression levels of selected DEGs encoding transcription factors across combined expression patterns for each primordia stage.
+primordium development. c, Left: floret meristem divided into central (FMc),
+
+===== PAGE 11 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+GP WT com1a;com2g
+a b c f g h
+HvKN1 HvCRC VRS4 HvKN1 HvCRC VRS4
+HvLOGCOM1HvHD-zip HvLOGCOM1HvHD-zip
+d e i j
+* * *
+*
+*
+HvKN1 HvCRC VRS4 HvKN1 HvCRC VRS4
+HvLOGCOM1HvHD-zip HvLOGCOM1HvHD-zip
+k l
+GP WT com1a;com2g GP WT com1a;com2g
+4
+8 5
+7
+2 0 Ground tissue
+6
+1 1 Meristematic tissue
+3
+2 Epidermis
+0
+3 Meristem boundary
+9
+4 Lemma/Bract 674 0
+5 Floret meristem DEG DEG
+6 Rachilla
+7 Unknown
+8 Meristem tip
+9 Vascular tissue
+m
+Fraction of cells
+in group (%)
+20 40 60 80100
+thousand genes, without spatial information. Our approach com- combining scRNA-seq and cell-resolved transcript detection on tis-
+bines the benefits of both methods to address the problem of space sue sections. Using a small set of probes as anchors to reliably detect
+in gene expression studies32. We obtained cell-resolved, quantitative transcripts at many different expression levels, we matched cells
+data on gene expression, covering a maximum number of genes, by from tissue sections with those from the scRNA-seq dataset, using CS
+Nature Plants | Volume 12 | January 2026 | 107–124 117
+0934110GH2 0977110GH2 0370810GH2 0344520GH3 0489620GH3 0964720GH3 0171130GH3 0730430GH4 0626730GH4 0982930GH4 0227240GH5 0724840GH5 0814940GH5 0418940GH5 0540150GH5 0877250GH5 0760760GH7 0299070GH7 0875270GH7 0035870GnU
+IM_wt
+SM_wt
+IM_com
+SM_com
+Mean expression
+in group
+0.25 0.50 0.75
+Fig. 7 | Imputed differential gene expression for molecular phenotyping at the com1a;com2g after integration. The WT SMs acquired FM and floret expression
+single-cell level. a, SEM of barley spike indicating the IM (red), TSM (pink), CSM profiles (cluster 5 FM, black cells). In com1a;com2g, cells with FM profile (black,
+(orange), stamen primordia (yellow) and gynoecium primordia (blue). b, Close- cluster 5) are underrepresented and branches maintained tip-like expression
+up of one developing spike highlighting TSM formation, equivalent to the top profiles. l, Imputed DEGs between the upper part of the spike, including the
+dashed box in a. c, Gene expression patterns associated with the establishment IM and the first four primordia (P1–P4, blue), and P13 (FM, orange) in WT, and
+of TSM. d, Close-up from a showing the CSM and its transition to FM. e, Marker its counterpart in com1a;com2g., colour gradient in the arrows suggest the
+gene expression profiles during the transition from TSM to FM. f, Marker genes progression along the pT. m, Gene expression barcodes for SM and IM of WT and
+expressed in the top part of a com1a;com2g developing spike. g, SEM of an com1a;com2g (as selected in l). The barcodes show expression levels of 20 genes
+equivalent region as shown in f. h, Developing spike of com1a;com2g; initiation that distinguish between the tissues. Genes were selected using PERSIST, solely
+of TSM (top dotted box) and further IM-like development (bottom dotted box). i, on the basis of their expression patterns. smRNA-FISH sections are representative
+Expression profile of marker genes in an IM-like branching structure, with asterisk of at least 2 independent developing spikes. SEM WT images are representative of
+indicating the formation of ectopic SMs. j, SEM of branched structure equivalent their developmental stage, com1a;com2g images are representative of 10 spikes
+to the bottom dotted box in h. k, Spatial clusters of smRNA-FISH data from WT and analysed. Scale bars, 100 µm.
+
+===== PAGE 12 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+a b c
+Spikelet meristem MADS-box TF in meristem
+Leaf primordia
+initiation and organ determination
+initiation
+LOG W0.5 LOG W3.5 IM IM
+WUS HvMADS42
+WUS
+Tunica Tunica P1
+KN1 Fo1 TSM
+HDZIV8 KN1 TSM P3
+7HG0702200
+YABBY?
+P5 HvMADS64
+6HG0618540 CRC HvMADS33
+3HG0240110 CRC LFo P7
+CRC Fo2 Corpus CSM CSM
+? CRC L O Fo3 P9 HvMADS64 HvMADS50
+LP1 CRC
+VRS4G
+P11
+CRC FM Ra FM
+CRC LP2 Fo4 VRS4 COM1 P13 HvMADS33 HvMADS50
+W HvMADS11
+LP3 CRC Corpus LP4 G O X CRC COM1 K N 1 U S /W O X L O G P1 P P 1 1 5 7 H H L v v M M e A A D D S S 4 50 0 HvMADS40 Pa
+CRC
+P2 L O
+W U
+S/ W
+K
+N1
+Ra
+C
+C
+R
+O
+C
+M
+S
+1
+B OrP
+P19
+LoP
+G
+H
+y
+v
+P
+MADS20
+H H v v M M A A D D S S 6 5 8
+P3
+SB CRC
+P21 StP
+Fig. 8 | Model for primordia initiation and meristem organization in fosters cytokinin accumulation, which upregulates HvWUS/HvWOX genes
+vegetative SAM and developing inflorescences. a, Model for leaf primordia to organize and pattern the newly formed TSM. Expression of COM genes
+specification and initiation in vegetative SAM. HvKN1 (magenta) is expressed (orange) then determines the rachilla meristem (Ra). c, MADS TFs are
+in the corpus and the tip of the SAM; HvKN1 positively regulates LOG major regulators in meristem and floret organ determination. HvMADS42
+(magenta and cyan stripe pattern), which promotes cytokinin biosynthesis. (green) is expressed during the transition from IM to TSM. HvMADS64
+Cytokinin upregulates HvWUS/HvWOX genes to organize meristem function. and HvMADS33 (red and yellow, respectively) are expressed in CSM, then
+Leaf primordia are specified in founder cells (LFo) depleted for HvKN1, with HvMADS64 specifically in Ra. HvMADS50 (cyan) is specific for the central
+HvCRC (green) as the earliest sign of leaf primordia determination (LP). zone of FM, HvMADS33 for the lemma primordia (Le), the first floral organ
+b, Inflorescences initiate triple spikelet meristems (TSM). Founder cells formed. Combinations of HvMADS TF genes mark the specification of
+(Fo1–Fo2) lack HvKN1 expression; HvCRC (green) in the basal domain marks other floral organs (OrP). HvMADS50 (cyan) and HvMADS11 are expressed
+Fo cells of the suppressed bract (SB), YABBY TFs become expressed in the in the palea (Pa); HvMADS50 and HvMADS40 in the lodicule primordium
+apical domain. At Fo3–Fo4, VRS4 (yellow) and LOG (cyan) are expressed (LoP); HvMADS40 and HvMADS20 in the gynoecium primordia (GyP) and
+in the apical domain, possibly specifying TSM identity. From P1 onwards, HvMADS68 and HvMADS5 in stamen primordia (StP).
+HvKN1 expression is restored and extends into the tunica. LOG expression
+followed by calculation of a weighted average from the most similar Dynamic gene expression underlying the
+cells for each gene. We then used gene expression information from formation and specification of primordia
+the scRNA-seq dataset to impute the missing expression values of KN1 and its orthologues promote meristem fate in many cereal spe-
+almost all barley genes for all cells in the tissue sections. Validation cies, and we found that the downregulation of HvKN1 combined with
+tests showed that the imputed gene expression values were highly HvHD-zip expression is a hallmark of primordia initiation in the vSAM
+reliable, after exclusion of protoplasting-induced genes. We focused and IM. Leaf founder cells were predominantly marked by expression
+on key imputation parameters to identify our method’s limitations, of HvCRC, which was also expressed in spikelet founder cells, but polar-
+and found that the 81 anchor genes from the smRNA-FISH experiment ized to the abaxial side marking cells that form the suppressed bract.
+were able to identify similar cells between the datasets; however, The adaxial side expresses HvLOG1 and the TFs VRS4 and COM1, which
+the selection of anchor genes could be optimized using the deep promote spikelet determinacy.
+learning tool PERSIST for gene selection. For a dataset as complex KN1 mRNA in meristems was restricted to corpus tissue and only
+as the barley inflorescence, scRNA-seq data from 10,000 cells and 20 sporadically found in the tunica layers of maize or rice. We found that
+anchor genes were sufficient for gene expression imputation. Gene HvKN1 is expressed in the corpus of spikes and, at a lower level, of vSAMs.
+combinations can be used to differentiate between cell populations HvKN1-positive cells from the corpus of vSAM, and HvKN1-negative
+and to establish simplified gene expression barcodes for specific cell tunica cells from spikes showed positive correlation in gene expression,
+identities or states in a dataset, characterizing complex changes in indicating shared developmental paths (Supplementary Fig. 10e,f).
+gene expression in mutants or during developmental progression. HvKN1-positive tunica cells are located at the tips of IMs and SMs,
+Future applications could integrate additional data types, such as whereas tunica cells in leaf primordia tips of the vSAM lacked HvKN1
+proteomic or metabolomic data. Within the given experimental limi- expression. Expressions of HvKN1 and HvLOG1 correlate and might
+tations, our imputation approach enables gene expression analysis generate a cytokinin source in meristem tip tunica cells (but not those
+by virtual microdissection of individual cells for the discovery of in the tips of leaf primordia). Hypothetically, such a local cytokinin
+cell- or location-specific characteristics, or to determine functional peak could establish the WUS/WOX expression domains in the IM and
+domains within meristems that underlie specific traits. Recent studies newly formed SMs74 to provide a feedback signal that maintains HvKN1
+combined co-expression and orthology73 to identify tissue-specific expression, thereby acting as a local organizer that promotes meristem
+genes and markers across plant species22,27,29. Our dataset can serve maintenance from the outermost cell layer (Fig. 8a,b).
+to implement cross-species gene imputation to generate a spatial Virtual microdissection using BARVISTA identified specific marker
+pan-grass transcriptome. genes for the IM, TSM founder cells and TSM primordia (Fig. 3f–h).
+Nature Plants | Volume 12 | January 2026 | 107–124 118
+
+===== PAGE 13 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+These included genes encoding the flowering regulators HvFT2 and allowing us to deduce quantitative expression data for most genes with
+HvFD7 for IM, the TFs HvTOB1 and HvTOB2 for Fo cells, and HvSCR1 cellular resolution. High costs associated with spatial and single-cell
+for P1 or TSM. In maize, stem cells in the vSAM and IM, marked by transcriptomics can be reduced using imputation approaches, with
+ZmWUS1 and ZmCLE7 expression, are often difficult to recover from the aim to generate multidimensional atlases for developmental and
+protoplast preparations22. Our scRNA-seq dataset included a sig- physiological studies in plants. BARVISTA allows the intuitive naviga-
+nificant number of cells expressing HvWUS1 and HvCLV3. Further- tion of these data to identify gene expression patterns of specific genes,
+more, maize PYRUVATE ORTHOPHOSPHATE DIKINASE (ZmPPDK) is individual cells or cell groups with high spatial resolution. Combined
+highly co-expressed with ZmCLE7 in the IM22, and we found HvPPDK with functional dissection of promoter elements, we should soon be
+(1HG0062940) transcripts enriched in the barley IM, indicating that able to redesign cereal inflorescence architectures and adapt crop
+expression imputation can digitally reconstruct the IM and facilitate plants to new challenging environments.
+marker gene identification from limited tissues. Finding marker genes BARVISTA currently offers only a snapshot of barley develop-
+specific for the IM is challenging because many genes relevant for IM ment, with expression data for specific developmental time points
+development are also expressed in SMs, including HvKN1, HvLOG1 and limited to two dimensions. We will now aim to reach beyond the intrin-
+HvHD-zip/HvHDZIV2/HvOCL2 (Fig. 3g), or HvMADS42/MADS34 and sic limitations of two-dimensional spatial analysis, towards three-
+HvMADS64/MADS5 (Supplementary Fig. 14). Alternatively, the expres- and four-dimensional (time) reconstruction of barley development.
+sion dynamics of several genes can be combined into highly specific Furthermore, cell shape, cell size and cell neighbourhoods will be
+expression profiles using a barcoding strategy to identify specific cell considered to enable a deep understanding of cell identity and function
+types or tissues. within different spatial contexts82.
+Subclustering and pseudotime analysis predict Methods
+meristem transitions and the path to floret organ Plant growth conditions
+establishment WT tissue was collected from Hordeum vulgare cv. Golden Promise
+Barley spikes at W3.5 comprise all major stages and transitions in the plants grown in Minitray soil (Einheitserde, Einheitserde Werkverband)
+developmental path towards floret formation. We used COM1 expression in 96-well trays with 4 g l−1 Osmocote Exact Hi.End 3-4 M 4th generation
+in the TSM as a starting point for pseudotime analysis. Double mutants (ICL Group) under long day conditions (16-h photoperiod, 20/16 °C day/
+of COM1 and COM2 develop branched spikes, suggesting a defect in night temperature). Before seed sowing, grains were pre-germinated
+early stages of CSM determination9. VRS4 is already expressed in TSM for 4 days at 4 °C in Petri dishes lined with wet paper. Golden Promise
+Fo cells (Fig. 3g) and follows a pseudotime expression profile similar to takes ~30 days after emergence to reach W3.5 under these conditions.
+that of COM1 (Supplementary Fig. 13b,c). Following the developmental For the scRNA-seq work, 25 biological replicates per sample were col-
+trajectory by pseudotime analysis, we identified genes marking the lected and pooled, and the overall experiment was carried out three
+major transitions from IM to floret organs in the inner whorl. Genes times. The com1a;com2g mutants were grown under the same condi-
+modulated during the transitions from IM to FM (up to pT9) showed a tions and collected when WT (Bowman) reached W3.5. We dissected
+higher diversity in patterns of gene modulation. Later in development, ~80 plants for vSAM library preparation 11 days after sowing in soil.
+from FM to the formation of floret organs, patterns were less diverse, but The tissue was collected for protoplast isolation before verification
+more genes were modulated (Fig. 4e and Supplementary Table 16). We at the W0 stage.
+then reconciled pseudotime and canonical time using the plastochron
+and developmental time based on meristem or organ formation (Fig. 4f). Protoplast isolation
+MADS TFs are master regulators of floret organ development, and by Protoplasts were generated from developing inflorescences (W3.5,
+using their pseudotime modulation, we assigned them to the ABCE when the stamen primordia emerged). The tissue was directly col-
+model of floret development (Fig. 5). Virtual microdissection with BARV- lected in 6-well plates containing 3 ml washing solution I (WSI; 0.4 M
+ISTA corroborated the pseudotime analysis data and identified potential mannitol, 20 mM MES, 20 mM KCl, 10 mM CaCl, 0.1% BSA, pH 5.7). For
+2
+regulators of key developmental transitions. Many DEGs were detected cell wall digestion, the tissue was chopped in WSI using a scalpel and
+at stage P5 when the TSM separates into a determinate CSM and LSMs, immediately digested for 140 min in 4 ml enzyme solution (0.4 M man-
+including HvNF-YB10, HvERF61, HvMADS33 and HvMADS42. Arabidop- nitol, 1.2% Cellulase R-10, 1.2% Cellulase RS, 0.36% Pectolyase Y-23, 0.4%
+sis NF-Y mediates epigenetic control of the floral transition75, and an Macerozyme R-10 (all from Duchefa), 20 mM MES, 20 mM KCl, pH 5.7,
+HvERF61 orthologue regulates key floral constituents in Osmanthus 10 mM CaCl, 0.1% BSA, 0.06% β-mercaptoethanol). Protoplasts were
+2
+fragrans76. Mutation of HvMADS33/MADS1 generated branched spikes then passed through a 40-µm cell strainer (Scienceware Flowmi) into
+at high temperatures11, and the mutation of Setaria italica SiMADS34 microfuge tubes for centrifugation (250 g, 2.5 min, 4 °C). The pellets
+(HvMADS42) generated panicle-like inflorescences with long primary were gently washed once with WSI and twice with WSII (0.6 M mannitol,
+branches77. Rice OsMADS34 cooperates with OsMADS5 to promote mer- 2 mM MES, 0.1% BSA, pH 5.7) with centrifugation under the same condi-
+istem determinacy, and osmads5;osmads34 double mutants generate tions described above between each wash. The protoplasts were passed
+multiple branches78. HvMADS64 (OsMADS5) was upregulated in the WT through the 40-µm cell strainer and stained with calcein AM (10 µM)
+CSM (P7), while the branched inflorescences of com1;com2 mutants did and DRAQ7 (1.5 µM) for 5 min at room temperature. An aliquot was
+not express HvMADS20, HvMADS33, HvMADS50 and HvMADS64. We con- loaded into a haemocytometer to score cell viability using a BD Rhap-
+clude that a key function of TFs expressed from P5 onwards is specifica- sody scanner. Only samples exceeding 70% viability were loaded into
+tion of CSM identity and branch suppression. HvMADS7 (AtPISTILLATA), the BD Rhapsody Express system for partitioning and mRNA capture.
+HvMADS20 (OsMADS3) and HvMADS76, which regulate petal, carpel and
+stamen development in Arabidopsis, rice and barley79–81, are probably scRNA-seq
+stage-specific master regulators of floret organ development (Fig. 8c). We loaded ~20,000 cells per replicate. Single-cell libraries were pre-
+We have showcased how the computational integration of pared using the mRNA Whole Transcriptome Analysis (WTA) kit (BD-
+scRNA-seq and spatial transcriptomics data significantly advances Biosciences) and libraries were sequenced on the Illumina Next-
+our understanding of plant meristem development and organ forma- Seq2000 platform, aiming for 50,000 reads per cell. Raw scRNA-seq
+tion, allowing us to identify and study the underlying gene regulatory data were analysed using the BD WTA Rhapsody analysis pipeline.
+network. The gene expression imputation approach that we developed Gene reads were aligned to the H. vulgare cv. Morex V3 reference
+closes a gap in our understanding of developmental processes by genome (https://doi.org/10.5447/ipk/2021/3).
+Nature Plants | Volume 12 | January 2026 | 107–124 119
+
+===== PAGE 14 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+Subtraction of DEGs induced during protoplast isolation Cell segmentation
+Total RNA was extracted from three replicates of fresh protoplasts To calculate the gene expression matrix for the MC data, the DAPI
+and intact inflorescences using the Direct-zol RNA Miniprep Plus image was segmented using a workflow provided by Resolve Bio-
+kit (Zymo Research), followed by bulk RNA sequencing using the sciences (https://my.resolvebiosciences.com/help/segmentation).
+Illumina NextSeq platform (Biomarker Technologies). Reads were Briefly, the pipeline first runs MindaGap (https://github.com/Viria-
+aligned to the H. vulgare cv. Morex V3 reference genome and con- toII/MindaGap) with default settings to improve the borders of the
+verted to transcripts per million (TPM) by adapting a custom Python image tiles, then Cellpose88 with the parameters: model=cyto, diam-
+script (https://github.com/cvanges/spike_development). DEGs were eter=50.0 and flow-thresh=0.5. Genes with ≥70% transcripts inside
+defined using a count-based Fisher’s exact test in the R package DAPI segments were considered nucleus specific, and those with
+EdgeR v.3.32.1. The false discovery rate (FDR) was adjusted using the ≤30% transcripts inside DAPI segments were considered cytoplasm
+Benjamini–Hochberg procedure. Genes were considered differen- specific. Finally, Baysor89 was run using the DAPI roi files as prior
+tially expressed when exceeding the threshold logFC ≥ 3 or ≤–3 and with the parameters: –no-ncv-estimation–force-2d–n-clusters=1–
+an FDR < 1 × 10−5. These DEGs (3,684 genes) were removed from the prior-segmentation-confidence 0.9 -m 3, as well as the previously
+scRNA-seq expression matrix before identifying the most variable determined list of nucleus/cytoplasm-specific genes for –nuclei-genes
+features for cluster analysis. and –cyto-genes. The resulting MC count matrix was used for
+subsequent analysis.
+UMAP and replicate integration
+Replicates were merged using the Seurat package (v.4.0)43. Low-quality Integrated clustering
+cells were removed with a threshold of 800 < genes < 9,000, and cells Seurat v.4.3.0 was fed with count matrices from the MC and scRNA-seq
+were log normalized. Protoplasting-affected genes were removed from as inputs. Data quality was based on the number of cells per sample, the
+the merged object, and the 7,500 most variable features were identi- number of Unique Molecular Identifiers (UMIs) per cell, the number of
+fied using the vst function in Seurat. Next, FindIntegrationAnchors genes per cell and the complexity of all four datasets. Subsequently,
+identified anchors to integrate the three replicate datasets using 30 all genes not recorded in the MC dataset, as well as those affected by
+dimensions. The integrated expression matrix was retrieved using protoplasting, were removed from all count matrices, resulting in
+IntegrateData. Dimensionality was reduced by scaling the expression a total of 81 anchor genes for the IM, 76 for the vSAM and 83 for the
+matrix using ScaleData, and then by principal component analysis com1;com2 mutant. The datasets were log normalized on the basis
+(PCA). The top 50 components were selected for further analysis. of the natural logarithm with a scale factor of 1 using NormalizeData.
+Cells were clustered using a k-nearest neighbours and SNN graph All four Seurat objects were merged into one using Seurat’s merge
+method. FindNeighbors and FindClusters were applied with a reso- function and then split into a list object with SplitObject, with one
+lution of 1.3. Dimensionality reduction was then achieved using the list element containing one sample. A second normalization step
+UMAP algorithm with the top 35 principal components and a minimal was applied across all four datasets for further harmonization. All
+distance of 0.01. available genes were selected for subsequent integration using Find-
+VariableFeatures and SelectIntegrationAnchors, with the identified
+Cluster-specific gene marker identification integration features as anchor features and the MC dataset as a refer-
+Genes enriched in each cluster were identified using the FindAllmark- ence to integrate the other three datasets. For the clustering of the
+ers function in Seurat with thresholds of: log.FC = 0.25, pct1 > 0.25, vSAM, we tested different parameter settings in SelectIntegrationAn-
+pct2 < 0.3, P < 0.001. Differential gene expression was calculated chors (Supplementary Table 22). We varied k.anchor between 3 and
+adj
+using the function FindAllMarkers and MAST83. 10, k.filter between 25 and 400, and k.score between 10 and 50. For
+the final clustering of the vSAM, we selected k.anchor = 4, k.filter = 25
+Multiplex smRNA-FISH and k.score = 30, whereas default parameters were used for the IM. The
+Developing inflorescences were fixed in phosphate buffered saline con- datasets were integrated using IntegrateData, scaled using ScaleData,
+taining 4% paraformaldehyde and 0.03% Triton X-100 (Sigma) before and PCA was performed using RunPCA with VariableFeatures as PCA
+dehydration through an ethanol series and progressive embedding features and 50 dimensions. Neighbouring cells were calculated using
+under vacuum in Paraplast X-tra (Leica). We prepared 10-µm sections FindNeighbors on the PCA-reduced dataset with the first 35 dimen-
+on glass slides (Resolve Biosciences), which were deparaffinized, gradu- sions, and clusters were determined using FindClusters with varying
+ally rehydrated and permeabilized with proteinase K (Thermo Fisher). resolutions between 0.1 and 2.0 (step = 0.1). The com1;com2 mutant
+After refixation, acetylation and dehydration through an ethanol series, was clustered with a resolution of 0.5. The clusters were visualized
+the slides were mounted with SlowFade-Gold Antifade reagent (Invit- on the basis of Seurat’s RunUMAP results, using the PCA reduction
+rogen). Probe hybridization and imaging were carried out at Resolve method and 35 UMAP dimensions. The differential gene expression of
+Biosciences using in-house protocols. The target genes are listed in each cluster was compared to all other clusters using FoldChange in
+Supplementary Table 5. Seurat v.5.0.3 for each resolution (a different Seurat version was used
+due to a known error in the fold-change calculation of Seurat v.4.3.0).
+Pseudotime analysis All genes from the reference genome were annotated using Mercator
+The Seurat object with the integrated cells was used for pseudotime (v.4.6)90. Clusters were identified using known marker genes as well as
+trajectory analysis with monocle3 (v.1.3.7)84–86 in RStudio. Only clus- the Mercator annotations.
+ters from corpus cells were analysed in detail. These were first sub-
+clustered with Seurat using 50 components, a resolution of 2 and a Imputation of genome-wide gene expression
+dimensionality of 35. COMPOSITUM1 (5HG0479720) was selected as For all genes in the scRNA-seq dataset (reference data) but not meas-
+the starting point for developmental time because COM1 is specifi- ured in the MC experiment (test data), gene expression was imputed
+cally expressed at the branching point of developmental trajectories in a two-step procedure, loosely as previously described91. All raw
+towards tunica, corpus or vascular fates. The subclusters were ordered counts were normalized to counts per million (CPM) without additional
+according to the learnt trajectory, and pseudotime-modulated genes integration. The first step of imputation (cell similarity determination)
+were calculated using graph_test with threshold values of Moran’s I > 0.1 required the similarity between each MC cell and scRNA-seq cells
+and q = <0.01. Selected examples (q_value == 0) were visualized using (SCs) to be determined. We calculated the CS between each MC cell
+ComplexHeatmap (v.2.18.0)87. and all segmented cells within the same cluster on the basis of the 81
+Nature Plants | Volume 12 | January 2026 | 107–124 120
+
+===== PAGE 15 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+previously determined anchor genes, and the result was shifted by 1 into Simulation 4: Impact of gene selection method on imputation
+the positive range. For the vSAM, the CS to all segmented cells within quality. Sets of 20–100 genes were identified using PERSIST46(https://
+all clusters was calculated instead due to the lower number of overall github.com/iancovert/persist; initial release) and reference subsets
+segmented cells. During the second imputation step, the expression of generated as described above. Default parameters from the provided
+each MC cell was imputed by taking the weighted mean gene expression scripts were used, with modification of the setting flavour = ‘seurat’ for
+in the n = 25 most similar segmented cells using the shifted CSs from the determination of highly variable genes. During unsupervised gene
+the calculated similarity matrix as weights (equations (1) and (2)). For selection, the setting lam_init = 0.64 was applied.
+the vSAM, the number of top n cells to keep was varied between 1 and Simulation 5: Impact of gene variability on imputation quality.
+25 during an additional parameter optimization step, ultimately using Reference subsets were generated containing 5,000 cells and the
+n = 4 for the final imputation. top 250 most or least variable genes as determined using Seurat’s
+FindVariableFeatures command.
+weight
+i
+=CSi (1)
+Generation of primordia barcodes
+n
+expression(gene)= ∑ i=0 neighbouringExpression i weight i (2) Gene expression barcodes for different sections of the IM from WT
+∑ n weight and com1;com2 mutant plants were generated using PERSIST. One
+i=0 i
+barcode was generated for the sections P1–P19 and another for the
+Imputation quality assessment meristem tip and floret meristem of the WT and com1;com2 mutant.
+To evaluate the accuracy of the imputation method, the imputed During file preprocessing, highly variable genes were detected using
+gene expression values of the MC data were compared to the the flavour = ‘seurat’ setting. The data were split into test and training
+CPM-normalized smRNA-FISH gene expression values. The compari- sets to run the supervised training with default settings plus lam_
+son of imputed and experimentally measured values was applied for init = 0.64. After training, 20 genes were selected for each barcode
+the anchor genes (81 for the IM, 76 for the vSAM, 83 for the com1;com2 using default settings.
+mutant) using CS as the similarity measure (equation (3)). Gene expres-
+sion patterns were compared on a cell-by-cell basis. For genes not Data pre-processing
+measured in the MC data, the scRNA-seq data were used instead. Multiple input files were prepared for visualization based on Seurat
+clustering results, containing cell IDs, UMAP coordinates, cluster IDs
+cosinesimilarity(A,B)= A⋅B (3) and cluster names for all calculated resolutions. A data table was pre-
+||A||||B|| pared containing logFC and P values, and annotation information for
+2
+each gene from Seurat’s FindAllMarkers for each cluster and cluster
+where A is the gene expression vector of the experimentally measured resolution, including the top-level Mercator bin in the ‘classification’
+values, and B is the gene expression vector of the computationally column and the leaf-level Mercator bin in the ‘annotation’ column. The
+imputed values. count matrices were CPM normalized and rounded to zero decimal
+To further evaluate the accuracy of the method, the scRNA-seq points, compressed using gzip with six compression levels and saved
+data from the inflorescence was split into test and reference datasets separately in two matrices for the MC and SC data.
+using the third scRNA-seq batch containing 5,910 cells as test cells to Polygon coordinates were extracted in ImageJ/Fiji v.2.9.0/1.53t
+impute gene expression values for, and the cells of the first and second (Java 1.8.0_322; https://imagej.net/ij/; accessed 13 March 2024) by
+batches to impute the gene expression from. The first test set contained creating a 16-bit mask of the calcofluor image using the roi files from
+the same 81 genes from the MC, and the second test set contained all the cell segmentation. Briefly, the developed macro creates a new
+48,904 genes from the scRNA-seq experiment. For both test sets, the image file the same size as the original image with pixel values of zero,
+cell similarity determination step of the imputation was performed creating a black background. For each roi file containing one cell from
+using the 81 anchor genes. During validation of the imputation for the the segmentation, the pixel values were changed to the cell ID, creating
+first test set, we used the 81 anchor genes (scSub IM 81 genes), and for the 16-bit mask file. To extract polygon corner coordinates, we devel-
+the second test set we used all 48,904 genes (scSub IM 48,904 genes). oped a Python script using the pillow library v.9.4.0 (https://python-
+pillow.org/; accessed 13 March 2024), scipy v.1.10.1 (https://scipy.org/;
+Imputation quality simulations accessed 13 March 2024) and scikit-image v.0.19.3 (https://scikit-image.
+Gene expression imputation quality was simulated on different sub- org/; accessed 13 March 2024), which extracts pixel coordinates for
+sets of the scRNA-seq dataset from inflorescences to investigate the each cell and calculates their convex hull. Polygon corner coordinates
+impact of different settings on the imputation quality. The full dataset and the pixel value as cell ID were saved in JSON format to create a suit-
+consists of ~16,500 cells and 48,904 genes. Five different simulations able javascript input.
+were performed, each with five repetitions per parameter setting. Test
+datasets were generated containing 1,000 cells and the same genes as Web application BARVISTA
+the reference datasets. Gene expression was validated using all 48,904 For data visualization, we developed a web application in JavaScript
+genes in the cell-by-cell comparison of imputed to experimentally (https://www.plabipd.de/projects/hannah_demo/Barvista.html)
+measured gene expression values. with D3.jsv7.8.4 (https://d3js.org/; accessed 26 October 2023) as the
+Simulation 1: Impact of reference cell number. Subsets with main framework. The package dom-to-image v.2.6.0 (https://github.
+100–15,000 cells were tested. Gene expression was imputed using com/tsayen/dom-to-image/tree/master; accessed 13 March 2023) was
+81 anchors. used for image downloading. The gzipped expression matrices were
+Simulation 2: Impact of gene number. Subsets with 5,000 cells and streamed from the server to the client, making use of Decompression-
+20–40,000 randomly selected genes were tested. Gene expression was Stream from the Compression Streams API, ReadableStream from the
+imputed using the genes contained in the reference dataset during the Streams API and TextDecoder from the Encoding API. The web applica-
+cell similarity determination. tion visualizes the integrated barley data and has two main plots, one
+Simulation 3: Impact of the MC anchor genes on imputation accu- displaying the cell clusters (UMAP plot) and the other displaying the
+racy, compared to the random gene selection from simulation 2. Refer- cells within tissue sections. Clusters are colour coded and identified
+ence subsets were generated in the same manner as for simulation 2 in both plots. At the bottom of plots, a data table displays informa-
+for combinations of 20–80 genes. tion about a selected cluster, including the genes, their average logFC
+2
+Nature Plants | Volume 12 | January 2026 | 107–124 121
+
+===== PAGE 16 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+values, the percentage of cells in the selected cluster that express each 12. Hake, S. et al. The role of knox genes in plant development. Annu.
+gene (pct.1), the percentage of cells in all other clusters that express each Rev. Cell Dev. Biol. 20, 125–151 (2004).
+gene (pct.2) and their Mercator annotation. The table is searchable for 13. Kitagawa, M., Wu, P., Balkunde, R., Cunniff, P. & Jackson, D. An RNA
+genes or annotations of interest. The default resolution of the cluster exosome subunit mediates cell-to-cell trafficking of a homeobox
+data is 1.3, but a resolution selector allows visualization at resolutions mRNA via plasmodesmata. Science 375, 177–182 (2022).
+of 0.1–2.0 to show clustering with a higher or lower number of clusters. 14. Kitagawa, M., Xu, X. & Jackson, D. Trafficking and localization of
+Gene expression information can be visualized in both plots for two KNOTTED1 related mRNAs in shoot meristems. Commun. Integr.
+genes in parallel. Cells in the tissue plot can be selected with the selec- Biol. 15, 158–163 (2022).
+tion tool and gene expression can be downloaded as a subset for further 15. Kim, J. Y., Yuan, Z. & Jackson, D. Developmental regulation
+analysis of specific regions of interest. and significance of KNOX protein trafficking in Arabidopsis.
+Development 130, 4351–4362 (2003).
+Imputed differential gene expression analysis 16. Hong, L. & Fletcher, J. C. Stem cells: engines of plant growth and
+Subsets of cells in the tissue sections were selected using the selection development. Int. J. Mol. Sci. 24, 14889 (2023).
+cell tool in BARVISTA, aiming to capture IMs (IM-01 and IM-02), founder 17. Wakeman, A. & Bennett, T. Auxins and grass shoot architecture:
+cells (Fo-01 and Fo-02) and the first properly organized TSM primordia how the most important hormone makes the most important
+cells (P1-01 and P1-02). The matrices containing the imputed counts plants. J. Exp. Bot. 74, 6975–6988 (2023).
+were used to create a Seurat object and were then log normalized. 18. Li, X. et al. Spatiotemporal transcriptomics reveals key gene
+Cells from each category were considered as a cluster, and the imputed regulation for grain yield and quality in wheat. Genome Biol. 26,
+DEGs were calculated using the FindAllmarkers function in Seurat and 93 (2025).
+a MAST statistical method, with thresholds log.FC > 0.1, pct.1 > 0.25, 19. Wang, Y. et al. A spatial transcriptome map of the developing
+pct.2 < 0.5, P < 0.05 and a pct.1/pct.2 ratio >1.2. maize ear. Nat. Plants 10, 815–827 (2024).
+adj
+20. Perico, C. et al. Multiplexed in situ hybridization reveals distinct
+Reporting summary lineage identities for major and minor vein initiation during maize
+Further information on research design is available in the Nature leaf development. Proc. Natl Acad. Sci. USA 121, e2402514121 (2024).
+Portfolio Reporting Summary linked to this article. 21. Laureyns, R. et al. An in situ sequencing approach maps
+PLASTOCHRON1 at the boundary between indeterminate and
+Data availability determinate cells. Plant Physiol. 188, 782–794 (2022).
+Metadata associated with this investigation can be accessed at https:// 22. Xu, X. et al. Large-scale single-cell profiling of stem cells
+doi.org/10.60534/zfdth-2g147 (ref. 92). BARVISTA is accessible at uncovers redundant regulators of shoot development and yield
+https://www.plabipd.de/projects/hannah_demo/Barvista.html. trait variation. Dev. Cell (in the press); https://doi.org/10.1016/j.
+devcel.2025.07.024
+Code availability 23. Yao, J. et al. Spatiotemporal transcriptomic landscape of rice
+The code is available upon request to the authors. embryonic cells during seed germination. Dev. Cell 59, 2320–
+2332 e2325 (2024).
+References 24. Long, K. A. et al. Spatial transcriptomics reveals expression
+1. Kellogg, E. A. Genetic control of branching patterns in grass gradients in developing wheat inflorescences at cellular resolution.
+inflorescences. Plant Cell 34, 2518–2533 (2022). Preprint at bioRxiv https://doi.org/10.1101/2024.12.19.629411 (2024).
+2. Kellogg, E. et al. Early inflorescence development in the grasses 25. Liu, X. et al. Decoding cellular transcriptional regulatory networks
+(Poaceae). Front. Plant Science 4, 250 (2013). governing wheat inflorescence development. Preprint at bioRxiv
+3. Mangelsdorf, P. C. The origin and nature of the ear of maize. Bot. https://doi.org/10.1101/2025.01.18.633750 (2025).
+Mus. Leafl. Harv. Univ. 12, 33–75 (1945). 26. Marand, A. P. et al. The genetic architecture of cell type-specific
+4. Doebley, J. The genetics of maize evolution. Annu. Rev. Genet. 38, cis regulation in maize. Science 388, eads6601 (2025).
+37–59 (2004). 27. Ke, Y. et al. A single-cell and spatial wheat root atlas with
+5. Koppolu, R., Chen, S. & Schnurbusch, T. Evolution of cross-species annotations delineates conserved tissue-specific
+inflorescence branch modifications in cereal crops. Curr. Opin. marker genes and regulators. Cell Rep. 44, 115240 (2025).
+Plant Biol. 65, 102168 (2022). 28. Sun, Y. et al. Progressive meristem and single-cell transcriptomes
+6. Ramsay, L. et al. INTERMEDIUM-C, a modifier of lateral spikelet reveal the regulatory mechanisms underlying maize
+fertility in barley, is an ortholog of the maize domestication gene inflorescence development and sex differentiation. Mol. Plant 17,
+TEOSINTE BRANCHED 1. Nat. Genet. 43, 169–172 (2011). 1019–1037 (2024).
+7. Koppolu, R. et al. Six-rowed spike4 (Vrs4) controls spikelet 29. Guillotin, B. et al. A pan-grass transcriptome reveals patterns of
+determinacy and row-type in barley. Proc. Natl Acad. Sci. USA 110, cellular divergence in crops. Nature 617, 785–791 (2023).
+13198–13203 (2013). 30. Zhu, M. et al. Single-cell transcriptomics reveal how root tissues
+8. Zhong, J. et al. INTERMEDIUM-M encodes an HvAP2L-H5 ortholog adapt to soil stress. Nature 642, 721–729 (2025).
+and is required for inflorescence indeterminacy and spikelet 31. Xu, X. et al. Single-cell RNA sequencing of developing maize ears
+determinacy in barley. Proc. Natl Acad. Sci. USA 118, e2011779118 facilitates functional analysis and trait candidate gene discovery.
+(2021). Dev. Cell 56, 557–568.e6 (2021).
+9. Poursarebani, N. et al. COMPOSITUM 1 contributes to the 32. Adema, K., Schon, M. A., Nodine, M. D. & Kohlen, W. Lost in space:
+architectural simplification of barley inflorescence via meristem what single-cell RNA sequencing cannot tell you. Trends Plant Sci.
+identity signals. Nat. Commun. 11, 5138 (2020). 29, 1018–1028 (2024).
+10. Vardanega, I. et al. CLAVATA signalling shapes barley 33. Waddington, S. R., Cartwright, P. M. & Wall, P. C. A quantitative
+inflorescence architecture by controlling activity and determinacy scale of spike initial and pistil development in barley and wheat.
+of shoot apical and rachilla meristems. Nat. Commun. 16, 3937 Ann. Bot. 51, 119–130 (1983).
+(2025). 34. Satterlee, J. W. & Scanlon, M. J. Protoplast isolation from
+11. Li, G. et al. MADS1 maintains barley spike morphology at high undifferentiated maize seedling shoot tissue. Methods Mol. Biol.
+ambient temperatures. Nat. Plants 7, 1093–1107 (2021). 2464, 123–130 (2022).
+Nature Plants | Volume 12 | January 2026 | 107–124 122
+
+===== PAGE 17 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+35. Chan, L. L., McCulley, K. J. & Kessel, S. L. Assessment of cell 58. Juarez, M. T., Twigg, R. W. & Timmermans, M. C. Specification of
+viability with single-, dual-, and multi-staining methods using adaxial cell fate during maize leaf development. Development
+image cytometry. Methods Mol. Biol. 1601, 27–41 (2017). 131, 4533–4544 (2004).
+36. Zheng, G. X. et al. Massively parallel digital transcriptional 59. Bowman, J. L. & Smyth, D. R. CRABS CLAW, a gene that regulates
+profiling of single cells. Nat. Commun. 8, 14049 (2017). carpel and nectary development in Arabidopsis, encodes a
+37. Javelle, M. et al. Genome-wide characterization of the HD-ZIP IV novel protein with zinc finger and helix-loop-helix domains.
+transcription factor family in maize: preferential expression in the Development 126, 2387–2396 (1999).
+epidermis. Plant Physiol. 157, 790–803 (2011). 60. Tanaka, W. et al. The YABBY gene TONGARI-BOUSHI1 is involved
+38. Huang, Y. et al. A molecular framework for grain number in lateral organ development and maintenance of meristem
+determination in barley. Sci. Adv. 9, eadd0324 (2023). organization in the rice spikelet. Plant Cell 24, 80–95 (2012).
+39. Smith, L. G., Gerttula, S. M., Han, S. & Levy, J. Tangled1: a 61. Kumaran, M. K. et al. Molecular cloning of ABNORMAL
+microtubule binding protein required for the spatial control of FLORAL ORGANS: a gene required for flower development in
+cytokinesis in maize. J. Cell Biol. 152, 231–236 (2001). Arabidopsis. Sex. Plant Reprod. 12, 118–122 (1999).
+40. Wang, Y. et al. Spatial transcriptomics: technologies, 62. Honda, E. et al. LEAF LATERAL SYMMETRY1, a member of the
+applications and experimental considerations. Genomics 115, WUSCHEL-RELATED HOMEOBOX3 gene family, regulates lateral
+110671 (2023). organ development differentially from other paralogs, NARROW
+41. Wang, F. et al. Genome-wide analysis of the MADS-box gene LEAF2 and NARROW LEAF3 in rice. Plant Cell Physiol. 59, 376–391
+family involved in salt and waterlogging tolerance in barley (2018).
+(Hordeum vulgare L.). Front. Plant Sci. 14, 2023 (2023). 63. Nardmann, J., Zimmermann, R., Durantini, D., Kranz, E. & Werr,
+42. Moses, L. & Pachter, L. Museum of spatial transcriptomics. Nat. W. WOX gene phylogeny in Poaceae: a comparative approach
+Methods 19, 534–546 (2022). addressing leaf and embryo development. Mol. Biol. Evol. 24,
+43. Hao, Y. et al. Integrated analysis of multimodal single-cell data. 2474–2484 (2007).
+Cell 184, 3573–3587.e29 (2021). 64. Nakata, M. et al. Roles of the middle domain-specific
+44. Biancalani, T. et al. Deep learning and alignment of spatially WUSCHEL-RELATED HOMEOBOX genes in early development of
+resolved single-cell transcriptomes with Tangram. Nat. Methods leaves in Arabidopsis. Plant Cell 24, 519–535 (2012).
+18, 1352–1362 (2021). 65. Guo, Y. et al. Identification and expression of GRAS family genes
+45. Ji, Y. et al. Optimal distance metrics for single-cell in maize (Zea mays L.). PLoS ONE 12, e0185418 (2017).
+RNA-seq populations. Preprint at bioRxiv https://doi. 66. Li, X. et al. Control of tillering in rice. Nature 422, 618–621 (2003).
+org/10.1101/2023.12.26.572833 (2023). 67. Greb, T. et al. Molecular analysis of the LATERAL SUPPRESSOR
+46. Covert, I. et al. Predictive and robust gene selection for spatial gene in Arabidopsis reveals a conserved control mechanism for
+transcriptomics. Nat. Commun. 14, 2091 (2023). axillary meristem formation. Genes Dev. 17, 1175–1187 (2003).
+47. Tsuda, K. et al. YABBY and diverged KNOX1 genes shape nodes 68. Ohmori, S. et al. MOSAIC FLORAL ORGANS1, an AGL6-like MADS
+and internodes in the stem. Science 384, 1241–1247 (2024). box gene, regulates floral organ identity and meristem fate in rice.
+48. Thiel, J. et al. Transcriptional landscapes of floral meristems in Plant Cell 21, 3008–3025 (2009).
+barley. Sci. Adv. 7, eabf0832 (2021). 69. Thompson, B. E. et al. bearded-ear encodes a MADS box
+49. Mouchel, C. F., Briggs, G. C. & Hardtke, C. S. Natural genetic transcription factor critical for maize floral development. Plant
+variation in Arabidopsis identifies BREVIS RADIX, a novel regulator Cell 21, 2578–2590 (2009).
+of cell proliferation and elongation in the root. Genes Dev. 18, 70. Koo, S. C. et al. Control of lateral organ development and
+700–714 (2004). flowering time by the Arabidopsis thaliana MADS-box Gene
+50. Giaume, F. et al. Two florigens and a florigen-like protein form AGAMOUS-LIKE6. Plant J. 62, 807–816 (2010).
+a triple regulatory module at the shoot apical meristem to 71. Selva, C. et al. HvLEAFY controls the early stages of floral organ
+promote reproductive transitions in rice. Nat. Plants 9, 525–534 specification and inhibits the formation of multiple ovaries in
+(2023). barley. Plant J. 108, 509–527 (2021).
+51. Kaur, A., Nijhawan, A., Yadav, M. & Khurana, J. P. OsbZIP62/ 72. Poursarebani, N. et al. The genetic basis of composite spike form
+OsFD7, a functional ortholog of FLOWERING LOCUS D, regulates in barley and ‘miracle-wheat’. Genetics 201, 155–165 (2015).
+floral transition and panicle development in rice. J. Exp. Bot. 72, 73. Passalacqua, M. J. & Gillis, J. Coexpression enhances
+7826–7845 (2021). cross-species integration of single-cell RNA sequencing across
+52. Bahafid, E. et al. The Arabidopsis SHORTROOT network diverse plant species. Nat. Plants 10, 1075–1080 (2024).
+coordinates shoot apical meristem development with 74. Chickarmane, V. S., Gordon, S. P., Tarr, P. T., Heisler, M. G. &
+auxin-dependent lateral organ initiation. eLife 12, e83334 (2023). Meyerowitz, E. M. Cytokinin signaling as a positional cue for
+53. Egea-Cortines, M., Saedler, H. & Sommer, H. Ternary complex patterning the apical–basal axis of the growing Arabidopsis shoot
+formation between the MADS-box proteins SQUAMOSA, meristem. Proc. Natl Acad. Sci. USA 109, 4002–4007 (2012).
+DEFICIENS and GLOBOSA is involved in the control of floral 75. Hou, X. et al. Nuclear factor Y-mediated H3K27me3
+architecture in Antirrhinum majus. EMBO J. 18, 5370–5379 (1999). demethylation of the SOC1 locus orchestrates flowering
+54. Honma, T. & Goto, K. Complexes of MADS-box proteins are responses of Arabidopsis. Nat. Commun. 5, 4601 (2014).
+sufficient to convert leaves into floral organs. Nature 409, 76. Han, Y. et al. Mechanism of floral scent production in Osmanthus
+525–529 (2001). fragrans and the production and regulation of its key floral
+55. Dreni, L. in Flower Development: Methods and Protocols (eds constituents, β-ionone and linalool. Hortic. Res. 6, 106 (2019).
+Riechmann, J. L. & Ferrándiz, C.) 59–82 (Springer, 2023). 77. Hussin, S. H. et al. SiMADS34, an E-class MADS-box transcription
+56. Yamaguchi, T. et al. The YABBY gene DROOPING LEAF regulates factor, regulates inflorescence architecture and grain yield in
+carpel specification and midrib development in Oryza sativa. Setaria italica. Plant Mol. Biol. 105, 419–434 (2021).
+Plant Cell 16, 500–509 (2004). 78. Zhu, W. et al. Rice SEPALLATA genes OsMADS5 and OsMADS34
+57. Strable, J. & Vollbrecht, E. Maize YABBY genes drooping leaf1 and cooperate to limit inflorescence branching by repressing the
+drooping leaf2 regulate floret development and floral meristem TERMINAL FLOWER1-like gene RCN4. New Phytol. 233, 1682–1700
+determinacy. Development 146, dev171181 (2019). (2022).
+Nature Plants | Volume 12 | January 2026 | 107–124 123
+
+===== PAGE 18 =====
+
+Article https://doi.org/10.1038/s41477-025-02176-6
+79. Wuest, S. E. et al. Molecular basis for the specification of floral the data analysis and set up the BARVISTA website. I.V. performed
+organs by APETALA3 and PISTILLATA. Proc. Natl Acad. Sci. USA bulk RNA-seq analysis and assisted in the slide preparation
+109, 13452–13457 (2012). for smRNA-FISH, and with J.E.M. performed data analysis in
+80. Yamaguchi, T. et al. Functional diversification of the two C-class com1a;com2g. I.P.-V. carried out cell segmentation for data analysis.
+MADS box genes OSMADS3 and OSMADS58 in Oryza sativa. Plant S.E. edited the manuscript. T.L. and K.K. carried out the partitioning,
+Cell 18, 15–28 (2006). sequencing and genome mapping in scRNA-seq libraries. T.S.
+81. Selva, C. et al. HvSL1 and HvMADS16 promote stamen identity Provided biological materials. M.v.K., B.U. and R.S. acquired funding
+to restrict multiple ovary formation in barley. J. Exp. Bot. 74, and supervised the project. E.D.-A., H.D., I.V., J.E.M., M.v.K., B.U. and
+5039–5056 (2023). R.S. wrote, reviewed and edited the manuscript.
+82. Danaher, P. et al. InSituCor: exploring spatially correlated genes
+conditional on the cell type landscape. Genome Biol. 26, 105 (2025). Funding
+83. Finak, G. et al. MAST: a flexible statistical framework for assessing Open access funding provided by
+transcriptional changes and characterizing heterogeneity in Heinrich-Heine-Universität Düsseldorf.
+single-cell RNA sequencing data. Genome Biol. 16, 278 (2015).
+84. Trapnell, C. et al. The dynamics and regulators of cell fate Competing interests
+decisions are revealed by pseudotemporal ordering of single All authors declare no competing interests.
+cells. Nat. Biotechnol. 32, 381–386 (2014).
+85. Qiu, X. et al. Reversed graph embedding resolves complex Additional information
+single-cell trajectories. Nat. Methods 14, 979–982 (2017). Supplementary information The online version contains
+86. Cao, J. et al. The single-cell transcriptional landscape of supplementary material available at
+mammalian organogenesis. Nature 566, 496–502 (2019). https://doi.org/10.1038/s41477-025-02176-6.
+87. Gu, Z., Eils, R. & Schlesner, M. Complex heatmaps reveal
+patterns and correlations in multidimensional genomic data. Correspondence and requests for materials should be addressed to
+Bioinformatics 32, 2847–2849 (2016). Rüdiger Simon.
+88. Stringer, C., Wang, T., Michaelos, M. & Pachitariu, M. Cellpose: a
+generalist algorithm for cellular segmentation. Nat. Methods 18, Peer review information Nature Plants thanks Longjiang Fan, Zifeng
+100–106 (2021). Guo and Rosangela Sozzani for their contribution to the peer review
+89. Petukhov, V. et al. Cell segmentation in imaging-based spatial of this work.
+transcriptomics. Nat. Biotechnol. 40, 345–354 (2022).
+90. Schwacke, R. et al. MapMan4: a refined protein classification and Reprints and permissions information is available at
+annotation framework applicable to multi-omics data analysis. www.nature.com/reprints.
+Mol. Plant 12, 879–892 (2019).
+91. Lohoff, T. et al. Integration of spatial and single-cell transcriptomic Publisher’s note Springer Nature remains neutral with regard to
+data elucidates mouse organogenesis. Nat. Biotechnol. 40, 74–85 jurisdictional claims in published maps and institutional affiliations.
+(2022).
+92. Dörpholz, H., Demesa-Arevalo, E., Usadel, B. & Simon, R. Open Access This article is licensed under a Creative Commons
+Imputation integrates single-cell and spatial gene expression Attribution 4.0 International License, which permits use, sharing,
+data to resolve transcriptional networks in barley shoot meristem adaptation, distribution and reproduction in any medium or format,
+development [Data set]. DataPLANT. https://doi.org/10.60534/ as long as you give appropriate credit to the original author(s) and the
+zfdth-2g147 (2025). source, provide a link to the Creative Commons licence, and indicate
+if changes were made. The images or other third party material in this
+Acknowledgements article are included in the article’s Creative Commons licence, unless
+Research in the R.S. and M.v.K. laboratories is funded by the Deutsche indicated otherwise in a credit line to the material. If material is not
+Forschungsgemeinschaft (CEPLAS EXC2048 and CSCS FOR5235). included in the article’s Creative Commons licence and your intended
+B.U. acknowledges funding through CEPLAS EXC2048 p.no. use is not permitted by statutory regulation or exceeds the permitted
+390686111 and the NFDI DataPlant NFDI p.no. 442077441. use, you will need to obtain permission directly from the copyright
+holder. To view a copy of this licence, visit http://creativecommons.
+Author contributions org/licenses/by/4.0/.
+E.D.-A. carried out most of the experimental work and data
+analysis presented here. H.D. implemented, performed most of © The Author(s) 2026
+Edgar Demesa-Arevalo 1,2,3,9, Hannah Dӧrpholz 4, Isaia Vardanega 1, Jan Eric Maika 1, Itzel Pineda-Valentino 3,5,
+Stella Eggels 4, Tobias Lautwein 6, Karl Kӧhrer 6, Thorsten Schnurbusch 7,8, Maria von Korff2,3, Bjӧrn Usadel 3,4,5 &
+Rüdiger Simon 1,3
+1Institute for Developmental Genetics, Faculty of Mathematics and Natural Sciences, Heinrich-Heine University, Düsseldorf, Germany. 2Institute for
+Plant Genetics, Faculty of Mathematics and Natural Sciences, Heinrich-Heine University, Düsseldorf, Germany. 3Cluster of Excellence on Plant Sciences
+(CEPLAS), Heinrich-Heine University, Düsseldorf, Germany. 4Institute of Bio and Geosciences (IBG-4: Bioinformatics) and Bioeconomy Science Center
+(BioSC), Forschungszentrum Jülich, Jülich, Germany. 5Institute for Biological Data Science, Faculty of Mathematics and Natural Sciences, Heinrich-Heine
+University, Düsseldorf, Germany. 6Genomics and Transcriptomics Laboratory (GTL), Biological and Medical Research Center (BMFZ), Medical Faculty,
+Heinrich-Heine University, Düsseldorf, Germany. 7Research Group Plant Architecture, Leibniz Institute of Plant Genetics and Crop Plant Research
+(IPK), OT Gatersleben, Seeland, Germany. 8Institute of Agricultural and Nutritional Sciences, Faculty of Natural Sciences III, Martin Luther University
+Halle-Wittenberg, Halle, Germany. 9Present address: Genetic Engineering Department, Irapuato Unit, Center for Research and Advanced Studies of the
+IPN (Cinvestav), Irapuato, Mexico. e-mail: ruediger.simon@hhu.de
+Nature Plants | Volume 12 | January 2026 | 107–124 124
+
+===== PAGE 19 =====
+
+
+
+===== PAGE 20 =====
+
+
+
+===== PAGE 21 =====
+

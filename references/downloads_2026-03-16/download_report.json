@@ -1,0 +1,87 @@
+[
+  {
+    "status": "downloaded",
+    "path": "/Users/lilabzsm/Desktop/分形/references/downloads_2026-03-16/01_The_Algorithmic_Beauty_of_Plants_1990.pdf",
+    "url": "https://algorithmicbotany.org/papers/abop/abop.pdf",
+    "content_type": "application/pdf",
+    "size": 16810995,
+    "name": "01_The_Algorithmic_Beauty_of_Plants_1990"
+  },
+  {
+    "status": "downloaded",
+    "path": "/Users/lilabzsm/Desktop/分形/references/downloads_2026-03-16/02_A_genetic_network_for_the_extreme_repetition_and_diversity_of_cauliflower_NG_2024.pdf",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11176064/pdf/41588_2024_Article_1744.pdf",
+    "html_path": "/Users/lilabzsm/Desktop/分形/references/downloads_2026-03-16/02_A_genetic_network_for_the_extreme_repetition_and_diversity_of_cauliflower_NG_2024.html",
+    "size": 1817,
+    "name": "02_A_genetic_network_for_the_extreme_repetition_and_diversity_of_cauliflower_NG_2024"
+  },
+  {
+    "status": "downloaded",
+    "path": "/Users/lilabzsm/Desktop/分形/references/downloads_2026-03-16/03_Gene_network_dynamics_govern_the_cauli_and_romanesco_like_plant_shapes_Science_2021.pdf",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10027312/pdf/cureus-0015-00000036425.pdf",
+    "html_path": "/Users/lilabzsm/Desktop/分形/references/downloads_2026-03-16/03_Gene_network_dynamics_govern_the_cauli_and_romanesco_like_plant_shapes_Science_2021.html",
+    "size": 1817,
+    "name": "03_Gene_network_dynamics_govern_the_cauli_and_romanesco_like_plant_shapes_Science_2021"
+  },
+  {
+    "status": "failed",
+    "url": "https://www.pnas.org/doi/10.1073/pnas.0605475103",
+    "error": "HTTPSConnectionPool(host='www.pnas.org', port=443): Max retries exceeded with url: /doi/10.1073/pnas.0605475103 (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))",
+    "name": "04_Self_organizing_patterning_of_Arabidopsis_flowers_PNAS_2006"
+  },
+  {
+    "status": "failed",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0012160605001136",
+    "error": "403 Client Error: Forbidden for url: https://www.sciencedirect.com/science/article/pii/S0012160605001136",
+    "name": "05_Quantitative_Modeling_of_Arabidopsis_Development_DevBio_2005"
+  },
+  {
+    "status": "failed",
+    "url": "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14457",
+    "error": "403 Client Error: Forbidden for url: https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14457",
+    "name": "06_Fractal_approaches_to_characterize_the_structure_of_herbaceous_plants_MEE_2024"
+  },
+  {
+    "status": "failed",
+    "url": "https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.17509",
+    "error": "HTTPSConnectionPool(host='nph.onlinelibrary.wiley.com', port=443): Max retries exceeded with url: /doi/10.1111/nph.17509 (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))",
+    "name": "07_A_modern_view_of_the_complexity_of_leaf_venation_patterns_New_Phytologist_2021"
+  },
+  {
+    "status": "failed",
+    "url": "https://academic.oup.com/plphys/article/189/4/2244/6561731",
+    "error": "403 Client Error: Forbidden for url: https://academic.oup.com/plphys/article/189/4/2244/6561731",
+    "name": "08_How_well_can_we_predict_root_system_architecture_Plant_Physiology_2022"
+  },
+  {
+    "status": "failed",
+    "url": "https://academic.oup.com/jxb/article/76/4/1082/7965177",
+    "error": "403 Client Error: Forbidden for url: https://academic.oup.com/jxb/article/76/4/1082/7965177",
+    "name": "09_Cauliflowers_or_how_the_perseverance_of_a_simple_cellular_programme_can_create_elaborate_fractal_form_JXB_2025"
+  },
+  {
+    "status": "failed",
+    "url": "https://www.nature.com/nplants/aims",
+    "error": "HTTPSConnectionPool(host='www.nature.com', port=443): Max retries exceeded with url: /nplants/aims (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))",
+    "name": "10_Nature_Plants_aims_scope"
+  },
+  {
+    "status": "saved_html",
+    "path": "/Users/lilabzsm/Desktop/分形/references/downloads_2026-03-16/11_Nature_Genetics_aims_scope.html",
+    "url": "https://www.nature.com/ng/aims",
+    "content_type": "text/html; charset=\"UTF-8\"",
+    "name": "11_Nature_Genetics_aims_scope"
+  },
+  {
+    "status": "failed",
+    "url": "https://www.nature.com/nplants/guide-to-authors",
+    "error": "404 Client Error: Not Found for url: https://www.nature.com/nplants/guide-to-authors",
+    "name": "12_Nature_Plants_guide_to_authors"
+  },
+  {
+    "status": "failed",
+    "url": "https://www.nature.com/ng/guide-to-authors",
+    "error": "404 Client Error: Not Found for url: https://www.nature.com/ng/guide-to-authors",
+    "name": "13_Nature_Genetics_guide_to_authors"
+  }
+]

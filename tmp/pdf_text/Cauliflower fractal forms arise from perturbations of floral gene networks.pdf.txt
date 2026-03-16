@@ -1,0 +1,514 @@
+
+
+===== PAGE 1 =====
+
+RESEARCH
+PLANTSCIENCE andTFL1,therebystabilizingthefloralfate
+ofthenewmeristem.Intheap1calcauliflower
+Cauliflower fractal forms arise
+mutant, the AP1/LFY positive feedback is ab-
+sentandTFL1isnotrepressedbyAP1/CAL
+from perturbations of floral gene networks
+inthenascentfloralmeristem.Consequent-
+ly,youngflowerprimordiacannotmaintain
+EugenioAzpeitia1†,GabrielleTichtinsky2,MarieLeMasson2,AntonioSerrano-Mislata3, LFYexpressionandstartexpressingTFL1.As
+JérémyLucas2,VeronicaGregis4,CarlosGimenez3,NathanaëlPrunet5,6,EtienneFarcot7, aresult,theylosetheirfloralidentityandbe-
+MartinM.Kater4,DesmondBradley8,FranciscoMadueño3,ChristopheGodin1*,FrancoisParcy2* come inflorescence meristems (6). Whereas
+TFL1repressioninnascentflowerprimordia
+Throughoutdevelopment,plantmeristemsregularlyproduceorgansindefinedspiral,opposite,orwhorl is well understood, the factors directly re-
+patterns.Cauliflowerspresentanunusualorganarrangementwithamultitudeofspiralsnested sponsibleforitsup-regulationinap1caland
+overawiderangeofscales.Howsuchafractal,self-similarorganizationemergesfromdevelopmental inflorescencemeristemsareunknown.
+mechanismshasremainedelusive.CombiningexperimentalanalysesinanArabidopsisthaliana Tocompleteournetwork,wethussearched
+cauliflower-likemutantwithmodeling,wefoundthatcurdself-similarityarisesbecausethe for direct positive regulators of TFL1 other
+meristemsfailtoformflowersbutkeepthe“memory”oftheirtransientpassageinafloralstate. thanLFY[whichinducesTFL1(15)butisnot
+Additionalmutationsaffectingmeristemgrowthcaninducetheproductionofconicalstructures activeininflorescencemeristems].TFL1isin-
+reminiscentoftheconspicuousfractalRomanescoshape.Thisstudyrevealshowfractal-like directlyregulatedbydaylength(16):Duringlong
+formsmayemergefromthecombinationofkey,definedperturbationsoffloraldevelopmental days(LDs),TFL1isup-regulatedbyCONSTANS
+programsandgrowthdynamics. (CO)andFLOWERINGLOCUST(FT),twokey
+upstreameffectorsoftheLDpathway(11,17–19)
+A
+(fig.S1).Tosearchfordirectregulators,weex-
+bove-ground plant architectures arise stagebutinsteadgeneratesmorecurd-shaped amined SOC1 and AGL24, which act down-
+fromtheactivityofshootapicalmeri- inflorescences(2,3).InB.oleracea,thegenetic streamofCOandFTintheLDpathway(9).
+stems (SAMs), pools of stem cells that modifications causing curd development are Loss-andgain-of-functionexperimentsdem-
+giverisetoorganssuchasleaves,shoots, still debated and likely affect multiple genes onstratedthatbothSOC1andAGL24induce
+orflowers.Thearrangementoforgans (2–5).However,cauliflower-likestructuresalso TFL1(Fig.2,AtoI)andchromatinimmuno-
+onstemsiscalledphyllotaxis.Plantswitha existinthemodelBrassicaceaeArabidopsis precipitation(ChIP)showedthatthese two
+spiral phyllotaxisusuallyformtwofamilies thalianaandarecausedbyadoublemutation TFsbindtotheTFL1regionsthatregulateits
+oforganspiralsthatarevisibleoncompact inAPETALA1(AP1)andCAULIFLOWER (CAL) expression in the SAM (20) (Fig. 2, J to L).
+structuressuchasflowerheads,pinecones, (Fig.1,HandI),twoparalogousgenesencod- These regions were sufficient to activate a
+orcacti(Fig.1,AtoC).Thesetwofamiliesof ingMADS-boxtranscriptionfactors(TFs)pro- TFL1reporterconstructbySOC1andAGL24
+spiralsturninoppositedirectionsandcome motingfloraldevelopment(6,7).TheArabidopsis inatransientassay(Fig.2,MandN),confirm-
+intwoconsecutivenumbersoftheFibonacci molecular regulators governing the develop- ing that both MADS-box TFs are direct reg-
+series(Fig.1A)(1).Incauliflowers,spiralfam- mentofshootsandflowershavebeenlargely ulatorsofTFL1.BecauseXAANTAL2(XAL2),a
+iliesarevisiblenotonlyatonebutatseveral identified (8–10) (table S1). Network models homologofSOC1andAGL24,alsoboundtoand
+scales(Fig.1,DtoF).Thisself-similarorgani- basedontheseregulatorshavebeenproposed inducedTFL1(21),weaggregatedtheactivities
+zationculminates inthe Romanescocultivar toexplainflowerandinflorescencedevelopment ofSOC1,AGL24,andXAL2intoaSAXproxy
+inwhichthespiralsappearinreliefbecauseof (11–14).However,whethervariantsofthesenet- actingasaTFL1positiveregulator(Fig.3A).
+theirconicalshapeatallscales,ageometrical worksareabletoaccountforthedevelopment WethuscreatedtheSALTnetwork(forSAX,
+feature conferring the whole curd a marked ofArabidopsisap1calcurdsisunknown. AP1/CAL,LFY,andTFL1;Fig.3A)madeofthese
+fractal-likeaspect(Fig.1G). Toaddressthisquestion,wefirstbuiltanet- fourregulatorsets,auxin(22),andF,aflower-
+Cauliflowers(Brassicaoleraceavar.botrytis) workofthemainregulatorsinvolvedinboth inducingsignal(aproxyfortheFTflorigen)
+were domesticated from cabbages (2). The flowerandcurddevelopment.Then,weem- thatincreaseswhentheplantagesorisex-
+cauliflower inflorescence (the flower-bearing beddedthisnetworkwithinathree-dimensional posedtoflower-inducingenvironmentalcon-
+shoot)takesacurdshapebecauseeachemerg- (3D) computational model of plant develop- ditions (23,24). We also added a short-lived
+ingflowerprimordianevermaturestothefloral menttounderstandhowmutationscouldtrans- transientearlyRepressorofTFL1(eREP)asa
+formwild-type(WT)inflorescencesintocurds. proxyforTFL1earlyrepressionintheyoung
+1LaboratoiredeReproductionetDéveloppementdesPlantes, flowerbudperformedbytheredundantac-
+Univ.Lyon,ENSdeLyon,UCBLyon1,CNRS,INRAE,Inria, Geneticbasisofcauliflowercurds tivitiesofSOC1,AGL24,SHORTVEGETATIVE
+F-69364Lyon,France.2LaboratoirePhysiologieCellulaireet
+Végétale,Univ.GrenobleAlpes,CNRS,CEA,INRAE,IRIG- InArabidopsis,flowersareinitiatedbytheTF PHASE,andSEPALLATA4(25).
+DBSCI-LPCV,F-38054Grenoble,France.3Institutode LEAFY(LFY)(Fig.1J)(tableS1).LFYisup-regulated ThesteadystatesoftheSALTnetworkcor-
+BiologíaMolecularyCelulardePlantas(IBMCP),Consejo bytheSUPPRESSOR-OF-OVEREXPRESSION- respondtothegeneexpressionpatternsob-
+SuperiordeInvestigacionesCientíficas(CSIC)-Universidad
+PolitécnicadeValencia(UPV),46022Valencia,Spain. OF-CO1(SOC1)andAGAMOUS-LIKE24(AGL24) servedinWTvegetative(lowSALTvalues),
+4DipartimentodiBioscienze,UniversitàdegliStudidiMilano, MADS-boxproteins(inducedthroughoutthe inflorescence(highTFL1/SAX,lowAP1/CAL/
+20133Milan,Italy.5DivisionofBiologyandBiological
+inflorescencemeristembyenvironmentaland LFY),andflower(lowTFL1/SAX,highAP1/CAL/
+Engineering,CaliforniaInstituteofTechnology,Pasadena,
+CA91125,USA.6DepartmentofMolecular,Celland endogenouscues)andbyauxinphytohormone LFY)meristems(Fig.3,BandC,andfig.S2).
+DevelopmentalBiology,UniversityofCalifornia,LosAngeles, maxima thatmarkfloral meristeminitiation AboveacertainFthresholdvalue,thenetwork
+CA90095,USA.7SchoolofMathematicalSciences, sites. LFY is expressed specifically in floral generatesafloweroraninflorescencestatede-
+UniversityofNottingham,NottinghamNG72RD,UK.
+8DepartmentofCellandDevelopmentalBiology,JohnInnes primordiabecauseitsinductionintheSAMis pendingonFandauxinvalues.Simulationsof
+Centre,NorwichNR47UH,UK. repressed by the TFL1 inflorescence identity tfl1,lfy,ap1calmutantsproducedtheexpected
+*Correspondingauthor.Email:christophe.godin@inria.fr(C.G.); protein.Inthefloralprimordium,LFYinduces outputsconsistentwithexperimentallyreported
+francois.parcy@cea.fr(F.P.) †Presentaddress:Centrode
+AP1andCAL(AP1/CAL),whichpositivelyfeed- geneexpressions(6,16,26,27)(Fig.3,BandC).
+CienciasMatemáticas,UniversidadNacionalAutónomadeMéxico,
+Morelia,México. backonLFYandrepressbothSOC1/AGL24 Thesimulatedsaxmutantdidnotreachafloral
+Azpeitiaetal.,Science373,192–197(2021) 9July2021 1of6
+Downloaded
+from
+http://science.sciencemag.org/
+on
+July
+9,
+2021
+
+===== PAGE 2 =====
+
+RESEARCH | RESEARCHARTICLE
+A B C TheSALTnetworkthusrecapitulatesreal-
+isticgeneexpressionsdrivingmeristemfates.
+However, a plant architecture depends not
+justonmeristemfatesbutalsoonmorphody-
+namicparameters,includingmolecularthresh-
+oldsforfatedecisions,organgrowthrate,delay
+formeristemstostartorganproduction,and
+organproductionrate,whichareindependently
+regulated.Plantinflorescencearchitecturethus
+emerges from the complex interaction be-
+tweenthefloralgene-regulatorynetwork(GRN)
+D E F and morphodynamic parameters. Thisisil-
+lustratedherebythelfyandap1calmutants
+that have the same GRN outputs (Fig. 3C)
+butmarkedlydifferentarchitectures(6,27).
+!!!!!!! """""""""""""""""" To study how this interaction operates in
+Arabidopsis,weintegratedtheSALTGRNin
+a3Dplantcomputationalmodelimplemented
+asanL-system(seethesupplementarymate-
+rials,modelingmethods).
+AmultiscalemodelgeneratesArabidopsis
+G H I
+cauliflowerstructures
+The3Dmodelismadeofthefourtypesofor-
+gansthatshapeplantabove-groundarchitec-
+ture:meristems,internodes,leaves,andflowers
+(Fig. 4A and see the supplementary mate-
+rials). Each meristem’s identity (vegetative,
+inflorescence,andfloral)isdeterminedbythe
+GRNsteadystate,computedateachtimestep
+asafunctionofthemeristem’spreviousstate
+J andexternalfactors(auxinandF).TheGRN
+TFL1
+modelisimplementedassingle-compartment
+Auxin ordinary differential equations (see the sup-
+plementarymaterials,modelingmethods).We
+AP1
+LFY assumethattheGRNdynamicsarefasterthan
+CAL
+growthandreachsteadystatewithinatime
+SOC1
+step.Asetofgrowthrulesdefinesmeristempro-
+AGL24
+duction:Avegetativemeristemproducesacom-
+pressedstem(non-elongatedinternodes)with
+Fig.1.Illustrationsofphyllotacticspiralsonplantinflorescences.(A)Daisycapitulum.Thetwofamilies
+rosetteleavesanddormantaxillarymeristems;
+ofspiralsareindicatedintheclose-up(13bluespiralsand21red).(B)Dahliacompositeflower.(C)Zingiber
+aninflorescencemeristemproducesanelongat-
+inflorescence.(DtoF)B.oleraceavar.botrytiscauliflowerwitheightcounterclockwise[(E);brownfamily]
+inginternodewitheitheracaulineleafanda
+andfiveclockwise[(F);greenfamily]mainspirals.Dashedrectanglesshowfamiliesofspiralsnestedover
+newaxillaryshootmeristemintheleafaxilora
+severalscales.(GtoI)Romanescocurd(G),ArabidopsisWTinflorescence(H),andap1calcurd(I).Scale
+bars,2cm[(A)to(G)];500mm[(H)and(I)].(J)Interactionsbetweenmajorfloralregulators;arrows lateralflowermeristem;andafloralmeristem
+producesaninternodeterminatingwithaflower
+depictactivationandbarredlinesindicaterepression.
+meristemdevoidofbracts(leaf-likeorganssub-
+tendingflowers)becausetheyarerepressedby
+state,consistentwiththelate-floweringbehav- quences: (i) LFY expression is up-regulated LFY(6).Eachnewlygeneratedaxillarymeristem
+iorofthesoc1agl24doublemutant(28). onlytransientlybecauseAP1/CALpositivefeed- beginswithmaximalauxinlevel(22),SAX/LFY/
+Themodeledgeneexpressiondynamics(Fig. backismissing(Fig.3D)and(ii)SAXgenesare AP1/CAL values inherited from the parent
+3D)illuminate the fundamental differences notrepressedbyAP1andthusinduceTFL1in meristem,togetherwithafractionofthepar-
+betweenWTandcauliflowermeristems:Ina nascent flowermeristems. TFL1 represses LFY entTFL1valuebecauseintherealplant,this
+WTflowerprimordium,FinducesSAX.SAX evenfurtherandthemeristemreturnstoa non–cell-autonomous protein is present in
+andauxininduceLFY,which,togetherwithF, shoot meristem state (Fig. 3D). The early theprimordiaregion(30).TomatchtheWT
+inducesAP1/CAL.AP1positively feedsback LFY induction would likely be reinforced plantarchitecture,indeterminatemeristems
+onLFYandrepressesSAX(Fig.3D).TFL1ex- (while remaining transient) by incorporat- atorders>2(Fig.4A)werekeptquiescent,a
+pression,whichcouldbeinducedbySAXand ing therecentlydiscovereddirectinduction likely effect of apical dominance (the inhibi-
+LFYinearlyfloralstages,isconstantlyrepressed, ofLFYbytheFpartnerproteinFD(29).The tionoflateralmeristemoutgrowth)(fig.S3A).
+firstbyeREPandlaterbySAXplusAP1/CAL. SALT model predicts that SAX expression Themodelalsocontainsrulesdescribingorgan
+High AP1/CAL and LFY with low TFL1 and shouldextendovertheentirecauliflower.We growthdynamics(internodeandleafelongation,
+SAX expression stabilize the floral fate. By analyzedaSOC1-GFPreporterlineandindeed flower growth, organ production rate, and
+contrast,intheap1calflowerprimordia,the observedexpansionofitsexpressiondomain growthinitiationdelay).Simulatedplantsstart
+absenceofAP1/CALactivityhastwoconse- inap1calcomparedwithWT(Fig.3,EandF). withasinglevegetativeSAMandrepeatedly
+Azpeitiaetal.,Science373,192–197(2021) 9July2021 2of6
+Downloaded
+from
+http://science.sciencemag.org/
+on
+July
+9,
+2021
+
+===== PAGE 3 =====
+
+thresholdlevel.Up-regulatedfactorXreleases
+high-order meristem growth and suppresses
+the bract. This was sufficient to unlock the
+recursivegrowthoflateralmeristemsandto
+generatetheap1calcurdstructurethatarises
+fromthetransientbutirreversibleexposureof
+meristemstothefloralsignalwithoutanyal-
+terationofWTgrowthdynamics(Fig.4,Eand
+H,and movie S3). Overall, our work shows
+thattheap1calandlfyarchitecturesaredif-
+ferent(Fig.3C)becausethemolecularhistories
+oftheirinflorescencemeristemsaredifferent,
+thereby revealing the existence of a develop-
+mentalhysteresis.
+Growthdynamicsdefinecauliflowerand
+Romanescocurdstructures
+Our workinArabidopsisoffersa conceptual
+frameworktoexplainhowinflorescencearchi-
+-2.2 -0.3 +1.0 +1.6 +2.8 +3.3 +4.5 tectureemergesfromcouplingafloralGRN
+I TFL II III IV V tomorphodynamicparameters.Wewondered
+1 1 2 3 4 5 6 whether modifications affecting components
+ofthisframeworkcouldalsoexplainthearchi-
+tecture of the cauliflowers that arose during
+10 AGL24 domestication,namelytheedibleB.oleracea
+(Bo)var.botrytis(Bob)anditsRomanescovar-
+iant.WhethersimilargeneticdefectsasinAra-
+5 bidopsisareresponsibleforcurddevelopment
+inB.oleraceaisstilldebated(4,5).Tofurtherin-
+0 vestigatethispoint,weanalyzedRNA-sequencing
+dataofBobcurds.Weconfirmedthepreviously
+identified mutationinthe BobCALgene(fig.
+S4A)(4,5,7)andobservedthatthetwoAP1
+paralogs,BobAP1-aandBobAP1-c,areexpressed
+atmuchlowerlevelsthanincabbage(Bovar.
+capitata)inflorescences(fig.S4B).Thesefunc-
+tionalproteinsareinducedwithadelayonly
+whenthecauliflowerelongatesandstartsform-
+ingnormalflowers(3,33).Comparingcauli-
+flowerandcabbagesequences,weidentified
+differencesinbindingsitesforcandidatereg-
+ulatorsofBoAP1thatcouldaccountfortheir
+delayed activation (fig. S4D). The combina-
+tion of BoCAL inactivation and BobAP1-a/c
+expressiondelay(heterochronycausedbycis
+ortransmutations)thuslikelyparticipatesin
+produceneworgansaccordingtotheGRN,the causeaccordingtoourGRN,theyhavebeen Bobcurddevelopment.SimilartoArabidopsis
+morphodynamicrules,andaninputvalueofF. transiently exposed to LFY expression (Fig. ap1cal,cauliflowershavemeristemsofhigher
+ByadjustingtheGRNandmorphodynamic 3D).Severalpiecesofevidencesuggestthat maximalorder(n≥7)thancabbages(n=3
+parameterswithinarangeofplausiblevalues thistransientLFYexpression,alreadyknown to4)(fig.S5).Nevertheless,thedevelopment
+(see the supplementary materials), we suc- torepressbracts(6),couldalsocontributeto ofsinglemassivecauliflowercurdsisnotthe
+cessfully calibrated the model to produce high-order meristem release.First,theout- exactequivalentoftheArabidopsismutant
+realistic architectures for WT and lfy plants growthofotherwiseinhibitedaxillarymeris- (3,5)andinvolvesadditionalmultifactorial
+(movies S1 and S2), as well as for the tfl1 tems in the rosette is stimulated by ectopic alterations of morphodynamics parameters
+mutant(Fig.4,BtoD)andanonflowering expressionofLFY(oranLFYallele)(31,32). (suchasreductionofinternodeelongationand
+phenotypeforthesaxmutant.However,our Second,itwasestablishedthatthelfyap1cal increaseinbranchdiameter).
+simulationscouldnotgeneratearealisticap1 triplemutantdoesnotformcauliflowers(6), TheconicalshapesappearinginRomanesco
+calmutantgrowingwithoutbractorcauline andwefoundthatinthismutant,thenumber spiralsatallscales(Fig.1F)representanaddi-
+leavesanddisplayinghigh-ordermeristems ofhigh-ordermeristemswassignificantlyre- tional geometric variation obtained through
+(fig.S3,AandB),suggestingthatthecauli- ducedcomparedwithap1cal(fig.S3,DtoH), domestication that seems to be associated
+flower phenotype involves additional regu- thussupportingourhypothesis. withachangeinmorphodynamicparameters.
+lations.Wereasonedthatlaterallyproduced Weabstractedthiscriticalmolecularpath- Indeed,severalsuchparametersremaincon-
+ap1calinflorescencemeristemsaredifferent waybyintroducinginthemodelafactorX stantduringcauliflowerdevelopmentbutvary
+fromthoseproducedinothergenotypesbe- up-regulated when LFY exceeds a minimal inRomanesco (34): (i) the plastochron, the
+Azpeitiaetal.,Science373,192–197(2021) 9July2021 3of6
+dlof
+tnemhcirnE
+dlof
+tnemhcirnE
+A B C
+WT soc1-2 agl24-2
+D E F
+– NGA3AGL24
+WT WT WT
+G H I
+35Sp:SOC1 35Sp:SOC1 35Sp:SOC1
+J
+K L
+SOC1 10
+5
+0
+1 2 3 4 5 6 1 2 3 4 5 5
+oitar
+NER/CUL
+M TFL1pregion IV:LUC
+0.017
+0.15
+0.10
+0.05
+0.0
+TFL1pregion V:LUC
+0.10
+0.05
+– NGA3 SOC1
+oitar
+NER/CUL
+RESEARCH | RESEARCHARTICLE
+N
+0.001
+0.15
+0.0
+Fig.2.AGL24andSOC1aredirectpositiveregulatorsofTFL1.(AtoC)TFL1p:GUSactivityinWT(A),
+soc1-2(B),andagl24-2(C)inflorescenceapices.(DtoI)TFL1p:GUSactivity(bluesignal)inWT[(D)to(F)]
+and35Sp:SOC1[(G)to(I)]apicesatthevegetative[(D)and(G)]andflowering[(E),(F),(H),and(I)]stages.
+(F)to(I)arelongitudinalsectionsthroughfloweringshoots.ArrowsmarktheSAM.Scalebarsin(F)and
+(I),40mm.(JtoL)StructureofTFL1locus,withregionsconservedinBrassicaceae(pinklines),regulatory
+regions(20)(blueboxesItoV),andfragmentsusedinChIP(blacklines1to6).ChIPexperimentson
+plantsexpressingataggedversionofAGL24[(K),whitebars]ortheWTSOC1protein[(L),whitebars]oron
+controlplants[(K)and(L),graybars;seethesupplementarymaterialsandmethods]showedthatAGL24
+bindsregionIV[(K),fragments4and5]andSOC1regionV[(L),fragment6].Arepresentativebiological
+replicateisshownwiththemean±SEforthreetechnicalreplicates.(MandN)Transientassaysshowing
+transactivationoftheLUCIFERASE(LUC)reporterdrivenbyregionIV(activationby35Sp:AGL24)and
+regionV(activationby35Sp:SOC1).NGA3isanunrelatedTFusedasanegativecontrol.Barsdenotethemean±
+SDofthreeindependentbiologicalreplicates.Pvaluesarefortheequalityofmeans(Student’sttest).
+Downloaded
+from
+http://science.sciencemag.org/
+on
+July
+9,
+2021
+
+===== PAGE 4 =====
+
+RESEARCH | RESEARCHARTICLE
+A B
+WT
+ap1
+cal
+SAX AP1 LFY TFL1
+C
+WT tfl1 ap1 cal lfy
+e
+at
+st
+SAM y
+d
+a
+e
+St
+SAX AP1/CAL LFY TFL1
+e
+at
+Lateral st
+meristem d y
+a
+e
+St
+F value F value F value F value
+D E F
+n
+o
+si
+s
+WT e
+pr
+x
+e
+e
+n
+e
+G
+ap1
+WT * cal *
+n
+o
+si
+ap1 e s
+cal pr
+x
+e
+e
+n
+e
+G
+time
+Fig.3.SALTGRNmodelandexperimentalvalidation.(A)SALTGRN identitypredictedforWTandallmutantmeristemscorrespondtothe
+networkstructure.(B)KnownexpressionpatternsofSAX,AP1/CAL,LFY,and experimentallyobservedphenotypes.(D)Temporalsimulationofgene
+TFL1intheSAMandlateralprimordiaoftheWTandtheap1calmutant. expressioninlateralprimordiawithhighFvalues.(EandF)Expression
+Thequestionmarkindicatesapredictedexpressionpatternofthemodel. oftheSOC1:GFP(white/lightbluesignal)reporterconstructinWT
+(C)WT,tfl1,ap1cal,andlfysteadystatesofthemodelatdifferentFvaluesin (E)andap1-7cal-1mutant(F)inflorescences.AsterisksmarktheSAM.
+theSAM(lowauxin)andinlateralmeristems(highauxin).Thegenetic Scalebars,50mm.
+timebetweentwosuccessivemeristemproduc- the meristem central zone should decrease Romanescoshapes(Fig.4G),whereasconstant
+tions,(ii)thenumberofvisual spiralsorig- theplastochron,whichinturnincreasesthe values of this parameter produce cauliflower
+inatingfromagivenmeristem,(iii)thetime number of spirals, and the lateral production morphologies(Fig.4F).
+(measuredinnumberofplastochrons)needed onsetdelay.Wethushypothesizedthatpassing Wethenintroducedthesamechangeinthe
+beforealateralprimordiumstartsproducing fromaconstanttoadecreasingplastochron morecomplex,GRN-basedArabidopsiscauli-
+itsownprimordia(orlateralproductionon- inmeristemscouldchangecauliflowerinto flower architectural model while keeping its
+setdelay),and(iv)thesizeofthemeristems. Romanescomorphologies.Wefirsttestedthis organgrowthdynamicsascalibratedonthe
+Whethersomeoftheseparametersarecausal in silico using a simplified, purely geometric WT.Althoughnotascompleteasinthepurely
+totheRomanescophenotyperemainsunclear, modelofcurdgrowththatisindependentfrom geometricmodel,thecurdchangedtowarda
+butphyllotaxisstudies(1,35,36)indicatethat theArabidopsisGRNandspecificgrowthdy- “Romanesco-like”morphologywithtypical
+the first three parameters are linked to the namics (see the supplementary materials). A conical curd shapes (Fig. 4, H and I). We
+meristemsize:Anaugmentationofthesizeof decreasingplastochronwassufficienttoproduce thentestedthishypothesisexperimentallyin
+Azpeitiaetal.,Science373,192–197(2021) 9July2021 4of6
+Downloaded
+from
+http://science.sciencemag.org/
+on
+July
+9,
+2021
+
+===== PAGE 5 =====
+
+RESEARCH | RESEARCHARTICLE
+Arabidopsis by altering the size of the meri- inggrowth(37,38).Aspredictedbyouranal- atdifferentscales,featuresrecognizedashall-
+stemdirectly.Weachievedthisbyintroducing ysis,introductionofaclv3mutationinap1cal marksofRomanescocurds(39)(Fig.4,Land
+amutationintheCLAVATA3(CLV3)genethat Arabidopsismutantmodifiedthecurdshape, M).Twoadditionalpiecesofevidencesupport
+controls meristem homeostasis and induces whichlostitsroundmorphologyandacquired thehypothesisthatmeristemhomeostasisisper-
+anincreaseofthemeristemcentralzonedur- amoreconicalshape,withsimilarstructures turbedinRomanescocurds:(i)theyoccasionally
+A Δt
+Meristem
+1 State (t) State (t+Δt)
+Internode = [S,A,L,T,F,Aux]
+L-System
+Flower [S,A,L,T,F, Aux]
+model
+Leaf 3
+Updated New inherited state
+123Meristem 2 State (t) Δt [S,A,L,T] [S',A',L',T',F', Aux']
+order at t+Δt
+GRN
+model
+B C D E
+WT Ify tfl1 ap1 cal
+F H J K N
+L M
+G I
+O
+Fig.4.SimulationandassessmentofaGRN-basedplantdevelopmentmodel. (BtoE)PlantmorphologiesobtainedintheWT(B),lfy(C),tfl1(D),andap1cal(E)
+(A)SchematicrepresentationofthemultiscalemodelofArabidopsisdevelop- simulations.(FtoI)Simulatedmorphologieswithconstant[(F)and(H)]orincreased
+ment.Eachmeristemstateiscomposedofsignallevels(auxin,F)andaGRNsteady [(G)and(I)]meristemproductionrateinasimplifiedmodel[(F)and(G)]andinthe
+state.Attimet,theplantismadeupofacollectionoforgans(left).Attimet+Dt(right), Arabidopsismodel[(H)and(I)].(JtoO)Lightmicrographs[(J),(L),and(N)]and
+themodelupdatesthesignallevelsandGRNstateineachmeristem.Thesteady SEM[(K),(M),and(O)]ofcauliflowerstructuresinArabidopsisap1cal[(J)and
+statedefinestheidentityofthemeristems(vegetative,inflorescence,orflower)usedto (K)],Arabidopsisap1calclv3[(L),(M),and(O)],andRomanesco(N).The
+computemeristemlateralproductions.Greennumbersindicatemeristemorder. uninducedAP1:GRtransgeneispresentinplants(J)to(M).Scalebars,500mm.
+Azpeitiaetal.,Science373,192–197(2021) 9July2021 5of6
+Downloaded
+from
+http://science.sciencemag.org/
+on
+July
+9,
+2021
+
+===== PAGE 6 =====
+
+RESEARCH | RESEARCHARTICLE
+showfasciation,afeaturetypicalofmeristem 11. K.E.Jaeger,N.Pullen,S.Lamzin,R.J.Morris,P.A.Wigge, E.Giraud,R.Dumas,andV.Martin(OBS,France)forproviding
+enlargementalsoobservedinclv3orap1cal PlantCell25,820–833(2013). cauliflowersamples;L.BoussetVaslinforimagesandbranch
+clv3mutants(Fig.4,NandO)(37);and(ii)the 12. C.Espinosa-Soto,P.Padilla-Longoria,E.R.Alvarez-Buylla, counting;F.BoudonforhelpwithL-Py;R.Immink(Wageningen,
+PlantCell16,2923–2939(2004). Netherlands),C.Ferrándiz(IBMCP;Spain),G.Coupland(MPIPZ,
+expression of CLV3 (and possibly two other 13. F.LealValentimetal.,PLOSONE10,e0116973(2015). Germany),M.ÁngelBlázquez(IBMCP,Spain),R.Amasino
+genes acting in the same pathway) (38) is 14. P.Prusinkiewicz,Y.Erasmus,B.Lane,L.D.Harder,E.Coen, (UWM,USA),andtheEuropeanArabidopsisStockCentreforproviding
+lowerinRomanescocurdsthanincauliflow- Science316,1452–1456(2007). seeds;V.Berger(CEA/DRF)forfinancingtheKeyencemicroscope;
+15. K.Goslinetal.,PlantPhysiol.174,1097–1109(2017). andC.Lancelon-Pin(Plateaudemicroscopieélectronique-ICMG.
+ers(fig.S6).Altogether,theseobservationses-
+16. C.Ferrándiz,Q.Gu,R.Martienssen,M.F.Yanofsky, CERMAV-CNRS)forhelpwithSEMexperiments.Funding:
+tablishthatmeristemsizeregulatesthefinal Development127,725–734(2000). ThisworkwassupportedbytheINRAECaulimodelproject(toF.P.and
+curd morphology through control of plasto- 17. D.Bradley,O.Ratcliffe,C.Vincent,R.Carpenter,E.Coen, C.Go.);InriaProjectLabMorphogenetics(toC.Go.,E.A.,andF.P.);
+Science275,80–83(1997). theANRBBSRCFlowermodelproject(toF.P.andC.Go.);theGRAL
+chronvalue.
+18. X.Houetal.,Nat.Commun.5,4601(2014). LabEX(ANR-10-LABX-49-01)withintheframeworkoftheCBH-
+Theseresultsrevealhowfractalpatternscan 19. S.K.Yooetal.,PlantPhysiol.139,770–778(2005). EUR-GS(ANR-17-EURE-0003)(toF.P.,G.T.,M.L.M.,andJ.L.);the
+be generated through growth and develop- 20.A.Serrano-Mislataetal.,Development143,3315–3327 EUH2020773875ROMIproject(toC.Go.);andtheSpanish
+mentalnetworksthatalteridentitiesandmeri- (2016). MinisteriodeCienciaInnovaciónandFEDER(grantno.PGC2018-
+21. R.V.Pérez-Ruizetal.,Mol.Plant8,796–813(2015). 099232-B-I00toF.M.).Authorcontributions:C.Go.andF.P.
+stem dynamics. Our data, GRN, and growth 22.D.Reinhardtetal.,Nature426,255–260(2003). conceivedthestudy.C.Go.,E.A.,andE.F.performedthemodeling.
+modelsnowclarifythemolecularandmor- 23.P.A.Wigge,Curr.Biol.21,R374–R378(2011). A.S.-M.,C.Gi.,D.B.,F.M.,F.P.,G.T.,M.M.K.,M.L.M.,andV.G.
+phologicalchangesovertimebywhichmeri-
+24.J.Putterill,E.Varkonyi-Gasic,Curr.Opin.PlantBiol.33,77–82 designedandperformedtheplantexperiments.N.P.performedthe
+(2016). confocalimagingexperiment.J.L.analyzedtheRNA-seqand
+stemsgaindifferentidentitiestoformthehighly 25.C.Liuetal.,Dev.Cell24,612–622(2013). genomicdata.C.Go.,F.P.,andE.A.wrotethepaperwith
+diverseandfascinatingarrayofplantarchitec- 26.O.J.Ratcliffeetal.,Development125,1609–1615(1998). contributionsfromallauthors.Competinginterests:Theauthors
+turesfoundthroughoutnatureandcrops. 27.D.Weigel,J.Alvarez,D.R.Smyth,M.F.Yanofsky, declarenocompetinginterests.Dataandmaterialsavailability:
+E.M.Meyerowitz,Cell69,843–859(1992). Alldataareavailableinthemainpaperorthesupplementary
+28.S.D.Michaelsetal.,PlantJ.33,867–874(2003). materials.Allplantmaterialsareavailableuponrequest.Rawand
+REFERENCESANDNOTES 29.Y.Zhuetal.,Nat.Commun.11,5118(2020). processedRNA-seqdataareavailableatGEOunderaccessionno. 30.L.Conti,D.Bradley,PlantCell19,767–778(2007). GSE150627.Allsourcecodestorunthesimulationsareavailable
+1. C.Godin,C.Golé,S.Douady,Development147,dev165878 31. H.Chahtaneetal.,PlantJ.74,678–689(2013). asasupplementaryarchivefile(descriptionsofinstallationand
+2. ( C o 2 l . e 0 r F 2 a . 0 c Q e ). u a, i ” ro in s, G M e . n W et . ic F s a a rn n h d a G m e , n “ o T m he ics ge o n f e t t h ic e s B o r f as B s r i a c s a s c i e c a a e, 3 3 3 2. .X D . . S W u e n ig e e t l, a O l. . , N En il v s i s r o o n n , . N Ex a p tu . r B e o 3 t. 7 1 7 5 , 5 4 , 9 7 5 4 – 2 5 – 0 7 0 50 (19 (2 9 0 5 1 ) 8 . ). executionareavailableasREADME.txt).
+R.Schmidt,I.Bancroft,Eds.(Springer,2011),pp.261–289.
+34.M.Kieffer,M.P.Fuller,A.J.Jellings,Planta206,34–43 SUPPLEMENTARYMATERIALS
+3. D.V.Duclos,T.Björkman,J.Exp.Bot.59,421–433 (1998). science.sciencemag.org/content/373/6551/192/suppl/DC1
+(2008). 35.S.Douady,Y.Couder,J.Theor.Biol.178,255–273(1996). MaterialsandMethods
+4. L.B.Smith,G.J.King,Mol.Breed.6,603–613(2000). 36.Y.Refahietal.,eLife5,e14093(2016). Figs.S1toS6
+5. N.Guoetal.,BMCBiol.19,93(2021). 37.J.C.Fletcher,U.Brand,M.P.Running,R.Simon, TablesS1toS3
+6. J.L.Bowman,J.Alvarez,D.Weigel,E.M.Meyerowitz, E.M.Meyerowitz,Science283,1911–1914(1999). MoviesS1toS3
+D.R.Smyth,Development119,721–743(1993). 38.M.Kitagawa,D.Jackson,Annu.Rev.PlantBiol.70,269–291 References(40–108)
+7. S.A.Kempin,B.Savidge,M.F.Yanofsky,Science267, (2019). CodeArchiveFile:Architecture-Model.zip
+522–525(1995). 39.L.E.Watts,Euphytica15,224–228(1966). MDARReproducibilityChecklist
+8. G.Denay,H.Chahtane,G.Tichtinsky,F.Parcy,Curr.Opin.Plant
+Biol.35,15–22(2017). ACKNOWLEDGMENTS View/requestaprotocolforthispaperfromBio-protocol.
+9. A.Pajoroetal.,J.Exp.Bot.65,4731–4745(2014). WethankA.-M.Chèvre,R.Immink,R.Simon,L.Ostergaard,and
+10.B.Thomson,F.Wellmer,Curr.Top.Dev.Biol.131,185–210 M.Benitezforadvice;T.Vernoux,C.Zubieta,andH.Chahtanefor 15January2021;accepted3June2021
+(2019). proofreadingandusefulfeedbackonthemanuscript;D.Tardy, 10.1126/science.abg5999
+Azpeitiaetal.,Science373,192–197(2021) 9July2021 6of6
+Downloaded
+from
+http://science.sciencemag.org/
+on
+July
+9,
+2021
+
+===== PAGE 7 =====
+
+Cauliflower fractal forms arise from perturbations of floral gene networks
+Eugenio Azpeitia, Gabrielle Tichtinsky, Marie Le Masson, Antonio Serrano-Mislata, Jérémy Lucas, Veronica Gregis, Carlos
+Gimenez, Nathanaël Prunet, Etienne Farcot, Martin M. Kater, Desmond Bradley, Francisco Madueño, Christophe Godin and
+Francois Parcy
+Science 373 (6551), 192-197.
+DOI: 10.1126/science.abg5999
+Vegetal fractals
+Cauliflower, along with dahlias and daisies, develop as phyllotactic spirals. Azpeitia et al. combined modeling with
+experimental investigation to clarify the gene-regulatory network that sets up a multitude of undeveloped flowers to form
+a cauliflower curd. Irrepressible inflorescence identity genes in the context of dysfunctional meristems and slow internode
+elongation result in piles of incomplete flowers. If meristem size drifts during organogenesis, then the conical structures
+of the Romanesco form emerge in fractal formation.
+Science, abg5999, this issue p. 192
+ARTICLE TOOLS http://science.sciencemag.org/content/373/6551/192
+SUPPLEMENTARY http://science.sciencemag.org/content/suppl/2021/07/07/373.6551.192.DC1
+MATERIALS
+REFERENCES This article cites 104 articles, 43 of which you can access for free
+http://science.sciencemag.org/content/373/6551/192#BIBL
+PERMISSIONS http://www.sciencemag.org/help/reprints-and-permissions
+Use of this article is subject to the Terms of Service
+Science (print ISSN 0036-8075; online ISSN 1095-9203) is published by the American Association for the Advancement of
+Science, 1200 New York Avenue NW, Washington, DC 20005. The title Science is a registered trademark of AAAS.
+Copyright © 2021 The Authors, some rights reserved; exclusive licensee American Association for the Advancement of
+Science. No claim to original U.S. Government Works
+Downloaded
+from
+http://science.sciencemag.org/
+on
+July
+9,
+2021

@@ -1,0 +1,1329 @@
+
+
+===== PAGE 1 =====
+
+Corrected 2 December 2021: See below
+science.sciencemag.org/content/373/6551/192/suppl/DC1
+Supplementary Materials for
+Cauliflower fractal forms arise from perturbations of floral gene networks
+Eugenio Azpeitia†, Gabrielle Tichtinsky, Marie Le Masson, Antonio Serrano-Mislata,
+Jérémy Lucas, Veronica Gregis, Carlos Gimenez, Nathanaël Prunet, Etienne Farcot,
+Martin M. Kater, Desmond Bradley, Francisco Madueño, Christophe Godin*, Francois Parcy*
+*Corresponding author. Email: christophe.godin@inria.fr (C.G.); francois.parcy@cea.fr (F.P.)
+Published 9 July 2021, Science 373, 192 (2021)
+DOI: 10.1126/science.abg5999
+This PDF file includes:
+Materials and Methods
+Modeling Methods
+Figs. S1 to S6
+Movie Captions
+Tables S1 to S3
+References
+Other Supplementary Material for this manuscript includes the following:
+(available at science.sciencemag.org/content/373/6551/192/suppl/DC1)
+Movies S1 to S5 (.mov and .avi)
+Archive with Source Code for the Model (.zip)
+MDAR Reproducibility Checklist (.pdf)
+Correction: Figure S6 and the corresponding explanations in the text have been added to explain
+(i) how the geometric works, (ii) why some structures were removed, and (iii) the possibility of
+running a model without removing structures (illustrated by new movies S4 and S5, now added).
+Revised text appears in red font. In the code archive ZIP folder, the “geometric.model.lpy” file
+has been replaced with a new file named “geometric.model.erratum.lpy.”
+
+===== PAGE 2 =====
+
+MATERIALS AND METHODS
+Plant materials
+The following A. thaliana lines in the Columbia-0 background were used: lfy-12 (40); ap1-7 (6),
+cal-1 (41), ap1-7 cal-1 double mutants (gift from J. Goodrich, Institute of Molecular Plant Science,
+University of Edinburgh, Edinburgh, United Kingdom), SOC1p-GFP (42) (provided by D. Posé),
+35Sp:FT (43), 35Sp:SOC1 (44), soc1-2 (44), AGL24p:AGL24-RFP (45) and agl24-2 (28).
+35Sp:CO (46), co-3 (47), ft-3 (43), 35S:AP1-GR ap1-1 cal-1 (48) and TFL1p:GUS (this work) are
+A. thaliana lines in the Landsberg erecta background, as well as the 35S:AP1-GR ap1-1 cal-1 (48)
+used for the mutation of CLV3 using the CRISPR-Cas9 strategy.
+For crosses between accessions, it was previously verified that the GUS reporter activity was not
+affected in wild-type Col x Ler hybrids.
+Brassica oleracea var. botrytis and Romanesco cauliflowers were obtained from Observatoire
+Breton des Semences (OBS) or bought at the Grenoble producer market.
+Plant growth conditions
+Seeds were sown on soil or surface-sterilized and grown in Petri dishes on Murashige and Skoog
+basal salt mixture medium (Sigma-Aldrich, www.sigmaaldrich.com). Seeds were stratified 1-3
+days at 4°C, transferred mixture of phagnum:perlite:vermiculite (2:1:1) or on soil:vermiculite (5:1)
+and grown at 21-22°C under long-day (16 h) or short-day conditions (8 h). ap1 cal plants were
+grown at 18°C for 16 h light and 16°C for 8 h dark, under 65% humidity. Nicotiana benthamiana
+plants for transient assays were grown on a mixture of sphagnum:vermiculite (1:1) under long-day
+photoperiod at 24°C.
+Plasmids construction
+For the reporter analysis of TFL1 expression, we produced a TFL1p:GUS construct that contained
+the β-glucuronidase (GUS) gene flanked by 2177 bp of the TFL1 promoter 5’ region and 4605 bp
+of the TFL1 promoter 3’ region (20). The 5’ region was amplified from a Ler genomic clone with
+primers 5’-TGAGTCGACGCTAGGAGACTTCGTTGATC-3’ (SalI site is underlined) and 5’-
+CTGCAGGATCCTTTTCTTTTGTTAACTTAGAGG-3’ (including the ATG of the TFL1 gene,
+1
+
+===== PAGE 3 =====
+
+BamHI site is underlined). This fragment was cloned as SalI-BamHI into the pBI101 vector (49),
+upstream the GUS gene. The 3’ region was amplified with primers 5’-
+GTAGAGCTCTAGATTCATGATTGTCATAAACTGC-3’ (including the stop codon of TFL1,
+SacI and XbaI sites are underlined) and 5’-
+TAGAATTCGGTACCAAGTTGAAGTCTCTCATTGACGAAC-3’ (EcoRI and KpnI sites are
+underlined). This fragment was cloned as SacI-EcoRI into the pBI101 vector, thus replacing the
+nopaline synthase terminator downstream the GUS gene. The resulting TFL1p:GUS cassette was
+cloned as SalI-KpnI into the pBIN19 binary vector. This construct was introduced into wild-type
+Arabidopsis plants of the Ler ecotype by vacuum infiltration (50, 51). An homozygous line
+carrying the transgene in a single locus was selected for further analysis.
+For transient expression assays, the cDNAs of SOC1 and AGL24 were cloned into the pMDC32
+vector by Gateway LR recombination to create 35Sp:SOC1 and 35Sp:AGL24 plasmids
+respectively. The 35Sp:NGA3 plasmid was already available (52). The TFL1 promoter region IV
+(fragment between +2823 and + 3230 bp downstream the TFL1 stop codon) was amplified with
+forward primer 5'-CTCGAGGACTCTCGAGGACAAACCAAC-3' (XhoI site is underlined) and
+reverse primer 5'-CTTATATAGAGGAAGGGTCTTGATTATGGGTTAGCTATAAAGATGG-
+3' (overlapping sequence with a 35SminΩ promoter is underlined). The TFL1 promoter region V
+(fragment between +3420 and +3752 bp downstream the TFL1 stop codon) was amplified with
+forward primer 5´-CTCGAGCGGATTGGTCCAGTTAGAAC-3' (XhoI site is underlined) and
+reverse primer 5'-CTTATATAGAGGAAGGGTCTTGAAGAAGCTCCTACCACTTGAAG-3’
+(overlapping sequence with a 35Smin (53) promoter is underlined). A -90 bp CaMV 35S promoter
+that includes the omega translational enhancer (35S)(53) was amplified with forward primer 5’-
+CAAGACCCTTCCTCTATATAAG-3' and reverse primer 5’-
+CCATGGTGTAATTGTAAATAGTAATTGTAATGTTG-3’ (NcoI site is underlined). The
+35SminΩ sequence was fused by PCR downstream the TFL1 promoter regions with the described
+region-specific forward primers and the 35SminΩ reverse primer. The resulting fragments were
+cloned as XhoI/NcoI into the pGreenII 0800-LUC vector (54).
+For the CRISPR-Cas9 mediated mutation of CLV3, three gRNA spacers specific of the CLV3 gene
+were designed using CHOPCHOP https://chopchop.rc.fas.harvard.edu/ and synthetized by
+eurofins. Guide sequences are the following:
+2
+
+===== PAGE 4 =====
+
+● Guide1: 5’-GATTGGAGACCAGAAGCATCATGA-3’
+● Guide2: 5’-GATTGGTTTCTTGGCTGTCTTGGT-3’
+● Guide3: 5’-GATTGGTGAATGGGTTGGAGCAAA-3’
+These guides were used to build one vector with two gRNA spacers (guides 1-2) and one with the
+three gRNA (guides 1-2-3)
+After annealing oligonucleotide guides, each of the 3 double-stranded DNAs were ligated in
+pBSK-AtU6-26:guide vector (55), modified to allow sequential ligation of several guides (56).
+Resulting plasmids were verified by sequencing. KpnI/SbfI restriction fragments containing the
+assembled guides and the UBQ10:CoCas9:tUBQ10 cassette of the pBSK:CoCas9 digested by SbfI
+and EcoRI were simultaneously ligated in the pCAMBIA plant transformation vector containing
+the At2S3:eGFP as selection marker. This plasmid was obtained by cloning the At2S3:eGFP:t35S
+reporter construct from pFP100 (57) into BstX1/PspX1 digested pCAMBIA1300 backbone. The
+pBSK:CoCas9 contains a codon-optimized version optimized for expression in Arabidopsis of the
+human Cas9 under the control of the UBQ10 promoter (56). Final plasmids (pMLM17 with 2
+guides and pMLM18 with 3 guides) were verified by sequencing.
+Arabidopsis thaliana transformation
+Agrobacterium tumefaciens, strain C58C1pMP90, carrying pMLM17 or 18 were grown overnight
+at 28 °C in Luria Broth medium supplemented with rifampicin 50 µg/mL, gentamycin 50 µg/mL
+and kanamycin 50 µg/mL and used for the Arabidopsis floral dip method (58) using Silwet L-77
+at 0.01 %. To improve transformation efficiency of the 35S:AP1-GR ap1-1 cal-1 plants, a spray
+with 10 mM Dexamethasone supplemented with Silwet L-77 0.01 % was performed 10 days before
+the agrobacterium floral dip to trigger AP1-GR nuclear translocation and induce flower
+development and seed recovery.
+Molecular characterization of clv3 CRISPR-Cas9 lines
+The effect of the clv3 mutation in ap1 cal were studied by transforming MLM17 and MLM18
+constructs in 35S:AP1-GR ap1-1 cal-1. T1 primary transformed seeds were collected based on
+their seed fluorescence under a SZX12 Olympus dissecting microscope.
+3
+
+===== PAGE 5 =====
+
+We obtained 14 T1 plants with pMLM17 vector (5 out of 14 showing pyramidal curds) and 16
+with the pMLM18 (7 out of 16 showing pyramidal curds). PCR amplification of the CLV3 genomic
+sequence around the sgRNA target sites was used to detect Cas9/sgRNA induced mutations and
+deletions. gDNA was extracted from leaves using Edwards extraction buffer (200 mM Tris-HCl
+pH7.5 ; 250 mM NaCl, 25 mM EDTA, 0.5 % SDS 20 %). For the PCR amplification, two couples
+of primers were used oMLM1134/oMLM1131 (166 bp) and oMLM1132/oMLM1133 (268 bp)
+oMLM1131: 5’-CATGAGCTTGAGTGAGATCTGG-3’
+oMLM1132: 5’-AATGTTGTTCAATTGGCAGATG-3’
+oMLM1133: 5’-CCGAAATGGTAAAACCGATAAA-3’
+oMLM1134: 5’-GCTACTACTACTACTCTTCTGC-3’
+In the T2 generation, non-fluorescent seeds were sown to select against the transgene. The PCR
+product obtained with oMLM133/1134 primers were sequenced to check mutations at the CLV3
+locus. Sequencing revealed several types of mutations in the CLV3 gene. Plant MLM18-25-4 has
+a T nucleotide insertion at position 57 creating a frame-shift with a stop codon in the 1st exon
+((First exon sequence with added t and bold stop codon:
+ATGGATTCGAAGAGTTTTCTGCTACTACTACTACTCTTCTGCTTCTTGTTCCTTCAtTG
+A) amino acid sequence: MDSKSFLLLLLLFCFLFLH), as well as a deletion of 100 bp between
+guides 3 and 2. The mutant MLM17-3 shows the same insertion of a T nucleotide as the MLM18-
+25-4 mutant. Plants shown in figure 4 are MLM18-25-4 T3 (Fig. 4j), MLM17-3 T1 (Fig. 4k) and
+MLM18-4-28 T3 (Fig. 4m).
+To verify that the pyramidal phenotype observed in ap1 cal 35S:AP1-GR is due to a single
+mutation, one T2 plant (MLM18-2-19 in 35S:AP1-GR ap1-1 cal-1) was crossed to 35S:AP1-GR
+ap1-1 cal-1 and F2 progenies from two individual F1 plants were analyzed. The pyramidal
+phenotype was observed in 6 out of 35 (17%) and 8 out of 40 (20%) F2 plants consistent with a
+25% / 75% segregation with a single mutation at the CLV3 locus (Chi-square test of independence
+p = 0.205 > 0.5).
+As a control, pMLM18 construct was transformed into the Col-0 and Ler wild type backgrounds.
+27 and 30 T1 plants were obtained in Col-0 and Ler backgrounds respectively, all showing typical
+clv phenotype including increased petal number, increased pistil size due to increased carpel
+number and inflorescence meristem size.
+4
+
+===== PAGE 6 =====
+
+Seed and plant imaging
+For selection of MLM17 and MLM18 transgenics based on At2S3:GFP fluorescence in seeds, an
+Olympus SZX12 dissecting microscope with fluorescent illumination was used. Light micrographs
+were taken with the Keyence digital microscope (VHX-5000) using a Z20 X50 lens.
+Confocal imaging was performed as described (59). Environmental scanning electron microscopy
+experiments were performed at the Electron Microscopy facility of the ICMG Nanobio-Chemistry
+Platform (Grenoble, France). Untreated flowers were directly placed in the microscope chamber.
+Secondary electron images were recorded with a Quanta FEG 250 (LV) microscope while
+maintaining the tissue at 2 °C, under a pressure of 120 Pa and a 25 % relative humidity. The
+accelerating voltage was 7 kV and the image magnification ranged from 100 to 800X.
+GUS assay and histological procedures
+Arabidopsis shoot apices were stained for GUS as described (20) with minor modifications.
+Staining buffer contained 10 mM of potassium ferri- and ferrocyanide in order to minimize leakage
+of the X-Gluc reaction product (60). Photographs of whole-mount samples were taken with a Color
+View 12 digital camera connected to a Nikon SMZ800 binocular stereoscopic microscope. After
+GUS staining, some samples were cleared with chloral hydrate solution for 2-3 days at 4 °C (61).
+Images of cleared apices were taken with a Nikon DS-Fi1 digital camera connected to a Nikon
+Eclipse 600 light microscope under Nomarski interference optics. For tissue sectioning, samples
+were stained in 0.2% (w/v) eosin and embedded in paraffin as described (20). 12 µm sections were
+obtained with a Leica RM-2025 microtome and images were taken under bright-field microscopy.
+Luciferase transient assays
+4-week-old Nicotiana plants (with 5-6 leaves) were used for the analysis. Agrobacterium cultures
+(C58pMP90 strain) were incubated for 24 hours at 28 °C (to stationary phase, OD 1-2). Cells
+600
+were collected and resuspended in infiltration buffer (10 mM MgCl , 10 mM MES and 0.2 mM
+2
+acetosyringone) to an OD of 0.4. Agrobacterium mixtures with a 1:5 reporter:effector ratio were
+600
+prepared. These were incubated for 3 hours at room temperature and darkness with gentle shaking
+(50 rpm) before infiltration of young and fully expanded Nicotiana leaves. Three days later, firefly
+luciferase (LUC) and renilla (REN) activities were assayed from 0.5 cm leaf discs (approximately
+20 mg) using the Dual-Luciferase® Reporter Assay System kit according to the manufacturer’s
+5
+
+===== PAGE 7 =====
+
+instructions (Promega). Absolute relative luminiscence units were measured with a GloMaxTM 96
+Microplate Luminometer (Promega). LUC/REN ratios were averaged from at least three biological
+replicates (different plants) each one with three technical replicates (different leaves from the same
+plant).
+Chromatin immunoprecipitation assay
+The commercial antibody Living Colors_DsRed polyclonal antibody (Clontech) and an antibody
+against a synthetic peptide (SVKCIRARKTQVFK) were used for AGL24 and SOC1 ChIP
+experiments respectively. Chromatin was prepared from inflorescences and three independent
+biological replicates were done. Wild-type (Col-0) plants were used for chromatin extraction for
+the SOC1 ChIP experiment, and soc1-2 plants served as a negative control. Homozygous
+AGL24p:AGL24-RFP agl24-2 plants were used for the AGL24 ChIP experiment and wild-type
+plants served as a negative control. The ChIP assays were performed as described previously (62).
+Six primer sets (fragments 1-6) were designed in the 3’ TFL1 promoter region: the forward primer
+5’-AAACGTGGAGATACGGAAAAGG-3’ and the reverse primer 5’-
+ACCAGCCGTGAAAATAGATATG-3’ for fragment 1, the forward primer 5’-
+GCATTCTACATTGATTCAGTG-3’ and the reverse primer 5’-
+TGAATTAATGACACGTGACC-3’ for fragment 2, the forward primer 5’-
+GTTTTAGGGTTTCAGTAACAC-3’ and the reverse primer 5’-
+ATGGAATGGAACAGAGCACG-3’ for fragment 3, the forward primer 5’-
+GGTCCAAGGGTTAGTATGTTTC-3’ and the reverse primer 5’-
+GCCGCAAACCTGGTGATTAACC-3’ for fragment 4, the forward primer 5’-
+GAAACATACTAACCCTTGGACC-3’ and the reverse primer 5’-
+GTAAATGTACCTCCTCGTCAC-3’ for fragment 5, and the forward primer 5’-
+TCAATTTCGGATTGGTCCAG-3’ and the reverse primer 5’-
+CTTAGTTGTAACTGATGAACG-3’ for fragment 6. Enrichment folds were detected by qPCR
+using a SYBR Green assay (Bio-Rad). The assay was performed in triplicate using a Bio-Rad
+C1000 Thermal Cycler optical system and relative enrichments, with their associated relative
+errors, were calculated as previously described (62).
+6
+
+===== PAGE 8 =====
+
+Cauliflower curd mRNA sequencing
+Curds from developing cauliflowers grown in the field (planted July 10th 2017, harvested Oct 18-
+27 2017) were provided by O.B.S (Breton Seed Observatory): OBS_5045_1 (named OBS-Caul-1
+on figure S5), OBS_800_1 (OBS-Caul-2), OBS-0795_2 (OBS-Caul-3), OBS_800_2 (OBS-Caul-
+4), OBS_0795_1 (OBS-Caul-5), OBS_0819_1 (OBS-Caul-5). We also used two cauliflowers
+(Samples CAUL_1, CAUL_2a, CAUL_2b) and two Romanesco (Samples ROM_1, ROM_2a,
+ROM_2b) bought on the Grenoble producer market in 2017. 2a and 2b correspond to extractions
+made on different florets from the same curd. Total RNAs were extracted using the RNeasy Plant
+Kit protocol (QIAGEN) followed by DNAse treatment and sent to Genewiz (UK) for quality
+control, Poly-A selection, library cloning and sequencing (Illumina HiSeq4000, 2x150bp
+configuration, single index).
+The obtained reads were aligned with the HDEM Reference Genome (63) with STAR
+(outFilterMultimapNmax 1; outFilterMismatchNmax 6; alignIntronMax 30000; other parameters
+set by default). FeatureCount (default settings) was used to detect reads mapping to Brassica
+oleracea genes. EdgeR (default settings) was then used to identify the genes differentially
+expressed between the individuals analyzed. The orthologs of AP1 (At1g69120), CAL
+(At1g26310) and FUL (At5g60910) of cabbage are identified by BLAST protein against the
+Arabidopsis thaliana proteome (TAIR10). The Heatmap of the expression of these genes is
+generated by a python ad hoc script. Comparisons of the genes expressions on multiple tissues
+were done using datasets from GSE42891 (64). Orthology between our reference genome (HDEM)
+and their reference were done with reciprocal Blast and selection of the best candidates.
+The following secure token has been created to allow review of record GSE150627 while it
+remains in private status: khkjgckmdtkhpgb.
+BoAP1 promoter analysis
+BoAP1-a/c and BobAP1-a/c promoters were extracted from HDEM (63) and D-134 (65) reference
+genomes, respectively. The sequences were scanned with the Position Weight Matrices (PWM) of
+three transcription factors known to regulate AP1 in Arabidopsis. PWM were taken from the
+JASPAR database for FD and SOC1 (66) or from (67) for LFY. Based on previous analyses on
+LFY (67), we chose a score threshold of -18 to distinguish relevant TFBS. We calculated
+7
+
+===== PAGE 9 =====
+
+thresholds for FD (-8.5) and SOC1 (-9.5) to achieve similar TFBS frequency as for LFY sites with
+score > -18. The PWM and computed thresholds were used to identify TFBS in BoAP1-a/c and
+BobAP1-a/c promoters.
+MODELING METHODS
+Regulatory network construction and simulation
+SALT network
+The SALT model included the SAX genes (i.e., SUPPRESSOR OF OVEREXPRESSION OF
+CONSTANS 1 (SOC1), AGAMOUS-LIKE 24 (AGL24) and XAANTAL2 (XAL2)), APETALA1
+(AP1) and CAULIFLOWER (CAL) (hereinafter AP1/CAL), LEAFY (LFY), and TERMINAL
+FLOWER1 (TFL1). These genes are the key transcription factors (TF) or co-factors that have been
+experimentally associated with inflorescence and flower development and the development of
+cauliflower structures in A. thaliana. We also included two inputs, auxin, a phytohormone that
+promotes the initiation of new primordia, and F that represents different types of molecules
+triggering flower production. Because we did not include the auxin signaling pathway and F
+possibly represents multiple flowering inducing pathways, the activity of both auxin and F is only
+phenomenological in our model. Auxin concentration is maximal in newly formed primordia,
+while its activity is basal in the shoot apical meristem. For this reason, shoot apical meristems and
+newly formed primordia states are different in their auxin levels. As the value of F increases during
+the plant development in every meristem, we expect the shoot apical meristem to transit to an
+inflorescence state, and to a flower state for lateral primordia. The network includes multiple
+positive and negative regulatory interactions listed in Table S1. We model all regulatory
+interaction using Hill equation of the form:
+𝑑𝑌 𝑋𝑛
+= ,
+𝑑𝑡 𝑘𝑛 +𝑋𝑛
+𝑋,𝑌
+for positive regulations and:
+𝑑𝑌 = 𝑘 𝑋 𝑛 ,𝑌 ,
+𝑑𝑡 𝑘𝑛 +𝑋𝑛
+𝑋,𝑌
+8
+
+===== PAGE 10 =====
+
+for negative regulations. 𝑘𝑛 is the dissociation constant or binding affinity of protein X to the
+𝑋,𝑌
+promoter of gene Y, which is equal to the concentration of free TF at which half of all binding sites
+are occupied and 𝑛 is the Hill coefficient that usually represents the number of TF molecules that
+are required to bind to a gene regulatory region, also known as level of cooperativity. Using Hill
+equations to represent the regulatory interactions we build the GRN described by the next system
+of equations:
+𝑑𝑆 𝑘𝑛 𝐹 𝑆𝑛
+𝐴,𝑆
+=( )( + )−(𝑘 𝑆𝐴−𝑘 )−𝛿𝑆
+𝑑𝑡 𝑘𝑛 +𝐴𝑛 𝑘 +𝐹 𝑘𝑛 +𝑆𝑛 𝑎𝑆+𝐴 𝑑𝐷
+𝐴,𝑆 𝐹,𝑆 𝑆,𝑆
+𝑑𝐴 𝑘𝑛 𝐿𝑛 𝑆𝑛 𝐹
+𝑇,𝐴
+=( )( + )−(𝑘 𝑆𝐴−𝑘 )−𝛿𝐴
+𝑑𝑡 𝑘𝑛 +𝑇𝑛 𝑘𝑛 +𝐿𝑛 𝑘𝑛 +𝑆𝑛𝑘 +𝐹 𝑎𝑆+𝐴 𝑑𝐷
+𝑇,𝐴 𝐿,𝐴 𝑆,𝐴 𝐹,𝐴
+𝑑𝐿 𝑘𝑛 𝑎𝑢𝑥+𝑎𝑢𝑥 𝑘𝑛 𝐴𝑛
+𝑇,𝐿 𝑏 𝐿,𝐿
+=( )( + )−𝛿𝐿
+𝑑𝑡 𝑘𝑛 +𝑇𝑛 𝑘 +𝑎𝑢𝑥+𝑎𝑢𝑥 𝑘𝑛 +𝐿𝑛 𝑘𝑛 +𝐴𝑛
+𝑇,𝐿 𝑎𝑢𝑥,𝐿 𝑏 𝐿,𝐿 𝐴,𝐿
+𝑑𝑇 𝑆𝑛 𝑘𝑛 𝑘𝑛 𝐿𝑛
+𝑅,𝑇 𝐷,𝑇
+=( )+ −𝛿𝑇
+𝑑𝑡 𝑘𝑛 +𝑆𝑛𝑘𝑛 +𝑅𝑛𝑘𝑛 +𝐷𝑛 𝑘𝑛 +𝐿𝑛
+𝑆,𝑇 𝑅,𝑇 𝐷,𝑇 𝐿,𝑇
+𝑑𝐷
+=𝑘 𝑆𝐴−𝑘 −𝛿𝐷
+𝑑𝑡 𝑎𝑆+𝐴 𝑑𝐷
+𝑑𝑎𝑢𝑥
+=−𝛿𝑎𝑢𝑥
+𝑑𝑡
+𝑑𝑅
+=−𝛿𝑅
+𝑑𝑡
+S, A, L, T and aux represent SAX, AP1, LFY, TFL1, and auxin respectively. D and R represent the
+dimer SAX-AP1, and the eREP repressor of TFL1. 𝑎𝑢𝑥 represents a “basal level of auxin activity”.
+𝑏
+For sake of simplicity, 𝑎𝑢𝑥 includes the synthesis, import and signaling in an apical meristem and
+𝑏
+is considered constant. 𝛿 is the degradation rate. Here, in 𝑘 , 𝑋 ∈ {𝑆,𝐴,𝐿,𝑇,𝐷,𝑅,𝐹,𝑎𝑢𝑥}
+𝑋,𝑌
+and 𝑌 ∈ {𝑆,𝐴,𝐿,𝑇}. 𝑘 and 𝑘 are the association rate of AP1 with SAX and the dissociation
+𝑎𝑆+𝐴 𝑑𝐷
+rate of the SAX-AP1 complex. We optimized the SALT model choosing different values of 𝛿, 𝑘
+𝑋,𝑌
+and n within sensitive biological values (see Parameters below).
+Parameters
+Data for the exact value of the parameters included in the network are not available in the literature.
+However, we used general knowledge about the different processes to constrain the parameter
+space. In particular, we assumed that the degradation 𝛿 of all variables were equal to 0.1/minute,
+which is a realistic value given that the half-life of proteins is usually within the hours range (68).
+The level of cooperativity 𝑛 for all X and Y genes were equal to 2, representing the formation of
+9
+
+===== PAGE 11 =====
+
+protein dimers for gene regulations, which is common for gene regulation (69). Finally, we
+considered that the concentration of TFs in cells is within the nanoMolar (nM) range (70). The
+affinity of transcription factor to the DNA is usually lower than 10−8M (i.e., affinity≤µM)(71).
+Finally, TFs or cofactors, including TFL1, AP1, and LFY bind to hundreds of target genes, and all
+TFs can randomly bind to the DNA (32). Thus, the effective concentration of TFs is lower than
+the real concentration. Assuming that the effective concentrations of the TFs is 2 orders of
+magnitude smaller than the real concentration, we constrain 𝑘 values within the range
+𝑋,𝑌
+[10−10M, 10−6M].
+The SALT model was able to produce the expected behavior, and the kinetic was optimized by
+hand (see Table S2) leading to “optimal” values of the parameters. Then, we analyzed the effect
+of modifying the value of the 𝑘 s. To do this, we fixed the values of all 𝑘 to their optimal
+𝑋,𝑌 𝑋,𝑌
+values, except one, that we varied within the interval [10−10M, 10−7M]. As observed in Fig. S2,
+the overall behavior of the network was maintained for most 𝑘 values, showing that the dynamic
+𝑋,𝑌
+of the network is robust to changes in the values of the parameters.
+Structure of the model
+The model structure (as reported in Fig. 3a, with feedback loops and feedforward loops (FFL)
+listed in Table S3), allows for some analysis which is independent of specific parameter values.
+The “mutual repression” positive feedback listed in Table S3 is solely mediated by AP1. The other
+positive 2-loop, between AP1 and LFY, is visible but cannot affect the competition with TFL1: it
+plays a role of stabilization, or self-maintenance, of the floral identity. One consequence of this
+loop is that, at steady state, LFY and AP1 are always expected to be either both high or low. It is
+apparent, without having to write any detailed model of the dynamics, that the removal of AP1
+above deprives the network from its ability to overcome TFL1's expression; even if external signals
+transiently increase LFY's expression, without AP1’s contribution this cannot be maintained
+permanently and the system must reverse to a ``non-flower'' identity (high TFL1). The structure of
+the positive three loop entails that any steady state must not only have AP1 and LFY at similar
+levels, but that this should be opposite to TFL1 level, again confirming the antagonism floral/non-
+floral identities.
+Coherent FFLs have been characterized (72) to induce a response delay (to “off steps” for type 2
+and “on steps” for type 4, given the AND nature of these FFLs), which can have the function of a
+10
+
+===== PAGE 12 =====
+
+“persistence detector” (i.e. their last term responds to pulses of the first term only if it persists over
+time), while incoherent FFLs have the potential to speed up response times (the “on step” for type
+1 and “off step” for type 3, with also a potential to induce pulses of TFL1 if LFY is present). For
+the SALT model this leads to the following interpretation: the GRN comprises a core “ALT”
+network, which has an intrinsic ability to present clearly distinct floral (high LFY and AP1, low
+TFL1) and non-floral attractors (high TFL1, low AP1 and LFY), while also presenting homeostatic
+properties able to transiently maintain the network in intermediary states (all three core variables
+at intermediate levels). On top of this core network, a layer of feedforward loops is able to speed
+up the triggering of the core ALT network’s internal dynamics, while protecting the flower
+inducing genes from transient removal of the florigen signal. Without the AP1 node, the remaining
+LFY-TFL1 “core” network is irremediably deprived of its bistability, and only high TFL1/low
+LFY can be achieved as a permanent state.
+Two remaining FFLs (6th and 11th in Table S3) have the potential to make the increase (in
+response to SAX, i.e. F after a delay) of LFY faster than that of TFL1 and make the removal of
+TFL1 (upon SAX removal) delayed compared to that of LFY. Both can contribute to the
+occurrence of a transient pulse of LFY upon F induction via SAX, during which TFL1 remains
+low.
+Introducing a factor X
+Even though the SALT network has the ability to extend the persistence of a transient pulse of
+LFY in time, this can only be a reversible process; the irreversible effects produced by the LFY
+pulse (i.e. the development of branches of order >2 and the removal of the bract) observed in the
+ap1 cal mutant cannot be explained with the SALT variables alone. The most parsimonious
+explanation requires some transcriptional target of LFY, say a factor “X” (which could actually
+correspond not only to one but to several transcriptional targets, aggregated into a unique factor X
+here), which would be permanently activated by a transient exposure to LFY. This requires this
+factor X to either self-activate, or to be part of a larger positive feedback loop involving additional
+transcription factors. Choosing the former for parsimony, one would typically have
+𝑑𝑋 𝐿𝑛 𝑋𝑛
+= ( + )−𝛿 𝑋
+𝑑𝑡 𝐿𝑛 +𝑘𝑛 𝑋𝑛 +𝑘𝑛 𝑋
+𝑋𝐿 𝑋𝑋
+11
+
+===== PAGE 13 =====
+
+Given the hypothetical nature of this equation, we simplify it to a limit where the Hill function
+becomes a hard step (i.e. 𝑛 → ∞), so the production rate (term in brackets) is a Boolean like “1 if
+either X or L is high, 2 if both are high”. The finite n case would be qualitatively equivalent, but
+requires more parameter values and does not lead to closed form solutions. In this model, X has
+two stable values, high and low, and the high value can be triggered permanently if LFY remains
+high for some time, i.e. 𝐿(𝑡) > 𝑘 for a long enough interval of time values (say at least 𝛥𝑡,
+𝑋𝐿
+defined as the time for X to reach its threshold 𝑘 from 0).
+𝑋𝑋
+In practice, this is strictly equivalent to a simpler criterion, where LFY is compared to a threshold
+value larger than 𝑘 calculated to ensure it takes at least 𝛥𝑡 time units for LFY to decrease down
+𝑋𝐿
+to 𝑘 . We have therefore chosen this simple implementation. In summary: the factor X is a
+𝑋𝐿
+Boolean variable, which is set to 0 initially and switches irreversibly to 1 if LFY reaches a
+threshold value at one point during its history. This was incorporated in the model with the
+piecewise function:
+𝑋(𝑡) = 0 𝑖𝑓 𝑋(𝑡−𝑑𝑡) = 0 & 𝐿 < 𝐿
+𝑋𝑡ℎ
+𝑋(𝑡) = 1 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒
+where 𝐿 represents the LFY threshold needed to activate 𝑋 (Table S2). The equations
+𝑋𝑡ℎ
+describing the SALT model plus this one are the equations used in the plant architecture and
+GRN model described in the next section.
+Coupling of plant architecture model and GRN
+To model the interaction between the GRN studied in this work and the development of plant
+architecture, we built a model for organ and branching system development and coupled this
+developmental model with the GRN model presented in the previous section.
+Our developmental model consists of a set of developmental rules expressing the growth of the
+plant apices and the growth dynamics of the different organs. These rules are encoded using the
+L-system formalism (73) in the L-Py programming language (74). The model is a context-free
+deterministic L-system (D0L-system), where components change according to physiological and
+genetic rules depending on their own state, but independent of the state of their neighbors in the
+plant.
+12
+
+===== PAGE 14 =====
+
+Meristem state. We assume in our model that plant apices i (i.e. meristems) have a state 𝑠
+𝑖
+composed of molecular variables (levels of gene expression, hormones, etc.), geometric variables
+(radius, order), and physiological variables such as age, time count since last production,
+dormancy, physiological age, number of plastochrons already produced, duration in the current
+physiological state.
+At a macroscopic level, meristems can be in one of three categories of physiological state
+corresponding to three broad classes of the detailed states 𝑠 : VEG for vegetative, INFLO for
+𝑖
+inflorescence, FLO for flower. The first meristem starts in a VEG physiological state. During
+growth, new meristems are initialized with respect to the parent meristem state 𝑠 : they inherit all
+𝑖
+the values LFY, AP1, SAX of their parent meristem, a value of TFL1 multiplied by a fraction
+factor (by default 0.1) and maximal level of auxin and of TFL1 repressor (eRep). The value of F
+is also inherited with potentially an attenuating factor (by default 1 - no attenuation).
+Rules determining meristem macroscopic physiological state. At any time t, meristems that
+have a state with high LFY and high AP1 are set to FLO physiological state. Meristems that are
+not in FLO physiological state can either be in VEG or INFLO physiological states. A VEG
+physiological state corresponds to a low sum of SAX and LFY, while INFLO physiological state
+corresponds to a high value of the sum of SAX and LFY. The fact that the sum of LFY and SAX
+determine the physiological state reflects the fact that LFY and SAX induce bolting independently.
+Low/high values of specific gene activities are determined with respect to specific thresholds
+parameters. These thresholds were set so that in WT plants they lead to realistic numbers of organs
+and development (inspired from Mündermann et al. (75)).
+Meristem growth. In VEG physiological state, meristems produce a short internode, an axillary
+leaf at a phyllotaxis angle of 137 degrees from the preceding one at each plastochron. Axillary
+meristems are forced to stay dormant (we do not model the outgrowth and dynamics of lateral
+meristems in the rosette). In INFLO physiological state, a bract/cauline leaf is produced if the X
+factor (reflecting a memory of high levels of LEAFY) is not set in the current meristem state,
+together with an axillary meristem. Finally, as soon as a meristem enters a FLO state, it
+immediately transforms into a terminal flower with age 0.
+Conditions for lateral productions to grow out: The meristem building the main stem (order 0
+in the code) grows immediately after initiation. Lateral meristems in the rosette meristem never
+13
+
+===== PAGE 15 =====
+
+grow (their growth is not modelled). Meristems building stems of order 1 (lateral branches) always
+start to grow with a small and constant delay with respect to the moment of their initiation (half a
+day by default). Other meristems (at higher orders) are latent by default (in reference to what is
+observed in WT, presumably due to apical dominance exerted to apices of order 1 on meristems
+of higher orders). This dormancy is cancelled if meristems have experienced a high level of LFY
+since their initiation, which by triggering the factor X (see above), induces meristems outgrowth
+(case of cauliflower).
+Organ growth. Every generated organ grows during the simulation according to its own growth
+rules. These rules depend on the physiological state of the meristem that produced that organ. For
+instance, an internode produced by a meristem in VEG physiological state will not elongate, as
+opposed to meristems produced by meristems in INFLO or FLO physiological states. Growth rules
+are essential to the dynamics of architecture development, in particular the rules controlling
+internode elongation. These rules have been implemented to reproduce qualitatively realistic
+rosette dynamics, bolting and flowering development on the WT. We assume here that these rules
+are not modified by the mutations affecting the inflorescence studied here. The cauliflower
+architecture thus emerges only from a change in the genetic network and its consequence on organ
+outgrowth or suppression, with a conserved dynamics of axes elongation.
+Gene regulation computation. At each time step, each meristem reads the new value of F, whose
+dynamics is considered as a global input variable to the plant and determined here by a growing
+sigmoidal function of the current development time. This value is used as an input of the genetic
+network, together with the previous state of the meristem to update the genetic state of the
+meristem. This new genetic state may in turn determine a new value of the macroscopic
+physiological state of the meristem and induce a change in meristem behavior according to
+previously defined rules.
+A consequence of the meristem development rules and the monotonic increase of F, all meristems
+follow a logical sequence of differentiation by moving to the next physiological state after a while:
+VEG → INFLO → FLO,
+thus producing a progressive macroscopic differentiation of the meristems. In the cauliflower, this
+differentiation is blocked in the INFLO state as LFY can never set up firmly the flower state
+14
+
+===== PAGE 16 =====
+
+L-systems implementation principle. At any moment during a simulation, the simulated plant is
+represented as a set of components organized in a bracketed string of modules and called the L-
+string. Modules represent the various plant components (meristems, internode, leaves, etc.) that
+can be found in a plant branching system. Each module can bear attributes describing its state (e.g.
+diameter, length, genetic state, etc.). In the L-string, modules within a pair of matching brackets
+correspond to the successive components of a given axis. The position of an opening bracket in
+the L-string defines the position of the axis in the tree branching system. Altogether, the L-string
+represents the state of the plant branching system at each time step.
+For example, consider a L-string made of three main types of components denoted I (internodes),
+A (apices), L (leaves):
+L = 𝐼(5,21)𝐼(5,19)[𝐿(10,40)][𝐼(3,10)𝐴(𝑠 )]𝐼(4,12)[𝐴(𝑠 )]𝐴(𝑆 )
+1 2 0
+It represents a plant made of 3 axes:
+1. 𝐼(5,21)𝐼(5,19)𝐼(4,12)𝐴(𝑠 )
+0
+2. 𝐼(3,10)𝐴(𝑠 )
+1
+3. 𝐴(𝑠 )
+2
+Leaves, such as [𝐿(10,40)], are considered as insertions on their own axis. In this example,
+internodes I have two attributes, namely d and l, corresponding respectively to their average
+diameter and length. Likewise, leaves L have two attributes corresponding to their maximum width
+and length. Apices A have a single vector attribute aggregating several variables defining the state
+of an apex. A typical such state contains variables corresponding to plastochron information, gene
+expression and signal levels.
+Let's assume for instance that the state of each apex is governed by a GRN composed of 3 genes,
+𝐴,𝐵,𝐶. Then the state of every apex will contain a value corresponding to the level of expression
+of these genes in the apex. In our example, each state 𝑠 of apex 𝑖 will contain the following
+𝑖
+variables: 𝑠 .𝐴, 𝑠 .𝐵, 𝑠 .𝐶, corresponding to the expression levels of genes 𝐴,𝐵,𝐶 in state 𝑠 , and
+𝑖 𝑖 𝑖 𝑖
+a plastochron count down value 𝑠 .𝑃𝐶𝐷, counting the time remaining before initiating a new lateral
+𝑖
+organ and reset at the initiation of each lateral primordium.
+Based on these definitions, assuming a constant increment of time 𝛥𝑡 between the simulation steps,
+the rules of development have the following main structure:
+15
+
+===== PAGE 17 =====
+
+𝐴(𝑠): # apex production rule (s = state)
+compute the new apex state 𝑛𝑠 as a function of the old state 𝑠 and 𝛥𝑡
+(this updates in particular the apex GRN variables, including factorX)
+if 𝑠.𝑃𝐶𝐷 == 0: # time to make a new primordium
+compute an initial state 𝑖𝑠 for the new lateral apex
+reset 𝑠.𝑃𝐶𝐷 to T # i.e. to a full plastochron
+if factorX < fXthreshold: produce [𝐴(𝑖𝑠)]𝐴(𝑛𝑠)
+else: produce 𝐴(𝑛𝑠) # the bract is suppressed
+else:
+decrease 𝑠.𝑃𝐶𝐷by 𝛥𝑡
+produce 𝐴(𝑛𝑠)
+𝐼(𝑦,𝑙): # internode production rule, (y = diameter, l = length)
+compute dy and 𝑑𝑙 as a function of the increment of time 𝛥𝑡
+produce 𝐼(𝑑+𝑑𝑦,𝑙 +𝑑𝑙)
+𝐿(𝑤,𝑙): # Leaf production rule (w = width, l = length)
+compute 𝑑𝑤 and dl as a function of the increment of time 𝛥𝑡
+produce 𝐿(𝑤 +𝑑𝑤,𝑙 +𝑑𝑙)
+The first rule defines the time evolution of an apex. First the new state 𝑛𝑠 is computed based on
+the apex previous state 𝑠 and on 𝛥𝑡. This updates the value of the gene expression levels contained
+in the apex current state (detailed below). Then, if the plastochron countdown has reached 0
+(𝑠.𝑃𝐶𝐷 == 0), it triggers the production of a new lateral apex with an initial state partially
+inherited from the main apex's state (see above), and an apical state with updated state. Note that
+depending on the value returned by the GRN for the factor X, the network will keep or suppress
+the bract (this illustrates how gene levels are used to take decisions at the level of morphodynamics
+rules). Otherwise, one just replaces the current apex with an updated one.
+16
+
+===== PAGE 18 =====
+
+The last two rules define how each internode I and leaf 𝐿 grow with time. Increment of the
+geometric variables (length, width and diameter) characterizing these components are computed
+over a time lapse 𝛥𝑡, and are used to update the values of internode and leaf geometric variables.
+Finally, a set of interpretation rules make it possible to map at each time point the current L-string
+to a detailed geometric interpretation. The detailed description of these rules can be found in the
+available code.
+Coupling with the GRN model
+At time step 𝑡, each apex 𝑖 is in a state 𝑠 stored as an attribute of the corresponding component
+𝑖
+𝐴(𝑠 ) in the L-string. We assume that this state is characterized by some attractor of the SALT
+𝑖
+GRN described in previous section Regulatory network construction and simulation. During
+development, this state can change if one of its entries, aux or F, is forced to a new value by the
+architectural processes implemented in the L-systems rules and external to the GRN per se.
+Let us denote 𝑔 ,…,𝑔 the set of GRN variables and call 𝑔 ,…,𝑔 subset of the entries that might
+1 𝑘 1 𝑘0
+be overwritten by external processes during the plant growth (variables that can be forced from the
+outside in the GRN). At the end of the 𝑛𝑡ℎ time step, the state of an apex 𝑖 is stable, defined by 𝑠 ,
+𝑖
+and the 𝑘𝑡ℎ gene having the value 𝑠 .𝑔 . During the next step of duration 𝛥𝑡, apex processes or
+𝑖 𝑘
+aging may change the value of one or several of the input gene variables 𝑔 ,…,𝑔 . In this case,
+1 𝑘0
+the apex GRN state from the previous state may no longer be valid, i.e. compatible with the GRN
+model. Therefore, the GRN transition function must be called with the new GRN input gene values
+to compute the attractor corresponding to this new situation. All these updates are done at the
+beginning of the Apex production rule (see above).
+Between two simulated steps, the state of every apex is thus evaluated using this rule. The state of
+newly initiated lateral meristems is derived from the apical meristem state, using a set of putative
+inheritance rules (see description above). Thanks to this tight coupling between the plant
+architecture model and GRN, the architecture of the plant can be seen as an emerging property of
+the two-way interaction between GRN and growth. It made it possible to reproduce all the mutant
+phenotypes related to genes involved in the cauliflower GRN.
+17
+
+===== PAGE 19 =====
+
+Geometric model
+In addition to the GRN-based plant development model, we built a purely architectural or
+geometric model (no GRN involved) to study how changes in the plastochron modify the
+morphology of curds. This model is a simplified version of the plant architecture model described
+above.
+In this model, a meristem (represented by a sphere of constant size) produces an elongating
+internode and a lateral meristem at each plastochron. A newly born meristem starts producing its
+own lateral meristems after a time defined by the parameter called Onset Delay (OD). Increasing
+OD values decreases the total number of meristems produced by the simulation. OD = 0 was used
+in Figure 4F-G. Internodes elongate in time according to a common sigmoidal curve. Starting from
+an initial meristem, the repetitive application of these rules generates a curd composed of
+branching systems called florets (fig. S6A). To avoid the high computational cost after some time
+due to the production of an exponentially increasing number of elements, we simulated meristems
+and internodes up to a chosen maximal order (MO). Florets of order = MO were represented by an
+axis bearing a sphere used as envelope to coarsely approximate the non-simulated internodes and
+meristems of higher order (fig. S6A). However, for long simulation times, the growth curve of the
+envelopes creates large structures that become poor approximations of the oldest florets and alter
+the actual curd structure (fig. S6A and orange spheres in fig. S6B). For a given number of
+simulation days, more precise curd structures are obtained by increasing the detail level (i.e. by
+increasing the MO value): fig. S6B shows that the envelopes become a better approximation as
+they are used for younger florets when MO is increased. To limit the visual impact of poorly
+simulated floret envelopes at low MO, we thus designed an empirical rule that removes those large
+elements artificially altering the curd shape. This produces a curd structure closer to the fully
+detailed one (i.e. with all orders simulated, Fig S6C). For example, removing the oldest envelopes
+from the MO=4 model makes it closer to the finer one obtained at MO=9 (fig. S6B).
+Limiting simulation time or increasing the OD parameter make it possible to reduce the number
+of simulated meristems. In such cases, all meristems can be simulated at all orders and one can
+optionally choose to inactivate the previous empirical rule and represent all meristems by spheres
+of constant size (fig. S6D-E).
+18
+
+===== PAGE 20 =====
+
+These two options of the geometric model show that cauliflower and Romanesco morphologies
+can be produced by changes in the plastochron duration (Fig.4F-G, fig. S6D-E). To produce a
+cauliflower morphology, the plastochron remains constant during the entire simulation (10 h). For
+the Romanesco morphology new meristems are initialized with a 10 h plastochron. Then, the
+duration of the plastochron linearly decreases as the meristem grows.
+The model was implemented as an L-system (see previous section). For the cauliflower
+morphology the plastochron countdown decreased following:
+𝑠.𝑃𝐶𝐷(𝑡+𝛥𝑡) = 𝑠.𝑃𝐶𝐷(𝑡)−𝑐𝑡𝑒
+while for the Romanesco the plastochron countdown decreased faster with the age of the
+meristem:
+𝑠.𝑃𝐶𝐷(𝑡+𝛥𝑡) = 𝑠.𝑃𝐶𝐷(𝑡)−(𝑐𝑡𝑒)(𝑠.𝐴𝐺𝐸)
+where 𝑠.𝐴𝐺𝐸 is the age of the meristem since it was created.
+19
+
+===== PAGE 21 =====
+
+Supplementary figures
+Figure S1. The photoperiod flowering pathway upregulates TFL1p:GUS activity in the shoot
+apex. (a-b), TFL1p:GUS activity in representative shoot apices grown under long-day (a) or short-
+day (b) photoperiod. (c-d), longitudinal sections through the apices shown on the left. (e-f),
+TFL1p:GUS activity in representative WT (e) and co-3 (f) shoot apices at a similar developmental
+stage. (g-h), TFL1p:GUS activity in cleared WT (g) and 35Sp:CO (h) shoot apices. (i-j),
+TFL1p:GUS activity in representative WT (i) and ft-3 (j) shoot apices at a similar developmental
+stage. (k-l), TFL1p:GUS activity in longitudinal sections through representative WT (k) and
+35Sp:FT (l) shoot apices at a similar developmental stage. Arrows mark the SAM region. Scale
+bars in (c), (d), (k) and (l), 100 μm. Scale bars in (g) and (h), 40 μm.
+20
+
+===== PAGE 22 =====
+
+TFL1 AP1 LFY
+min max min max min max
+Figure S2: Robustness of the SALT model
+Steady state of the SALT GRN (y axis) at different F values (x axis) using 10 different values of
+the parameter indicated above each graph (see Modeling Methods section), while the other
+parameters remain fixed. The first three columns of graphs show the analysis in SAM conditions
+(i.e., without auxin), and the next three columns show the analysis performed in lateral meristem
+conditions (i.e., with auxin). The value of the parameters changes in regular intervals from 0.001
+(light green, yellow and grey colored curves) to double its optimized value (dark green, orange
+and dark grey colored curves). Green, yellow and red curves correspond to TFL1, AP1, and LFY
+value, respectively. The same qualitative behavior is observed independently of changes in the
+value of the parameters.
+21
+
+===== PAGE 23 =====
+
+Figure S3: Genetic control of lateral axes development: Lateral axes of higher order develop in
+ap1 cal , in a LFY dependent manner, compared to wild-type or lfy plants.
+The main inflorescence stem is order 1, a lateral axis growing on order n stem has order n+1.
+Numbers on the pictures below indicate order of the closest inflorescence.
+(a-c) Inflorescences of six-week-old plants grown in long days. Whereas in these growth
+conditions, inflorescences of orders >2 are rarely observed in Col-0 (a) or lfy mutant (c), several
+of them are visible in ap1 cal mutant (b). Scale bar = 1 cm. (d-f) The highly branched structure of
+ap1 cal (d) compared to wild type Col-0 (e) is lost in ap1 cal lfy triple mutant (f), that have an
+architecture very close to the lfy single mutant (g). Plants were grown for 2 months in long-day
+conditions. Scale bar = 5 cm. Scoring axis of order ≥4 per plant (h) shows that the ap1 cal lfy plants
+behaves differently from ap1 cal plants (Wilcoxon test, * p-value 0.0099)
+22
+
+===== PAGE 24 =====
+
+23
+
+===== PAGE 25 =====
+
+Figure S4: Sequence and expression of BoAP1 and BoCAL genes.
+(a) Sequence alignment of the BoAP1-a, BoAP1-c and BoCAL proteins from Brassica oleracea
+(Bo) and Brassica oleracea var. botrytis (Bob). Sequences of the proteins were translated from the
+Brassica oleracea reference genome (63) or from the gene sequence assembled from reads
+obtained from RNA-seq of cauliflower curds (sample CAUL-2b). The mutation identified in
+BoCAL protein is the same as previously published (7)(b). Expression levels of BobAP1, BobCAL
+and their close homologs FRUITFUL (BobFUL) based on RNA-seq. For each gene, the normalized
+number of reads (RPKM) is shown as a value and color coded according to the color scale. OBS
+are cauliflowers harvested in the field of the Brittany Seed Observatory, CAUL and ROM samples
+are issued from two mature curds bought on the market (2a and 2b are different samples from curd
+2). BobAP1 genes expression is undetectable in growing cauliflowers (OBS samples) and weak
+in mature cauliflowers as compared to BoFUL genes. (c) Expression levels of genes BoAP1,
+BoCAL and BoFUL gene in Brassica oleracea tissues (stem, inflorescence and flowers, left panel)
+and the curds of the Botrytis varieties (cauliflower and Romanesco). Error bars represent the
+standard deviation between replicates. This comparison shows that BoAP1-a and BoAP1-c have a
+higher expression level than BoFUL in inflorescence and flower tissue whereas their expression is
+much lower than BoFUL’s in curds (right panel). BobACT2 is an ACTIN2 gene used as a reference.
+(d) Analysis of BoAP1-a/c and BobAP1-a/c promoter sequences using models (position weight
+matrices) detecting binding sites for 3 known AP1 regulators from Arabidopsis (SOC1, FD and
+LFY)(66, 67). Sites are denoted by bars above the line for cabbage and below for cauliflowers and
+with height dependent on the score obtained with the binding models. Scale bar is 100 bp.
+24
+
+===== PAGE 26 =====
+
+Figure S5: Cauliflowers grow axes of higher order than cabbages
+Dissected cauliflower reveals axes of successive orders from order 1 to 7 (b-g). Growing
+cabbages (h-j) and an elongating cauliflower curd (k). Cabbages (h-j) show 3 orders, rarely 4,
+whereas cauliflowers show up to 7. Scale bars: 2 cm (a), 0.5 cm (b, c), 1 mm (d), 500 µm (e),
+200 µm (f), 50 µm (g).
+25
+
+===== PAGE 27 =====
+
+A Envelope
+order 2
+order 1 order 3 order 4
+Floret
+2 3 4
+Maximal order (MO)
+B D:10 OD:0
+C
+MO 3 4 5 7 9
+D:14 MO:5
+D
+Cauliflower-like
+E
+Romanesco-like
+OD 2 4 6 8
+Figure S6: Overview of the geometric model characteristics and output
+Labels: D = number of simulation Days, MO = Maximum Order, OD = Onset Delay.
+26
+
+===== PAGE 28 =====
+
+A: Strategy to display envelopes at different maximum orders. Green circles = meristems, blue
+circles = floret envelopes. For aging structures, a heuristic rule was designed to remove poor
+envelope approximations (dashed elements). Only structures at MO are removed, meaning that
+structures removed at MO=k do appear at MO=k+1, thus making a sequence of increasingly
+precise approximations of the curd structure, and where the volume of removed elements vanishes
+with increasing maximum orders.
+B-C: Effect of changing MO from 3-4-5-7-9 in romanesco-like curds. B. All envelopes are kept.
+Orange envelopes are older florets that poorly approximate the structure of the floret. C. Envelopes
+of old structures (in orange in B) are removed. Note that the sequence of shapes converges when
+MO increases, similarly to pre-fractal sequences that converge toward limit fractal structures and
+that at each MO, the structure with removed envelopes (C) is a better approximation of the most
+detailed simulation (MO=9) than when the envelopes are kept (B).
+D-E: Curd simulations using meristems of fixed size and no elements removed at different OD (D:
+cauliflower-like, E: romanesco-like). Note that increasing OD (2-4-6-8) increasingly reduces the
+total number of simulated meristems. Simulations run over 14 days, MO=5.
+27
+
+===== PAGE 29 =====
+
+Figure S7: Differential expression of selected meristem genes between Cauliflower and
+Romanesco curds. Heatmap (a) and quantification (b) showing the expression of genes involved
+in meristem homeostasis in cauliflower and Romanesco curds. CLV3 is expressed at lower level
+in Romanesco as compared to cauliflower (p = 0.0765; Mann & Whitney test). CLAVATA1 and
+SHOOTMERISTEMLESS (STM) have lower read numbers in Romanesco but the difference is
+barely significant (p = 0.1; Mann & Whitney test). Error bars represent the standard deviation
+between replicates.
+Movie Captions
+Simulations of the realistic model of Arabidopsis thaliana coupling architecture development
+with the GRN model (arabidopsis-grn.lpy file)
+- Movie 1: growth of a wild-type plant : no gene mutated
+- Movie 2: growth of lfy mutant: LFY gene off
+- Movie 3: growth of ap1/cal mutant: AP1/CAL gene off
+Simulations of the simple geometric model (geometric-model-erratum.lpy file)
+28
+
+===== PAGE 30 =====
+
+- Movie 4: growth of a cauliflower-like structure using the geometric model (geometric-
+model-erratum.lpy), where all apices are represented by identical small spheres and no
+structure is removed (Flag CONST_RADIUS on). The simulation runs over 16 days with
+MO=4 and OD=6.
+- Movie 5: growth of a romanesco-like structure using our geometric model (geometric-
+model-erratum.lpy), where all apices are represented by identical small spheres and no
+structure is removed (Flag CONST_RADIUS on). This simulation is obtained by simply
+replacing the constant plastochron law used in movie 4 by a decreasing plastochron. The
+simulation runs over 16 days with MO=4 and OD=6.
+29
+
+===== PAGE 31 =====
+
+Table S1. List of interactions used in the GRN.
+Regulator Type of regulation References
+AP1/CAL regulations
+LFY Positive direct (15, 41, 67, 76–80)
+TFL1 Negative direct (in complex with FD) (26, 29, 81–83)
+SAX Positive direct (21, 41)
+F Positive (direct in complex with FD) (84–89)
+LFY regulations
+AP1/CAL Positive direct (6, 82, 90, 91)
+TFL1 Negative direct (17, 26, 29, 83)
+SAX Positive direct (21, 41, 92–94)
+Auxin Positive via MP/ARF5 (95, 96)
+LFY Negative direct (15, 67, 76, 96, 97)
+TFL1 regulations
+AP1/CAL Negative direct (6, 25, 82, 90, 91)
+SAX Positive direct This study, (21)
+SAX Negative direct (21, 25)
+LFY Positive direct (15, 67, 76, 98)
+SAX regulations
+AP1 Negative direct (9, 21, 91, 99, 100)
+SAX Positive direct (21, 28, 42, 92, 94,
+101, 102)
+F Positive direct (18, 19, 21, 44, 89,
+93, 103–108)
+30
+
+===== PAGE 32 =====
+
+Table S2. Parameter values used in the SALT GRN.
+All 𝑘 are in nM t-1 units. Time (t) is in arbitrary units.
+𝑋,𝑌
+𝑘 1
+𝐿,𝐴
+𝑘 1
+𝑇,𝐴
+𝑘 50
+𝐹,𝐴
+𝑘 15
+𝑆,𝐴
+𝑘 4
+𝐴,𝑆
+𝑘 10
+𝐹,𝑆
+𝑘 20
+𝑆,𝑆
+𝑘 1
+𝑆,𝑇
+𝑘 100
+𝐿,𝑇
+𝑘 1
+𝐷,𝑇
+𝑘 0.1
+𝑅,𝑇
+𝑘 6
+𝑆,𝐿
+𝑘 4
+𝐴,𝐿
+𝑘 100
+𝐿,𝐿
+𝑘 5
+𝑇,𝐿
+𝑘 1
+𝑎𝑢𝑥,𝐿
+𝑘 0.1
+𝑎𝑆+𝐴
+𝑘 0.01
+𝑑𝐷
+𝛿 0.1
+𝑛 2
+𝐿 1
+𝑡ℎ
+31
+
+===== PAGE 33 =====
+
+Table S3. Feedback and feedforward loops in the SALT GRN.
+Feedback loops and their sign Coherent and Incoherent FFLs (ignoring
+SAX)
+▪ Mutual activation AP1←→LFY (>0) ▪ CFFL, type 2: TFL1⊣AP1→LFY /
+▪ Mutual repression AP1⊢⊣TFL1 (>0) TFL1⊣LFY
+▪ Positive 3-loop ▪ CFFL, type 2: TFL1⊣LFY→AP1/
+LFY→AP1⊣TFL1⊣LFY (>0) TFL1⊣AP1
+▪ Self repression LFY ⊢⊣LFY (<0) ▪ CFFL, type 4: AP1⊣TFL1⊣LFY/
+▪ Negative 2-loop LFY⊢→TFL1 (<0) AP1→LFY
+▪ Negative 3-loop ▪ IFFL, type 3: AP1→LFY→TFL1/
+LFY→TFL1⊣AP1→LFY (<0) AP1⊣TFL1
+▪ IFFL, type 1: LFY→TFL1⊣AP1/
+LFY→AP1
+▪ IFFL, type 1: LFY→AP1⊣TFL1/
+LFY→TFL1
+▪ SAX->LFY->AP1 / SAX->AP1; CFFL
+type 1
+▪ SAX->LFY->TLF1 / SAX->TFL1;
+CFFL type 1
+▪ SAX->AP1->LFY/ SAX->LFY; CFFL
+type 1
+▪ SAX->AP1-|TLF1/ SAX->TFL1; IFFL
+type 1
+▪ SAX->TFL1-|LFY / SAX->LFY; IFFL
+type 1
+▪ SAX->TFL1-|AP1 / SAX->AP1; IFFL
+type 1
+32
+
+===== PAGE 34 =====
+
+References and Notes
+1. C. Godin, C. Golé, S. Douady, Phyllotaxis as geometric canalization during plant
+development. Development 147, dev165878 (2020). doi:10.1242/dev.165878 Medline
+2. C. F. Quiros, M. W. Farnham, “The genetics of Brassica oleracea,” in Genetics and Genomics
+of the Brassicaceae, R. Schmidt, I. Bancroft, Eds. (Springer, 2011), pp. 261–289.
+3. D. V. Duclos, T. Björkman, Meristem identity gene expression during curd proliferation and
+flower initiation in Brassica oleracea. J. Exp. Bot. 59, 421–433 (2008).
+doi:10.1093/jxb/erm327 Medline
+4. L. B. Smith, G. J. King, The distribution of BoCAL-a alleles in Brassica oleracea is consistent
+with a genetic model for curd development and domestication of the cauliflower. Mol.
+Breed. 6, 603–613 (2000). doi:10.1023/A:1011370525688
+5. N. Guo, S. Wang, L. Gao, Y. Liu, X. Wang, E. Lai, M. Duan, G. Wang, J. Li, M. Yang, M.
+Zong, S. Han, Y. Pei, T. Borm, H. Sun, L. Miao, D. Liu, F. Yu, W. Zhang, H. Ji, C. Zhu,
+Y. Xu, G. Bonnema, J. Li, Z. Fei, F. Liu, Genome sequencing sheds light on the
+contribution of structural variants to Brassica oleracea diversification. BMC Biol. 19, 93
+(2021). doi:10.1186/s12915-021-01031-2 Medline
+6. J. L. Bowman, J. Alvarez, D. Weigel, E. M. Meyerowitz, D. R. Smyth, Control of flower
+development in Arabidopsis thaliana by APETALA1 and interacting genes. Development
+119, 721–743 (1993). doi:10.1242/dev.119.3.721
+7. S. A. Kempin, B. Savidge, M. F. Yanofsky, Molecular basis of the cauliflower phenotype in
+Arabidopsis. Science 267, 522–525 (1995). doi:10.1126/science.7824951 Medline
+8. G. Denay, H. Chahtane, G. Tichtinsky, F. Parcy, A flower is born: An update on Arabidopsis
+floral meristem formation. Curr. Opin. Plant Biol. 35, 15–22 (2017).
+doi:10.1016/j.pbi.2016.09.003 Medline
+9. A. Pajoro, S. Biewers, E. Dougali, F. Leal Valentim, M. A. Mendes, A. Porri, G. Coupland, Y.
+Van de Peer, A. D. van Dijk, L. Colombo, B. Davies, G. C. Angenent, The (r)evolution
+of gene regulatory networks controlling Arabidopsis plant reproduction: A two-decade
+history. J. Exp. Bot. 65, 4731–4745 (2014). doi:10.1093/jxb/eru233 Medline
+10. B. Thomson, F. Wellmer, Molecular regulation of flower development. Curr. Top. Dev. Biol.
+131, 185–210 (2019). doi:10.1016/bs.ctdb.2018.11.007 Medline
+11. K. E. Jaeger, N. Pullen, S. Lamzin, R. J. Morris, P. A. Wigge, Interlocking feedback loops
+govern the dynamic behavior of the floral transition in Arabidopsis. Plant Cell 25, 820–
+833 (2013). doi:10.1105/tpc.113.109355 Medline
+12. C. Espinosa-Soto, P. Padilla-Longoria, E. R. Alvarez-Buylla, A gene regulatory network
+model for cell-fate determination during Arabidopsis thaliana flower development that is
+robust and recovers experimental gene expression profiles. Plant Cell 16, 2923–2939
+(2004). doi:10.1105/tpc.104.021725 Medline
+13. F. Leal Valentim, Sv. Mourik, D. Posé, M. C. Kim, M. Schmid, R. C. van Ham, M.
+Busscher, G. F. Sanchez-Perez, J. Molenaar, G. C. Angenent, R. G. Immink, A. D. van
+Dijk, A quantitative and dynamic model of the Arabidopsis flowering time gene
+33
+
+===== PAGE 35 =====
+
+regulatory network. PLOS ONE 10, e0116973 (2015). doi:10.1371/journal.pone.0116973
+Medline
+14. P. Prusinkiewicz, Y. Erasmus, B. Lane, L. D. Harder, E. Coen, Evolution and development
+of inflorescence architectures. Science 316, 1452–1456 (2007).
+doi:10.1126/science.1140429 Medline
+15. K. Goslin, B. Zheng, A. Serrano-Mislata, L. Rae, P. T. Ryan, K. Kwaśniewska, B. Thomson,
+D. S. Ó’Maoiléidigh, F. Madueño, F. Wellmer, E. Graciet, Transcription Factor Interplay
+between LEAFY and APETALA1/CAULIFLOWER during Floral Initiation. Plant
+Physiol. 174, 1097–1109 (2017). doi:10.1104/pp.17.00098 Medline
+16. C. Ferrándiz, Q. Gu, R. Martienssen, M. F. Yanofsky, Redundant regulation of meristem
+identity and plant architecture by FRUITFULL, APETALA1 and CAULIFLOWER.
+Development 127, 725–734 (2000). doi:10.1242/dev.127.4.725 Medline
+17. D. Bradley, O. Ratcliffe, C. Vincent, R. Carpenter, E. Coen, Inflorescence commitment and
+architecture in Arabidopsis. Science 275, 80–83 (1997). doi:10.1126/science.275.5296.80
+Medline
+18. X. Hou, J. Zhou, C. Liu, L. Liu, L. Shen, H. Yu, Nuclear factor Y-mediated H3K27me3
+demethylation of the SOC1 locus orchestrates flowering responses of Arabidopsis. Nat.
+Commun. 5, 4601 (2014). doi:10.1038/ncomms5601 Medline
+19. S. K. Yoo, K. S. Chung, J. Kim, J. H. Lee, S. M. Hong, S. J. Yoo, S. Y. Yoo, J. S. Lee, J. H.
+Ahn, CONSTANS activates SUPPRESSOR OF OVEREXPRESSION OF CONSTANS 1
+through FLOWERING LOCUS T to promote flowering in Arabidopsis. Plant Physiol.
+139, 770–778 (2005). doi:10.1104/pp.105.066928 Medline
+20. A. Serrano-Mislata, P. Fernández-Nohales, M. J. Doménech, Y. Hanzawa, D. Bradley, F.
+Madueño, Separate elements of the TERMINAL FLOWER 1 cis-regulatory region
+integrate pathways to control flowering time and shoot meristem identity. Development
+143, 3315–3327 (2016). Medline
+21. R. V. Pérez-Ruiz, B. García-Ponce, N. Marsch-Martínez, Y. Ugartechea-Chirino, M.
+Villajuana-Bonequi, S. de Folter, E. Azpeitia, J. Dávila-Velderrain, D. Cruz-Sánchez, A.
+Garay-Arroyo, Mde. L. Sánchez, J. M. Estévez-Palmas, E. R. Álvarez-Buylla,
+XAANTAL2 (AGL14) is an important component of the complex gene regulatory
+network that underlies Arabidopsis shoot apical meristem transitions. Mol. Plant 8, 796–
+813 (2015). doi:10.1016/j.molp.2015.01.017 Medline
+22. D. Reinhardt, E.-R. Pesce, P. Stieger, T. Mandel, K. Baltensperger, M. Bennett, J. Traas, J.
+Friml, C. Kuhlemeier, Regulation of phyllotaxis by polar auxin transport. Nature 426,
+255–260 (2003). doi:10.1038/nature02081 Medline
+23. P. A. Wigge, FT, a mobile developmental signal in plants. Curr. Biol. 21, R374–R378
+(2011). doi:10.1016/j.cub.2011.03.038 Medline
+24. J. Putterill, E. Varkonyi-Gasic, FT and florigen long-distance flowering control in plants.
+Curr. Opin. Plant Biol. 33, 77–82 (2016). doi:10.1016/j.pbi.2016.06.008 Medline
+34
+
+===== PAGE 36 =====
+
+25. C. Liu, Z. W. N. Teo, Y. Bi, S. Song, W. Xi, X. Yang, Z. Yin, H. Yu, A conserved genetic
+pathway determines inflorescence architecture in Arabidopsis and rice. Dev. Cell 24,
+612–622 (2013). doi:10.1016/j.devcel.2013.02.013 Medline
+26. O. J. Ratcliffe, I. Amaya, C. A. Vincent, S. Rothstein, R. Carpenter, E. S. Coen, D. J.
+Bradley, A common mechanism controls the life cycle and architecture of plants.
+Development 125, 1609–1615 (1998). doi:10.1242/dev.125.9.1609 Medline
+27. D. Weigel, J. Alvarez, D. R. Smyth, M. F. Yanofsky, E. M. Meyerowitz, LEAFY controls
+floral meristem identity in Arabidopsis. Cell 69, 843–859 (1992). doi:10.1016/0092-
+8674(92)90295-N Medline
+28. S. D. Michaels, G. Ditta, C. Gustafson-Brown, S. Pelaz, M. Yanofsky, R. M. Amasino,
+AGL24 acts as a promoter of flowering in Arabidopsis and is positively regulated by
+vernalization. Plant J. 33, 867–874 (2003). doi:10.1046/j.1365-313X.2003.01671.x
+Medline
+29. Y. Zhu, S. Klasfeld, C. W. Jeong, R. Jin, K. Goto, N. Yamaguchi, D. Wagner, TERMINAL
+FLOWER 1-FD complex target genes and competition with FLOWERING LOCUS T.
+Nat. Commun. 11, 5118 (2020). doi:10.1038/s41467-020-18782-1 Medline
+30. L. Conti, D. Bradley, TERMINAL FLOWER1 is a mobile signal controlling Arabidopsis
+architecture. Plant Cell 19, 767–778 (2007). doi:10.1105/tpc.106.049767 Medline
+31. H. Chahtane, G. Vachon, M. Le Masson, E. Thévenon, S. Périgon, N. Mihajlovic, A.
+Kalinina, R. Michard, E. Moyroud, M. Monniaux, C. Sayou, V. Grbic, F. Parcy, G.
+Tichtinsky, A variant of LEAFY reveals its capacity to stimulate meristem development
+by inducing RAX1. Plant J. 74, 678–689 (2013). doi:10.1111/tpj.12156 Medline
+32. D. Weigel, O. Nilsson, A developmental switch sufficient for flower initiation in diverse
+plants. Nature 377, 495–500 (1995). doi:10.1038/377495a0 Medline
+33. X. Sun, J. Bucher, Y. Ji, A. D. J. van Dijk, R. G. H. Immink, G. Bonnema, Effect of ambient
+temperature fluctuation on the timing of the transition to the generative stage in
+cauliflower. Environ. Exp. Bot. 155, 742–750 (2018).
+doi:10.1016/j.envexpbot.2018.06.013
+34. M. Kieffer, M. P. Fuller, A. J. Jellings, Explaining curd and spear geometry in broccoli,
+cauliflower and ‘romanesco’: Quantitative variation in activity of primary meristems.
+Planta 206, 34–43 (1998). doi:10.1007/s004250050371
+35. S. Douady, Y. Couder, Phyllotaxis as a dynamical self organizing process part I: The spiral
+modes resulting from time-periodic iterations. J. Theor. Biol. 178, 255–273 (1996).
+doi:10.1006/jtbi.1996.0024
+36. Y. Refahi, G. Brunoud, E. Farcot, A. Jean-Marie, M. Pulkkinen, T. Vernoux, C. Godin, A
+stochastic multicellular model identifies biological watermarks from disorders in self-
+organized patterns of phyllotaxis. eLife 5, e14093 (2016). doi:10.7554/eLife.14093
+Medline
+37. J. C. Fletcher, U. Brand, M. P. Running, R. Simon, E. M. Meyerowitz, Signaling of cell fate
+decisions by CLAVATA3 in Arabidopsis shoot meristems. Science 283, 1911–1914
+(1999). doi:10.1126/science.283.5409.1911 Medline
+35
+
+===== PAGE 37 =====
+
+38. M. Kitagawa, D. Jackson, Control of meristem size. Annu. Rev. Plant Biol. 70, 269–291
+(2019). doi:10.1146/annurev-arplant-042817-040549 Medline
+39. L. E. Watts, Selection for quality in marrow-stem kale. Euphytica 15, 224–228 (1966).
+doi:10.1007/BF00022327
+40. A. Maizel, D. Weigel, Temporally and spatially controlled induction of gene expression in
+Arabidopsis thaliana. Plant J. 38, 164–171 (2004). doi:10.1111/j.1365-
+313X.2004.02027.x Medline
+41. V. Grandi, V. Gregis, M. M. Kater, Uncovering genetic and molecular interactions among
+floral meristem identity genes in Arabidopsis thaliana. Plant J. 69, 881–893 (2012).
+doi:10.1111/j.1365-313X.2011.04840.x Medline
+42. R. G. H. Immink, D. Posé, S. Ferrario, F. Ott, K. Kaufmann, F. L. Valentim, S. de Folter, F.
+van der Wal, A. D. J. van Dijk, M. Schmid, G. C. Angenent, Characterization of SOC1's
+central role in flowering by the identification of its upstream and downstream regulators.
+Plant Physiol. 160, 433–449 (2012). doi:10.1104/pp.112.202614 Medline
+43. I. Kardailsky, V. K. Shukla, J. H. Ahn, N. Dagenais, S. K. Christensen, J. T. Nguyen, J.
+Chory, M. J. Harrison, D. Weigel, Activation tagging of the floral inducer FT. Science
+286, 1962–1965 (1999). doi:10.1126/science.286.5446.1962 Medline
+44. H. Lee, S. S. Suh, E. Park, E. Cho, J. H. Ahn, S. G. Kim, J. S. Lee, Y. M. Kwon, I. Lee, The
+AGAMOUS-LIKE 20 MADS domain protein integrates floral inductive pathways in
+Arabidopsis. Genes Dev. 14, 2366–2376 (2000). doi:10.1101/gad.813600 Medline
+45. V. Gregis, A. Sessa, C. Dorca-Fornell, M. M. Kater, The Arabidopsis floral meristem identity
+genes AP1, AGL24 and SVP directly repress class B and C floral homeotic genes. Plant
+J. 60, 626–637 (2009). doi:10.1111/j.1365-313X.2009.03985.x Medline
+46. H. Onouchi, M. I. Igeño, C. Périlleux, K. Graves, G. Coupland, Mutagenesis of plants
+overexpressing CONSTANS demonstrates novel interactions among Arabidopsis
+flowering-time genes. Plant Cell 12, 885–900 (2000). doi:10.1105/tpc.12.6.885 Medline
+47. M. Koornneef, C. J. Hanhart, J. H. van der Veen, A genetic and physiological analysis of late
+flowering mutants in Arabidopsis thaliana. Mol. Gen. Genet. 229, 57–66 (1991).
+doi:10.1007/BF00264213 Medline
+48. F. Wellmer, M. Alves-Ferreira, A. Dubois, J. L. Riechmann, E. M. Meyerowitz, Genome-
+wide analysis of gene expression during early Arabidopsis flower development. PLOS
+Genet. 2, e117 (2006). doi:10.1371/journal.pgen.0020117 Medline
+49. R. A. Jefferson, T. A. Kavanagh, M. W. Bevan, GUS fusions: Beta-glucuronidase as a
+sensitive and versatile gene fusion marker in higher plants. EMBO J. 6, 3901–3907
+(1987). doi:10.1002/j.1460-2075.1987.tb02730.x Medline
+50. N. Bechtold, J. Ellis, G. Pelletier, C. R. Acad. Sci. Paris. Life Sci. 316, 1194–1199 (1993).
+51. N. Bechtold, D. Bouchez, “In planta Agrobacterium-mediated transformation of adult
+Arabidopsis thaliana plants by vacuum infiltration,” in Gene Transfer to Plants, I.
+Potrykus, G. Spangenberg, Eds. (Springer, 1995) pp. 19–23.
+36
+
+===== PAGE 38 =====
+
+52. M. Trigueros, M. Navarrete-Gómez, S. Sato, S. K. Christensen, S. Pelaz, D. Weigel, M. F.
+Yanofsky, C. Ferrándiz, The NGATHA genes direct style development in the Arabidopsis
+gynoecium. Plant Cell 21, 1394–1409 (2009). doi:10.1105/tpc.109.065508 Medline
+53. I. Mitsuhara, M. Ugaki, H. Hirochika, M. Ohshima, T. Murakami, Y. Gotoh, Y. Katayose, S.
+Nakamura, R. Honkura, S. Nishimiya, K. Ueno, A. Mochizuki, H. Tanimoto, H.
+Tsugawa, Y. Otsuki, Y. Ohashi, Efficient promoter cassettes for enhanced expression of
+foreign genes in dicotyledonous and monocotyledonous plants. Plant Cell Physiol. 37,
+49–59 (1996). doi:10.1093/oxfordjournals.pcp.a028913 Medline
+54. R. P. Hellens, A. C. Allan, E. N. Friel, K. Bolitho, K. Grafton, M. D. Templeton, S.
+Karunairetnam, A. P. Gleave, W. A. Laing, Transient expression vectors for functional
+genomics, quantification of promoter activity and RNA silencing in plants. Plant
+Methods 1, 13 (2005). doi:10.1186/1746-4811-1-13 Medline
+55. Z. Feng, B. Zhang, W. Ding, X. Liu, D.-L. Yang, P. Wei, F. Cao, S. Zhu, F. Zhang, Y. Mao,
+J.-K. Zhu, Efficient genome editing in plants using a CRISPR/Cas system. Cell Res. 23,
+1229–1232 (2013). doi:10.1038/cr.2013.114 Medline
+56. W. Yan, D. Chen, K. Kaufmann, Efficient multiplex mutagenesis by RNA-guided Cas9 and
+its use in the characterization of regulatory elements in the AGAMOUS gene. Plant
+Methods 12, 23 (2016). doi:10.1186/s13007-016-0125-7 Medline
+57. S. Bensmihen, A. To, G. Lambert, T. Kroj, J. Giraudat, F. Parcy, Analysis of an activated
+ABI5 allele using a new selection method for transgenic Arabidopsis seeds. FEBS Lett.
+561, 127–131 (2004). doi:10.1016/S0014-5793(04)00148-6 Medline
+58. S. J. Clough, A. F. Bent, Floral dip: A simplified method for Agrobacterium-mediated
+transformation of Arabidopsis thaliana. Plant J. 16, 735–743 (1998). doi:10.1046/j.1365-
+313x.1998.00343.x Medline
+59. N. Prunet, K. Duncan, Imaging flowers: A guide to current microscopy and tomography
+techniques to study flower development. J. Exp. Bot. 71, 2898–2909 (2020).
+doi:10.1093/jxb/eraa094 Medline
+60. A. Sessions, D. Weigel, M. F. Yanofsky, The Arabidopsis thaliana MERISTEM LAYER 1
+promoter specifies epidermal expression in meristems and young primordia. Plant J. 20,
+259–263 (1999). doi:10.1046/j.1365-313x.1999.00594.x Medline
+61. D. Weigel, J. Glazebrook, Arabidopsis: A Laboratory Manual (Cold Spring Harbor
+Laboratory Press, 2002).
+62. C. Dorca-Fornell, V. Gregis, V. Grandi, G. Coupland, L. Colombo, M. M. Kater, The
+Arabidopsis SOC1-like genes AGL42, AGL71 and AGL72 promote flowering in the
+shoot apical and axillary meristems. Plant J. 67, 1006–1017 (2011). doi:10.1111/j.1365-
+313X.2011.04653.x Medline
+63. C. Belser, B. Istace, E. Denis, M. Dubarry, F.-C. Baurens, C. Falentin, M. Genete, W.
+Berrabah, A.-M. Chèvre, R. Delourme, G. Deniot, F. Denoeud, P. Duffé, S. Engelen, A.
+Lemainque, M. Manzanares-Dauleux, G. Martin, J. Morice, B. Noel, X. Vekemans, A.
+D’Hont, M. Rousseau-Gueutin, V. Barbe, C. Cruaud, P. Wincker, J.-M. Aury,
+Chromosome-scale assemblies of plant genomes using nanopore long reads and optical
+maps. Nat. Plants 4, 879–887 (2018). doi:10.1038/s41477-018-0289-4 Medline
+37
+
+===== PAGE 39 =====
+
+64. J. Yu, S. Tehrim, F. Zhang, C. Tong, J. Huang, X. Cheng, C. Dong, Y. Zhou, R. Qin, W.
+Hua, S. Liu, Genome-wide comparative analysis of NBS-encoding genes between
+Brassica species and Arabidopsis thaliana. BMC Genomics 15, 3 (2014).
+doi:10.1186/1471-2164-15-3 Medline
+65. H. Lv, Y. Wang, F. Han, J. Ji, Z. Fang, M. Zhuang, Z. Li, Y. Zhang, L. Yang, A high-quality
+reference genome for cabbage obtained with SMRT reveals novel genomic features and
+evolutionary characteristics. Sci. Rep. 10, 12394 (2020). doi:10.1038/s41598-020-69389-
+x Medline
+66. O. Fornes, J. A. Castro-Mondragon, A. Khan, R. van der Lee, X. Zhang, P. A. Richmond, B.
+P. Modi, S. Correard, M. Gheorghe, D. Baranašić, W. Santana-Garcia, G. Tan, J.
+Chèneby, B. Ballester, F. Parcy, A. Sandelin, B. Lenhard, W. W. Wasserman, A.
+Mathelier, JASPAR 2020: Update of the open-access database of transcription factor
+binding profiles. Nucleic Acids Res. 48 (D1), D87–D92 (2020). Medline
+67. E. Moyroud, E. G. Minguet, F. Ott, L. Yant, D. Posé, M. Monniaux, S. Blanchet, O. Bastien,
+E. Thévenon, D. Weigel, M. Schmid, F. Parcy, Prediction of regulatory interactions from
+genome sequences using a biophysical model for the Arabidopsis LEAFY transcription
+factor. Plant Cell 23, 1293–1306 (2011). doi:10.1105/tpc.111.083329 Medline
+68. B. H. Toyama, M. W. Hetzer, Protein homeostasis: Live long, won’t prosper. Nat. Rev. Mol.
+Cell Biol. 14, 55–61 (2013). doi:10.1038/nrm3496 Medline
+69. A. Jolma, Y. Yin, K. R. Nitta, K. Dave, A. Popov, M. Taipale, M. Enge, T. Kivioja, E.
+Morgunova, J. Taipale, DNA-dependent formation of transcription factor pairs alters
+their binding specificity. Nature 527, 384–388 (2015). doi:10.1038/nature15518 Medline
+70. S. Legewie, H. Herzel, H. V. Westerhoff, N. Blüthgen, Recurrent design patterns in the
+feedback regulation of the mammalian signalling network. Mol. Syst. Biol. 4, 190 (2008).
+doi:10.1038/msb.2008.29 Medline
+71. S. Belikov, O. G. Berg, Ö. Wrange, Quantification of transcription factor-DNA binding
+affinity in a living cell. Nucleic Acids Res. 44, 3045–3058 (2016).
+doi:10.1093/nar/gkv1350 Medline
+72. S. Mangan, U. Alon, Structure and function of the feed-forward loop network motif. Proc.
+Natl. Acad. Sci. U.S.A. 100, 11980–11985 (2003). doi:10.1073/pnas.2133841100 Medline
+73. P. Prusinkiewicz, A. Lindenmayer, The Algorithmic Beauty of Plants (Springer, 1990).
+74. F. Boudon, C. Pradal, T. Cokelaer, P. Prusinkiewicz, C. Godin, L-py: An L-system
+simulation framework for modeling plant architecture development based on a dynamic
+language. Front. Plant Sci. 3, 76 (2012). doi:10.3389/fpls.2012.00076 Medline
+75. L. Mündermann, Y. Erasmus, B. Lane, E. Coen, P. Prusinkiewicz, Quantitative modeling of
+Arabidopsis development. Plant Physiol. 139, 960–968 (2005).
+doi:10.1104/pp.105.060483 Medline
+76. C. M. Winter, R. S. Austin, S. Blanvillain-Baufumé, M. A. Reback, M. Monniaux, M.-F.
+Wu, Y. Sang, A. Yamaguchi, N. Yamaguchi, J. E. Parker, F. Parcy, S. T. Jensen, H. Li,
+D. Wagner, LEAFY target genes reveal floral regulatory logic, cis motifs, and a link to
+38
+
+===== PAGE 40 =====
+
+biotic stimulus response. Dev. Cell 20, 430–443 (2011).
+doi:10.1016/j.devcel.2011.03.019 Medline
+77. D. A. William, Y. Su, M. R. Smith, M. Lu, D. A. Baldwin, D. Wagner, Genomic
+identification of direct target genes of LEAFY. Proc. Natl. Acad. Sci. U.S.A. 101, 1775–
+1780 (2004). doi:10.1073/pnas.0307842100 Medline
+78. R. Benlloch, M. C. Kim, C. Sayou, E. Thévenon, F. Parcy, O. Nilsson, Integrating long-day
+flowering signals: A LEAFY binding site is essential for proper photoperiodic activation
+of APETALA1. Plant J. 67, 1094–1102 (2011). doi:10.1111/j.1365-313X.2011.04660.x
+Medline
+79. D. Wagner, R. W. M. Sablowski, E. M. Meyerowitz, Transcriptional activation of
+APETALA1 by LEAFY. Science 285, 582–584 (1999).
+doi:10.1126/science.285.5427.582 Medline
+80. F. Parcy, O. Nilsson, M. A. Busch, I. Lee, D. Weigel, A genetic framework for floral
+patterning. Nature 395, 561–566 (1998). doi:10.1038/26903 Medline
+81. S. Hanano, K. Goto, Arabidopsis TERMINAL FLOWER1 is involved in the regulation of
+flowering time and inflorescence development through transcriptional repression. Plant
+Cell 23, 3172–3184 (2011). doi:10.1105/tpc.111.088641 Medline
+82. O. J. Ratcliffe, D. J. Bradley, E. S. Coen, Separation of shoot and floral identity in
+Arabidopsis. Development 126, 1109–1120 (1999). doi:10.1242/dev.126.6.1109 Medline
+83. D. Goretti, M. Silvestre, S. Collani, T. Langenecker, C. Méndez, F. Madueño, M. Schmid,
+TERMINAL FLOWER1 Functions as a Mobile Transcriptional Cofactor in the Shoot
+Apical Meristem. Plant Physiol. 182, 2081–2095 (2020). doi:10.1104/pp.19.00867
+Medline
+84. J.-H. Jung, H.-J. Lee, J. Y. Ryu, C.-M. Park, SPL3/4/5 integrate developmental aging
+and photoperiodic signals into the FT-FD module in Arabidopsis Flowering. Mol. Plant
+9, 1647–1659 (2016). doi:10.1016/j.molp.2016.10.014 Medline
+85. P. A. Wigge, M. C. Kim, K. E. Jaeger, W. Busch, M. Schmid, J. U. Lohmann, D. Weigel,
+Integration of spatial and temporal information during floral induction in Arabidopsis.
+Science 309, 1056–1059 (2005). doi:10.1126/science.1114358 Medline
+86. S. Collani, M. Neumann, L. Yant, M. Schmid, FT modulates genome-wide DNA-binding of
+the bZIP transcription factor FD. Plant Physiol. 180, 367–380 (2019).
+doi:10.1104/pp.18.01505 Medline
+87. M. Abe, Y. Kobayashi, S. Yamamoto, Y. Daimon, A. Yamaguchi, Y. Ikeda, H. Ichinoki, M.
+Notaguchi, K. Goto, T. Araki, FD, a bZIP protein mediating signals from the floral
+pathway integrator FT at the shoot apex. Science 309, 1052–1056 (2005).
+doi:10.1126/science.1115983 Medline
+88. P. Teper-Bamnolker, A. Samach, The flowering integrator FT regulates SEPALLATA3 and
+FRUITFULL accumulation in Arabidopsis leaves. Plant Cell 17, 2661–2675 (2005).
+doi:10.1105/tpc.105.035766 Medline
+89. M. Romera-Branchat, E. Severing, C. Pocard, H. Ohr, C. Vincent, G. Née, R. Martinez-
+Gallegos, S. Jang, F. Andrés, P. Madrigal, G. Coupland, Functional divergence of the
+39
+
+===== PAGE 41 =====
+
+arabidopsis florigen-interacting bZIP transcription factors FD and FDP. Cell Rep. 31,
+107717 (2020). doi:10.1016/j.celrep.2020.107717 Medline
+90. S. J. Liljegren, C. Gustafson-Brown, A. Pinyopich, G. S. Ditta, M. F. Yanofsky, Interactions
+among APETALA1, LEAFY, and TERMINAL FLOWER1 specify meristem fate. Plant
+Cell 11, 1007–1018 (1999). doi:10.1105/tpc.11.6.1007 Medline
+91. K. Kaufmann, F. Wellmer, J. M. Muiño, T. Ferrier, S. E. Wuest, V. Kumar, A. Serrano-
+Mislata, F. Madueño, P. Krajewski, E. M. Meyerowitz, G. C. Angenent, J. L. Riechmann,
+Orchestration of floral initiation by APETALA1. Science 328, 85–89 (2010).
+doi:10.1126/science.1185244 Medline
+92. J. Lee, M. Oh, H. Park, I. Lee, SOC1 translocated to the nucleus by interaction with AGL24
+directly regulates leafy. Plant J. 55, 832–843 (2008). doi:10.1111/j.1365-
+313X.2008.03552.x Medline
+93. J. Moon, H. Lee, M. Kim, I. Lee, Analysis of flowering pathway integrators in Arabidopsis.
+Plant Cell Physiol. 46, 292–299 (2005). doi:10.1093/pcp/pci024 Medline
+94. C. Liu, H. Chen, H. L. Er, H. M. Soo, P. P. Kumar, J.-H. Han, Y. C. Liou, H. Yu, Direct
+interaction of AGL24 and SOC1 integrates flowering signals in Arabidopsis.
+Development 135, 1481–1491 (2008). doi:10.1242/dev.020255 Medline
+95. N. Yamaguchi, M.-F. Wu, C. M. Winter, M. C. Berns, S. Nole-Wilson, A. Yamaguchi, G.
+Coupland, B. A. Krizek, D. Wagner, A molecular framework for auxin-mediated
+initiation of flower primordia. Dev. Cell 24, 271–282 (2013).
+doi:10.1016/j.devcel.2012.12.017 Medline
+96. W. Li, Y. Zhou, X. Liu, P. Yu, J. D. Cohen, E. M. Meyerowitz, LEAFY controls auxin
+response pathways in floral primordium formation. Sci. Signal. 6, ra23 (2013). Medline
+97. O. Nilsson, I. Lee, M. A. Blázquez, D. Weigel, Flowering-time genes modulate the response
+to LEAFY activity. Genetics 150, 403–410 (1998). doi:10.1093/genetics/150.1.403
+Medline
+98. A. Serrano-Mislata, K. Goslin, B. Zheng, L. Rae, F. Wellmer, E. Graciet, F. Madueño,
+Regulatory interplay between LEAFY, APETALA1/CAULIFLOWER and TERMINAL
+FLOWER1: New insights into an old relationship. Plant Signal. Behav. 12, e1370164
+(2017). doi:10.1080/15592324.2017.1370164 Medline
+99. C. Liu, J. Zhou, K. Bracha-Drori, S. Yalovsky, T. Ito, H. Yu, Specification of Arabidopsis
+floral meristem identity by repression of flowering time genes. Development 134, 1901–
+1910 (2007). doi:10.1242/dev.003103 Medline
+100. H. Yu, T. Ito, F. Wellmer, E. M. Meyerowitz, Repression of AGAMOUS-LIKE 24 is a
+crucial step in promoting flower development. Nat. Genet. 36, 157–161 (2004).
+doi:10.1038/ng1286 Medline
+101. Z. Tao, L. Shen, C. Liu, L. Liu, Y. Yan, H. Yu, Genome-wide identification of SOC1 and
+SVP targets during the floral transition in Arabidopsis. Plant J. 70, 549–561 (2012).
+doi:10.1111/j.1365-313X.2012.04919.x Medline
+40
+
+===== PAGE 42 =====
+
+102. H. Yu, Y. Xu, E. L. Tan, P. P. Kumar, AGAMOUS-LIKE 24, a dosage-dependent mediator
+of the flowering signals. Proc. Natl. Acad. Sci. U.S.A. 99, 16336–16341 (2002).
+doi:10.1073/pnas.212624599 Medline
+103. J.-W. Wang, B. Czech, D. Weigel, miR156-regulated SPL transcription factors define an
+endogenous flowering pathway in Arabidopsis thaliana. Cell 138, 738–749 (2009).
+doi:10.1016/j.cell.2009.06.014 Medline
+104. S. D. Michaels, E. Himelblau, S. Y. Kim, F. M. Schomburg, R. M. Amasino, Integration of
+flowering signals in winter-annual Arabidopsis. Plant Physiol. 137, 149–156 (2005).
+doi:10.1104/pp.104.052811 Medline
+105. I. Searle, Y. He, F. Turck, C. Vincent, F. Fornara, S. Kröber, R. A. Amasino, G. Coupland,
+The transcription factor FLC confers a flowering response to vernalization by repressing
+meristem competence and systemic signaling in Arabidopsis. Genes Dev. 20, 898–912
+(2006). doi:10.1101/gad.373506 Medline
+106. R. Borner, G. Kampmann, J. Chandler, R. Gleissner, E. Wisman, K. Apel, S. Melzer, A
+MADS domain gene involved in the transition to flowering in Arabidopsis. Plant J. 24,
+591–599 (2000). doi:10.1046/j.1365-313x.2000.00906.x Medline
+107. A. Samach, H. Onouchi, S. E. Gold, G. S. Ditta, Z. Schwarz-Sommer, M. F. Yanofsky, G.
+Coupland, Distinct roles of CONSTANS target genes in reproductive development of
+Arabidopsis. Science 288, 1613–1616 (2000). doi:10.1126/science.288.5471.1613
+Medline
+108. S. R. Hepworth, F. Valverde, D. Ravenscroft, A. Mouradov, G. Coupland, Antagonistic
+regulation of flowering-time gene SOC1 by CONSTANS and FLC via separate promoter
+motifs. EMBO J. 21, 4327–4337 (2002). doi:10.1093/emboj/cdf432 Medline
+41
